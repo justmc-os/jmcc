@@ -1,0 +1,51 @@
+function update_compass(yaw) {
+  inline var BOSS_BAR_ID = "compass";
+
+  inline var SOUTH = 0;
+  inline var EAST  = 90;
+  inline var NORTH = 180;
+  inline var WEST  = 270;
+
+  inline var N     = "&7N";
+  inline var E     = "&7E";
+  inline var S     = "&7S";
+  inline var W     = "&7W";
+  inline var BLANK = "&8◦";
+
+  var final = "";
+  var length = 0;
+  var needed_length = 35;
+
+  var correct_yaw = (yaw + 180).round();
+  var snapped_yaw =
+    180 - ((correct_yaw - correct_yaw % 5) + 5 * floor((correct_yaw % 5) / 2.5));
+  var half_of_length = floor(needed_length / 2);
+
+  repeat::while(length.less(needed_length)) {
+    var char = (snapped_yaw - (length - half_of_length) * 5).warp(0, 360);
+
+    if (char.equals(NORTH))            { char = N }
+    if (char.equals([SOUTH, 360]))     { char = S }
+    if (char.equals(EAST))             { char = E }
+    if (char.equals(WEST))             { char = W }
+    if not (char.equals([N, S, E, W])) { char = BLANK }
+
+    final = variable::set_text([final, char])
+    length = (final.regex_replace_text("[\s\p{Z}]|&.", "")).get_text_length()
+  }
+
+  player::set_boss_bar(
+    BOSS_BAR_ID,
+    final,
+    progress = 0,
+    color = "WHITE",
+    sky_effect = "FOG_AND_DARK_SKY"
+  )
+}
+
+event<player_join> {
+  repeat::forever() {
+    update_compass(value::yaw);
+    code::wait(1);
+  }
+}

@@ -1,0 +1,16 @@
+/**
+  Переменные
+ */
+
+game var picked_blocks = variable::create_map();
+
+event<player_join> {
+  game var %player%_gold = 50;
+  game var %player%_gold_max = 100;
+  game var %player%_attack = 100;
+  game var %player%_attack_max = 100;
+  game var %player%_gold_income = 1;
+  game var %player%_attack_income = 1;
+  game var %player%_playing = 0;
+  game var %player%_block = 0;
+}

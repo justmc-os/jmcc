@@ -1,0 +1,10371 @@
+[
+  {
+    "id": "call_function",
+    "name": "call_function",
+    "object": "code",
+    "args": [
+      {
+        "type": "text",
+        "name": "function_name"
+      }
+    ]
+  },
+  {
+    "id": "else",
+    "name": "else",
+    "object": "code",
+    "args": [],
+    "containing": "base"
+  },
+  {
+    "id": "start_process",
+    "name": "start_process",
+    "object": "code",
+    "args": [
+      {
+        "type": "text",
+        "name": "process_name"
+      },
+      {
+        "type": "enum",
+        "name": "target_mode",
+        "enum": [
+          "CURRENT_TARGET",
+          "CURRENT_SELECTION",
+          "NO_TARGET",
+          "FOR_EACH_IN_SELECTION"
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "local_variables_mode",
+        "enum": [
+          "DONT_COPY",
+          "COPY",
+          "SHARE"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "control_end_thread",
+    "name": "break",
+    "object": "code",
+    "args": []
+  },
+  {
+    "id": "control_return_function",
+    "name": "return_function",
+    "object": "code",
+    "args": []
+  },
+  {
+    "id": "control_skip_iteration",
+    "name": "skip_iteration",
+    "object": "code",
+    "args": []
+  },
+  {
+    "id": "control_stop_repeat",
+    "name": "stop_repeat",
+    "object": "code",
+    "args": []
+  },
+  {
+    "id": "control_wait",
+    "name": "wait",
+    "object": "code",
+    "args": [
+      {
+        "type": "number",
+        "name": "duration"
+      },
+      {
+        "type": "enum",
+        "name": "time_unit",
+        "enum": [
+          "TICKS",
+          "SECONDS",
+          "MINUTES"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "entity_disguise_as_block",
+    "name": "disguise_as_block",
+    "object": "entity",
+    "args": [
+      {
+        "type": "item",
+        "name": "block"
+      }
+    ]
+  },
+  {
+    "id": "entity_disguise_as_entity",
+    "name": "disguise_as_entity",
+    "object": "entity",
+    "args": [
+      {
+        "type": "item",
+        "name": "entity_type"
+      }
+    ]
+  },
+  {
+    "id": "entity_disguise_as_item",
+    "name": "disguise_as_item",
+    "object": "entity",
+    "args": [
+      {
+        "type": "item",
+        "name": "item"
+      }
+    ]
+  },
+  {
+    "id": "entity_disguise_as_player",
+    "name": "disguise_as_player",
+    "object": "entity",
+    "args": [
+      {
+        "type": "text",
+        "name": "name_or_uuid"
+      },
+      {
+        "type": "text",
+        "name": "display_name"
+      }
+    ]
+  },
+  {
+    "id": "entity_remove_disguise",
+    "name": "remove_disguise",
+    "object": "entity",
+    "args": []
+  },
+  {
+    "id": "entity_set_armor_stand_parts",
+    "name": "set_armor_stand_parts",
+    "object": "entity",
+    "args": [
+      {
+        "type": "enum",
+        "name": "arms",
+        "enum": [
+          "ENABLE",
+          "DISABLE",
+          "DONT_CHANGE"
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "base_plate",
+        "enum": [
+          "ENABLE",
+          "DISABLE",
+          "DONT_CHANGE"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "entity_set_armor_stand_pose",
+    "name": "set_armor_stand_pose",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "x_rotation"
+      },
+      {
+        "type": "number",
+        "name": "y_rotation"
+      },
+      {
+        "type": "number",
+        "name": "z_rotation"
+      },
+      {
+        "type": "enum",
+        "name": "body_part",
+        "enum": [
+          "HEAD",
+          "BODY",
+          "LEFT_ARM",
+          "RIGHT_ARM",
+          "LEFT_LEG",
+          "RIGHT_LEG"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "entity_set_axolotl_type",
+    "name": "set_axolotl_type",
+    "object": "entity",
+    "args": [
+      {
+        "type": "enum",
+        "name": "axolotl_type",
+        "enum": [
+          "BLUE",
+          "CYAN",
+          "GOLD",
+          "LUCY",
+          "WILD"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "entity_set_cat_type",
+    "name": "set_cat_type",
+    "object": "entity",
+    "args": [
+      {
+        "type": "enum",
+        "name": "cat_type",
+        "enum": [
+          "ALL_BLACK",
+          "BLACK",
+          "BRITISH_SHORTHAIR",
+          "CALICO",
+          "JELLIE",
+          "PERSIAN",
+          "RAGDOLL",
+          "RED",
+          "SIAMESE",
+          "TABBY",
+          "WHITE"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "entity_set_dye_color",
+    "name": "set_dye_color",
+    "object": "entity",
+    "args": [
+      {
+        "type": "enum",
+        "name": "color",
+        "enum": [
+          "BLACK",
+          "BLUE",
+          "BROWN",
+          "CYAN",
+          "GRAY",
+          "GREEN",
+          "LIGHT_BLUE",
+          "LIGHT_GRAY",
+          "LIME",
+          "MAGENTA",
+          "ORANGE",
+          "PINK",
+          "PURPLE",
+          "RED",
+          "WHITE",
+          "YELLOW"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "entity_set_fox_type",
+    "name": "set_fox_type",
+    "object": "entity",
+    "args": [
+      {
+        "type": "enum",
+        "name": "fox_type",
+        "enum": [
+          "RED",
+          "SNOW"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "entity_set_glowing",
+    "name": "set_glowing",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "glowing"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_horse_pattern",
+    "name": "set_horse_pattern",
+    "object": "entity",
+    "args": [
+      {
+        "type": "enum",
+        "name": "horse_color",
+        "enum": [
+          "WHITE",
+          "CREAMY",
+          "CHESTNUT",
+          "BROWN",
+          "DARK_BROWN",
+          "GRAY",
+          "BLACK",
+          "DO_NOT_CHANGE"
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "horse_style",
+        "enum": [
+          "NONE",
+          "WHITE",
+          "WHITEFIELD",
+          "WHITE_DOTS",
+          "BLACK_DOTS",
+          "DO_NOT_CHANGE"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "entity_set_item_in_frame",
+    "name": "set_item_in_frame",
+    "object": "entity",
+    "args": [
+      {
+        "type": "item",
+        "name": "item"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_minecart_block",
+    "name": "set_minecart_block",
+    "object": "entity",
+    "args": [
+      {
+        "type": "item",
+        "name": "block"
+      },
+      {
+        "type": "number",
+        "name": "block_offset"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_mushroom_cow_type",
+    "name": "set_mushroom_cow_type",
+    "object": "entity",
+    "args": [
+      {
+        "type": "enum",
+        "name": "cow_type",
+        "enum": [
+          "BROWN",
+          "RED"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "entity_set_parrot_type",
+    "name": "set_parrot_type",
+    "object": "entity",
+    "args": [
+      {
+        "type": "enum",
+        "name": "parrot_type",
+        "enum": [
+          "BLUE",
+          "CYAN",
+          "GRAY",
+          "GREEN",
+          "RED"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "entity_set_projectile_display_item",
+    "name": "set_projectile_display_item",
+    "object": "entity",
+    "args": [
+      {
+        "type": "item",
+        "name": "item"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_rabbit_type",
+    "name": "set_rabbit_type",
+    "object": "entity",
+    "args": [
+      {
+        "type": "enum",
+        "name": "rabbit_type",
+        "enum": [
+          "BLACK",
+          "BLACK_AND_WHITE",
+          "BROWN",
+          "GOLD",
+          "SALT_AND_PEPPER",
+          "THE_KILLER_BUNNY",
+          "WHITE"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "entity_set_tropical_fish_pattern",
+    "name": "set_tropical_fish_pattern",
+    "object": "entity",
+    "args": [
+      {
+        "type": "enum",
+        "name": "pattern_color",
+        "enum": [
+          "WHITE",
+          "ORANGE",
+          "MAGENTA",
+          "LIGHT_BLUE",
+          "YELLOW",
+          "LIME",
+          "PINK",
+          "GRAY",
+          "LIGHT_GRAY",
+          "CYAN",
+          "PURPLE",
+          "BLUE",
+          "BROWN",
+          "GREEN",
+          "RED",
+          "BLACK",
+          "DO_NOT_CHANGE"
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "body_color",
+        "enum": [
+          "WHITE",
+          "ORANGE",
+          "MAGENTA",
+          "LIGHT_BLUE",
+          "YELLOW",
+          "LIME",
+          "PINK",
+          "GRAY",
+          "LIGHT_GRAY",
+          "CYAN",
+          "PURPLE",
+          "BLUE",
+          "BROWN",
+          "GREEN",
+          "RED",
+          "BLACK",
+          "DO_NOT_CHANGE"
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "pattern",
+        "enum": [
+          "KOB",
+          "SUNSTREAK",
+          "SNOOPER",
+          "DASHER",
+          "BRINELY",
+          "SPOTTY",
+          "FLOPPER",
+          "STRIPEY",
+          "GLITTER",
+          "BLOCKFISH",
+          "BETTY",
+          "CLAYFISH",
+          "DO_NOT_CHANGE"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "entity_eat_grass",
+    "name": "eat_grass",
+    "object": "entity",
+    "args": []
+  },
+  {
+    "id": "entity_explode",
+    "name": "explode",
+    "object": "entity",
+    "args": []
+  },
+  {
+    "id": "entity_ignite_creeper",
+    "name": "ignite_creeper",
+    "object": "entity",
+    "args": []
+  },
+  {
+    "id": "entity_jump",
+    "name": "jump",
+    "object": "entity",
+    "args": []
+  },
+  {
+    "id": "entity_move_to_location",
+    "name": "move_to_location",
+    "object": "entity",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "number",
+        "name": "speed"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_celebrating",
+    "name": "set_celebrating",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "celebrating"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_target",
+    "name": "set_target",
+    "object": "entity",
+    "args": [
+      {
+        "type": "text",
+        "name": "name"
+      }
+    ]
+  },
+  {
+    "id": "entity_sleep",
+    "name": "sleep",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "sleep"
+      }
+    ]
+  },
+  {
+    "id": "entity_get_custom_tag",
+    "name": "get_custom_tag",
+    "object": "entity",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "text",
+        "name": "name"
+      }
+    ]
+  },
+  {
+    "id": "entity_launch_projectile",
+    "name": "launch_projectile",
+    "object": "entity",
+    "args": [
+      {
+        "type": "item",
+        "name": "projectile"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "text",
+        "name": "name"
+      },
+      {
+        "type": "number",
+        "name": "speed"
+      },
+      {
+        "type": "number",
+        "name": "inaccuracy"
+      },
+      {
+        "type": "particle",
+        "name": "trail"
+      }
+    ]
+  },
+  {
+    "id": "entity_remove",
+    "name": "remove",
+    "object": "entity",
+    "args": []
+  },
+  {
+    "id": "entity_remove_custom_tag",
+    "name": "remove_custom_tag",
+    "object": "entity",
+    "args": [
+      {
+        "type": "text",
+        "name": "name"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_armor_items",
+    "name": "set_armor_items",
+    "object": "entity",
+    "args": [
+      {
+        "type": "item",
+        "name": "helmet"
+      },
+      {
+        "type": "item",
+        "name": "chestplate"
+      },
+      {
+        "type": "item",
+        "name": "leggings"
+      },
+      {
+        "type": "item",
+        "name": "boots"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_custom_tag",
+    "name": "set_custom_tag",
+    "object": "entity",
+    "args": [
+      {
+        "type": "text",
+        "name": "name"
+      },
+      {
+        "type": "text",
+        "name": "value"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_equipment_item",
+    "name": "set_equipment_item",
+    "object": "entity",
+    "args": [
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "enum",
+        "name": "slot",
+        "enum": [
+          "CHEST",
+          "FEET",
+          "HAND",
+          "HEAD",
+          "LEGS",
+          "OFF_HAND"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "entity_set_item",
+    "name": "set_item",
+    "object": "entity",
+    "args": [
+      {
+        "type": "item",
+        "name": "item"
+      }
+    ]
+  },
+  {
+    "id": "entity_shear_sheep",
+    "name": "shear_sheep",
+    "object": "entity",
+    "args": []
+  },
+  {
+    "id": "entity_attach_lead",
+    "name": "attach_lead",
+    "object": "entity",
+    "args": [
+      {
+        "type": "text",
+        "name": "name_or_uuid"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      }
+    ]
+  },
+  {
+    "id": "entity_face_location",
+    "name": "face_location",
+    "object": "entity",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      }
+    ]
+  },
+  {
+    "id": "entity_launch_forward",
+    "name": "launch_forward",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "power"
+      },
+      {
+        "type": "boolean",
+        "name": "increment"
+      },
+      {
+        "type": "enum",
+        "name": "launch_axis",
+        "enum": [
+          "YAW_AND_PITCH",
+          "YAW"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "entity_launch_to_location",
+    "name": "launch_to_location",
+    "object": "entity",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "number",
+        "name": "power"
+      },
+      {
+        "type": "boolean",
+        "name": "increment"
+      }
+    ]
+  },
+  {
+    "id": "entity_launch_up",
+    "name": "launch_up",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "power"
+      },
+      {
+        "type": "boolean",
+        "name": "increment"
+      }
+    ]
+  },
+  {
+    "id": "entity_ride_entity",
+    "name": "ride_entity",
+    "object": "entity",
+    "args": [
+      {
+        "type": "text",
+        "name": "name_or_uuid"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_gliding",
+    "name": "set_gliding",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "is_gliding"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_gravity",
+    "name": "set_gravity",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "gravity"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_rotation",
+    "name": "set_rotation",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "yaw"
+      },
+      {
+        "type": "number",
+        "name": "pitch"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_location",
+    "name": "set_location",
+    "object": "entity",
+    "args": [
+      {
+        "type": "vector",
+        "name": "velocity"
+      },
+      {
+        "type": "boolean",
+        "name": "increment"
+      }
+    ]
+  },
+  {
+    "id": "entity_teleport",
+    "name": "teleport",
+    "object": "entity",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "boolean",
+        "name": "keep_rotation"
+      }
+    ]
+  },
+  {
+    "id": "entity_celar_potion_effects",
+    "name": "celar_potion_effects",
+    "object": "entity",
+    "args": []
+  },
+  {
+    "id": "entity_damage",
+    "name": "damage",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "damage_amount"
+      }
+    ]
+  },
+  {
+    "id": "entity_give_potion_effects",
+    "name": "give_potion_effects",
+    "object": "entity",
+    "args": [
+      {
+        "type": "potion",
+        "name": "potions",
+        "array": true,
+        "length": 14
+      },
+      {
+        "type": "boolean",
+        "name": "overwrite"
+      },
+      {
+        "type": "boolean",
+        "name": "show_icon"
+      },
+      {
+        "type": "enum",
+        "name": "particle_mode",
+        "enum": [
+          "REGULAR",
+          "AMBIENT",
+          "NONE"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "entity_heal",
+    "name": "heal",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "heal"
+      }
+    ]
+  },
+  {
+    "id": "entity_remove_potion_effect",
+    "name": "remove_potion_effect",
+    "object": "entity",
+    "args": [
+      {
+        "type": "potion",
+        "name": "effects",
+        "array": true,
+        "length": 18
+      }
+    ]
+  },
+  {
+    "id": "entity_set_absorption_health",
+    "name": "set_absorption_health",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "health"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_animal_age",
+    "name": "set_animal_age",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "age"
+      },
+      {
+        "type": "enum",
+        "name": "lock",
+        "enum": [
+          "ENABLE",
+          "DISABLE",
+          "DONT_CHANGE"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "entity_set_attribute",
+    "name": "set_attribute",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "value"
+      },
+      {
+        "type": "enum",
+        "name": "attribute_type",
+        "enum": [
+          "MAX_HEALTH",
+          "FOLLOW_RANGE",
+          "KNOCKBACK_RESISTANCE",
+          "MOVEMENT_SPEED",
+          "FLYING_SPEED",
+          "ATTACK_DAMAGE",
+          "ATTACK_KNOCKBACK",
+          "ATTACK_SPEED",
+          "ARMOR",
+          "ARMOR_TOUGHNESS",
+          "LUCK",
+          "HORSE_JUMP_STRENGTH"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "entity_set_creeper_explosion_power",
+    "name": "set_creeper_explosion_power",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "power"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_creeper_fuse",
+    "name": "set_creeper_fuse",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "fuse_ticks"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_current_health",
+    "name": "set_current_health",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "health"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_death_time",
+    "name": "set_death_time",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "death_time"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_fall_distance",
+    "name": "set_fall_distance",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "fall_distance"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_fire_ticks",
+    "name": "set_fire_ticks",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "ticks"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_fishing_wait",
+    "name": "set_fishing_wait",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "time"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_freeze_ticks",
+    "name": "set_freeze_ticks",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "ticks"
+      },
+      {
+        "type": "boolean",
+        "name": "ticking_locked"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_horse_jump",
+    "name": "set_horse_jump",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "power"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_invulnerability_ticks",
+    "name": "set_invulnerability_ticks",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "ticks"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_max_health",
+    "name": "set_max_health",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "max_health"
+      },
+      {
+        "type": "boolean",
+        "name": "heal_to_max"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_pickup_delay",
+    "name": "set_pickup_delay",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "delay"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_potion_cloud_radius",
+    "name": "set_potion_cloud_radius",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "radius"
+      },
+      {
+        "type": "number",
+        "name": "shrinking_speed"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_villager_experience",
+    "name": "set_villager_experience",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "experience"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_wither_invulnerability_ticks",
+    "name": "set_wither_invulnerability_ticks",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "ticks"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_ai",
+    "name": "set_ai",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "ai"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_angry",
+    "name": "set_angry",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "angry"
+      },
+      {
+        "type": "text",
+        "name": "target"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_baby",
+    "name": "set_baby",
+    "object": "entity",
+    "args": [
+      {
+        "name": "baby"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_carrying_chest",
+    "name": "set_carrying_chest",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "carrying"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_collidable",
+    "name": "set_collidable",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "collidable"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_creeper_charge",
+    "name": "set_creeper_charge",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "charged"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_custom_name",
+    "name": "set_custom_name",
+    "object": "entity",
+    "args": [
+      {
+        "type": "text",
+        "name": "custom_name"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_custom_name_visibility",
+    "name": "set_custom_name_visibility",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "visibility"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_death_drops",
+    "name": "set_death_drops",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "drops"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_despawning",
+    "name": "set_despawning",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "despawning"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_end_crystal_beam",
+    "name": "set_end_crystal_beam",
+    "object": "entity",
+    "args": [
+      {
+        "type": "location",
+        "name": "beam"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_goat_screaming",
+    "name": "set_goat_screaming",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "screams"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_invisible",
+    "name": "set_invisible",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "invisible"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_invulnerable",
+    "name": "set_invulnerable",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "invulnerable"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_marker",
+    "name": "set_marker",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "marker",
+        "defaultBooleanValue": false
+      }
+    ]
+  },
+  {
+    "id": "entity_set_panda_gene",
+    "name": "set_panda_gene",
+    "object": "entity",
+    "args": [
+      {
+        "type": "enum",
+        "name": "gene",
+        "enum": [
+          "MAIN",
+          "HIDDEN",
+          "BOTH"
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "gene_type",
+        "enum": [
+          "NORMAL",
+          "LAZY",
+          "WORRIED",
+          "PLAYFUL",
+          "BROWN",
+          "WEAK",
+          "AGGRESSIVE"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "entity_set_persistence",
+    "name": "set_persistence",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "persistence"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_projectile_shooter",
+    "name": "set_projectile_shooter",
+    "object": "entity",
+    "args": [
+      {
+        "type": "text",
+        "name": "uuid"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_rearing",
+    "name": "set_rearing",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "rearing"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_riptiding",
+    "name": "set_riptiding",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "riptiding"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_sheep_sheared",
+    "name": "set_sheep_sheared",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "sheared"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_silenced",
+    "name": "set_silenced",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "silenced"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_sitting",
+    "name": "set_sitting",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "sitting"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_size",
+    "name": "set_size",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "size"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_tame",
+    "name": "set_tame",
+    "object": "entity",
+    "args": [
+      {
+        "type": "text",
+        "name": "name_or_uuid"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_villager_profession",
+    "name": "set_villager_profession",
+    "object": "entity",
+    "args": [
+      {
+        "type": "enum",
+        "name": "profession",
+        "enum": [
+          "NONE",
+          "ARMORER",
+          "BUTCHER",
+          "CARTOGRAPHER",
+          "CLERIC",
+          "FARMER",
+          "FISHERMAN",
+          "FLETCHER",
+          "LEATHERWORKER",
+          "LIBRARIAN",
+          "MASON",
+          "NITWIT",
+          "SHEPHERD",
+          "TOOLSMITH",
+          "WEAPONSMITH"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "entity_set_wearing_saddle",
+    "name": "set_wearing_saddle",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "wearing"
+      }
+    ]
+  },
+  {
+    "id": "game_block_growth",
+    "name": "block_growth",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "number",
+        "name": "growth_stage"
+      },
+      {
+        "type": "enum",
+        "name": "growth_type",
+        "enum": [
+          "STAGE_NUMBER",
+          "PERCENTAGE"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "game_bone_meal_block",
+    "name": "bone_meal_block",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "number",
+        "name": "count"
+      }
+    ]
+  },
+  {
+    "id": "game_break_block",
+    "name": "break_block",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "locations",
+        "array": true,
+        "length": 18
+      }
+    ]
+  },
+  {
+    "id": "game_clear_container",
+    "name": "clear_container",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      }
+    ]
+  },
+  {
+    "id": "game_clear_container_items",
+    "name": "clear_container_items",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "item",
+        "name": "items",
+        "array": true,
+        "length": 35
+      }
+    ]
+  },
+  {
+    "id": "game_clear_region",
+    "name": "clear_region",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "pos_1"
+      },
+      {
+        "type": "location",
+        "name": "pos_2"
+      }
+    ]
+  },
+  {
+    "id": "game_clone_region",
+    "name": "clone_region",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "pos_1"
+      },
+      {
+        "type": "location",
+        "name": "pos_2"
+      },
+      {
+        "type": "location",
+        "name": "target_pos"
+      },
+      {
+        "type": "location",
+        "name": "paste_pos"
+      },
+      {
+        "type": "boolean",
+        "name": "ignore_air"
+      },
+      {
+        "type": "boolean",
+        "name": "copy_entity"
+      }
+    ]
+  },
+  {
+    "id": "game_fill_container",
+    "name": "fill_container",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "item",
+        "name": "items",
+        "array": true,
+        "length": 14
+      }
+    ]
+  },
+  {
+    "id": "game_generate_tree",
+    "name": "generate_tree",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "enum",
+        "name": "tree_type",
+        "enum": [
+          "TREE",
+          "ACACIA",
+          "BIG_TREE",
+          "BIRCH",
+          "BROWN_MUSHROOM",
+          "CHORUS_PLANT",
+          "COCOA_TREE",
+          "CRIMSON_FUNGUS",
+          "DARK_OAK",
+          "JUNGLE",
+          "JUNGLE_BUSH",
+          "MEGA_REDWOOD",
+          "REDWOOD",
+          "RED_MUSHROOM",
+          "SMALL_JUNGLE",
+          "SWAMP",
+          "TALL_BIRCH",
+          "TALL_REDWOOD",
+          "WARPED_FUNGUS",
+          "AZALEA"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "game_random_tick_block",
+    "name": "random_tick_block",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "number",
+        "name": "times"
+      }
+    ]
+  },
+  {
+    "id": "game_remove_container_items",
+    "name": "remove_container_items",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "item",
+        "name": "items",
+        "array": true,
+        "length": 35
+      }
+    ]
+  },
+  {
+    "id": "game_replace_blocks_in_region",
+    "name": "replace_blocks_in_region",
+    "object": "world",
+    "args": [
+      {
+        "type": "item",
+        "name": "old_block",
+        "array": true,
+        "length": 10
+      },
+      {
+        "type": "location",
+        "name": "pos_1"
+      },
+      {
+        "type": "location",
+        "name": "pos_2"
+      },
+      {
+        "type": "item",
+        "name": "new_block"
+      }
+    ]
+  },
+  {
+    "id": "game_replace_container_items",
+    "name": "replace_container_items",
+    "object": "world",
+    "args": [
+      {
+        "type": "item",
+        "name": "items",
+        "array": true,
+        "length": 10
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "item",
+        "name": "replace"
+      },
+      {
+        "type": "number",
+        "name": "count"
+      }
+    ]
+  },
+  {
+    "id": "game_set_age",
+    "name": "set_age",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "number",
+        "name": "tick"
+      }
+    ]
+  },
+  {
+    "id": "game_set_block",
+    "name": "set_block",
+    "object": "world",
+    "args": [
+      {
+        "type": "item",
+        "name": "block"
+      },
+      {
+        "type": "location",
+        "name": "locations",
+        "array": true,
+        "length": 14
+      }
+    ]
+  },
+  {
+    "id": "game_set_campfire_item",
+    "name": "set_campfire_item",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "number",
+        "name": "cooking_time"
+      },
+      {
+        "type": "enum",
+        "name": "slot",
+        "enum": [
+          "FIRST",
+          "SECOND",
+          "THIRD",
+          "FOURTH"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "game_set_container",
+    "name": "set_container",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location",
+        "array": true,
+        "length": 9
+      },
+      {
+        "type": "item",
+        "name": "items",
+        "array": true,
+        "length": 27
+      }
+    ]
+  },
+  {
+    "id": "game_set_container_lock",
+    "name": "set_container_lock",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "text",
+        "name": "container_key"
+      }
+    ]
+  },
+  {
+    "id": "game_set_container_name",
+    "name": "set_container_name",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "text",
+        "name": "name"
+      }
+    ]
+  },
+  {
+    "id": "game_set_furnace_cook_time",
+    "name": "set_furnace_cook_time",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "number",
+        "name": "time"
+      }
+    ]
+  },
+  {
+    "id": "game_set_item_in_container_slot",
+    "name": "set_item_in_container_slot",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "number",
+        "name": "slot"
+      }
+    ]
+  },
+  {
+    "id": "game_set_lectern_book",
+    "name": "set_lectern_book",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "number",
+        "name": "page"
+      }
+    ]
+  },
+  {
+    "id": "game_set_player_head",
+    "name": "set_player_head",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "text",
+        "name": "name_or_uuid"
+      }
+    ]
+  },
+  {
+    "id": "game_set_region",
+    "name": "set_region",
+    "object": "world",
+    "args": [
+      {
+        "type": "item",
+        "name": "block"
+      },
+      {
+        "type": "location",
+        "name": "pos_1"
+      },
+      {
+        "type": "location",
+        "name": "pos_2"
+      }
+    ]
+  },
+  {
+    "id": "game_set_sign_text",
+    "name": "set_sign_text",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "text",
+        "name": "text"
+      },
+      {
+        "type": "number",
+        "name": "line"
+      }
+    ]
+  },
+  {
+    "id": "game_set_sign_text_color",
+    "name": "set_sign_text_color",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "boolean",
+        "name": "glowing"
+      },
+      {
+        "type": "enum",
+        "name": "sign_text_color",
+        "enum": [
+          "BLACK",
+          "BLUE",
+          "BROWN",
+          "CYAN",
+          "GRAY",
+          "GREEN",
+          "LIGHT_BLUE",
+          "LIGHT_GRAY",
+          "LIME",
+          "MAGENTA",
+          "ORANGE",
+          "PINK",
+          "PURPLE",
+          "RED",
+          "WHITE",
+          "YELLOW"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "game_create_explosion",
+    "name": "create_explosion",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "number",
+        "name": "power"
+      }
+    ]
+  },
+  {
+    "id": "game_launch_firework",
+    "name": "launch_firework",
+    "object": "world",
+    "args": [
+      {
+        "type": "item",
+        "name": "firework"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "enum",
+        "name": "movement",
+        "enum": [
+          "UPWARDS",
+          "DIRECTIONAL"
+        ]
+      },
+      {
+        "type": "boolean",
+        "name": "instant"
+      }
+    ]
+  },
+  {
+    "id": "game_launch_projectile",
+    "name": "launch_projectile",
+    "object": "world",
+    "args": [
+      {
+        "type": "item",
+        "name": "projectile"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "number",
+        "name": "speed"
+      },
+      {
+        "type": "number",
+        "name": "inaccuracy"
+      },
+      {
+        "type": "text",
+        "name": "custom_name"
+      },
+      {
+        "type": "particle",
+        "name": "trail"
+      }
+    ]
+  },
+  {
+    "id": "game_spawn_armor_stand",
+    "name": "spawn_armor_stand",
+    "object": "world",
+    "args": [
+      {
+        "type": "item",
+        "name": "helmet"
+      },
+      {
+        "type": "item",
+        "name": "chestplate"
+      },
+      {
+        "type": "item",
+        "name": "leggings"
+      },
+      {
+        "type": "item",
+        "name": "boots"
+      },
+      {
+        "type": "item",
+        "name": "right_hand"
+      },
+      {
+        "type": "item",
+        "name": "left_hand"
+      },
+      {
+        "type": "boolean",
+        "name": "gravity",
+        "defaultBooleanValue": false
+      },
+      {
+        "type": "boolean",
+        "name": "marker",
+        "defaultBooleanValue": false
+      },
+      {
+        "type": "boolean",
+        "name": "small",
+        "defaultBooleanValue": false
+      },
+      {
+        "type": "boolean",
+        "name": "show_arms"
+      },
+      {
+        "type": "boolean",
+        "name": "base_plate",
+        "defaultBooleanValue": false
+      },
+      {
+        "type": "boolean",
+        "name": "invisible",
+        "defaultBooleanValue": false
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "text",
+        "name": "custom_name"
+      }
+    ]
+  },
+  {
+    "id": "game_spawn_effect_cloud",
+    "name": "spawn_effect_cloud",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "potion",
+        "name": "effects",
+        "array": true,
+        "length": 6
+      },
+      {
+        "type": "number",
+        "name": "radius"
+      },
+      {
+        "type": "number",
+        "name": "duration"
+      },
+      {
+        "type": "particle",
+        "name": "particle"
+      },
+      {
+        "type": "text",
+        "name": "custom_name"
+      }
+    ]
+  },
+  {
+    "id": "game_spawn_end_crystal",
+    "name": "spawn_end_crystal",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "text",
+        "name": "custom_name"
+      },
+      {
+        "type": "boolean",
+        "name": "show_bottom"
+      }
+    ]
+  },
+  {
+    "id": "game_spawn_evoker_fangs",
+    "name": "spawn_evoker_fangs",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "text",
+        "name": "custom_name"
+      }
+    ]
+  },
+  {
+    "id": "game_spawn_experience_orb",
+    "name": "spawn_experience_orb",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "number",
+        "name": "experience_amount"
+      },
+      {
+        "type": "text",
+        "name": "custom_name"
+      }
+    ]
+  },
+  {
+    "id": "game_spawn_eye_of_ender",
+    "name": "spawn_eye_of_ender",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "location",
+        "name": "destination"
+      },
+      {
+        "type": "number",
+        "name": "lifespan"
+      },
+      {
+        "type": "text",
+        "name": "custom_name"
+      },
+      {
+        "type": "enum",
+        "name": "end_of_lifespan",
+        "enum": [
+          "DROP",
+          "SHATTER",
+          "RANDOM"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "game_spawn_falling_block",
+    "name": "spawn_falling_block",
+    "object": "world",
+    "args": [
+      {
+        "type": "item",
+        "name": "block"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "text",
+        "name": "name"
+      },
+      {
+        "type": "boolean",
+        "name": "should_expire"
+      }
+    ]
+  },
+  {
+    "id": "game_spawn_item",
+    "name": "spawn_item",
+    "object": "world",
+    "args": [
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "text",
+        "name": "custom_name"
+      },
+      {
+        "type": "boolean",
+        "name": "apply_motion"
+      },
+      {
+        "type": "boolean",
+        "name": "can_mob_pickup"
+      },
+      {
+        "type": "boolean",
+        "name": "can_player_pickup"
+      }
+    ]
+  },
+  {
+    "id": "game_spawn_lightning_bolt",
+    "name": "spawn_lightning_bolt",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      }
+    ]
+  },
+  {
+    "id": "game_spawn_mob",
+    "name": "spawn_mob",
+    "object": "world",
+    "args": [
+      {
+        "type": "item",
+        "name": "mob"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "number",
+        "name": "health"
+      },
+      {
+        "type": "text",
+        "name": "custom_name"
+      },
+      {
+        "type": "potion",
+        "name": "potion_effects",
+        "array": true,
+        "length": 15
+      },
+      {
+        "type": "item",
+        "name": "main_hand"
+      },
+      {
+        "type": "item",
+        "name": "helmet"
+      },
+      {
+        "type": "item",
+        "name": "chestplate"
+      },
+      {
+        "type": "item",
+        "name": "leggings"
+      },
+      {
+        "type": "item",
+        "name": "boots"
+      },
+      {
+        "type": "item",
+        "name": "off_hand"
+      }
+    ]
+  },
+  {
+    "id": "game_spawn_primed_tnt",
+    "name": "spawn_primed_tnt",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "number",
+        "name": "tnt_power"
+      },
+      {
+        "type": "number",
+        "name": "fuse_duration"
+      },
+      {
+        "type": "text",
+        "name": "custom_name"
+      }
+    ]
+  },
+  {
+    "id": "game_spawn_shulker_bullet",
+    "name": "spawn_shulker_bullet",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "text",
+        "name": "custom_name"
+      }
+    ]
+  },
+  {
+    "id": "game_spawn_vehicle",
+    "name": "spawn_vehicle",
+    "object": "world",
+    "args": [
+      {
+        "type": "item",
+        "name": "vehicle"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "text",
+        "name": "custom_name"
+      }
+    ]
+  },
+  {
+    "id": "game_cancel_event",
+    "name": "cancel_event",
+    "object": "world",
+    "args": []
+  },
+  {
+    "id": "game_clear_exploded_blocks",
+    "name": "clear_exploded_blocks",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location",
+        "array": true,
+        "length": 27
+      }
+    ]
+  },
+  {
+    "id": "game_hide_event_message",
+    "name": "hide_event_message",
+    "object": "world",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "hide"
+      }
+    ]
+  },
+  {
+    "id": "game_set_event_damage",
+    "name": "set_event_damage",
+    "object": "world",
+    "args": [
+      {
+        "type": "number",
+        "name": "damage"
+      }
+    ]
+  },
+  {
+    "id": "game_set_event_experience",
+    "name": "set_event_experience",
+    "object": "world",
+    "args": [
+      {
+        "type": "number",
+        "name": "experience"
+      }
+    ]
+  },
+  {
+    "id": "game_set_event_heal",
+    "name": "set_event_heal",
+    "object": "world",
+    "args": [
+      {
+        "type": "number",
+        "name": "heal"
+      }
+    ]
+  },
+  {
+    "id": "game_set_event_projectile",
+    "name": "set_event_projectile",
+    "object": "world",
+    "args": [
+      {
+        "type": "item",
+        "name": "projectile"
+      },
+      {
+        "type": "text",
+        "name": "name"
+      }
+    ]
+  },
+  {
+    "id": "game_set_event_sound",
+    "name": "set_event_sound",
+    "object": "world",
+    "args": [
+      {
+        "type": "sound",
+        "name": "sound"
+      }
+    ]
+  },
+  {
+    "id": "game_uncancel_event",
+    "name": "uncancel_event",
+    "object": "world",
+    "args": []
+  },
+  {
+    "id": "game_set_block_drops_enabled",
+    "name": "set_block_drops_enabled",
+    "object": "world",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "enable"
+      }
+    ]
+  },
+  {
+    "id": "game_set_world_difficulty",
+    "name": "set_world_difficulty",
+    "object": "world",
+    "args": [
+      {
+        "type": "enum",
+        "name": "difficulty",
+        "enum": [
+          "EASY",
+          "HARD",
+          "NORMAL",
+          "PEACEFUL"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "game_set_world_time",
+    "name": "set_world_time",
+    "object": "world",
+    "args": [
+      {
+        "type": "number",
+        "name": "time"
+      }
+    ]
+  },
+  {
+    "id": "game_set_world_weather",
+    "name": "set_world_weather",
+    "object": "world",
+    "args": [
+      {
+        "type": "enum",
+        "name": "weather_type",
+        "enum": [
+          "DOWNFALL",
+          "CLEAR"
+        ]
+      },
+      {
+        "type": "number",
+        "name": "weather_duration"
+      }
+    ]
+  },
+  {
+    "id": "game_send_web_request",
+    "name": "send_web_request",
+    "object": "world",
+    "args": [
+      {
+        "type": "text",
+        "name": "url"
+      },
+      {
+        "type": "text",
+        "name": "content_body"
+      },
+      {
+        "type": "enum",
+        "name": "request_type",
+        "enum": [
+          "GET",
+          "POST"
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "content_type",
+        "enum": [
+          "TEXT_PLAIN",
+          "APPLICATION_JSON"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "if_entity_exists",
+    "name": "exists",
+    "object": "entity",
+    "args": [],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_entity_has_custom_tag",
+    "name": "has_custom_tag",
+    "object": "entity",
+    "args": [
+      {
+        "type": "text",
+        "name": "tag"
+      },
+      {
+        "type": "text",
+        "name": "tag_value"
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_entity_has_potion_effect",
+    "name": "has_potion_effect",
+    "object": "entity",
+    "args": [
+      {
+        "type": "potion",
+        "name": "potions",
+        "array": true,
+        "length": 18
+      },
+      {
+        "type": "enum",
+        "name": "check_mode",
+        "enum": [
+          "ANY",
+          "ALL"
+        ]
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_entity_is_disguised",
+    "name": "is_disguised",
+    "object": "entity",
+    "args": [],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_entity_is_grounded",
+    "name": "is_grounded",
+    "object": "entity",
+    "args": [],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_entity_is_item",
+    "name": "is_item",
+    "object": "entity",
+    "args": [],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_entity_is_mob",
+    "name": "is_mob",
+    "object": "entity",
+    "args": [],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_entity_is_near_location",
+    "name": "is_near_location",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "ignore_y_axis"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "number",
+        "name": "range"
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_entity_is_projectile",
+    "name": "is_projectile",
+    "object": "entity",
+    "args": [],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_entity_is_riding_entity",
+    "name": "is_riding_entity",
+    "object": "entity",
+    "args": [
+      {
+        "type": "text",
+        "name": "entity_ids",
+        "array": true,
+        "length": 18
+      },
+      {
+        "type": "enum",
+        "name": "compare_mode",
+        "enum": [
+          "TYPE",
+          "NAME_OR_UUID"
+        ]
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_entity_is_standing_on_block",
+    "name": "is_standing_on_block",
+    "object": "entity",
+    "args": [
+      {
+        "type": "item",
+        "name": "blocks",
+        "array": true,
+        "length": 20
+      },
+      {
+        "type": "location",
+        "name": "locations",
+        "array": true,
+        "length": 20
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_entity_is_type",
+    "name": "is_type",
+    "object": "entity",
+    "args": [
+      {
+        "type": "item",
+        "name": "entity_type"
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_entity_is_vehicle",
+    "name": "is_vehicle",
+    "object": "entity",
+    "args": [],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_entity_name_equals",
+    "name": "name_equals",
+    "object": "entity",
+    "args": [
+      {
+        "type": "text",
+        "name": "name"
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_entity_spawn_reason_equals",
+    "name": "spawn_reason_equals",
+    "object": "entity",
+    "args": [
+      {
+        "type": "enum",
+        "name": "reason",
+        "enum": [
+          "BEEHIVE",
+          "BREEDING",
+          "BUILD_IRONGOLEM",
+          "BUILD_SNOWMAN",
+          "BUILD_WITHER",
+          "COMMAND",
+          "CURED",
+          "CUSTOM",
+          "DEFAULT",
+          "DISPENSE_EGG",
+          "DROWNED",
+          "EGG",
+          "ENDER_PEARL",
+          "EXPLOSION",
+          "FROZEN",
+          "INFECTION",
+          "JOCKEY",
+          "LIGHTNING",
+          "MOUNT",
+          "NATURAL",
+          "NETHER_PORTAL",
+          "OCELOT_BABY",
+          "PATROL",
+          "PIGLIN_ZOMBIFIED",
+          "RAID",
+          "REINFORCEMENTS",
+          "SHEARED",
+          "SHOULDER_ENTITY",
+          "SILVERFISH_BLOCK",
+          "SLIME_SPLIT",
+          "SPAWNER",
+          "SPAWNER_EGG",
+          "TRAP",
+          "VILLAGER_DEFENSE",
+          "VILLAGE_INVASION"
+        ]
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_game_block_equals",
+    "name": "block_equals",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "item",
+        "name": "blocks",
+        "array": true,
+        "length": 17
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_game_block_powered",
+    "name": "block_powered",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "locations",
+        "array": true,
+        "length": 18
+      },
+      {
+        "type": "enum",
+        "name": "power_mode",
+        "enum": [
+          "DIRECT",
+          "INDIRECT"
+        ]
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_game_container_has",
+    "name": "container_has",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "item",
+        "name": "items",
+        "array": true,
+        "length": 16
+      },
+      {
+        "type": "enum",
+        "name": "check_mode",
+        "enum": [
+          "ANY",
+          "ALL"
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "comparison_mode",
+        "enum": [
+          "EXACTLY",
+          "IGNORE_STACK_SIZE",
+          "IGNORE_DURABILITY_AND_STACK_SIZE",
+          "TYPE_ONLY"
+        ]
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_game_container_has_room_for_item",
+    "name": "container_has_room_for_item",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "item",
+        "name": "items",
+        "array": true,
+        "length": 16
+      },
+      {
+        "type": "enum",
+        "name": "check_mode",
+        "enum": [
+          "ANY",
+          "ALL"
+        ]
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_game_damage_cause_equals",
+    "name": "damage_cause_equals",
+    "object": "world",
+    "args": [
+      {
+        "type": "enum",
+        "name": "cause",
+        "enum": [
+          "BLOCK_EXPLOSION",
+          "CONTACT",
+          "CRAMMING",
+          "CUSTOM",
+          "DRAGON_BREATH",
+          "DROWNING",
+          "DRYOUT",
+          "ENTITY_ATTACK",
+          "ENTITY_EXPLOSION",
+          "ENTITY_SWEEP_ATTACK",
+          "FALL",
+          "FALLING_BLOCK",
+          "FIRE",
+          "FIRE_TICK",
+          "FLY_INTO_WALL",
+          "FREEZE",
+          "HOT_FLOOR",
+          "LAVA",
+          "LIGHTNING",
+          "MAGIC",
+          "MELTING",
+          "POISON",
+          "PROJECTILE",
+          "STARVATION",
+          "SUFFOCATION",
+          "SUICIDE",
+          "THORNS",
+          "VOID",
+          "WITHER"
+        ]
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_game_event_block_equals",
+    "name": "event_block_equals",
+    "object": "world",
+    "args": [
+      {
+        "type": "item",
+        "name": "blocks",
+        "array": true,
+        "length": 20
+      },
+      {
+        "type": "location",
+        "name": "locations",
+        "array": true,
+        "length": 20
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_game_event_is_canceled",
+    "name": "event_is_canceled",
+    "object": "world",
+    "args": [],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_game_event_item_equals",
+    "name": "event_item_equals",
+    "object": "world",
+    "args": [
+      {
+        "type": "item",
+        "name": "items",
+        "array": true,
+        "length": 18
+      },
+      {
+        "type": "enum",
+        "name": "comparison_mode",
+        "enum": [
+          "EXACTLY",
+          "IGNORE_STACK_SIZE",
+          "IGNORE_DURABILITY_AND_STACK_SIZE",
+          "TYPE_ONLY"
+        ]
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_game_has_player",
+    "name": "has_player",
+    "object": "world",
+    "args": [
+      {
+        "type": "text",
+        "name": "names_or_uuids",
+        "array": true,
+        "length": 18
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_game_heal_cause_equals",
+    "name": "heal_cause_equals",
+    "object": "world",
+    "args": [
+      {
+        "type": "enum",
+        "name": "heal_cause",
+        "enum": [
+          "CUSTOM",
+          "EATING",
+          "ENDER_CRYSTAL",
+          "MAGIC",
+          "MAGIC_REGEN",
+          "REGEN",
+          "SATIATED",
+          "WITHER",
+          "WITHER_SPAWN"
+        ]
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_game_ignite_cause_equals",
+    "name": "ignite_cause_equals",
+    "object": "world",
+    "args": [
+      {
+        "type": "enum",
+        "name": "cause",
+        "enum": [
+          "ARROW",
+          "ENDER_CRYSTAL",
+          "EXPLOSION",
+          "FIREBALL",
+          "FLINT_AND_STEEL",
+          "LAVA",
+          "LIGHTNING",
+          "SPREAD"
+        ]
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_game_instrument_equals",
+    "name": "instrument_equals",
+    "object": "world",
+    "args": [
+      {
+        "type": "enum",
+        "name": "instrument",
+        "enum": [
+          "BANJO",
+          "BASS_DRUM",
+          "BASS_GUITAR",
+          "BELL",
+          "BIT",
+          "CHIME",
+          "COW_BELL",
+          "DIDGERIDOO",
+          "FLUTE",
+          "GUITAR",
+          "IRON_XYLOPHONE",
+          "PIANO",
+          "PLING",
+          "SNARE_DRUM",
+          "STICKS",
+          "XYLOPHONE"
+        ]
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_game_sign_contains",
+    "name": "sign_contains",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "text",
+        "name": "texts",
+        "array": true,
+        "length": 16
+      },
+      {
+        "type": "enum",
+        "name": "check_mode",
+        "enum": [
+          "CONTAINS",
+          "EQUALS"
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "lines",
+        "enum": [
+          "FIRST",
+          "SECOND",
+          "THIRD",
+          "FOURTH",
+          "ALL"
+        ]
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_player_cursor_item_equals",
+    "name": "cursor_item_equals",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "items",
+        "array": true,
+        "length": 18
+      },
+      {
+        "type": "enum",
+        "name": "comparison_mode",
+        "enum": [
+          "EXACTLY",
+          "IGNORE_STACK_SIZE",
+          "IGNORE_DURABILITY_AND_STACK_SIZE",
+          "TYPE_ONLY"
+        ]
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_player_has_item",
+    "name": "has_item",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "items",
+        "array": true,
+        "length": 18
+      },
+      {
+        "type": "enum",
+        "name": "check_mode",
+        "enum": [
+          "ANY",
+          "ALL"
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "comparison_mode",
+        "enum": [
+          "EXACTLY",
+          "IGNORE_STACK_SIZE",
+          "IGNORE_DURABILITY_AND_STACK_SIZE",
+          "TYPE_ONLY"
+        ]
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_player_has_item_at_least",
+    "name": "has_item_at_least",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "number",
+        "name": "count"
+      },
+      {
+        "type": "enum",
+        "name": "comparison_mode",
+        "enum": [
+          "EXACTLY",
+          "TYPE_ONLY"
+        ]
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_player_has_item_in_slot",
+    "name": "has_item_in_slot",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "items",
+        "array": true,
+        "length": 12
+      },
+      {
+        "type": "number",
+        "name": "slots",
+        "array": true,
+        "length": 12
+      },
+      {
+        "type": "enum",
+        "name": "comparison_mode",
+        "enum": [
+          "EXACTLY",
+          "IGNORE_STACK_SIZE",
+          "IGNORE_DURABILITY_AND_STACK_SIZE",
+          "TYPE_ONLY"
+        ]
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_player_has_room_for_item",
+    "name": "has_room_for_item",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "items",
+        "array": true,
+        "length": 18
+      },
+      {
+        "type": "enum",
+        "name": "check_mode",
+        "enum": [
+          "ANY",
+          "ALL"
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "checked_slots",
+        "enum": [
+          "ENTIRE_INVENTORY",
+          "MAIN_INVENTORY",
+          "UPPER_INVENTORY",
+          "HOTBAR",
+          "ARMOR"
+        ]
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_player_inventory_menu_slot_equals",
+    "name": "inventory_menu_slot_equals",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "items",
+        "array": true,
+        "length": 12
+      },
+      {
+        "type": "number",
+        "name": "slots",
+        "array": true,
+        "length": 12
+      },
+      {
+        "type": "enum",
+        "name": "comparison_mode",
+        "enum": [
+          "EXACTLY",
+          "IGNORE_STACK_SIZE",
+          "IGNORE_DURABILITY_AND_STACK_SIZE",
+          "TYPE_ONLY"
+        ]
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_player_is_holding",
+    "name": "is_holding",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "items",
+        "array": true,
+        "length": 18
+      },
+      {
+        "type": "enum",
+        "name": "hand_slot",
+        "enum": [
+          "EITHER_HAND",
+          "MAIN_HAND",
+          "OFF_HAND"
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "comparison_mode",
+        "enum": [
+          "EXACTLY",
+          "IGNORE_STACK_SIZE",
+          "IGNORE_DURABILITY_AND_STACK_SIZE",
+          "TYPE_ONLY"
+        ]
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_player_item_is_not_on_cooldown",
+    "name": "item_is_not_on_cooldown",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "items",
+        "array": true,
+        "length": 18
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_player_is_using_item",
+    "name": "is_using_item",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "items",
+        "array": true,
+        "length": 18
+      },
+      {
+        "type": "enum",
+        "name": "comparison_mode",
+        "enum": [
+          "EXACTLY",
+          "IGNORE_STACK_SIZE",
+          "IGNORE_DURABILITY_AND_STACK_SIZE",
+          "TYPE_ONLY"
+        ]
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_player_is_wearing_item",
+    "name": "is_wearing_item",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "items",
+        "array": true,
+        "length": 18
+      },
+      {
+        "type": "enum",
+        "name": "check_mode",
+        "enum": [
+          "ANY",
+          "ALL"
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "comparison_mode",
+        "enum": [
+          "EXACTLY",
+          "IGNORE_STACK_SIZE",
+          "IGNORE_DURABILITY_AND_STACK_SIZE",
+          "TYPE_ONLY"
+        ]
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_player_in_area",
+    "name": "in_area",
+    "object": "player",
+    "args": [
+      {
+        "type": "location",
+        "name": "location_1"
+      },
+      {
+        "type": "location",
+        "name": "location_2"
+      },
+      {
+        "type": "boolean",
+        "name": "ignore_y_axis"
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_player_is_looking_at_block",
+    "name": "is_looking_at_block",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "blocks",
+        "array": true,
+        "length": 15
+      },
+      {
+        "type": "location",
+        "name": "locations",
+        "array": true,
+        "length": 15
+      },
+      {
+        "type": "number",
+        "name": "distance"
+      },
+      {
+        "type": "enum",
+        "name": "fluid_mode",
+        "enum": [
+          "NEVER",
+          "SOURCE_ONLY",
+          "ALWAYS"
+        ]
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_player_is_near",
+    "name": "is_near",
+    "object": "player",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "ignore_y_axis"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "number",
+        "name": "range"
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_player_is_standing_on_block",
+    "name": "is_standing_on_block",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "blocks",
+        "array": true,
+        "length": 20
+      },
+      {
+        "type": "location",
+        "name": "locations",
+        "array": true,
+        "length": 20
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_player_chat_message_equals",
+    "name": "chat_message_equals",
+    "object": "player",
+    "args": [
+      {
+        "type": "text",
+        "name": "chat_messages",
+        "array": true,
+        "length": 18
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_player_gamemode_equals",
+    "name": "gamemode_equals",
+    "object": "player",
+    "args": [
+      {
+        "type": "enum",
+        "name": "gamemode",
+        "enum": [
+          "SURVIVAL",
+          "CREATIVE",
+          "ADVENTURE",
+          "SPECTATOR"
+        ]
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_player_has_potion_effect",
+    "name": "has_potion_effect",
+    "object": "player",
+    "args": [
+      {
+        "type": "potion",
+        "name": "potions",
+        "array": true,
+        "length": 18
+      },
+      {
+        "type": "enum",
+        "name": "check_mode",
+        "enum": [
+          "ANY",
+          "ALL"
+        ]
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_player_has_privilege",
+    "name": "has_privilege",
+    "object": "player",
+    "args": [
+      {
+        "type": "enum",
+        "name": "privilege",
+        "enum": [
+          "BUILDER",
+          "DEVELOPER",
+          "BUILDER_AND_DEVELOPER",
+          "WHITELISTED",
+          "OWNER"
+        ]
+      },
+      {
+        "type": "boolean",
+        "name": "exact",
+        "defaultBooleanValue": false
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_player_hotbar_slot_equals",
+    "name": "hotbar_slot_equals",
+    "object": "player",
+    "args": [
+      {
+        "type": "number",
+        "name": "slot"
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_player_inventory_type_open",
+    "name": "inventory_type_open",
+    "object": "player",
+    "args": [
+      {
+        "type": "enum",
+        "name": "inventory_type",
+        "enum": [
+          "CHEST",
+          "DISPENSER",
+          "DROPPER",
+          "FURNACE",
+          "WORKBENCH",
+          "CRAFTING",
+          "ENCHANTING",
+          "BREWING",
+          "PLAYER",
+          "CREATIVE",
+          "MERCHANT",
+          "ENDER_CHEST",
+          "ANVIL",
+          "SMITHING",
+          "BEACON",
+          "HOPPER",
+          "SHULKER_BOX",
+          "BARREL",
+          "BLAST_FURNACE",
+          "LECTERN",
+          "SMOKER",
+          "LOOM",
+          "CARTOGRAPHY",
+          "GRINDSTONE",
+          "STONECUTTER",
+          "COMPOSTER"
+        ]
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_player_is_riding_entity",
+    "name": "is_riding_entity",
+    "object": "player",
+    "args": [
+      {
+        "type": "text",
+        "name": "entity_ids",
+        "array": true,
+        "length": 18
+      },
+      {
+        "type": "enum",
+        "name": "compare_mode",
+        "enum": [
+          "TYPE",
+          "NAME_OR_UUID"
+        ]
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_player_name_equals",
+    "name": "name_equals",
+    "object": "player",
+    "args": [
+      {
+        "type": "text",
+        "name": "names_or_uuids",
+        "array": true,
+        "length": 18
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_player_is_blocking",
+    "name": "is_blocking",
+    "object": "player",
+    "args": [],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_player_is_disguised",
+    "name": "is_disguised",
+    "object": "player",
+    "args": [],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_player_is_flying",
+    "name": "is_flying",
+    "object": "player",
+    "args": [],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_player_is_gliding",
+    "name": "is_gliding",
+    "object": "player",
+    "args": [],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_player_is_on_ground",
+    "name": "is_on_ground",
+    "object": "player",
+    "args": [],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_player_is_sleeping",
+    "name": "is_sleeping",
+    "object": "player",
+    "args": [],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_player_is_sneaking",
+    "name": "is_sneaking",
+    "object": "player",
+    "args": [],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_player_is_sprinting",
+    "name": "is_sprinting",
+    "object": "player",
+    "args": [],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_player_is_swimming",
+    "name": "is_swimming",
+    "object": "player",
+    "args": [],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_variable_equals",
+    "name": "equals",
+    "object": "variable",
+    "args": [
+      {
+        "type": "any",
+        "name": "value"
+      },
+      {
+        "type": "any",
+        "name": "compare",
+        "array": true,
+        "length": 21
+      }
+    ],
+    "containing": "predicate",
+    "origin": "value"
+  },
+  {
+    "id": "if_variable_exists",
+    "name": "exists",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      }
+    ],
+    "containing": "predicate",
+    "origin": "variable"
+  },
+  {
+    "id": "if_variable_greater",
+    "name": "greater",
+    "object": "variable",
+    "args": [
+      {
+        "type": "number",
+        "name": "value"
+      },
+      {
+        "type": "number",
+        "name": "compare"
+      }
+    ],
+    "containing": "predicate",
+    "origin": "value"
+  },
+  {
+    "id": "if_variable_greater_or_equals",
+    "name": "greater_or_equals",
+    "object": "variable",
+    "args": [
+      {
+        "type": "number",
+        "name": "value"
+      },
+      {
+        "type": "number",
+        "name": "compare"
+      }
+    ],
+    "containing": "predicate",
+    "origin": "value"
+  },
+  {
+    "id": "if_variable_in_range",
+    "name": "in_range",
+    "object": "variable",
+    "args": [
+      {
+        "type": "any",
+        "name": "value"
+      },
+      {
+        "type": "any",
+        "name": "min"
+      },
+      {
+        "type": "any",
+        "name": "max"
+      }
+    ],
+    "containing": "predicate",
+    "origin": "value"
+  },
+  {
+    "id": "if_variable_is_type",
+    "name": "is_type",
+    "object": "variable",
+    "args": [
+      {
+        "type": "any",
+        "name": "value"
+      },
+      {
+        "type": "enum",
+        "name": "variable_type",
+        "enum": [
+          "NUMBER",
+          "TEXT",
+          "LOCATION",
+          "ITEM",
+          "POTION",
+          "SOUND",
+          "PARTICLE",
+          "VECTOR",
+          "ARRAY",
+          "MAP"
+        ]
+      }
+    ],
+    "containing": "predicate",
+    "origin": "value"
+  },
+  {
+    "id": "if_variable_item_equals",
+    "name": "item_equals",
+    "object": "variable",
+    "args": [
+      {
+        "type": "item",
+        "name": "value"
+      },
+      {
+        "type": "item",
+        "name": "compare",
+        "array": true,
+        "length": 21
+      },
+      {
+        "type": "enum",
+        "name": "comparison_mode",
+        "enum": [
+          "EXACTLY",
+          "IGNORE_STACK_SIZE",
+          "IGNORE_DURABILITY_AND_STACK_SIZE",
+          "TYPE_ONLY"
+        ]
+      }
+    ],
+    "containing": "predicate",
+    "origin": "value"
+  },
+  {
+    "id": "if_variable_item_has_tag",
+    "name": "item_has_tag",
+    "object": "variable",
+    "args": [
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "text",
+        "name": "tag"
+      },
+      {
+        "type": "text",
+        "name": "value"
+      }
+    ],
+    "containing": "predicate",
+    "origin": "item"
+  },
+  {
+    "id": "if_variable_less",
+    "name": "less",
+    "object": "variable",
+    "args": [
+      {
+        "type": "number",
+        "name": "value"
+      },
+      {
+        "type": "number",
+        "name": "compare"
+      }
+    ],
+    "containing": "predicate",
+    "origin": "value"
+  },
+  {
+    "id": "if_variable_less_or_equals",
+    "name": "less_or_equals",
+    "object": "variable",
+    "args": [
+      {
+        "type": "number",
+        "name": "value"
+      },
+      {
+        "type": "number",
+        "name": "compare"
+      }
+    ],
+    "containing": "predicate",
+    "origin": "value"
+  },
+  {
+    "id": "if_variable_list_contains_value",
+    "name": "list_contains_value",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "list"
+      },
+      {
+        "type": "any",
+        "name": "values",
+        "array": true,
+        "length": 21
+      }
+    ],
+    "containing": "predicate",
+    "origin": "list"
+  },
+  {
+    "id": "if_variable_list_value_equals",
+    "name": "list_value_equals",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "list"
+      },
+      {
+        "type": "number",
+        "name": "index"
+      },
+      {
+        "type": "any",
+        "name": "values",
+        "array": true,
+        "length": 21
+      }
+    ],
+    "containing": "predicate",
+    "origin": "list"
+  },
+  {
+    "id": "if_variable_location_is_near",
+    "name": "location_is_near",
+    "object": "variable",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "number",
+        "name": "radius"
+      },
+      {
+        "type": "location",
+        "name": "check",
+        "array": true,
+        "length": 18
+      },
+      {
+        "type": "enum",
+        "name": "shape",
+        "enum": [
+          "SPHERE",
+          "CIRCLE",
+          "CUBE",
+          "SQUARE"
+        ]
+      }
+    ],
+    "containing": "predicate",
+    "origin": "location"
+  },
+  {
+    "id": "if_variable_map_has_key",
+    "name": "map_has_key",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "map"
+      },
+      {
+        "type": "any",
+        "name": "key"
+      }
+    ],
+    "containing": "predicate",
+    "origin": "map"
+  },
+  {
+    "id": "if_variable_map_value_equals",
+    "name": "map_value_equals",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "map"
+      },
+      {
+        "type": "any",
+        "name": "key"
+      },
+      {
+        "type": "any",
+        "name": "values",
+        "array": true,
+        "length": 21
+      }
+    ],
+    "containing": "predicate",
+    "origin": "map"
+  },
+  {
+    "id": "if_variable_not_equals",
+    "name": "not_equals",
+    "object": "variable",
+    "args": [
+      {
+        "type": "any",
+        "name": "value"
+      },
+      {
+        "type": "any",
+        "name": "compare",
+        "array": true,
+        "length": 21
+      }
+    ],
+    "containing": "predicate",
+    "origin": "value"
+  },
+  {
+    "id": "if_variable_text_contains",
+    "name": "text_contains",
+    "object": "variable",
+    "args": [
+      {
+        "type": "text",
+        "name": "value"
+      },
+      {
+        "type": "text",
+        "name": "compare",
+        "array": true,
+        "length": 21
+      },
+      {
+        "type": "boolean",
+        "name": "ignore_case",
+        "defaultBooleanValue": false
+      }
+    ],
+    "containing": "predicate",
+    "origin": "value"
+  },
+  {
+    "id": "if_variable_text_ends_with",
+    "name": "text_ends_with",
+    "object": "variable",
+    "args": [
+      {
+        "type": "text",
+        "name": "value"
+      },
+      {
+        "type": "text",
+        "name": "compare",
+        "array": true,
+        "length": 21
+      },
+      {
+        "type": "boolean",
+        "name": "ignore_case",
+        "defaultBooleanValue": false
+      }
+    ],
+    "containing": "predicate",
+    "origin": "value"
+  },
+  {
+    "id": "if_variable_text_matches",
+    "name": "text_matches",
+    "object": "variable",
+    "args": [
+      {
+        "type": "text",
+        "name": "match"
+      },
+      {
+        "type": "text",
+        "name": "values",
+        "array": true,
+        "length": 21
+      },
+      {
+        "type": "boolean",
+        "name": "ignore_case",
+        "defaultBooleanValue": false
+      },
+      {
+        "type": "boolean",
+        "name": "regular_expressions",
+        "defaultBooleanValue": false
+      }
+    ],
+    "containing": "predicate",
+    "origin": "match"
+  },
+  {
+    "id": "if_variable_text_starts_with",
+    "name": "text_starts_with",
+    "object": "variable",
+    "args": [
+      {
+        "type": "text",
+        "name": "value"
+      },
+      {
+        "type": "text",
+        "name": "compare",
+        "array": true,
+        "length": 21
+      },
+      {
+        "type": "boolean",
+        "name": "ignore_case",
+        "defaultBooleanValue": false
+      }
+    ],
+    "containing": "predicate",
+    "origin": "value"
+  },
+  {
+    "id": "player_disguise_as_block",
+    "name": "disguise_as_block",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "block"
+      }
+    ]
+  },
+  {
+    "id": "player_disguise_as_entity",
+    "name": "disguise_as_entity",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "entity_type"
+      }
+    ]
+  },
+  {
+    "id": "player_disguise_as_item",
+    "name": "disguise_as_item",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "item"
+      }
+    ]
+  },
+  {
+    "id": "player_play_animation_action",
+    "name": "play_animation_action",
+    "object": "player",
+    "args": [
+      {
+        "type": "enum",
+        "name": "animation",
+        "enum": [
+          "DAMAGE",
+          "WAKE_UP",
+          "TOTEM",
+          "JUMPSCARE"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "player_remove_disguise",
+    "name": "remove_disguise",
+    "object": "player",
+    "args": []
+  },
+  {
+    "id": "player_set_arrows_in_body",
+    "name": "set_arrows_in_body",
+    "object": "player",
+    "args": [
+      {
+        "type": "number",
+        "name": "amount"
+      }
+    ]
+  },
+  {
+    "id": "player_set_skin",
+    "name": "set_skin",
+    "object": "player",
+    "args": [
+      {
+        "type": "text",
+        "name": "name_or_uuid"
+      }
+    ]
+  },
+  {
+    "id": "player_set_visual_fire",
+    "name": "set_visual_fire",
+    "object": "player",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "visual_fire"
+      }
+    ]
+  },
+  {
+    "id": "player_swing_hand",
+    "name": "swing_hand",
+    "object": "player",
+    "args": [
+      {
+        "type": "enum",
+        "name": "hand_type",
+        "enum": [
+          "MAIN",
+          "OFF"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "player_clear_chat",
+    "name": "clear_chat",
+    "object": "player",
+    "args": []
+  },
+  {
+    "id": "player_open_book",
+    "name": "open_book",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "book"
+      }
+    ]
+  },
+  {
+    "id": "player_play_sound",
+    "name": "play_sound",
+    "object": "player",
+    "args": [
+      {
+        "type": "sound",
+        "name": "sound"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "enum",
+        "name": "source",
+        "enum": [
+          "MASTER",
+          "AMBIENT",
+          "BLOCK",
+          "HOSTILE",
+          "MUSIC",
+          "NEUTRAL",
+          "PLAYER",
+          "RECORD",
+          "VOICE",
+          "WEATHER"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "player_play_sound_sequence",
+    "name": "play_sound_sequence",
+    "object": "player",
+    "args": [
+      {
+        "type": "sound",
+        "name": "sounds",
+        "array": true,
+        "length": 43
+      },
+      {
+        "type": "number",
+        "name": "delay"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "enum",
+        "name": "source",
+        "enum": [
+          "MASTER",
+          "AMBIENT",
+          "BLOCK",
+          "HOSTILE",
+          "MUSIC",
+          "NEUTRAL",
+          "PLAYER",
+          "RECORD",
+          "VOICE",
+          "WEATHER"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "player_remove_boss_bar",
+    "name": "remove_boss_bar",
+    "object": "player",
+    "args": [
+      {
+        "type": "text",
+        "name": "id"
+      }
+    ]
+  },
+  {
+    "id": "player_send_action_bar",
+    "name": "action_bar",
+    "object": "player",
+    "args": [
+      {
+        "type": "text",
+        "name": "messages",
+        "array": true,
+        "length": 18
+      },
+      {
+        "type": "enum",
+        "name": "merging",
+        "enum": [
+          "SPACES",
+          "CONCATENATION"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "player_send_advancement",
+    "name": "send_advancement",
+    "object": "player",
+    "args": [
+      {
+        "type": "enum",
+        "name": "frame",
+        "enum": [
+          "TASK",
+          "CHALLENGE",
+          "GOAL"
+        ]
+      },
+      {
+        "type": "text",
+        "name": "name"
+      },
+      {
+        "type": "item",
+        "name": "icon"
+      }
+    ]
+  },
+  {
+    "id": "player_send_dialogue",
+    "name": "dialogue",
+    "object": "player",
+    "args": [
+      {
+        "type": "text",
+        "name": "messages",
+        "array": true,
+        "length": 17
+      },
+      {
+        "type": "number",
+        "name": "delay"
+      }
+    ]
+  },
+  {
+    "id": "player_send_hover",
+    "name": "send_hover",
+    "object": "player",
+    "args": [
+      {
+        "type": "text",
+        "name": "message"
+      },
+      {
+        "type": "text",
+        "name": "hover"
+      }
+    ]
+  },
+  {
+    "id": "player_send_message",
+    "name": "message",
+    "object": "player",
+    "args": [
+      {
+        "type": "text",
+        "name": "messages",
+        "array": true,
+        "length": 18
+      },
+      {
+        "type": "enum",
+        "name": "merging",
+        "enum": [
+          "SPACES",
+          "CONCATENATION",
+          "SEPARATE_LINES"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "player_send_minimessage",
+    "name": "send_minimessage",
+    "object": "player",
+    "args": [
+      {
+        "type": "text",
+        "name": "minimessage"
+      }
+    ]
+  },
+  {
+    "id": "player_send_title",
+    "name": "title",
+    "object": "player",
+    "args": [
+      {
+        "type": "text",
+        "name": "title"
+      },
+      {
+        "type": "text",
+        "name": "subtitle"
+      },
+      {
+        "type": "number",
+        "name": "fade_in"
+      },
+      {
+        "type": "number",
+        "name": "stay"
+      },
+      {
+        "type": "number",
+        "name": "fade_out"
+      }
+    ]
+  },
+  {
+    "id": "player_set_boss_bar",
+    "name": "set_boss_bar",
+    "object": "player",
+    "args": [
+      {
+        "type": "text",
+        "name": "id"
+      },
+      {
+        "type": "text",
+        "name": "title"
+      },
+      {
+        "type": "number",
+        "name": "progress"
+      },
+      {
+        "type": "enum",
+        "name": "color",
+        "enum": [
+          "PINK",
+          "BLUE",
+          "RED",
+          "GREEN",
+          "YELLOW",
+          "PURPLE",
+          "WHITE"
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "style",
+        "enum": [
+          "PROGRESS",
+          "NOTCHED_6",
+          "NOTCHED_10",
+          "NOTCHED_12",
+          "NOTCHED_20"
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "sky_effect",
+        "enum": [
+          "NONE",
+          "FOG",
+          "DARK_SKY",
+          "FOG_AND_DARK_SKY"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "player_set_player_list_info",
+    "name": "set_player_list_info",
+    "object": "player",
+    "args": [
+      {
+        "type": "text",
+        "name": "text",
+        "array": true,
+        "length": 16
+      },
+      {
+        "type": "enum",
+        "name": "position",
+        "enum": [
+          "HEADER",
+          "FOOTER"
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "merging",
+        "enum": [
+          "SPACES",
+          "CONCATENATION",
+          "SEPARATE_LINES"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "player_show_demo_screen",
+    "name": "show_demo_screen",
+    "object": "player",
+    "args": []
+  },
+  {
+    "id": "player_stop_sound",
+    "name": "stop_sound",
+    "object": "player",
+    "args": [
+      {
+        "type": "sound",
+        "name": "sounds",
+        "array": true,
+        "length": 18
+      },
+      {
+        "type": "enum",
+        "name": "source",
+        "enum": [
+          "MASTER",
+          "AMBIENT",
+          "BLOCK",
+          "HOSTILE",
+          "MUSIC",
+          "NEUTRAL",
+          "PLAYER",
+          "RECORD",
+          "VOICE",
+          "WEATHER"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "player_add_inventory_menu_row",
+    "name": "add_menu_row",
+    "object": "player",
+    "args": []
+  },
+  {
+    "id": "player_close_inventory",
+    "name": "close_menu",
+    "object": "player",
+    "args": []
+  },
+  {
+    "id": "player_expand_inventory_menu",
+    "name": "expand_menu",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "items",
+        "array": true,
+        "length": 27
+      },
+      {
+        "type": "number",
+        "name": "size"
+      }
+    ]
+  },
+  {
+    "id": "player_open_container_inventory",
+    "name": "open_container_inventory",
+    "object": "player",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      }
+    ]
+  },
+  {
+    "id": "player_remove_inventory_menu_row",
+    "name": "remove_menu_row",
+    "object": "player",
+    "args": [
+      {
+        "type": "number",
+        "name": "row"
+      }
+    ]
+  },
+  {
+    "id": "player_set_inventory_menu_item",
+    "name": "set_menu_item",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "number",
+        "name": "slot"
+      }
+    ]
+  },
+  {
+    "id": "player_set_inventory_menu_name",
+    "name": "set_menu_name",
+    "object": "player",
+    "args": [
+      {
+        "type": "text",
+        "name": "text"
+      }
+    ]
+  },
+  {
+    "id": "player_show_inventory_menu",
+    "name": "show_menu",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "items",
+        "array": true,
+        "length": 27
+      },
+      {
+        "type": "text",
+        "name": "name"
+      },
+      {
+        "type": "enum",
+        "name": "inventory_type",
+        "enum": [
+          "CHEST",
+          "DISPENSER",
+          "DROPPER",
+          "FURNACE",
+          "WORKBENCH",
+          "CRAFTING",
+          "ENCHANTING",
+          "BREWING",
+          "PLAYER",
+          "CREATIVE",
+          "MERCHANT",
+          "ENDER_CHEST",
+          "ANVIL",
+          "SMITHING",
+          "BEACON",
+          "HOPPER",
+          "SHULKER_BOX",
+          "BARREL",
+          "BLAST_FURNACE",
+          "LECTERN",
+          "SMOKER",
+          "LOOM",
+          "CARTOGRAPHY",
+          "GRINDSTONE",
+          "STONECUTTER",
+          "COMPOSTER"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "player_clear_inventory",
+    "name": "clear_inventory",
+    "object": "player",
+    "args": [
+      {
+        "type": "enum",
+        "name": "clear_mode",
+        "enum": [
+          "ENTIRE",
+          "MAIN",
+          "UPPER",
+          "HOTBAR",
+          "ARMOR"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "player_clear_items",
+    "name": "clear_items",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "items",
+        "array": true,
+        "length": 18
+      }
+    ]
+  },
+  {
+    "id": "player_give_items",
+    "name": "give_items",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "items",
+        "array": true,
+        "length": 17
+      },
+      {
+        "type": "number",
+        "name": "amount"
+      }
+    ]
+  },
+  {
+    "id": "player_give_random_item",
+    "name": "give_random_item",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "items",
+        "array": true,
+        "length": 27
+      }
+    ]
+  },
+  {
+    "id": "player_load_inventory",
+    "name": "load_inventory",
+    "object": "player",
+    "args": []
+  },
+  {
+    "id": "player_remove_items",
+    "name": "remove_items",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "items",
+        "array": true,
+        "length": 18
+      }
+    ]
+  },
+  {
+    "id": "player_replace_items",
+    "name": "replace_items",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "items",
+        "array": true,
+        "length": 28
+      },
+      {
+        "type": "item",
+        "name": "replace"
+      },
+      {
+        "type": "number",
+        "name": "count"
+      }
+    ]
+  },
+  {
+    "id": "player_save_inventory",
+    "name": "save_inventory",
+    "object": "player",
+    "args": []
+  },
+  {
+    "id": "player_set_armor",
+    "name": "set_armor",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "helmet"
+      },
+      {
+        "type": "item",
+        "name": "chestplate"
+      },
+      {
+        "type": "item",
+        "name": "leggings"
+      },
+      {
+        "type": "item",
+        "name": "boots"
+      }
+    ]
+  },
+  {
+    "id": "player_set_cursor_item",
+    "name": "set_cursor_item",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "item"
+      }
+    ]
+  },
+  {
+    "id": "player_set_equipment",
+    "name": "set_equipment",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "enum",
+        "name": "slot",
+        "enum": [
+          "CHEST",
+          "FEET",
+          "HAND",
+          "HEAD",
+          "LEGS",
+          "OFF_HAND"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "player_set_item_cooldown",
+    "name": "set_item_cooldown",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "number",
+        "name": "cooldown"
+      },
+      {
+        "type": "sound",
+        "name": "sound"
+      }
+    ]
+  },
+  {
+    "id": "player_set_items",
+    "name": "set_items",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "items",
+        "array": true,
+        "length": 36
+      }
+    ]
+  },
+  {
+    "id": "player_set_slot_item",
+    "name": "set_slot_item",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "number",
+        "name": "slot"
+      }
+    ]
+  },
+  {
+    "id": "player_kick",
+    "name": "kick",
+    "object": "player",
+    "args": []
+  },
+  {
+    "id": "player_boost_elytra",
+    "name": "boost_elytra",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "firework"
+      }
+    ]
+  },
+  {
+    "id": "player_face_location",
+    "name": "face_location",
+    "object": "player",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      }
+    ]
+  },
+  {
+    "id": "player_force_flight_mode",
+    "name": "force_flight_mode",
+    "object": "player",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "is_flying"
+      }
+    ]
+  },
+  {
+    "id": "player_launch_forward",
+    "name": "launch_forward",
+    "object": "player",
+    "args": [
+      {
+        "type": "number",
+        "name": "power"
+      },
+      {
+        "type": "boolean",
+        "name": "increment"
+      },
+      {
+        "type": "enum",
+        "name": "launch_axis",
+        "enum": [
+          "YAW_AND_PITCH",
+          "YAW"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "player_launch_to_location",
+    "name": "launch_to_location",
+    "object": "player",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "number",
+        "name": "power"
+      },
+      {
+        "type": "boolean",
+        "name": "increment"
+      }
+    ]
+  },
+  {
+    "id": "player_launch_up",
+    "name": "launch_up",
+    "object": "player",
+    "args": [
+      {
+        "type": "number",
+        "name": "power"
+      },
+      {
+        "type": "boolean",
+        "name": "increment"
+      }
+    ]
+  },
+  {
+    "id": "player_randomized_teleport",
+    "name": "randomized_teleport",
+    "object": "player",
+    "args": [
+      {
+        "type": "location",
+        "name": "locations",
+        "array": true,
+        "length": 18
+      },
+      {
+        "type": "boolean",
+        "name": "keep_rotation"
+      }
+    ]
+  },
+  {
+    "id": "player_ride_entity",
+    "name": "ride_entity",
+    "object": "player",
+    "args": [
+      {
+        "type": "text",
+        "name": "name_or_uuid"
+      }
+    ]
+  },
+  {
+    "id": "player_set_flying",
+    "name": "set_flying",
+    "object": "player",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "is_flying"
+      }
+    ]
+  },
+  {
+    "id": "player_set_gliding",
+    "name": "set_gliding",
+    "object": "player",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "is_gliding"
+      }
+    ]
+  },
+  {
+    "id": "player_set_rotation",
+    "name": "set_rotation",
+    "object": "player",
+    "args": [
+      {
+        "type": "number",
+        "name": "yaw"
+      },
+      {
+        "type": "number",
+        "name": "pitch"
+      }
+    ]
+  },
+  {
+    "id": "player_set_velocity",
+    "name": "set_velocity",
+    "object": "player",
+    "args": [
+      {
+        "type": "vector",
+        "name": "velocity"
+      },
+      {
+        "type": "boolean",
+        "name": "increment"
+      }
+    ]
+  },
+  {
+    "id": "player_spectate_target",
+    "name": "spectate_target",
+    "object": "player",
+    "args": [
+      {
+        "type": "text",
+        "name": "name_or_uuid"
+      }
+    ]
+  },
+  {
+    "id": "player_teleport",
+    "name": "teleport",
+    "object": "player",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "boolean",
+        "name": "keep_rotation"
+      }
+    ]
+  },
+  {
+    "id": "player_teleport_sequence",
+    "name": "teleport_sequence",
+    "object": "player",
+    "args": [
+      {
+        "type": "number",
+        "name": "delay"
+      },
+      {
+        "type": "location",
+        "name": "locations",
+        "array": true,
+        "length": 14
+      }
+    ]
+  },
+  {
+    "id": "player_clear_potion_effects",
+    "name": "clear_potion_effects",
+    "object": "player",
+    "args": []
+  },
+  {
+    "id": "player_damage",
+    "name": "damage",
+    "object": "player",
+    "args": [
+      {
+        "type": "number",
+        "name": "damage"
+      },
+      {
+        "type": "text",
+        "name": "source"
+      }
+    ]
+  },
+  {
+    "id": "player_give_experience",
+    "name": "give_experience",
+    "object": "player",
+    "args": [
+      {
+        "type": "number",
+        "name": "experience"
+      },
+      {
+        "type": "enum",
+        "name": "mode",
+        "enum": [
+          "POINTS",
+          "LEVEL",
+          "LEVEL_PERCENTAGE"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "player_give_potion_effect",
+    "name": "give_potion_effect",
+    "object": "player",
+    "args": [
+      {
+        "type": "potion",
+        "name": "potions",
+        "array": true,
+        "length": 18
+      },
+      {
+        "type": "boolean",
+        "name": "overwrite"
+      },
+      {
+        "type": "boolean",
+        "name": "show_icon"
+      },
+      {
+        "type": "enum",
+        "name": "particle_mode",
+        "enum": [
+          "REGULAR",
+          "ItemStack"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "player_heal",
+    "name": "heal",
+    "object": "player",
+    "args": [
+      {
+        "type": "number",
+        "name": "heal"
+      }
+    ]
+  },
+  {
+    "id": "player_remove_potion_effect",
+    "name": "remove_potion_effect",
+    "object": "player",
+    "args": [
+      {
+        "type": "potion",
+        "name": "potions",
+        "array": true,
+        "length": 18
+      }
+    ]
+  },
+  {
+    "id": "player_set_absorption_health",
+    "name": "set_absorption_health",
+    "object": "player",
+    "args": [
+      {
+        "type": "number",
+        "name": "health"
+      }
+    ]
+  },
+  {
+    "id": "player_set_air_ticks",
+    "name": "set_air_ticks",
+    "object": "player",
+    "args": [
+      {
+        "type": "number",
+        "name": "ticks"
+      }
+    ]
+  },
+  {
+    "id": "player_set_attack_speed",
+    "name": "set_attack_speed",
+    "object": "player",
+    "args": [
+      {
+        "type": "number",
+        "name": "speed"
+      }
+    ]
+  },
+  {
+    "id": "player_set_experience",
+    "name": "set_experience",
+    "object": "player",
+    "args": [
+      {
+        "type": "number",
+        "name": "experience"
+      },
+      {
+        "type": "enum",
+        "name": "mode",
+        "enum": [
+          "POINTS",
+          "LEVEL",
+          "LEVEL_PERCENTAGE"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "player_set_fall_distance",
+    "name": "set_fall_distance",
+    "object": "player",
+    "args": [
+      {
+        "type": "number",
+        "name": "distance"
+      }
+    ]
+  },
+  {
+    "id": "player_set_fire_ticks",
+    "name": "set_fire_ticks",
+    "object": "player",
+    "args": [
+      {
+        "type": "number",
+        "name": "ticks"
+      }
+    ]
+  },
+  {
+    "id": "player_set_food",
+    "name": "set_food",
+    "object": "player",
+    "args": [
+      {
+        "type": "number",
+        "name": "food"
+      }
+    ]
+  },
+  {
+    "id": "player_set_freeze_ticks",
+    "name": "set_freeze_ticks",
+    "object": "player",
+    "args": [
+      {
+        "type": "number",
+        "name": "ticks"
+      },
+      {
+        "type": "boolean",
+        "name": "ticking_locked"
+      }
+    ]
+  },
+  {
+    "id": "player_set_health",
+    "name": "set_health",
+    "object": "player",
+    "args": [
+      {
+        "type": "number",
+        "name": "health"
+      }
+    ]
+  },
+  {
+    "id": "player_set_hotbar_slot",
+    "name": "set_hotbar_slot",
+    "object": "player",
+    "args": [
+      {
+        "type": "number",
+        "name": "slot"
+      }
+    ]
+  },
+  {
+    "id": "player_set_invulnerability_ticks",
+    "name": "set_invulnerability_ticks",
+    "object": "player",
+    "args": [
+      {
+        "type": "number",
+        "name": "ticks"
+      }
+    ]
+  },
+  {
+    "id": "player_set_max_health",
+    "name": "set_max_health",
+    "object": "player",
+    "args": [
+      {
+        "type": "number",
+        "name": "health"
+      },
+      {
+        "type": "boolean",
+        "name": "heal"
+      }
+    ]
+  },
+  {
+    "id": "player_set_movement_speed",
+    "name": "set_movement_speed",
+    "object": "player",
+    "args": [
+      {
+        "type": "number",
+        "name": "distance"
+      },
+      {
+        "type": "enum",
+        "name": "movement_type",
+        "enum": [
+          "WALK",
+          "FLY"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "player_set_saturation",
+    "name": "set_saturation",
+    "object": "player",
+    "args": [
+      {
+        "type": "number",
+        "name": "saturation"
+      }
+    ]
+  },
+  {
+    "id": "player_display_lightning",
+    "name": "display_lightning",
+    "object": "player",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      }
+    ]
+  },
+  {
+    "id": "player_display_particle",
+    "name": "display_particle",
+    "object": "player",
+    "args": [
+      {
+        "type": "particle",
+        "name": "particle"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      }
+    ]
+  },
+  {
+    "id": "player_display_particle_line",
+    "name": "display_particle_line",
+    "object": "player",
+    "args": [
+      {
+        "type": "particle",
+        "name": "particle"
+      },
+      {
+        "type": "location",
+        "name": "start"
+      },
+      {
+        "type": "location",
+        "name": "end"
+      },
+      {
+        "type": "number",
+        "name": "divider"
+      },
+      {
+        "type": "enum",
+        "name": "unit_of_measurement",
+        "enum": [
+          "POINTS",
+          "DISTANCE"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "player_display_particle_ray",
+    "name": "display_particle_ray",
+    "object": "player",
+    "args": [
+      {
+        "type": "particle",
+        "name": "particle"
+      },
+      {
+        "type": "location",
+        "name": "start"
+      },
+      {
+        "type": "vector",
+        "name": "ray"
+      },
+      {
+        "type": "number",
+        "name": "divider"
+      },
+      {
+        "type": "enum",
+        "name": "unit_of_measurement",
+        "enum": [
+          "POINTS",
+          "DISTANCE"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "player_display_vibration",
+    "name": "display_vibration",
+    "object": "player",
+    "args": [
+      {
+        "type": "location",
+        "name": "from"
+      },
+      {
+        "type": "location",
+        "name": "to"
+      },
+      {
+        "type": "number",
+        "name": "destination_time"
+      }
+    ]
+  },
+  {
+    "id": "player_allow_placing_breaking_blocks",
+    "name": "allow_placing_breaking_blocks",
+    "object": "player",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "allow"
+      },
+      {
+        "type": "item",
+        "name": "blocks",
+        "array": true,
+        "length": 18
+      }
+    ]
+  },
+  {
+    "id": "player_set_allow_flying",
+    "name": "set_allow_flying",
+    "object": "player",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "allow_flying"
+      }
+    ]
+  },
+  {
+    "id": "player_set_collidable",
+    "name": "set_collidable",
+    "object": "player",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "collidable"
+      }
+    ]
+  },
+  {
+    "id": "player_set_death_drops",
+    "name": "set_death_drops",
+    "object": "player",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "death_drops"
+      }
+    ]
+  },
+  {
+    "id": "player_set_gamemode",
+    "name": "set_gamemode",
+    "object": "player",
+    "args": [
+      {
+        "type": "enum",
+        "name": "gamemode",
+        "enum": [
+          "SURVIVAL",
+          "CREATIVE",
+          "ADVENTURE",
+          "SPECTATOR"
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "flight_mode",
+        "enum": [
+          "RESPECT_GAMEMODE",
+          "KEEP_ORIGINAL"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "player_set_instant_respawn",
+    "name": "set_instant_respawn",
+    "object": "player",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "instant_respawn"
+      }
+    ]
+  },
+  {
+    "id": "player_set_inventory_kept",
+    "name": "set_inventory_kept",
+    "object": "player",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "kept"
+      }
+    ]
+  },
+  {
+    "id": "player_set_nametag_visible",
+    "name": "set_nametag_visible",
+    "object": "player",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "visible"
+      }
+    ]
+  },
+  {
+    "id": "player_set_pvp",
+    "name": "set_pvp",
+    "object": "player",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "pvp"
+      }
+    ]
+  },
+  {
+    "id": "player_set_spawn_point",
+    "name": "set_spawn_point",
+    "object": "player",
+    "args": [
+      {
+        "type": "location",
+        "name": "spawn_point"
+      }
+    ]
+  },
+  {
+    "id": "player_display_block",
+    "name": "display_block",
+    "object": "player",
+    "args": [
+      {
+        "type": "location",
+        "name": "location",
+        "array": true,
+        "length": 27
+      },
+      {
+        "type": "item",
+        "name": "block"
+      }
+    ]
+  },
+  {
+    "id": "player_set_block_opened_state",
+    "name": "set_block_opened_state",
+    "object": "player",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "boolean",
+        "name": "is_opened"
+      }
+    ]
+  },
+  {
+    "id": "player_display_end_gateway_beam",
+    "name": "display_end_gateway_beam",
+    "object": "player",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "enum",
+        "name": "color",
+        "enum": [
+          "LIGHT_PURPLE",
+          "DARK_PURPLE"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "player_display_hologram",
+    "name": "display_hologram",
+    "object": "player",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "text",
+        "name": "text"
+      }
+    ]
+  },
+  {
+    "id": "player_display_sign_text",
+    "name": "display_sign_text",
+    "object": "player",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "text",
+        "name": "line_1"
+      },
+      {
+        "type": "text",
+        "name": "line_2"
+      },
+      {
+        "type": "text",
+        "name": "line_3"
+      },
+      {
+        "type": "text",
+        "name": "line_4"
+      }
+    ]
+  },
+  {
+    "id": "player_hide_player",
+    "name": "hide_player",
+    "object": "player",
+    "args": [
+      {
+        "type": "text",
+        "name": "name_or_uuid"
+      },
+      {
+        "type": "boolean",
+        "name": "hide"
+      }
+    ]
+  },
+  {
+    "id": "player_launch_projectile",
+    "name": "launch_projectile",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "projectile"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "text",
+        "name": "name"
+      },
+      {
+        "type": "number",
+        "name": "speed"
+      },
+      {
+        "type": "number",
+        "name": "inaccuracy"
+      },
+      {
+        "type": "particle",
+        "name": "trail"
+      }
+    ]
+  },
+  {
+    "id": "player_remove_world_border",
+    "name": "remove_world_border",
+    "object": "player",
+    "args": []
+  },
+  {
+    "id": "player_send_break_animation",
+    "name": "send_break_animation",
+    "object": "player",
+    "args": [
+      {
+        "type": "location",
+        "name": "locations",
+        "array": true,
+        "length": 14
+      },
+      {
+        "type": "number",
+        "name": "stage"
+      }
+    ]
+  },
+  {
+    "id": "player_set_compass_target",
+    "name": "set_compass_target",
+    "object": "player",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      }
+    ]
+  },
+  {
+    "id": "player_set_fog_distance",
+    "name": "set_fog_distance",
+    "object": "player",
+    "args": [
+      {
+        "type": "number",
+        "name": "distance"
+      }
+    ]
+  },
+  {
+    "id": "player_set_time",
+    "name": "set_time",
+    "object": "player",
+    "args": [
+      {
+        "type": "number",
+        "name": "time"
+      }
+    ]
+  },
+  {
+    "id": "player_set_weather",
+    "name": "set_weather",
+    "object": "player",
+    "args": [
+      {
+        "type": "enum",
+        "name": "weather_type",
+        "enum": [
+          "DOWNFALL",
+          "CLEAR"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "player_set_world_border",
+    "name": "set_world_border",
+    "object": "player",
+    "args": [
+      {
+        "type": "location",
+        "name": "center"
+      },
+      {
+        "type": "number",
+        "name": "size"
+      },
+      {
+        "type": "number",
+        "name": "warning"
+      }
+    ]
+  },
+  {
+    "id": "player_shift_world_border",
+    "name": "shift_world_border",
+    "object": "player",
+    "args": [
+      {
+        "type": "number",
+        "name": "old_size"
+      },
+      {
+        "type": "number",
+        "name": "size"
+      },
+      {
+        "type": "number",
+        "name": "time"
+      }
+    ]
+  },
+  {
+    "id": "repeat_adjacently",
+    "name": "adjacently",
+    "object": "repeat",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "origin"
+      },
+      {
+        "type": "boolean",
+        "name": "change_rotation"
+      },
+      {
+        "type": "boolean",
+        "name": "include_self"
+      },
+      {
+        "type": "enum",
+        "name": "pattern",
+        "enum": [
+          "CARDINAL",
+          "ItemStack"
+        ]
+      }
+    ],
+    "containing": "lambda",
+    "lambda": [
+      "variable"
+    ]
+  },
+  {
+    "id": "repeat_for_each_in_list",
+    "name": "for_each_in_list",
+    "object": "repeat",
+    "args": [
+      {
+        "type": "variable",
+        "name": "index_variable"
+      },
+      {
+        "type": "variable",
+        "name": "value_variable"
+      },
+      {
+        "type": "variable",
+        "name": "list"
+      }
+    ],
+    "containing": "lambda",
+    "lambda": [
+      "index_variable",
+      "value_variable"
+    ]
+  },
+  {
+    "id": "repeat_for_each_map_entry",
+    "name": "for_each_map_entry",
+    "object": "repeat",
+    "args": [
+      {
+        "type": "variable",
+        "name": "key_variable"
+      },
+      {
+        "type": "variable",
+        "name": "value_variable"
+      },
+      {
+        "type": "variable",
+        "name": "map"
+      }
+    ],
+    "containing": "lambda",
+    "lambda": [
+      "key_variable",
+      "value_variable"
+    ]
+  },
+  {
+    "id": "repeat_forever",
+    "name": "forever",
+    "object": "repeat",
+    "args": [],
+    "containing": "lambda"
+  },
+  {
+    "id": "repeat_multi_times",
+    "name": "multi_times",
+    "object": "repeat",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "amount"
+      }
+    ],
+    "containing": "lambda",
+    "lambda": [
+      "variable"
+    ]
+  },
+  {
+    "id": "repeat_on_circle",
+    "name": "on_circle",
+    "object": "repeat",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "center"
+      },
+      {
+        "type": "number",
+        "name": "radius"
+      },
+      {
+        "type": "number",
+        "name": "circle_points"
+      },
+      {
+        "type": "vector",
+        "name": "perpendicular_to_plane"
+      },
+      {
+        "type": "number",
+        "name": "start_angle"
+      },
+      {
+        "type": "enum",
+        "name": "angle_unit",
+        "enum": [
+          "DEGREES",
+          "RADIANS"
+        ]
+      }
+    ],
+    "containing": "lambda"
+  },
+  {
+    "id": "repeat_on_grid",
+    "name": "on_grid",
+    "object": "repeat",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "start"
+      },
+      {
+        "type": "location",
+        "name": "end"
+      }
+    ],
+    "containing": "lambda",
+    "lambda": [
+      "variable"
+    ]
+  },
+  {
+    "id": "repeat_on_path",
+    "name": "on_path",
+    "object": "repeat",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "step"
+      },
+      {
+        "type": "location",
+        "name": "locations",
+        "array": true,
+        "length": 21
+      },
+      {
+        "type": "boolean",
+        "name": "rotation"
+      }
+    ],
+    "containing": "lambda",
+    "lambda": [
+      "variable"
+    ]
+  },
+  {
+    "id": "repeat_on_range",
+    "name": "on_range",
+    "object": "repeat",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "start"
+      },
+      {
+        "type": "number",
+        "name": "end"
+      },
+      {
+        "type": "number",
+        "name": "interval"
+      }
+    ],
+    "containing": "lambda",
+    "lambda": [
+      "variable"
+    ]
+  },
+  {
+    "id": "repeat_while",
+    "name": "while",
+    "object": "repeat",
+    "args": [],
+    "containing": "lambda",
+    "conditional": true
+  },
+  {
+    "id": "select_all_entities",
+    "name": "all_entities",
+    "object": "select",
+    "args": []
+  },
+  {
+    "id": "select_all_mobs",
+    "name": "all_mobs",
+    "object": "select",
+    "args": []
+  },
+  {
+    "id": "select_all_players",
+    "name": "all_players",
+    "object": "select",
+    "args": []
+  },
+  {
+    "id": "select_entity_by_conditional",
+    "name": "entity_by_conditional",
+    "object": "select",
+    "args": [],
+    "conditional": true
+  },
+  {
+    "id": "select_entity_by_name",
+    "name": "entity_by_name",
+    "object": "select",
+    "args": [
+      {
+        "type": "text",
+        "name": "name_or_uuid"
+      }
+    ]
+  },
+  {
+    "id": "select_event_target",
+    "name": "event_target",
+    "object": "select",
+    "args": [
+      {
+        "type": "enum",
+        "name": "selection_type",
+        "enum": [
+          "DEFAULT",
+          "KILLER",
+          "DAMAGER",
+          "VICTIM",
+          "SHOOTER",
+          "PROJECTILE"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "select_invert",
+    "name": "invert",
+    "object": "select",
+    "args": []
+  },
+  {
+    "id": "select_last_entity",
+    "name": "last_entity",
+    "object": "select",
+    "args": []
+  },
+  {
+    "id": "select_last_mob",
+    "name": "last_mob",
+    "object": "select",
+    "args": []
+  },
+  {
+    "id": "select_mob_by_name",
+    "name": "mob_by_name",
+    "object": "select",
+    "args": [
+      {
+        "type": "text",
+        "name": "name_or_uuid"
+      }
+    ]
+  },
+  {
+    "id": "select_player_by_conditional",
+    "name": "player_by_conditional",
+    "object": "select",
+    "args": [],
+    "conditional": true
+  },
+  {
+    "id": "select_player_by_name",
+    "name": "player_by_name",
+    "object": "select",
+    "args": [
+      {
+        "type": "text",
+        "name": "name_or_uuid"
+      }
+    ]
+  },
+  {
+    "id": "select_random_entity",
+    "name": "random_entity",
+    "object": "select",
+    "args": []
+  },
+  {
+    "id": "select_random_mob",
+    "name": "random_mob",
+    "object": "select",
+    "args": []
+  },
+  {
+    "id": "select_random_player",
+    "name": "random_player",
+    "object": "select",
+    "args": []
+  },
+  {
+    "id": "select_reset",
+    "name": "reset",
+    "object": "select",
+    "args": []
+  },
+  {
+    "id": "select_filter_by_conditional",
+    "name": "filter_by_conditional",
+    "object": "select",
+    "args": [],
+    "conditional": true
+  },
+  {
+    "id": "select_filter_by_distance",
+    "name": "filter_by_distance",
+    "object": "select",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "number",
+        "name": "selection_size"
+      },
+      {
+        "type": "boolean",
+        "name": "ignore_y_axis"
+      },
+      {
+        "type": "enum",
+        "name": "compare_mode",
+        "enum": [
+          "NEAREST",
+          "FARTHEST"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "select_filter_by_raycast",
+    "name": "filter_by_raycast",
+    "object": "select",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "origin"
+      },
+      {
+        "type": "number",
+        "name": "max_distance"
+      },
+      {
+        "type": "number",
+        "name": "ray_size"
+      },
+      {
+        "type": "number",
+        "name": "selection_size"
+      },
+      {
+        "type": "boolean",
+        "name": "consider_blocks"
+      },
+      {
+        "type": "boolean",
+        "name": "ignore_passable_blocks"
+      },
+      {
+        "type": "enum",
+        "name": "fluid_collision_mode",
+        "enum": [
+          "NEVER",
+          "SOURCE_ONLY",
+          "ALWAYS"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "select_filter_randomly",
+    "name": "filter_randomly",
+    "object": "select",
+    "args": [
+      {
+        "type": "number",
+        "name": "size"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_append_list",
+    "name": "append_list",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "variable",
+        "name": "list_1"
+      },
+      {
+        "type": "variable",
+        "name": "list_2"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "list_1"
+  },
+  {
+    "id": "set_variable_append_value",
+    "name": "append_value",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "any",
+        "name": "values",
+        "array": true,
+        "length": 21
+      }
+    ],
+    "origin": "variable"
+  },
+  {
+    "id": "set_variable_create_list",
+    "name": "create_list",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "any",
+        "name": "values",
+        "array": true,
+        "length": 21
+      }
+    ],
+    "assigning": "variable"
+  },
+  {
+    "id": "set_variable_get_list_index_of_value",
+    "name": "get_list_index_of_value",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "variable",
+        "name": "list"
+      },
+      {
+        "type": "any",
+        "name": "value"
+      },
+      {
+        "type": "enum",
+        "name": "search_mode",
+        "enum": [
+          "FIRST",
+          "LAST"
+        ]
+      }
+    ],
+    "assigning": "variable",
+    "origin": "list"
+  },
+  {
+    "id": "set_variable_get_list_length",
+    "name": "get_list_length",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "variable",
+        "name": "list"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "list"
+  },
+  {
+    "id": "set_variable_get_list_value",
+    "name": "get_list_value",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "variable",
+        "name": "list"
+      },
+      {
+        "type": "number",
+        "name": "number"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "list"
+  },
+  {
+    "id": "set_variable_insert_list_value",
+    "name": "insert_list_value",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "variable",
+        "name": "list"
+      },
+      {
+        "type": "number",
+        "name": "number"
+      },
+      {
+        "type": "any",
+        "name": "value"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "list"
+  },
+  {
+    "id": "set_variable_randomize_list_order",
+    "name": "randomize_list_order",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "variable",
+        "name": "list"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "list"
+  },
+  {
+    "id": "set_variable_remove_list_value",
+    "name": "remove_list_value",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "variable",
+        "name": "list"
+      },
+      {
+        "type": "any",
+        "name": "value"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "list"
+  },
+  {
+    "id": "set_variable_remove_list_value_at_index",
+    "name": "remove_list_value_at_index",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "variable",
+        "name": "list"
+      },
+      {
+        "type": "number",
+        "name": "index"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "list"
+  },
+  {
+    "id": "set_variable_reverse_list",
+    "name": "reverse_list",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "variable",
+        "name": "list"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "list"
+  },
+  {
+    "id": "set_variable_set_list_value",
+    "name": "set_list_value",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "variable",
+        "name": "list"
+      },
+      {
+        "type": "number",
+        "name": "number"
+      },
+      {
+        "type": "any",
+        "name": "value"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "list"
+  },
+  {
+    "id": "set_variable_sort_any_list",
+    "name": "sort_any_list",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "variable",
+        "name": "list"
+      },
+      {
+        "type": "enum",
+        "name": "sort_mode",
+        "enum": [
+          "ASCENDING",
+          "DESCENDING"
+        ]
+      }
+    ],
+    "assigning": "variable",
+    "origin": "list"
+  },
+  {
+    "id": "set_variable_trim_list",
+    "name": "trim_list",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "variable",
+        "name": "list"
+      },
+      {
+        "type": "number",
+        "name": "start"
+      },
+      {
+        "type": "number",
+        "name": "end"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "list"
+  },
+  {
+    "id": "set_variable_add_item_enchantment",
+    "name": "add_item_enchantment",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "text",
+        "name": "enchantment"
+      },
+      {
+        "type": "number",
+        "name": "level"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_get_book_text",
+    "name": "get_book_text",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "book"
+      },
+      {
+        "type": "number",
+        "name": "page"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "book"
+  },
+  {
+    "id": "set_variable_get_item_amount",
+    "name": "get_item_amount",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "item"
+  },
+  {
+    "id": "set_variable_get_item_color",
+    "name": "get_item_color",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_get_item_custom_tag",
+    "name": "get_item_custom_tag",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "text",
+        "name": "tag_name"
+      },
+      {
+        "type": "any",
+        "name": "default_value"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "item"
+  },
+  {
+    "id": "set_variable_get_item_custom_tags",
+    "name": "get_item_custom_tags",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_get_item_durability",
+    "name": "get_item_durability",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "enum",
+        "name": "durability_type",
+        "enum": [
+          "DAMAGE",
+          "DAMAGE_PERCENTAGE",
+          "REMAINING",
+          "REMAINING_PERCENTAGE",
+          "MAXIMUM"
+        ]
+      }
+    ],
+    "assigning": "variable",
+    "origin": "item"
+  },
+  {
+    "id": "set_variable_get_item_enchantments",
+    "name": "get_item_enchantments",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_get_item_lore",
+    "name": "get_item_lore",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "item"
+  },
+  {
+    "id": "set_variable_get_item_type",
+    "name": "get_item_type",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "type"
+      },
+      {
+        "type": "enum",
+        "name": "value",
+        "enum": [
+          "ID",
+          "NAME",
+          "ITEM"
+        ]
+      }
+    ],
+    "assigning": "variable",
+    "origin": "type"
+  },
+  {
+    "id": "set_variable_get_item_max_stack_size",
+    "name": "get_item_max_stack_size",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "item"
+  },
+  {
+    "id": "set_variable_get_item_name",
+    "name": "get_item_name",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "item"
+  },
+  {
+    "id": "set_variable_get_item_nbt_tags",
+    "name": "get_item_nbt_tags",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_get_player_head",
+    "name": "get_player_head",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "text",
+        "name": "name_or_uuid"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_remove_item_custom_tag",
+    "name": "remove_item_custom_tag",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "text",
+        "name": "tag_name"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "item"
+  },
+  {
+    "id": "set_variable_remove_enchantment",
+    "name": "remove_enchantment",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "text",
+        "name": "enchantment"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_set_book_page",
+    "name": "set_book_page",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "book"
+      },
+      {
+        "type": "text",
+        "name": "text"
+      },
+      {
+        "type": "number",
+        "name": "page"
+      },
+      {
+        "type": "enum",
+        "name": "mode",
+        "enum": [
+          "MERGE",
+          "APPEND"
+        ]
+      }
+    ],
+    "assigning": "variable",
+    "origin": "book"
+  },
+  {
+    "id": "set_variable_set_book_pages",
+    "name": "set_book_pages",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "book"
+      },
+      {
+        "type": "text",
+        "name": "text",
+        "array": true,
+        "length": 21
+      }
+    ],
+    "assigning": "variable",
+    "origin": "book"
+  },
+  {
+    "id": "set_variable_set_item_amount",
+    "name": "set_item_amount",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "number",
+        "name": "amount"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "item"
+  },
+  {
+    "id": "set_variable_set_item_color",
+    "name": "set_item_color",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "text",
+        "name": "color"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_set_item_custom_tag",
+    "name": "set_item_custom_tag",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "text",
+        "name": "tag_name"
+      },
+      {
+        "type": "text",
+        "name": "tag_value"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "item"
+  },
+  {
+    "id": "set_variable_set_item_durability",
+    "name": "set_item_durability",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "number",
+        "name": "durability"
+      },
+      {
+        "type": "enum",
+        "name": "durability_type",
+        "enum": [
+          "DAMAGE",
+          "DAMAGE_PERCENTAGE",
+          "REMAINING",
+          "REMAINING_PERCENTAGE"
+        ]
+      }
+    ],
+    "assigning": "variable",
+    "origin": "item"
+  },
+  {
+    "id": "set_variable_set_item_enchantments",
+    "name": "set_item_enchantments",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "variable",
+        "name": "enchantments"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_set_item_lore",
+    "name": "set_item_lore",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "text",
+        "name": "lore",
+        "array": true,
+        "length": 21
+      },
+      {
+        "type": "item",
+        "name": "item"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "item"
+  },
+  {
+    "id": "set_variable_set_item_lore_line",
+    "name": "set_item_lore_line",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "text",
+        "name": "text"
+      },
+      {
+        "type": "number",
+        "name": "line"
+      },
+      {
+        "type": "enum",
+        "name": "mode",
+        "enum": [
+          "MERGE",
+          "APPEND"
+        ]
+      }
+    ],
+    "assigning": "variable",
+    "origin": "item"
+  },
+  {
+    "id": "set_variable_set_item_type",
+    "name": "set_item_type",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "text",
+        "name": "type"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "item"
+  },
+  {
+    "id": "set_variable_set_item_name",
+    "name": "set_item_name",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "text",
+        "name": "text"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "item"
+  },
+  {
+    "id": "set_variable_set_item_unbreakable",
+    "name": "set_item_unbreakable",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "boolean",
+        "name": "unbreakable"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_set_item_visibility_flags",
+    "name": "set_item_visibility_flags",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "enum",
+        "name": "hide_dye",
+        "enum": [
+          "ON",
+          "NO_CHANGE",
+          "OFF"
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "hide_enchantments",
+        "enum": [
+          "ON",
+          "NO_CHANGE",
+          "OFF"
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "hide_attributes",
+        "enum": [
+          "ON",
+          "NO_CHANGE",
+          "OFF"
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "hide_unbreakable",
+        "enum": [
+          "ON",
+          "NO_CHANGE",
+          "OFF"
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "hide_place_on",
+        "enum": [
+          "ON",
+          "NO_CHANGE",
+          "OFF"
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "hide_destroys",
+        "enum": [
+          "ON",
+          "NO_CHANGE",
+          "OFF"
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "hide_potion_effects",
+        "enum": [
+          "ON",
+          "NO_CHANGE",
+          "OFF"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "set_variable_center_location",
+    "name": "center_location",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "locations",
+        "array": true,
+        "length": 21
+      }
+    ],
+    "assigning": "variable",
+    "origin": "locations"
+  },
+  {
+    "id": "set_variable_face_location",
+    "name": "face_location",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "location",
+        "name": "target"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "location"
+  },
+  {
+    "id": "set_variable_get_coordinate",
+    "name": "get_coordinate",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "enum",
+        "name": "type",
+        "enum": [
+          "X",
+          "Y",
+          "Z",
+          "PITCH",
+          "YAW"
+        ]
+      }
+    ],
+    "assigning": "variable",
+    "origin": "location"
+  },
+  {
+    "id": "set_variable_get_location_direction",
+    "name": "get_location_direction",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "location"
+  },
+  {
+    "id": "set_variable_location_relative",
+    "name": "location_relative",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "number",
+        "name": "distance"
+      },
+      {
+        "type": "enum",
+        "name": "block_face",
+        "enum": [
+          "DOWN",
+          "EAST",
+          "EAST_NORTH_EAST",
+          "EAST_SOUTH_EAST",
+          "NORTH",
+          "NORTH_EAST",
+          "NORTH_NORTH_EAST",
+          "NORTH_NORTH_WEST",
+          "NORTH_WEST",
+          "SELF",
+          "SOUTH",
+          "SOUTH_EAST",
+          "SOUTH_SOUTH_EAST",
+          "SOUTH_SOUTH_WEST",
+          "SOUTH_WEST",
+          "UP",
+          "WEST",
+          "WEST_NORTH_WEST",
+          "WEST_SOUTH_WEST"
+        ]
+      }
+    ],
+    "assigning": "variable",
+    "origin": "location"
+  },
+  {
+    "id": "set_variable_locations_distance",
+    "name": "locations_distance",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "location_1"
+      },
+      {
+        "type": "location",
+        "name": "location_2"
+      },
+      {
+        "type": "enum",
+        "name": "type",
+        "enum": [
+          "THREE_D",
+          "TWO_D",
+          "Altitude"
+        ]
+      }
+    ],
+    "assigning": "variable"
+  },
+  {
+    "id": "set_variable_random_location",
+    "name": "random_location",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "location_1"
+      },
+      {
+        "type": "location",
+        "name": "location_2"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_set_all_coordinates",
+    "name": "set_all_coordinates",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "x"
+      },
+      {
+        "type": "number",
+        "name": "y"
+      },
+      {
+        "type": "number",
+        "name": "z"
+      },
+      {
+        "type": "number",
+        "name": "yaw"
+      },
+      {
+        "type": "number",
+        "name": "pitch"
+      }
+    ],
+    "assigning": "variable"
+  },
+  {
+    "id": "set_variable_set_coordinate",
+    "name": "set_coordinate",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "number",
+        "name": "coordinate"
+      },
+      {
+        "type": "enum",
+        "name": "type",
+        "enum": [
+          "X",
+          "Y",
+          "Z",
+          "PITCH",
+          "YAW"
+        ]
+      }
+    ],
+    "assigning": "variable",
+    "origin": "location"
+  },
+  {
+    "id": "set_variable_set_location_direction",
+    "name": "set_location_direction",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "vector",
+        "name": "vector"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "location"
+  },
+  {
+    "id": "set_variable_shift_all_coordinates",
+    "name": "shift_all_coordinates",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "number",
+        "name": "x"
+      },
+      {
+        "type": "number",
+        "name": "y"
+      },
+      {
+        "type": "number",
+        "name": "z"
+      },
+      {
+        "type": "number",
+        "name": "yaw"
+      },
+      {
+        "type": "number",
+        "name": "pitch"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "location"
+  },
+  {
+    "id": "set_variable_shift_coordinate",
+    "name": "shift_coordinate",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "number",
+        "name": "distance"
+      },
+      {
+        "type": "enum",
+        "name": "type",
+        "enum": [
+          "X",
+          "Y",
+          "Z",
+          "PITCH",
+          "YAW"
+        ]
+      }
+    ],
+    "assigning": "variable",
+    "origin": "location"
+  },
+  {
+    "id": "set_variable_shift_location_in_direction",
+    "name": "shift_location_in_direction",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "number",
+        "name": "shift"
+      },
+      {
+        "type": "enum",
+        "name": "direction",
+        "enum": [
+          "FORWARD",
+          "UPWARD",
+          "SIDEWAYS"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "set_variable_shift_location_on_vector",
+    "name": "shift_location_on_vector",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "vector",
+        "name": "vector"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "location"
+  },
+  {
+    "id": "set_variable_append_map",
+    "name": "append_map",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "variable",
+        "name": "map"
+      },
+      {
+        "type": "variable",
+        "name": "other_map"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "map"
+  },
+  {
+    "id": "set_variable_clear_map",
+    "name": "clear_map",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "map"
+      }
+    ],
+    "origin": "map"
+  },
+  {
+    "id": "set_variable_create_map",
+    "name": "create_map",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "variable",
+        "name": "keys"
+      },
+      {
+        "type": "variable",
+        "name": "values"
+      }
+    ],
+    "assigning": "variable"
+  },
+  {
+    "id": "set_variable_get_map_keys",
+    "name": "get_map_keys",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "variable",
+        "name": "map"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "map"
+  },
+  {
+    "id": "set_variable_get_map_size",
+    "name": "get_map_size",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "variable",
+        "name": "map"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "map"
+  },
+  {
+    "id": "set_variable_get_map_value",
+    "name": "get_map_value",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "variable",
+        "name": "map"
+      },
+      {
+        "type": "any",
+        "name": "key"
+      },
+      {
+        "type": "any",
+        "name": "default_value"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "map"
+  },
+  {
+    "id": "set_variable_get_map_values",
+    "name": "get_map_values",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "variable",
+        "name": "map"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "map"
+  },
+  {
+    "id": "set_variable_remove_map_entry",
+    "name": "remove_map_entry",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "variable",
+        "name": "map"
+      },
+      {
+        "type": "any",
+        "name": "key"
+      },
+      {
+        "type": "any",
+        "name": "values",
+        "array": true,
+        "length": 18
+      }
+    ],
+    "assigning": "variable",
+    "origin": "map"
+  },
+  {
+    "id": "set_variable_set_map_value",
+    "name": "set_map_value",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "variable",
+        "name": "map"
+      },
+      {
+        "type": "any",
+        "name": "key"
+      },
+      {
+        "type": "any",
+        "name": "value"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "map"
+  },
+  {
+    "id": "set_variable_get_color_channels",
+    "name": "get_color_channels",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "text",
+        "name": "color"
+      },
+      {
+        "type": "enum",
+        "name": "color_channels",
+        "enum": [
+          "RGB",
+          "HSB",
+          "HSL"
+        ]
+      }
+    ],
+    "assigning": "variable",
+    "origin": "color"
+  },
+  {
+    "id": "set_variable_get_potion_effect_amplifier",
+    "name": "get_potion_effect_amplifier",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "potion",
+        "name": "potion"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_get_potion_effect_duration",
+    "name": "get_potion_effect_duration",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "potion",
+        "name": "potion"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_get_potion_effect_type",
+    "name": "get_potion_effect_type",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "potion",
+        "name": "potion"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_get_sound_pitch",
+    "name": "get_sound_pitch",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "sound",
+        "name": "sound"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "sound"
+  },
+  {
+    "id": "set_variable_get_sound_type",
+    "name": "get_sound_type",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "sound",
+        "name": "sound"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "sound"
+  },
+  {
+    "id": "set_variable_get_sound_volume_action",
+    "name": "get_sound_volume_action",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "sound",
+        "name": "sound"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_get_template_code",
+    "name": "get_template_code",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "template"
+      },
+      {
+        "type": "enum",
+        "name": "return_type",
+        "enum": [
+          "TEXT",
+          "MAP"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "set_variable_set_potion_effect_amplifier",
+    "name": "set_potion_effect_amplifier",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "potion",
+        "name": "potion"
+      },
+      {
+        "type": "number",
+        "name": "amplifier"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_set_potion_effect_duration",
+    "name": "set_potion_effect_duration",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "potion",
+        "name": "potion"
+      },
+      {
+        "type": "number",
+        "name": "duration"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_set_potion_effect_type",
+    "name": "set_potion_effect_type",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "potion",
+        "name": "potion"
+      },
+      {
+        "type": "text",
+        "name": "effect_type"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_set_sound_pitch",
+    "name": "set_sound_pitch",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "sound",
+        "name": "sound"
+      },
+      {
+        "type": "number",
+        "name": "pitch"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "sound"
+  },
+  {
+    "id": "set_variable_set_sound_type",
+    "name": "set_sound_type",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "sound",
+        "name": "sound"
+      },
+      {
+        "type": "text",
+        "name": "namespace"
+      },
+      {
+        "type": "text",
+        "name": "value"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_set_sound_volume_action",
+    "name": "set_sound_volume_action",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "sound",
+        "name": "sound"
+      },
+      {
+        "type": "number",
+        "name": "volume"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_set_template_code",
+    "name": "set_template_code",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "template"
+      },
+      {
+        "type": "any",
+        "name": "code"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_to_hsb",
+    "name": "to_hsb",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "hue"
+      },
+      {
+        "type": "number",
+        "name": "saturation"
+      },
+      {
+        "type": "number",
+        "name": "brightness"
+      }
+    ],
+    "assigning": "variable"
+  },
+  {
+    "id": "set_variable_to_hsl",
+    "name": "to_hsl",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "hue"
+      },
+      {
+        "type": "number",
+        "name": "saturation"
+      },
+      {
+        "type": "number",
+        "name": "lightness"
+      }
+    ],
+    "assigning": "variable"
+  },
+  {
+    "id": "set_variable_to_rgb",
+    "name": "to_rgb",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "red"
+      },
+      {
+        "type": "number",
+        "name": "green"
+      },
+      {
+        "type": "number",
+        "name": "blue"
+      }
+    ],
+    "assigning": "variable"
+  },
+  {
+    "id": "set_variable_absolute",
+    "name": "absolute",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "number"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "number"
+  },
+  {
+    "id": "set_variable_add",
+    "name": "add",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "value",
+        "array": true,
+        "length": 21
+      }
+    ],
+    "assigning": "variable",
+    "origin": "value"
+  },
+  {
+    "id": "set_variable_average",
+    "name": "average",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "value",
+        "array": true,
+        "length": 21
+      }
+    ],
+    "assigning": "variable",
+    "origin": "value"
+  },
+  {
+    "id": "set_variable_bitwise_operation",
+    "name": "bitwise_operation",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "operand1"
+      },
+      {
+        "type": "number",
+        "name": "operand2"
+      },
+      {
+        "type": "enum",
+        "name": "operator",
+        "enum": [
+          "OR",
+          "AND",
+          "NOT",
+          "XOR",
+          "LEFT_SHIFT",
+          "RIGHT_SHIFT",
+          "UNSIGNED_RIGHT_SHIFT"
+        ]
+      }
+    ],
+    "assigning": "variable",
+    "origin": "operand1"
+  },
+  {
+    "id": "set_variable_clamp",
+    "name": "clamp",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "number"
+      },
+      {
+        "type": "number",
+        "name": "min"
+      },
+      {
+        "type": "number",
+        "name": "max"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "number"
+  },
+  {
+    "id": "set_variable_convert_text_to_number",
+    "name": "convert_text_to_number",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "text",
+        "name": "text"
+      },
+      {
+        "type": "number",
+        "name": "radix"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_cosine",
+    "name": "cosine",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "number"
+      },
+      {
+        "type": "enum",
+        "name": "variant",
+        "enum": [
+          "COSINE",
+          "ARCCOSINE",
+          "HYPERBOLIC_COSINE"
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "input",
+        "enum": [
+          "DEGREES",
+          "RADIANS"
+        ]
+      }
+    ],
+    "assigning": "variable",
+    "origin": "number"
+  },
+  {
+    "id": "set_variable_cotangent",
+    "name": "cotangent",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "number"
+      },
+      {
+        "type": "enum",
+        "name": "variant",
+        "enum": [
+          "COTANGENT",
+          "ARCCOTANGENT",
+          "HYPERBOLIC_COTANGENT"
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "input",
+        "enum": [
+          "DEGREES",
+          "RADIANS"
+        ]
+      }
+    ],
+    "assigning": "variable",
+    "origin": "number"
+  },
+  {
+    "id": "set_variable_decrement",
+    "name": "decrement",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "number"
+      }
+    ],
+    "origin": "variable"
+  },
+  {
+    "id": "set_variable_divide",
+    "name": "divide",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "value",
+        "array": true,
+        "length": 21
+      },
+      {
+        "type": "enum",
+        "name": "division_mode",
+        "enum": [
+          "DEFAULT",
+          "ROUND_TO_INT"
+        ]
+      }
+    ],
+    "assigning": "variable",
+    "origin": "value"
+  },
+  {
+    "id": "set_variable_increment",
+    "name": "increment",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "number"
+      }
+    ],
+    "origin": "variable"
+  },
+  {
+    "id": "set_variable_log",
+    "name": "log",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "number"
+      },
+      {
+        "type": "number",
+        "name": "base"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "number"
+  },
+  {
+    "id": "set_variable_max",
+    "name": "max",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "value",
+        "array": true,
+        "length": 21
+      }
+    ],
+    "assigning": "variable",
+    "origin": "value"
+  },
+  {
+    "id": "set_variable_min",
+    "name": "min",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "value",
+        "array": true,
+        "length": 21
+      }
+    ],
+    "assigning": "variable",
+    "origin": "value"
+  },
+  {
+    "id": "set_variable_multiply",
+    "name": "multiply",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "value",
+        "array": true,
+        "length": 21
+      }
+    ],
+    "assigning": "variable",
+    "origin": "value"
+  },
+  {
+    "id": "set_variable_perlin_noise_3d",
+    "name": "perlin_noise_3d",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "seed"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "number",
+        "name": "octaves"
+      },
+      {
+        "type": "number",
+        "name": "frequency"
+      },
+      {
+        "type": "number",
+        "name": "amplitude"
+      },
+      {
+        "type": "boolean",
+        "name": "normalized"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "location"
+  },
+  {
+    "id": "set_variable_pow",
+    "name": "pow",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "base"
+      },
+      {
+        "type": "number",
+        "name": "power"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "base"
+  },
+  {
+    "id": "set_variable_random_number",
+    "name": "random_in_range",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "min"
+      },
+      {
+        "type": "number",
+        "name": "max"
+      },
+      {
+        "type": "boolean",
+        "name": "integer"
+      }
+    ],
+    "assigning": "variable"
+  },
+  {
+    "id": "set_variable_remainder",
+    "name": "remainder",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "dividend"
+      },
+      {
+        "type": "number",
+        "name": "divisor"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "dividend"
+  },
+  {
+    "id": "set_variable_root",
+    "name": "root",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "base"
+      },
+      {
+        "type": "number",
+        "name": "root"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "base"
+  },
+  {
+    "id": "set_variable_round",
+    "name": "round",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "number"
+      },
+      {
+        "type": "number",
+        "name": "precision"
+      },
+      {
+        "type": "enum",
+        "name": "round_type",
+        "enum": [
+          "ROUND",
+          "FLOOR",
+          "CEIL"
+        ]
+      }
+    ],
+    "assigning": "variable",
+    "origin": "number"
+  },
+  {
+    "id": "set_variable_simplex_noise_3d",
+    "name": "simplex_noise_3d",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "seed"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "location"
+  },
+  {
+    "id": "set_variable_sine",
+    "name": "sine",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "number"
+      },
+      {
+        "type": "enum",
+        "name": "variant",
+        "enum": [
+          "SINE",
+          "ARCSINE",
+          "HYPERBOLIC_SINE"
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "input",
+        "enum": [
+          "DEGREES",
+          "RADIANS"
+        ]
+      }
+    ],
+    "assigning": "variable",
+    "origin": "number"
+  },
+  {
+    "id": "set_variable_subtract",
+    "name": "subtract",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "value",
+        "array": true,
+        "length": 21
+      }
+    ],
+    "assigning": "variable",
+    "origin": "value"
+  },
+  {
+    "id": "set_variable_tangent",
+    "name": "tangent",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "number"
+      },
+      {
+        "type": "enum",
+        "name": "variant",
+        "enum": [
+          "TANGENT",
+          "ARCTANGENT",
+          "HYPERBOLIC_TANGENT"
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "input",
+        "enum": [
+          "DEGREES",
+          "RADIANS"
+        ]
+      }
+    ],
+    "assigning": "variable",
+    "origin": "number"
+  },
+  {
+    "id": "set_variable_voronoi_noise_3d",
+    "name": "voronoi_noise_3d",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "number",
+        "name": "seed"
+      },
+      {
+        "type": "number",
+        "name": "frequency"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "location"
+  },
+  {
+    "id": "set_variable_warp",
+    "name": "warp",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "number"
+      },
+      {
+        "type": "number",
+        "name": "min"
+      },
+      {
+        "type": "number",
+        "name": "max"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "number"
+  },
+  {
+    "id": "set_variable_get_particle_amount",
+    "name": "get_particle_amount",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "particle",
+        "name": "particle"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "particle"
+  },
+  {
+    "id": "set_variable_get_particle_color",
+    "name": "get_particle_color",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "particle",
+        "name": "particle"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "particle"
+  },
+  {
+    "id": "set_variable_get_particle_material",
+    "name": "get_particle_material",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "particle",
+        "name": "particle"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "particle"
+  },
+  {
+    "id": "set_variable_get_particle_offset",
+    "name": "get_particle_offset",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "particle",
+        "name": "particle"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "particle"
+  },
+  {
+    "id": "set_variable_get_particle_size",
+    "name": "get_particle_size",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "particle",
+        "name": "particle"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "particle"
+  },
+  {
+    "id": "set_variable_get_particle_spread",
+    "name": "get_particle_spread",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "particle",
+        "name": "particle"
+      },
+      {
+        "type": "enum",
+        "name": "type",
+        "enum": [
+          "VERTICAL",
+          "HORIZONTAL"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "set_variable_get_particle_type",
+    "name": "get_particle_type",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "particle",
+        "name": "particle"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "particle"
+  },
+  {
+    "id": "set_variable_set_particle_amount",
+    "name": "set_particle_amount",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "particle",
+        "name": "particle"
+      },
+      {
+        "type": "number",
+        "name": "amount"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "particle"
+  },
+  {
+    "id": "set_variable_set_particle_color",
+    "name": "set_particle_color",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "particle",
+        "name": "particle"
+      },
+      {
+        "type": "text",
+        "name": "hex_color"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "particle"
+  },
+  {
+    "id": "set_variable_set_particle_material",
+    "name": "set_particle_material",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "particle",
+        "name": "particle"
+      },
+      {
+        "type": "item",
+        "name": "material"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "particle"
+  },
+  {
+    "id": "set_variable_set_particle_offset",
+    "name": "set_particle_offset",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "particle",
+        "name": "particle"
+      },
+      {
+        "type": "vector",
+        "name": "offset"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "particle"
+  },
+  {
+    "id": "set_variable_set_particle_size",
+    "name": "set_particle_size",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "particle",
+        "name": "particle"
+      },
+      {
+        "type": "number",
+        "name": "size"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "particle"
+  },
+  {
+    "id": "set_variable_set_particle_spread",
+    "name": "set_particle_spread",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "particle",
+        "name": "particle"
+      },
+      {
+        "type": "number",
+        "name": "horizontal"
+      },
+      {
+        "type": "number",
+        "name": "vertical"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_set_particle_type",
+    "name": "set_particle_type",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "particle",
+        "name": "particle"
+      },
+      {
+        "type": "text",
+        "name": "type"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "particle"
+  },
+  {
+    "id": "set_variable_get_list_variables",
+    "name": "get_list_variables",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "enum",
+        "name": "scope",
+        "enum": [
+          "GAME",
+          "SAVE",
+          "LOCAL"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "set_variable_purge",
+    "name": "purge",
+    "object": "variable",
+    "args": [
+      {
+        "type": "text",
+        "name": "names",
+        "array": true,
+        "length": 16
+      },
+      {
+        "type": "enum",
+        "name": "scope",
+        "enum": [
+          "GAME",
+          "SAVE",
+          "LOCAL"
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "match",
+        "enum": [
+          "EQUALS",
+          "NAME_CONTAINS",
+          "PART_CONTAINS"
+        ]
+      },
+      {
+        "type": "boolean",
+        "name": "ignore_case",
+        "defaultBooleanValue": false
+      }
+    ]
+  },
+  {
+    "id": "set_variable_random",
+    "name": "set_random",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "any",
+        "name": "values",
+        "array": true,
+        "length": 21
+      }
+    ],
+    "assigning": "variable",
+    "origin": "values"
+  },
+  {
+    "id": "set_variable_value",
+    "name": "set_value",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "any",
+        "name": "value"
+      }
+    ],
+    "assigning": "variable"
+  },
+  {
+    "id": "set_variable_char_to_number",
+    "name": "char_to_number",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "text",
+        "name": "char"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_clear_color_codes",
+    "name": "clear_color_codes",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "text",
+        "name": "text"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_convert_number_to_text",
+    "name": "convert_number_to_text",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "number"
+      },
+      {
+        "type": "number",
+        "name": "radix"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_get_char_at",
+    "name": "get_char_at",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "text",
+        "name": "text"
+      },
+      {
+        "type": "number",
+        "name": "index"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "text"
+  },
+  {
+    "id": "set_variable_get_index_of_subtext",
+    "name": "get_index_of_subtext",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "text",
+        "name": "text"
+      },
+      {
+        "type": "text",
+        "name": "subtext"
+      },
+      {
+        "type": "number",
+        "name": "start_index"
+      },
+      {
+        "type": "enum",
+        "name": "search_mode",
+        "enum": [
+          "FIRST",
+          "LAST"
+        ]
+      }
+    ],
+    "assigning": "variable",
+    "origin": "text"
+  },
+  {
+    "id": "set_variable_text_length",
+    "name": "get_text_length",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "text",
+        "name": "text"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "text"
+  },
+  {
+    "id": "set_variable_hash",
+    "name": "get_text_hash",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "text",
+        "name": "text"
+      },
+      {
+        "type": "enum",
+        "name": "algorithm",
+        "enum": [
+          "MD5",
+          "SHA1",
+          "SHA256"
+        ]
+      }
+    ],
+    "assigning": "variable",
+    "origin": "text"
+  },
+  {
+    "id": "set_variable_join_text",
+    "name": "join_text",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "variable",
+        "name": "list"
+      },
+      {
+        "type": "text",
+        "name": "separator"
+      },
+      {
+        "type": "text",
+        "name": "prefix"
+      },
+      {
+        "type": "text",
+        "name": "postfix"
+      },
+      {
+        "type": "number",
+        "name": "limit"
+      },
+      {
+        "type": "text",
+        "name": "truncated"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "list"
+  },
+  {
+    "id": "set_variable_parse_json",
+    "name": "parse_json",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "text",
+        "name": "json"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_regex_replace_text",
+    "name": "regex_replace_text",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "text",
+        "name": "text"
+      },
+      {
+        "type": "text",
+        "name": "regex"
+      },
+      {
+        "type": "text",
+        "name": "replacement"
+      },
+      {
+        "type": "enum",
+        "name": "first",
+        "enum": [
+          "ANY",
+          "FIRST"
+        ]
+      },
+      {
+        "type": "boolean",
+        "name": "ignore_case",
+        "defaultBooleanValue": false
+      },
+      {
+        "type": "boolean",
+        "name": "multiline",
+        "defaultBooleanValue": false
+      },
+      {
+        "type": "boolean",
+        "name": "literal",
+        "defaultBooleanValue": false
+      },
+      {
+        "type": "boolean",
+        "name": "unix_lines",
+        "defaultBooleanValue": false
+      },
+      {
+        "type": "boolean",
+        "name": "comments",
+        "defaultBooleanValue": false
+      },
+      {
+        "type": "boolean",
+        "name": "dot_matches_all",
+        "defaultBooleanValue": false
+      },
+      {
+        "type": "boolean",
+        "name": "cannon_eq",
+        "defaultBooleanValue": false
+      }
+    ],
+    "assigning": "variable",
+    "origin": "text"
+  },
+  {
+    "id": "set_variable_repeat_text",
+    "name": "repeat_text",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "text",
+        "name": "text"
+      },
+      {
+        "type": "number",
+        "name": "repeat"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "text"
+  },
+  {
+    "id": "set_variable_replace_text",
+    "name": "replace_text",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "text",
+        "name": "text"
+      },
+      {
+        "type": "text",
+        "name": "replace"
+      },
+      {
+        "type": "text",
+        "name": "replacement"
+      },
+      {
+        "type": "enum",
+        "name": "first",
+        "enum": [
+          "ANY",
+          "FIRST"
+        ]
+      },
+      {
+        "type": "boolean",
+        "name": "ignore_case",
+        "defaultBooleanValue": false
+      }
+    ],
+    "assigning": "variable",
+    "origin": "text"
+  },
+  {
+    "id": "set_variable_split_text",
+    "name": "split_text",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "text",
+        "name": "text"
+      },
+      {
+        "type": "text",
+        "name": "delimiter"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "text"
+  },
+  {
+    "id": "set_variable_strip_text",
+    "name": "strip_text",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "text",
+        "name": "text"
+      },
+      {
+        "type": "enum",
+        "name": "strip_type",
+        "enum": [
+          "ALL",
+          "START",
+          "END",
+          "INDENT"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "set_variable_text",
+    "name": "set_text",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "text",
+        "name": "text",
+        "array": true,
+        "length": 21
+      },
+      {
+        "type": "enum",
+        "name": "merging",
+        "enum": [
+          "SPACES",
+          "CONCATENATION"
+        ]
+      }
+    ],
+    "assigning": "variable",
+    "origin": "text"
+  },
+  {
+    "id": "set_variable_text_case",
+    "name": "set_text_case",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "text",
+        "name": "text"
+      },
+      {
+        "type": "enum",
+        "name": "case_type",
+        "enum": [
+          "UPPER",
+          "LOWER",
+          "PROPER",
+          "INVERT",
+          "RANDOM"
+        ]
+      }
+    ],
+    "assigning": "variable",
+    "origin": "text"
+  },
+  {
+    "id": "set_variable_to_char",
+    "name": "to_char",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "number"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_to_json",
+    "name": "to_json",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "any",
+        "name": "value"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_trim_text",
+    "name": "trim_text",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "text",
+        "name": "text"
+      },
+      {
+        "type": "number",
+        "name": "start"
+      },
+      {
+        "type": "number",
+        "name": "end"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "text"
+  },
+  {
+    "id": "set_variable_add_vectors",
+    "name": "add_vectors",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "vector",
+        "name": "vectors",
+        "array": true,
+        "length": 21
+      }
+    ],
+    "assigning": "variable",
+    "origin": "vectors"
+  },
+  {
+    "id": "set_variable_vector_cross_product",
+    "name": "vector_cross_product",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "vector",
+        "name": "vector_1"
+      },
+      {
+        "type": "vector",
+        "name": "vector_2"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "vector_1"
+  },
+  {
+    "id": "set_variable_vector_dot_product",
+    "name": "vector_dot_product",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "vector",
+        "name": "vector_1"
+      },
+      {
+        "type": "vector",
+        "name": "vector_2"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "vector_1"
+  },
+  {
+    "id": "set_variable_get_angle_between_vectors",
+    "name": "get_angle_between_vectors",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "vector",
+        "name": "vector_1"
+      },
+      {
+        "type": "vector",
+        "name": "vector_2"
+      },
+      {
+        "type": "enum",
+        "name": "angle_units",
+        "enum": [
+          "DEGREES",
+          "RADIANS"
+        ]
+      }
+    ],
+    "assigning": "variable",
+    "origin": "vector_1"
+  },
+  {
+    "id": "set_variable_get_midpoint_between_vectors",
+    "name": "get_midpoint_between_vectors",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "vector",
+        "name": "vector_1"
+      },
+      {
+        "type": "vector",
+        "name": "vector_2"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "vector_1"
+  },
+  {
+    "id": "set_variable_get_vector_between_locations",
+    "name": "get_vector_between_locations",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "start_location"
+      },
+      {
+        "type": "location",
+        "name": "end_location"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "start_location"
+  },
+  {
+    "id": "set_variable_get_vector_component",
+    "name": "get_vector_component",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "vector",
+        "name": "vector"
+      },
+      {
+        "type": "enum",
+        "name": "vector_component",
+        "enum": [
+          "X",
+          "Y",
+          "Z"
+        ]
+      }
+    ],
+    "assigning": "variable",
+    "origin": "vector"
+  },
+  {
+    "id": "set_variable_get_vector_length",
+    "name": "get_vector_length",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "vector",
+        "name": "vector"
+      },
+      {
+        "type": "enum",
+        "name": "length_type",
+        "enum": [
+          "LENGTH",
+          "LENGTH_SQUARED"
+        ]
+      }
+    ],
+    "assigning": "variable",
+    "origin": "vector"
+  },
+  {
+    "id": "set_variable_multiply_vector",
+    "name": "multiply_vector",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "vector",
+        "name": "vector"
+      },
+      {
+        "type": "number",
+        "name": "multiplier"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "vector"
+  },
+  {
+    "id": "set_variable_rotate_vector_around_axis",
+    "name": "rotate_vector_around_axis",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "vector",
+        "name": "vector"
+      },
+      {
+        "type": "number",
+        "name": "angle"
+      },
+      {
+        "type": "enum",
+        "name": "axis",
+        "enum": [
+          "X",
+          "Y",
+          "Z"
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "angle_units",
+        "enum": [
+          "DEGREES",
+          "RADIANS"
+        ]
+      }
+    ],
+    "assigning": "variable",
+    "origin": "vector"
+  },
+  {
+    "id": "set_variable_rotate_vector_around_vector",
+    "name": "rotate_vector_around_vector",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "vector",
+        "name": "rotating_vector"
+      },
+      {
+        "type": "vector",
+        "name": "axis_vector"
+      },
+      {
+        "type": "number",
+        "name": "angle"
+      },
+      {
+        "type": "enum",
+        "name": "angle_units",
+        "enum": [
+          "DEGREES",
+          "RADIANS"
+        ]
+      }
+    ],
+    "assigning": "variable",
+    "origin": "rotating_vector"
+  },
+  {
+    "id": "set_variable_set_vector_component",
+    "name": "set_vector_component",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "vector",
+        "name": "vector"
+      },
+      {
+        "type": "number",
+        "name": "value"
+      },
+      {
+        "type": "enum",
+        "name": "vector_component",
+        "enum": [
+          "X",
+          "Y",
+          "Z"
+        ]
+      }
+    ],
+    "assigning": "variable",
+    "origin": "vector"
+  },
+  {
+    "id": "set_variable_set_vector_length",
+    "name": "set_vector_length",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "vector",
+        "name": "vector"
+      },
+      {
+        "type": "number",
+        "name": "length"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "vector"
+  },
+  {
+    "id": "set_variable_subtract_vectors",
+    "name": "subtract_vectors",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "vector",
+        "name": "vectors",
+        "array": true,
+        "length": 21
+      }
+    ],
+    "assigning": "variable",
+    "origin": "vectors"
+  },
+  {
+    "id": "set_variable_vector",
+    "name": "set_vector",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "x"
+      },
+      {
+        "type": "number",
+        "name": "y"
+      },
+      {
+        "type": "number",
+        "name": "z"
+      }
+    ],
+    "assigning": "variable"
+  },
+  {
+    "id": "set_variable_get_block_material",
+    "name": "get_block_material",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "enum",
+        "name": "value_type",
+        "enum": [
+          "ID",
+          "ID_WITH_DATA",
+          "NAME",
+          "ITEM"
+        ]
+      }
+    ],
+    "assigning": "variable",
+    "origin": "location"
+  },
+  {
+    "id": "set_variable_get_container_contents",
+    "name": "get_container_contents",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "boolean",
+        "name": "ignore_empty_slots"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "location"
+  },
+  {
+    "id": "set_variable_get_container_name",
+    "name": "get_container_name",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "location"
+  },
+  {
+    "id": "set_variable_get_light_level",
+    "name": "get_light_level",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "enum",
+        "name": "value_type",
+        "enum": [
+          "TOTAL",
+          "SKY",
+          "BLOCKS"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "set_variable_get_sign_text",
+    "name": "get_sign_text",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "enum",
+        "name": "sign_line",
+        "enum": [
+          "FIRST",
+          "SECOND",
+          "THIRD",
+          "FOURTH",
+          "ALL"
+        ]
+      }
+    ],
+    "assigning": "variable",
+    "origin": "location"
+  },
+  {
+    "id": "set_variable_ray_trace_result",
+    "name": "ray_trace_result",
+    "object": "variable",
+    "args": [
+      {
+        "type": "location",
+        "name": "start"
+      },
+      {
+        "type": "number",
+        "name": "ray_size"
+      },
+      {
+        "type": "number",
+        "name": "max_distance"
+      },
+      {
+        "type": "enum",
+        "name": "ray_collision_mode",
+        "enum": [
+          "ONLY_BLOCKS",
+          "BLOCKS_AND_ENTITIES",
+          "ONLY_ENTITIES"
+        ]
+      },
+      {
+        "type": "boolean",
+        "name": "ignore_passable_blocks"
+      },
+      {
+        "type": "enum",
+        "name": "fluid_collision_mode",
+        "enum": [
+          "NEVER",
+          "SOURCE_ONLY",
+          "ALWAYS"
+        ]
+      },
+      {
+        "type": "variable",
+        "name": "variable_for_hit_location"
+      },
+      {
+        "type": "variable",
+        "name": "variable_for_hit_block_location"
+      },
+      {
+        "type": "variable",
+        "name": "variable_for_hit_block_face"
+      },
+      {
+        "type": "variable",
+        "name": "variable_for_hit_entity_uuid"
+      }
+    ]
+  }
+]

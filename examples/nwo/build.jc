@@ -1,0 +1,72 @@
+import './items';
+import './utils';
+import './variables';
+
+event<player_right_click> {
+  world::cancel_event();
+
+  // Если игрок держит предмет постройки
+  if (player::is_holding(build_item)) {
+    // Если игрок кликает по своему блоку
+    if (world::block_equals(value::event_block, %player%_block)) {
+      // Сохраняем позицию блока, на который кликнул игрок
+      game var %player%_clicked_at = value::event_block;
+
+      player::show_menu(build_menu, name = "Построить")
+    }
+  }
+
+  event<player_click_inventory> {
+    var block_location = %player%_clicked_at.shift_coordinate(1, "Y")
+
+    if ((value::event_item).equals(factory_item)) {
+      if (%player%_gold.greater_or_equals(30)) {
+        %player%_gold -= 30;
+        %player%_gold_income += 0.25;
+
+        world::set_block(
+          factory_block,
+          block_location,
+        );
+        player::close_menu();
+      } else {
+        title("${red}Недостаточно золота")
+      }
+    }
+
+    if ((value::event_item).equals(barracks_item)) {
+      if (%player%_gold.greater_or_equals(50)) {
+        if (%player%_attack.greater_or_equals(10)) {
+          %player%_gold -= 50;
+          %player%_attack -= 10;
+          %player%_attack_income += 0.5;
+
+          world::set_block(
+            barracks_block,
+            block_location,
+          );
+          player::close_menu();
+        } else {
+          title("${red}Недостаточно атаки")
+        }
+      } else {
+        title("${red}Недостаточно золота")
+      }
+    }
+
+    if ((value::event_item).equals(bank_item)) {
+      if (%player%_gold.greater_or_equals(100)) {
+        %player%_gold -= 100;
+        %player%_gold_max += 50;
+
+        world::set_block(
+          bank_block,
+          block_location,
+        );
+        player::close_menu();
+      } else {
+        title("${red}Недостаточно золота")
+      }
+    }
+  }
+}

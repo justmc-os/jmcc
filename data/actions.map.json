@@ -1,0 +1,640 @@
+{
+  "set_variable_append_list": {
+    "assigning": "variable",
+    "origin": "list_1"
+  },
+  "set_variable_append_value": {
+    "origin": "variable"
+  },
+  "set_variable_create_list": {
+    "assigning": "variable"
+  },
+  "set_variable_get_list_index_of_value": {
+    "assigning": "variable",
+    "origin": "list"
+  },
+  "set_variable_get_list_length": {
+    "assigning": "variable",
+    "origin": "list"
+  },
+  "set_variable_get_list_value": {
+    "assigning": "variable",
+    "origin": "list"
+  },
+  "set_variable_insert_list_value": {
+    "assigning": "variable",
+    "origin": "list"
+  },
+  "set_variable_randomize_list_order": {
+    "assigning": "variable",
+    "origin": "list"
+  },
+  "set_variable_remove_list_value": {
+    "assigning": "variable",
+    "origin": "list"
+  },
+  "set_variable_remove_list_value_at_index": {
+    "assigning": "variable",
+    "origin": "list"
+  },
+  "set_variable_reverse_list": {
+    "assigning": "variable",
+    "origin": "list"
+  },
+  "set_variable_set_list_value": {
+    "assigning": "variable",
+    "origin": "list"
+  },
+  "set_variable_sort_any_list": {
+    "assigning": "variable",
+    "origin": "list"
+  },
+  "set_variable_trim_list": {
+    "assigning": "variable",
+    "origin": "list"
+  },
+  "set_variable_get_book_text": {
+    "assigning": "variable",
+    "origin": "book"
+  },
+  "set_variable_get_item_amount": {
+    "assigning": "variable",
+    "origin": "item"
+  },
+  "set_variable_get_item_custom_tag": {
+    "assigning": "variable",
+    "origin": "item"
+  },
+  "set_variable_get_item_durability": {
+    "assigning": "variable",
+    "origin": "item"
+  },
+  "set_variable_get_item_lore": {
+    "assigning": "variable",
+    "origin": "item"
+  },
+  "set_variable_get_item_type": {
+    "assigning": "variable",
+    "origin": "type"
+  },
+  "set_variable_get_item_max_stack_size": {
+    "assigning": "variable",
+    "origin": "item"
+  },
+  "set_variable_get_item_name": {
+    "assigning": "variable",
+    "origin": "item"
+  },
+  "set_variable_remove_item_custom_tag": {
+    "assigning": "variable",
+    "origin": "item"
+  },
+  "set_variable_set_book_page": {
+    "assigning": "variable",
+    "origin": "book"
+  },
+  "set_variable_set_book_pages": {
+    "assigning": "variable",
+    "origin": "book"
+  },
+  "set_variable_set_item_amount": {
+    "assigning": "variable",
+    "origin": "item"
+  },
+  "set_variable_set_item_custom_tag": {
+    "assigning": "variable",
+    "origin": "item"
+  },
+  "set_variable_set_item_durability": {
+    "assigning": "variable",
+    "origin": "item"
+  },
+  "set_variable_set_item_lore": {
+    "assigning": "variable",
+    "origin": "item"
+  },
+  "set_variable_set_item_lore_line": {
+    "assigning": "variable",
+    "origin": "item"
+  },
+  "set_variable_set_item_type": {
+    "assigning": "variable",
+    "origin": "item"
+  },
+  "set_variable_set_item_name": {
+    "assigning": "variable",
+    "origin": "item"
+  },
+  "set_variable_center_location": {
+    "assigning": "variable",
+    "origin": "locations"
+  },
+  "set_variable_face_location": {
+    "assigning": "variable",
+    "origin": "location"
+  },
+  "set_variable_get_coordinate": {
+    "assigning": "variable",
+    "origin": "location"
+  },
+  "set_variable_get_location_direction": {
+    "assigning": "variable",
+    "origin": "location"
+  },
+  "set_variable_location_relative": {
+    "assigning": "variable",
+    "origin": "location"
+  },
+  "set_variable_locations_distance": {
+    "assigning": "variable"
+  },
+  "set_variable_set_all_coordinates": {
+    "assigning": "variable"
+  },
+  "set_variable_set_coordinate": {
+    "assigning": "variable",
+    "origin": "location"
+  },
+  "set_variable_set_location_direction": {
+    "assigning": "variable",
+    "origin": "location"
+  },
+  "set_variable_shift_all_coordinates": {
+    "assigning": "variable",
+    "origin": "location"
+  },
+  "set_variable_shift_coordinate": {
+    "assigning": "variable",
+    "origin": "location"
+  },
+  "set_variable_shift_location_on_vector": {
+    "assigning": "variable",
+    "origin": "location"
+  },
+  "set_variable_append_map": {
+    "assigning": "variable",
+    "origin": "map"
+  },
+  "set_variable_clear_map": {
+    "origin": "map"
+  },
+  "set_variable_create_map": {
+    "assigning": "variable"
+  },
+  "set_variable_get_map_keys": {
+    "assigning": "variable",
+    "origin": "map"
+  },
+  "set_variable_get_map_size": {
+    "assigning": "variable",
+    "origin": "map"
+  },
+  "set_variable_get_map_value": {
+    "assigning": "variable",
+    "origin": "map"
+  },
+  "set_variable_get_map_values": {
+    "assigning": "variable",
+    "origin": "map"
+  },
+  "set_variable_remove_map_entry": {
+    "assigning": "variable",
+    "origin": "map"
+  },
+  "set_variable_set_map_value": {
+    "assigning": "variable",
+    "origin": "map"
+  },
+  "set_variable_get_color_channels": {
+    "assigning": "variable",
+    "origin": "color"
+  },
+  "set_variable_get_sound_pitch": {
+    "assigning": "variable",
+    "origin": "sound"
+  },
+  "set_variable_get_sound_type": {
+    "assigning": "variable",
+    "origin": "sound"
+  },
+  "set_variable_set_sound_pitch": {
+    "assigning": "variable",
+    "origin": "sound"
+  },
+  "set_variable_to_hsb": {
+    "assigning": "variable"
+  },
+  "set_variable_to_hsl": {
+    "assigning": "variable"
+  },
+  "set_variable_to_rgb": {
+    "assigning": "variable"
+  },
+  "set_variable_absolute": {
+    "assigning": "variable",
+    "origin": "number"
+  },
+  "set_variable_add": {
+    "assigning": "variable",
+    "origin": "value"
+  },
+  "set_variable_average": {
+    "assigning": "variable",
+    "origin": "value"
+  },
+  "set_variable_bitwise_operation": {
+    "assigning": "variable",
+    "origin": "operand1"
+  },
+  "set_variable_clamp": {
+    "assigning": "variable",
+    "origin": "number"
+  },
+  "set_variable_cosine": {
+    "assigning": "variable",
+    "origin": "number"
+  },
+  "set_variable_cotangent": {
+    "assigning": "variable",
+    "origin": "number"
+  },
+  "set_variable_decrement": {
+    "origin": "variable"
+  },
+  "set_variable_divide": {
+    "assigning": "variable",
+    "origin": "value"
+  },
+  "set_variable_increment": {
+    "origin": "variable"
+  },
+  "set_variable_log": {
+    "assigning": "variable",
+    "origin": "number"
+  },
+  "set_variable_max": {
+    "assigning": "variable",
+    "origin": "value"
+  },
+  "set_variable_min": {
+    "assigning": "variable",
+    "origin": "value"
+  },
+  "set_variable_multiply": {
+    "assigning": "variable",
+    "origin": "value"
+  },
+  "set_variable_perlin_noise_3d": {
+    "assigning": "variable",
+    "origin": "location"
+  },
+  "set_variable_pow": {
+    "assigning": "variable",
+    "origin": "base"
+  },
+  "set_variable_random_number": {
+    "name": "random_in_range",
+    "assigning": "variable"
+  },
+  "set_variable_remainder": {
+    "assigning": "variable",
+    "origin": "dividend"
+  },
+  "set_variable_root": {
+    "assigning": "variable",
+    "origin": "base"
+  },
+  "set_variable_round": {
+    "assigning": "variable",
+    "origin": "number"
+  },
+  "set_variable_simplex_noise_3d": {
+    "assigning": "variable",
+    "origin": "location"
+  },
+  "set_variable_sine": {
+    "assigning": "variable",
+    "origin": "number"
+  },
+  "set_variable_subtract": {
+    "assigning": "variable",
+    "origin": "value"
+  },
+  "set_variable_tangent": {
+    "assigning": "variable",
+    "origin": "number"
+  },
+  "set_variable_voronoi_noise_3d": {
+    "assigning": "variable",
+    "origin": "location"
+  },
+  "set_variable_warp": {
+    "assigning": "variable",
+    "origin": "number"
+  },
+  "set_variable_get_particle_amount": {
+    "assigning": "variable",
+    "origin": "particle"
+  },
+  "set_variable_get_particle_color": {
+    "assigning": "variable",
+    "origin": "particle"
+  },
+  "set_variable_get_particle_material": {
+    "assigning": "variable",
+    "origin": "particle"
+  },
+  "set_variable_get_particle_offset": {
+    "assigning": "variable",
+    "origin": "particle"
+  },
+  "set_variable_get_particle_size": {
+    "assigning": "variable",
+    "origin": "particle"
+  },
+  "set_variable_get_particle_type": {
+    "assigning": "variable",
+    "origin": "particle"
+  },
+  "set_variable_set_particle_amount": {
+    "assigning": "variable",
+    "origin": "particle"
+  },
+  "set_variable_set_particle_color": {
+    "assigning": "variable",
+    "origin": "particle"
+  },
+  "set_variable_set_particle_material": {
+    "assigning": "variable",
+    "origin": "particle"
+  },
+  "set_variable_set_particle_offset": {
+    "assigning": "variable",
+    "origin": "particle"
+  },
+  "set_variable_set_particle_size": {
+    "assigning": "variable",
+    "origin": "particle"
+  },
+  "set_variable_set_particle_type": {
+    "assigning": "variable",
+    "origin": "particle"
+  },
+  "set_variable_random": {
+    "name": "set_random",
+    "assigning": "variable",
+    "origin": "values"
+  },
+  "set_variable_value": {
+    "name": "set_value",
+    "assigning": "variable"
+  },
+  "set_variable_get_char_at": {
+    "assigning": "variable",
+    "origin": "text"
+  },
+  "set_variable_get_index_of_subtext": {
+    "assigning": "variable",
+    "origin": "text"
+  },
+  "set_variable_text_length": {
+    "name": "get_text_length",
+    "assigning": "variable",
+    "origin": "text"
+  },
+  "set_variable_hash": {
+    "name": "get_text_hash",
+    "assigning": "variable",
+    "origin": "text"
+  },
+  "set_variable_join_text": {
+    "assigning": "variable",
+    "origin": "list"
+  },
+  "set_variable_regex_replace_text": {
+    "assigning": "variable",
+    "origin": "text"
+  },
+  "set_variable_repeat_text": {
+    "assigning": "variable",
+    "origin": "text"
+  },
+  "set_variable_replace_text": {
+    "assigning": "variable",
+    "origin": "text"
+  },
+  "set_variable_split_text": {
+    "assigning": "variable",
+    "origin": "text"
+  },
+  "set_variable_text": {
+    "name": "set_text",
+    "assigning": "variable",
+    "origin": "text"
+  },
+  "set_variable_text_case": {
+    "name": "set_text_case",
+    "assigning": "variable",
+    "origin": "text"
+  },
+  "set_variable_trim_text": {
+    "assigning": "variable",
+    "origin": "text"
+  },
+  "set_variable_add_vectors": {
+    "assigning": "variable",
+    "origin": "vectors"
+  },
+  "set_variable_vector_cross_product": {
+    "assigning": "variable",
+    "origin": "vector_1"
+  },
+  "set_variable_vector_dot_product": {
+    "assigning": "variable",
+    "origin": "vector_1"
+  },
+  "set_variable_get_angle_between_vectors": {
+    "assigning": "variable",
+    "origin": "vector_1"
+  },
+  "set_variable_get_midpoint_between_vectors": {
+    "assigning": "variable",
+    "origin": "vector_1"
+  },
+  "set_variable_get_vector_between_locations": {
+    "assigning": "variable",
+    "origin": "start_location"
+  },
+  "set_variable_get_vector_component": {
+    "assigning": "variable",
+    "origin": "vector"
+  },
+  "set_variable_get_vector_length": {
+    "assigning": "variable",
+    "origin": "vector"
+  },
+  "set_variable_multiply_vector": {
+    "assigning": "variable",
+    "origin": "vector"
+  },
+  "set_variable_rotate_vector_around_axis": {
+    "assigning": "variable",
+    "origin": "vector"
+  },
+  "set_variable_rotate_vector_around_vector": {
+    "assigning": "variable",
+    "origin": "rotating_vector"
+  },
+  "set_variable_set_vector_component": {
+    "assigning": "variable",
+    "origin": "vector"
+  },
+  "set_variable_set_vector_length": {
+    "assigning": "variable",
+    "origin": "vector"
+  },
+  "set_variable_subtract_vectors": {
+    "assigning": "variable",
+    "origin": "vectors"
+  },
+  "set_variable_vector": {
+    "name": "set_vector",
+    "assigning": "variable"
+  },
+  "set_variable_get_block_material": {
+    "assigning": "variable",
+    "origin": "location"
+  },
+  "set_variable_get_container_contents": {
+    "assigning": "variable",
+    "origin": "location"
+  },
+  "set_variable_get_container_name": {
+    "assigning": "variable",
+    "origin": "location"
+  },
+  "set_variable_get_sign_text": {
+    "assigning": "variable",
+    "origin": "location"
+  },
+  "if_variable_equals": {
+    "origin": "value"
+  },
+  "if_variable_exists": {
+    "origin": "variable"
+  },
+  "if_variable_greater": {
+    "origin": "value"
+  },
+  "if_variable_greater_or_equals": {
+    "origin": "value"
+  },
+  "if_variable_in_range": {
+    "origin": "value"
+  },
+  "if_variable_is_type": {
+    "origin": "value"
+  },
+  "if_variable_item_equals": {
+    "origin": "value"
+  },
+  "if_variable_item_has_tag": {
+    "origin": "item"
+  },
+  "if_variable_less": {
+    "origin": "value"
+  },
+  "if_variable_less_or_equals": {
+    "origin": "value"
+  },
+  "if_variable_list_contains_value": {
+    "origin": "list"
+  },
+  "if_variable_list_value_equals": {
+    "origin": "list"
+  },
+  "if_variable_location_is_near": {
+    "origin": "location"
+  },
+  "if_variable_map_has_key": {
+    "origin": "map"
+  },
+  "if_variable_map_value_equals": {
+    "origin": "map"
+  },
+  "if_variable_not_equals": {
+    "origin": "value"
+  },
+  "if_variable_text_contains": {
+    "origin": "value"
+  },
+  "if_variable_text_ends_with": {
+    "origin": "value"
+  },
+  "if_variable_text_matches": {
+    "origin": "match"
+  },
+  "if_variable_text_starts_with": {
+    "origin": "value"
+  },
+  "player_add_inventory_menu_row": {
+    "name": "add_menu_row"
+  },
+  "player_close_inventory": {
+    "name": "close_menu"
+  },
+  "player_expand_inventory_menu": {
+    "name": "expand_menu"
+  },
+  "player_remove_inventory_menu_row": {
+    "name": "remove_menu_row"
+  },
+  "player_set_inventory_menu_item": {
+    "name": "set_menu_item"
+  },
+  "player_set_inventory_menu_name": {
+    "name": "set_menu_name"
+  },
+  "player_show_inventory_menu": {
+    "name": "show_menu"
+  },
+  "player_send_message": {
+    "name": "message"
+  },
+  "player_send_title": {
+    "name": "title"
+  },
+  "player_send_dialogue": {
+    "name": "dialogue"
+  },
+  "player_send_action_bar": {
+    "name": "action_bar"
+  },
+  "control_end_thread": {
+    "name": "break"
+  },
+  "repeat_adjacently": {
+    "lambda": ["variable"]
+  },
+  "repeat_for_each_in_list": {
+    "lambda": ["index_variable", "value_variable"]
+  },
+  "repeat_for_each_map_entry": {
+    "lambda": ["key_variable", "value_variable"]
+  },
+  "repeat_multi_times": {
+    "lambda": ["variable"]
+  },
+  "repeat_on_grid": {
+    "lambda": ["variable"]
+  },
+  "repeat_on_path": {
+    "lambda": ["variable"]
+  },
+  "repeat_on_range": {
+    "lambda": ["variable"]
+  },
+  "repeat_while": {
+    "conditional": true
+  }
+}

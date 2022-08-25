@@ -1,0 +1,595 @@
+[
+  {
+    "id": "current_health",
+    "type": "number",
+    "name": "health"
+  },
+  {
+    "id": "max_health",
+    "type": "number",
+    "name": "max_health"
+  },
+  {
+    "id": "absorption_health",
+    "type": "number",
+    "name": "absorption_health"
+  },
+  {
+    "id": "food_level",
+    "type": "number",
+    "name": "food"
+  },
+  {
+    "id": "food_saturation",
+    "type": "number",
+    "name": "saturation"
+  },
+  {
+    "id": "food_exhaustion",
+    "type": "number",
+    "name": "food_exhaustion"
+  },
+  {
+    "id": "attack_damage",
+    "type": "number",
+    "name": "attack_damage"
+  },
+  {
+    "id": "attack_speed",
+    "type": "number",
+    "name": "attack_speed"
+  },
+  {
+    "id": "armor_points",
+    "type": "number",
+    "name": "armor"
+  },
+  {
+    "id": "armor_toughness",
+    "type": "number",
+    "name": "armor_toughness"
+  },
+  {
+    "id": "invulnerability_ticks",
+    "type": "number",
+    "name": "invulnerability_ticks"
+  },
+  {
+    "id": "experience_level",
+    "type": "number",
+    "name": "experience_level"
+  },
+  {
+    "id": "experience_progress",
+    "type": "number",
+    "name": "experience_progress"
+  },
+  {
+    "id": "fire_ticks",
+    "type": "number",
+    "name": "fire_ticks"
+  },
+  {
+    "id": "freeze_ticks",
+    "type": "number",
+    "name": "freeze_ticks"
+  },
+  {
+    "id": "remaining_air",
+    "type": "number",
+    "name": "remaining_air"
+  },
+  {
+    "id": "fall_distance",
+    "type": "number",
+    "name": "fall_distance"
+  },
+  {
+    "id": "held_slot",
+    "type": "number",
+    "name": "slot"
+  },
+  {
+    "id": "ping",
+    "type": "number",
+    "name": "ping"
+  },
+  {
+    "id": "protocol_version",
+    "type": "number",
+    "name": "protocol"
+  },
+  {
+    "id": "item_usage_progress",
+    "type": "number",
+    "name": "item_usage_progress"
+  },
+  {
+    "id": "entity_ticks_lived",
+    "type": "number",
+    "name": "entity_ticks_lived"
+  },
+  {
+    "id": "arrows_in_body",
+    "type": "number",
+    "name": "arrows_in_body"
+  },
+  {
+    "id": "age",
+    "type": "number",
+    "name": "age"
+  },
+  {
+    "id": "steer_forward",
+    "type": "number",
+    "name": "steer_forward"
+  },
+  {
+    "id": "steer_sideways",
+    "type": "number",
+    "name": "steer_sideways"
+  },
+  {
+    "id": "location",
+    "type": "location",
+    "name": "location"
+  },
+  {
+    "id": "target_block_location",
+    "type": "location",
+    "name": "target_block"
+  },
+  {
+    "id": "target_fluid_location",
+    "type": "location",
+    "name": "target_fluid"
+  },
+  {
+    "id": "target_block_face",
+    "type": "text",
+    "name": "target_block_face"
+  },
+  {
+    "id": "eye_location",
+    "type": "location",
+    "name": "eye_location"
+  },
+  {
+    "id": "x_coordinate",
+    "type": "number",
+    "name": "x_coord"
+  },
+  {
+    "id": "y_coordinate",
+    "type": "number",
+    "name": "y_coord"
+  },
+  {
+    "id": "z_coordinate",
+    "type": "number",
+    "name": "z_coord"
+  },
+  {
+    "id": "pitch",
+    "type": "number",
+    "name": "pitch"
+  },
+  {
+    "id": "yaw",
+    "type": "number",
+    "name": "yaw"
+  },
+  {
+    "id": "direction_of_view",
+    "type": "vector",
+    "name": "direction_of_view"
+  },
+  {
+    "id": "cardinal_direction",
+    "type": "text",
+    "name": "cardinal_direction"
+  },
+  {
+    "id": "spawn_location",
+    "type": "location",
+    "name": "spawn_location"
+  },
+  {
+    "id": "origin",
+    "type": "location",
+    "name": "origin"
+  },
+  {
+    "id": "velocity",
+    "type": "vector",
+    "name": "velocity"
+  },
+  {
+    "id": "main_hand_item",
+    "type": "item",
+    "name": "main_hand_item"
+  },
+  {
+    "id": "off_hand_item",
+    "type": "item",
+    "name": "off_hand_item"
+  },
+  {
+    "id": "armor_items",
+    "type": "array",
+    "name": "armor_items",
+    "array": {
+      "length": 4,
+      "type": "item"
+    }
+  },
+  {
+    "id": "hotbar_items",
+    "type": "array",
+    "name": "hotbar",
+    "array": {
+      "length": 9,
+      "type": "item"
+    }
+  },
+  {
+    "id": "inventory_items",
+    "type": "array",
+    "name": "inventory",
+    "array": {
+      "length": 36,
+      "type": "item"
+    }
+  },
+  {
+    "id": "custom_inventory_items",
+    "type": "array",
+    "name": "open_inventory",
+    "array": {
+      "length": 36,
+      "type": "item"
+    }
+  },
+  {
+    "id": "cursor_item",
+    "type": "item",
+    "name": "cursor_item"
+  },
+  {
+    "id": "saddle_item",
+    "type": "item",
+    "name": "saddle_item"
+  },
+  {
+    "id": "entity_item",
+    "type": "item",
+    "name": "entity_item"
+  },
+  {
+    "id": "name",
+    "type": "text",
+    "name": "name"
+  },
+  {
+    "id": "display_name",
+    "type": "text",
+    "name": "display_name"
+  },
+  {
+    "id": "uuid",
+    "type": "text",
+    "name": "uuid"
+  },
+  {
+    "id": "entity_type",
+    "type": "text",
+    "name": "entity_type"
+  },
+  {
+    "id": "client_brand_name",
+    "type": "text",
+    "name": "client_brand"
+  },
+  {
+    "id": "user_locale",
+    "type": "text",
+    "name": "user_locale"
+  },
+  {
+    "id": "open_inventory_title",
+    "type": "text",
+    "name": "open_inventory_title"
+  },
+  {
+    "id": "potion_effects",
+    "type": "array",
+    "name": "potion_effects",
+    "array": {
+      "length": 9999999,
+      "type": "potion"
+    }
+  },
+  {
+    "id": "vehicle",
+    "type": "text",
+    "name": "vehicle"
+  },
+  {
+    "id": "passengers",
+    "type": "array",
+    "name": "passengers",
+    "array": {
+      "length": 9999999,
+      "type": "text"
+    }
+  },
+  {
+    "id": "lead_holder",
+    "type": "text",
+    "name": "lead_holder"
+  },
+  {
+    "id": "attached_leads",
+    "type": "array",
+    "name": "attached_leads",
+    "array": {
+      "length": 9999999,
+      "type": "text"
+    }
+  },
+  {
+    "id": "spawn_reason",
+    "type": "text",
+    "name": "spawn_reason"
+  },
+  {
+    "id": "main_hand",
+    "type": "text",
+    "name": "main_hand"
+  },
+  {
+    "id": "event_block_location",
+    "type": "location",
+    "name": "event_block"
+  },
+  {
+    "id": "event_block_face",
+    "type": "text",
+    "name": "event_block_face"
+  },
+  {
+    "id": "event_blocks_involved",
+    "type": "array",
+    "name": "event_blocks_involved",
+    "array": {
+      "length": 9999999,
+      "type": "location"
+    }
+  },
+  {
+    "id": "event_interaction",
+    "type": "text",
+    "name": "event_interaction"
+  },
+  {
+    "id": "event_new_location",
+    "type": "location",
+    "name": "event_new_location"
+  },
+  {
+    "id": "event_damage",
+    "type": "number",
+    "name": "event_damage"
+  },
+  {
+    "id": "event_damage_cause",
+    "type": "text",
+    "name": "event_damage_cause"
+  },
+  {
+    "id": "event_chat_message",
+    "type": "text",
+    "name": "event_chat_message"
+  },
+  {
+    "id": "event_message",
+    "type": "text",
+    "name": "event_message"
+  },
+  {
+    "id": "event_heal_amount",
+    "type": "number",
+    "name": "event_heal_amount"
+  },
+  {
+    "id": "event_heal_cause",
+    "type": "text",
+    "name": "event_heal_cause"
+  },
+  {
+    "id": "event_power",
+    "type": "number",
+    "name": "event_power"
+  },
+  {
+    "id": "event_item",
+    "type": "item",
+    "name": "event_item"
+  },
+  {
+    "id": "event_equipment_slot",
+    "type": "text",
+    "name": "event_equipment_slot"
+  },
+  {
+    "id": "event_slot",
+    "type": "number",
+    "name": "event_slot"
+  },
+  {
+    "id": "event_hotbar_slot",
+    "type": "number",
+    "name": "event_hotbar_slot"
+  },
+  {
+    "id": "event_added_items",
+    "type": "map",
+    "name": "event_added_items",
+    "map": {
+      "key": "number",
+      "value": "item"
+    }
+  },
+  {
+    "id": "event_slot_type",
+    "type": "text",
+    "name": "event_slot_type"
+  },
+  {
+    "id": "event_close_inventory_cause",
+    "type": "text",
+    "name": "event_close_inventory_cause"
+  },
+  {
+    "id": "event_inventory_click_type",
+    "type": "text",
+    "name": "event_inventory_click_type"
+  },
+  {
+    "id": "event_inventory_action",
+    "type": "text",
+    "name": "event_inventory_action"
+  },
+  {
+    "id": "event_drag_type",
+    "type": "text",
+    "name": "event_drag_type"
+  },
+  {
+    "id": "event_slots_involved",
+    "type": "array",
+    "name": "event_slots_involved",
+    "array": {
+      "length": 9999999,
+      "type": "number"
+    }
+  },
+  {
+    "id": "event_fish_state",
+    "type": "text",
+    "name": "event_fish_state"
+  },
+  {
+    "id": "event_experience",
+    "type": "number",
+    "name": "event_experience"
+  },
+  {
+    "id": "event_hanging_break_cause",
+    "type": "text",
+    "name": "event_hanging_break_cause"
+  },
+  {
+    "id": "event_time_skip_reason",
+    "type": "text",
+    "name": "event_time_skip_reason"
+  },
+  {
+    "id": "event_time_skip_amount",
+    "type": "number",
+    "name": "event_time_skip_amount"
+  },
+  {
+    "id": "event_food_level",
+    "type": "number",
+    "name": "event_food_level"
+  },
+  {
+    "id": "event_projectile_item",
+    "type": "item",
+    "name": "event_projectile_item"
+  },
+  {
+    "id": "player_count",
+    "type": "number",
+    "name": "players"
+  },
+  {
+    "id": "cpu_usage",
+    "type": "number",
+    "name": "cpu_usage"
+  },
+  {
+    "id": "server_tps",
+    "type": "number",
+    "name": "server_tps"
+  },
+  {
+    "id": "timestamp",
+    "type": "number",
+    "name": "timestamp"
+  },
+  {
+    "id": "server_current_tick",
+    "type": "number",
+    "name": "server_current_tick"
+  },
+  {
+    "id": "selection_size",
+    "type": "number",
+    "name": "selection_size"
+  },
+  {
+    "id": "selection_target_names",
+    "type": "array",
+    "name": "selection_target_names",
+    "array": {
+      "length": 9999999,
+      "type": "text"
+    }
+  },
+  {
+    "id": "selection_target_uuids",
+    "type": "array",
+    "name": "selection_target_uuids",
+    "array": {
+      "length": 9999999,
+      "type": "text"
+    }
+  },
+  {
+    "id": "url_response",
+    "type": "text",
+    "name": "url_response"
+  },
+  {
+    "id": "world_time",
+    "type": "number",
+    "name": "world_time"
+  },
+  {
+    "id": "server_stopped_time",
+    "type": "text",
+    "name": "server_stopped_time"
+  },
+  {
+    "id": "action_count_per_tick",
+    "type": "number",
+    "name": "action_count_per_tick"
+  },
+  {
+    "id": "owner_uuid",
+    "type": "text",
+    "name": "owner_uuid"
+  },
+  {
+    "id": "world_size",
+    "type": "number",
+    "name": "world_size"
+  },
+  {
+    "id": "world_id",
+    "type": "text",
+    "name": "world_id"
+  }
+]

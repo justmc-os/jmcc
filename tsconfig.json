@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": ".",
+    "resolveJsonModule": true,
+    "composite": true
+  },
+  // Data & package
+  "files": ["package.json", "data/version.json", "data/action.d.ts"]
+}

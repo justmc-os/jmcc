@@ -1,0 +1,260 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`переменные вписанные обычные 1`] = `
+Object {
+  "handlers": Array [],
+}
+`;
+
+exports[`переменные вписанные с использованием 1`] = `
+Object {
+  "handlers": Array [
+    Object {
+      "event": "world_start",
+      "operations": Array [
+        Object {
+          "action": "player_send_message",
+          "values": Array [
+            Object {
+              "name": "messages",
+              "value": Object {
+                "type": "array",
+                "values": Array [
+                  Object {
+                    "text": "string",
+                    "type": "text",
+                  },
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                ],
+              },
+            },
+            Object {
+              "name": "merging",
+              "value": Object {
+                "enum": "SPACES",
+                "type": "enum",
+              },
+            },
+          ],
+        },
+      ],
+      "position": 0,
+      "type": "event",
+    },
+  ],
+}
+`;
+
+exports[`переменные игровые 1`] = `
+Object {
+  "handlers": Array [
+    Object {
+      "event": "world_start",
+      "operations": Array [
+        Object {
+          "action": "set_variable_value",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "game",
+                "type": "variable",
+                "variable": "a",
+              },
+            },
+            Object {
+              "name": "value",
+              "value": Object {
+                "text": "string",
+                "type": "text",
+              },
+            },
+          ],
+        },
+      ],
+      "position": 0,
+      "type": "event",
+    },
+  ],
+}
+`;
+
+exports[`переменные локальные 1`] = `
+Object {
+  "handlers": Array [
+    Object {
+      "event": "world_start",
+      "operations": Array [
+        Object {
+          "action": "set_variable_value",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "a",
+              },
+            },
+            Object {
+              "name": "value",
+              "value": Object {
+                "text": "string",
+                "type": "text",
+              },
+            },
+          ],
+        },
+      ],
+      "position": 0,
+      "type": "event",
+    },
+  ],
+}
+`;
+
+exports[`переменные переопределение 1`] = `"Переопределение переменной 'a'"`;
+
+exports[`переменные с нестандартным идентификатором 1`] = `
+Object {
+  "handlers": Array [
+    Object {
+      "event": "world_start",
+      "operations": Array [
+        Object {
+          "action": "set_variable_value",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "идентификатор",
+              },
+            },
+            Object {
+              "name": "value",
+              "value": Object {
+                "text": "string",
+                "type": "text",
+              },
+            },
+          ],
+        },
+        Object {
+          "action": "set_variable_value",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "с пробелом",
+              },
+            },
+            Object {
+              "name": "value",
+              "value": Object {
+                "text": "string",
+                "type": "text",
+              },
+            },
+          ],
+        },
+        Object {
+          "action": "set_variable_value",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "%var_local(идентификатор)",
+              },
+            },
+            Object {
+              "name": "value",
+              "value": Object {
+                "text": "string",
+                "type": "text",
+              },
+            },
+          ],
+        },
+        Object {
+          "action": "set_variable_value",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "%var_local(идентификатор) 2",
+              },
+            },
+            Object {
+              "name": "value",
+              "value": Object {
+                "text": "string",
+                "type": "text",
+              },
+            },
+          ],
+        },
+      ],
+      "position": 0,
+      "type": "event",
+    },
+  ],
+}
+`;
+
+exports[`переменные сохранённые 1`] = `
+Object {
+  "handlers": Array [
+    Object {
+      "event": "world_start",
+      "operations": Array [
+        Object {
+          "action": "set_variable_value",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "save",
+                "type": "variable",
+                "variable": "a",
+              },
+            },
+            Object {
+              "name": "value",
+              "value": Object {
+                "text": "string",
+                "type": "text",
+              },
+            },
+          ],
+        },
+      ],
+      "position": 0,
+      "type": "event",
+    },
+  ],
+}
+`;

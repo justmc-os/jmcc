@@ -1,0 +1,584 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`выражения математические аддитивные 1`] = `
+Object {
+  "handlers": Array [
+    Object {
+      "event": "world_start",
+      "operations": Array [
+        Object {
+          "action": "set_variable_value",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "a",
+              },
+            },
+            Object {
+              "name": "value",
+              "value": Object {
+                "text": "4",
+                "type": "text",
+              },
+            },
+          ],
+        },
+        Object {
+          "action": "set_variable_value",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "b",
+              },
+            },
+            Object {
+              "name": "value",
+              "value": Object {
+                "text": "%math(%var_local(a)-2)",
+                "type": "text",
+              },
+            },
+          ],
+        },
+        Object {
+          "action": "set_variable_value",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "chain",
+              },
+            },
+            Object {
+              "name": "value",
+              "value": Object {
+                "text": "0",
+                "type": "text",
+              },
+            },
+          ],
+        },
+      ],
+      "position": 0,
+      "type": "event",
+    },
+  ],
+}
+`;
+
+exports[`выражения математические мультипликативные 1`] = `
+Object {
+  "handlers": Array [
+    Object {
+      "event": "world_start",
+      "operations": Array [
+        Object {
+          "action": "set_variable_value",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "a",
+              },
+            },
+            Object {
+              "name": "value",
+              "value": Object {
+                "text": "4",
+                "type": "text",
+              },
+            },
+          ],
+        },
+        Object {
+          "action": "set_variable_value",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "b",
+              },
+            },
+            Object {
+              "name": "value",
+              "value": Object {
+                "text": "2",
+                "type": "text",
+              },
+            },
+          ],
+        },
+        Object {
+          "action": "set_variable_value",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "c",
+              },
+            },
+            Object {
+              "name": "value",
+              "value": Object {
+                "text": "%math(%var_local(b)%3)",
+                "type": "text",
+              },
+            },
+          ],
+        },
+        Object {
+          "action": "set_variable_value",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "chain",
+              },
+            },
+            Object {
+              "name": "value",
+              "value": Object {
+                "text": "0.6666666666666666",
+                "type": "text",
+              },
+            },
+          ],
+        },
+      ],
+      "position": 0,
+      "type": "event",
+    },
+  ],
+}
+`;
+
+exports[`выражения математические со скобками 1`] = `
+Object {
+  "handlers": Array [
+    Object {
+      "event": "world_start",
+      "operations": Array [
+        Object {
+          "action": "set_variable_value",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "a",
+              },
+            },
+            Object {
+              "name": "value",
+              "value": Object {
+                "text": "6",
+                "type": "text",
+              },
+            },
+          ],
+        },
+        Object {
+          "action": "set_variable_value",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "b",
+              },
+            },
+            Object {
+              "name": "value",
+              "value": Object {
+                "text": "8",
+                "type": "text",
+              },
+            },
+          ],
+        },
+        Object {
+          "action": "set_variable_value",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "c",
+              },
+            },
+            Object {
+              "name": "value",
+              "value": Object {
+                "text": "%math(%var_local(b)/4)",
+                "type": "text",
+              },
+            },
+          ],
+        },
+      ],
+      "position": 0,
+      "type": "event",
+    },
+  ],
+}
+`;
+
+exports[`выражения унарные 1`] = `
+Object {
+  "handlers": Array [
+    Object {
+      "event": "world_start",
+      "operations": Array [
+        Object {
+          "action": "set_variable_value",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "a",
+              },
+            },
+            Object {
+              "name": "value",
+              "value": Object {
+                "number": 0,
+                "type": "number",
+              },
+            },
+          ],
+        },
+        Object {
+          "action": "set_variable_increment",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "a",
+              },
+            },
+            Object {
+              "name": "number",
+              "value": Object {
+                "number": 1,
+                "type": "number",
+              },
+            },
+          ],
+        },
+        Object {
+          "action": "set_variable_increment",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "a",
+              },
+            },
+            Object {
+              "name": "number",
+              "value": Object {
+                "number": 1,
+                "type": "number",
+              },
+            },
+          ],
+        },
+        Object {
+          "action": "set_variable_decrement",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "a",
+              },
+            },
+            Object {
+              "name": "number",
+              "value": Object {
+                "number": 1,
+                "type": "number",
+              },
+            },
+          ],
+        },
+        Object {
+          "action": "set_variable_decrement",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "a",
+              },
+            },
+            Object {
+              "name": "number",
+              "value": Object {
+                "number": 1,
+                "type": "number",
+              },
+            },
+          ],
+        },
+      ],
+      "position": 0,
+      "type": "event",
+    },
+  ],
+}
+`;
+
+exports[`выражения устанавливающие 1`] = `
+Object {
+  "handlers": Array [
+    Object {
+      "event": "world_start",
+      "operations": Array [
+        Object {
+          "action": "set_variable_value",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "a",
+              },
+            },
+            Object {
+              "name": "value",
+              "value": Object {
+                "number": 0,
+                "type": "number",
+              },
+            },
+          ],
+        },
+        Object {
+          "action": "set_variable_value",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "a",
+              },
+            },
+            Object {
+              "name": "value",
+              "value": Object {
+                "number": 1,
+                "type": "number",
+              },
+            },
+          ],
+        },
+        Object {
+          "action": "set_variable_increment",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "a",
+              },
+            },
+            Object {
+              "name": "number",
+              "value": Object {
+                "number": 1,
+                "type": "number",
+              },
+            },
+          ],
+        },
+        Object {
+          "action": "set_variable_decrement",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "a",
+              },
+            },
+            Object {
+              "name": "number",
+              "value": Object {
+                "number": 1,
+                "type": "number",
+              },
+            },
+          ],
+        },
+        Object {
+          "action": "set_variable_multiply",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "a",
+              },
+            },
+            Object {
+              "name": "value",
+              "value": Object {
+                "type": "array",
+                "values": Array [
+                  Object {
+                    "scope": "local",
+                    "type": "variable",
+                    "variable": "a",
+                  },
+                  Object {
+                    "number": 1,
+                    "type": "number",
+                  },
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                ],
+              },
+            },
+          ],
+        },
+        Object {
+          "action": "set_variable_divide",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "a",
+              },
+            },
+            Object {
+              "name": "value",
+              "value": Object {
+                "type": "array",
+                "values": Array [
+                  Object {
+                    "scope": "local",
+                    "type": "variable",
+                    "variable": "a",
+                  },
+                  Object {
+                    "number": 1,
+                    "type": "number",
+                  },
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                ],
+              },
+            },
+            Object {
+              "name": "division_mode",
+              "value": Object {
+                "enum": "DEFAULT",
+                "type": "enum",
+              },
+            },
+          ],
+        },
+        Object {
+          "action": "set_variable_remainder",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "a",
+              },
+            },
+            Object {
+              "name": "dividend",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "a",
+              },
+            },
+            Object {
+              "name": "divisor",
+              "value": Object {
+                "number": 1,
+                "type": "number",
+              },
+            },
+          ],
+        },
+      ],
+      "position": 0,
+      "type": "event",
+    },
+  ],
+}
+`;

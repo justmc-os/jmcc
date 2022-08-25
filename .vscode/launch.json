@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug ANTLR4 grammar",
+      "type": "antlr-debug",
+      "request": "launch",
+      "input": "2.test.jc",
+      "grammar": "src/grammar/JustCodeParser.g4",
+      "startRule": "file",
+      "printParseTree": true,
+      "visualParseTree": true
+    }
+  ]
+}

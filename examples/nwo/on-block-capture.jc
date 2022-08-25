@@ -1,0 +1,39 @@
+import './variables';
+import './items';
+import './utils';
+
+function on_block_capture(location) {
+  if not (world::block_equals(location, grass)) {
+    var block = location.get_block_material();
+    var player = 0;
+    get_player_by_block(block, player);
+
+    if not (player.equals(0)) {
+      var block_above = location.shift_coordinate(1, "Y");
+
+      if (world::block_equals(block_above, factory_block)) {
+        %player%_gold_income += 0.25;
+        select::player_by_name(player);
+        // Сейчас код баганный и не воспринимает плейсхолдер %selected% нормально,
+        // поэтому приходиться сохранять игровое значение имени игрока
+        // а потом встраивать его в название переменной
+        var selected = value::name<current>;
+        `${selected}_gold_income` -= 0.25;
+      }
+
+      if (world::block_equals(block_above, barracks_block)) {
+        %player%_attack_income += 0.5;
+        select::player_by_name(player);
+        var selected = value::name<current>;
+        `${selected}_attack_income` -= 0.5;
+      }
+
+      if (world::block_equals(block_above, bank_block)) {
+        %player%_gold_max += 50;
+        select::player_by_name(player);
+        var selected = value::name<current>;
+        `${selected}_gold_max` -= 50;
+      }
+    }
+  }
+}

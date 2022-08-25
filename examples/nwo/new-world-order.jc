@@ -1,0 +1,105 @@
+/**
+  Код копии New World Order
+*/
+
+import '../generator';
+import './items';
+import './variables';
+
+import './land';
+import './attack';
+import './build';
+
+// Генерация доски при запуске мира
+generate();
+
+function show_block_menu() {
+  code::wait(1);
+  player::show_menu(blocks_menu, name = "Выберите блок");
+
+  event<player_close_inventory> {
+    if (%player%_block.equals(0)) {
+      if not ((value::event_close_inventory_cause).equals("open_new")) {
+        show_block_menu();
+      }
+    }
+  }
+
+  event<player_click_inventory> {
+    world::cancel_event();
+
+    if not (%player%_block.equals(0)) { break };
+    if ((value::event_item).item_equals("air", "TYPE_ONLY")) { break };
+
+    if ((picked_blocks.get_map_values()).list_contains_value((value::event_item).get_item_type())) {
+      player::message("${red}Этот блок уже выбран другим игроком!");
+      show_block_menu();
+
+      break;
+    }
+
+    %player%_block = value::event_item;
+    picked_blocks = picked_blocks.set_map_value("%player%", %player%_block.get_item_type());
+
+    player::close_menu();
+    player::message("Вы выбрали блок ${%player%_block.get_item_name()}")
+  }
+}
+
+event<player_join> {
+  player::set_items(player_inventory);
+  show_block_menu();
+  var ticks = 0;
+  game var %player%_ticker_active = 0;
+
+  process ticker() {
+    %player%_ticker_active = 1;
+    // Каждый 20 тик добавляем игроку золота и атаки
+    if ((ticks++).equals(20)) {
+      ticks = 0;
+      if (%player%_playing.equals(1)) {
+        // Устанавливает значение золота не больше максимального, и не меньше нуля
+        %player%_gold = (%player%_gold + %player%_gold_income).clamp(0, %player%_gold_max);
+        // Устанавливает значение атаки не больше максимального, и не меньше нуля
+        %player%_attack = (%player%_attack + %player%_attack_income).clamp(0, %player%_attack_max);
+      }
+    }
+
+    if (%player%_playing.equals(1)) {
+      player::action_bar(
+        "${red}Атаки: $%player%_attack &7&o($%player%_attack_income/сек) &8| ${yellow}Золота: $%player%_gold &7&o($%player%_gold_income/сек)"
+      );
+    } else {
+      player::action_bar("${red}Нажмите на любой блок возле воды с Захватом с моря в руках");
+    }
+
+    code::wait(1);
+    ticker();
+  }
+
+  code::wait(5);
+  // Если у игрока ещё не запущен процесс, то запускаем его
+  if (%player%_ticker_active.equals(0)) {
+    ticker();
+  }
+}
+
+event<player_quit> {
+  picked_blocks = picked_blocks.remove_map_entry("%player%")
+}
+
+event<player_drop_item> {
+  world::cancel_event();
+}
+
+event<player_food_level_change> {
+  world::cancel_event();
+}
+
+event<player_take_damage> {
+  world::cancel_event();
+}
+
+event<player_break_block> {
+  world::cancel_event();
+}

@@ -1,0 +1,33 @@
+import './variables';
+
+function is_near_block(location, block, return) {
+  if (world::block_equals(location.shift_all_coordinates(-1, 0, 0), block)) {
+    return = 1;
+  }
+
+  if (world::block_equals(location.shift_all_coordinates(1, 0, 0), block)) {
+    return = 1;
+  }
+
+  if (world::block_equals(location.shift_all_coordinates(0, 0, -1), block)) {
+    return = 1;
+  }
+
+  if (world::block_equals(location.shift_all_coordinates(0, 0, 1), block)) {
+    return = 1;
+  }
+}
+
+function title(text) {
+  player::title(subtitle = text, fade_in = 10, stay = 20, fade_out = 10)
+}
+
+function get_player_by_block(block, return) {
+  var values = picked_blocks.get_map_values();
+  var keys = picked_blocks.get_map_keys();
+  var index = values.get_list_index_of_value(block);
+
+  if (index.greater_or_equals(0)) {
+    return = keys[index];
+  }
+}

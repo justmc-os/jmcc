@@ -1,0 +1,119 @@
+{
+  "current_health": {
+    "name": "health"
+  },
+  "food_level": {
+    "name": "food"
+  },
+  "food_saturation": {
+    "name": "saturation"
+  },
+  "armor_points": {
+    "name": "armor"
+  },
+  "held_slot": {
+    "name": "slot"
+  },
+  "protocol_version": {
+    "name": "protocol"
+  },
+  "target_block_location": {
+    "name": "target_block"
+  },
+  "target_fluid_location": {
+    "name": "target_fluid"
+  },
+  "x_coordinate": {
+    "name": "x_coord"
+  },
+  "y_coordinate": {
+    "name": "y_coord"
+  },
+  "z_coordinate": {
+    "name": "z_coord"
+  },
+  "armor_items": {
+    "array": {
+      "length": 4,
+      "type": "item"
+    }
+  },
+  "hotbar_items": {
+    "name": "hotbar",
+    "array": {
+      "length": 9,
+      "type": "item"
+    }
+  },
+  "inventory_items": {
+    "name": "inventory",
+    "array": {
+      "length": 36,
+      "type": "item"
+    }
+  },
+  "custom_inventory_items": {
+    "name": "open_inventory",
+    "array": {
+      "length": 36,
+      "type": "item"
+    }
+  },
+  "client_brand_name": {
+    "name": "client_brand"
+  },
+  "attached_leads": {
+    "array": {
+      "length": 9999999,
+      "type": "text"
+    }
+  },
+  "event_block_location": {
+    "name": "event_block"
+  },
+  "event_blocks_involved": {
+    "array": {
+      "length": 9999999,
+      "type": "location"
+    }
+  },
+  "event_slots_involved": {
+    "array": {
+      "length": 9999999,
+      "type": "number"
+    }
+  },
+  "player_count": {
+    "name": "players"
+  },
+  "selection_target_names": {
+    "array": {
+      "length": 9999999,
+      "type": "text"
+    }
+  },
+  "selection_target_uuids": {
+    "array": {
+      "length": 9999999,
+      "type": "text"
+    }
+  },
+  "potion_effects": {
+    "array": {
+      "length": 9999999,
+      "type": "potion"
+    }
+  },
+  "passengers": {
+    "array": {
+      "length": 9999999,
+      "type": "text"
+    }
+  },
+  "event_added_items": {
+    "map": {
+      "key": "number",
+      "value": "item"
+    }
+  }
+}

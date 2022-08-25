@@ -1,0 +1,554 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`значения массив вложенный 1`] = `"Нельзя создавать вложенные массивы"`;
+
+exports[`значения массив пустой 1`] = `
+Object {
+  "handlers": Array [
+    Object {
+      "event": "world_start",
+      "operations": Array [
+        Object {
+          "action": "set_variable_create_list",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "a",
+              },
+            },
+            Object {
+              "name": "values",
+              "value": Object {
+                "type": "array",
+                "values": Array [
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                ],
+              },
+            },
+          ],
+        },
+      ],
+      "position": 0,
+      "type": "event",
+    },
+  ],
+}
+`;
+
+exports[`значения массив с больше 21 элементов 1`] = `
+Object {
+  "handlers": Array [
+    Object {
+      "event": "world_start",
+      "operations": Array [
+        Object {
+          "action": "set_variable_create_list",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "a",
+              },
+            },
+            Object {
+              "name": "values",
+              "value": Object {
+                "type": "array",
+                "values": Array [
+                  Object {
+                    "number": 1,
+                    "type": "number",
+                  },
+                  Object {
+                    "number": 2,
+                    "type": "number",
+                  },
+                  Object {
+                    "number": 3,
+                    "type": "number",
+                  },
+                  Object {
+                    "number": 4,
+                    "type": "number",
+                  },
+                  Object {
+                    "number": 5,
+                    "type": "number",
+                  },
+                  Object {
+                    "number": 6,
+                    "type": "number",
+                  },
+                  Object {
+                    "number": 7,
+                    "type": "number",
+                  },
+                  Object {
+                    "number": 8,
+                    "type": "number",
+                  },
+                  Object {
+                    "number": 9,
+                    "type": "number",
+                  },
+                  Object {
+                    "number": 10,
+                    "type": "number",
+                  },
+                  Object {
+                    "number": 11,
+                    "type": "number",
+                  },
+                  Object {
+                    "number": 12,
+                    "type": "number",
+                  },
+                  Object {
+                    "number": 13,
+                    "type": "number",
+                  },
+                  Object {
+                    "number": 14,
+                    "type": "number",
+                  },
+                  Object {
+                    "number": 15,
+                    "type": "number",
+                  },
+                  Object {
+                    "number": 16,
+                    "type": "number",
+                  },
+                  Object {
+                    "number": 17,
+                    "type": "number",
+                  },
+                  Object {
+                    "number": 18,
+                    "type": "number",
+                  },
+                  Object {
+                    "number": 19,
+                    "type": "number",
+                  },
+                  Object {
+                    "number": 20,
+                    "type": "number",
+                  },
+                  Object {
+                    "number": 21,
+                    "type": "number",
+                  },
+                ],
+              },
+            },
+          ],
+        },
+        Object {
+          "action": "set_variable_append_value",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "a",
+              },
+            },
+            Object {
+              "name": "values",
+              "value": Object {
+                "type": "array",
+                "values": Array [
+                  Object {
+                    "number": 22,
+                    "type": "number",
+                  },
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                ],
+              },
+            },
+          ],
+        },
+      ],
+      "position": 0,
+      "type": "event",
+    },
+  ],
+}
+`;
+
+exports[`значения массив с элементами 1`] = `
+Object {
+  "handlers": Array [
+    Object {
+      "event": "world_start",
+      "operations": Array [
+        Object {
+          "action": "set_variable_create_list",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "a",
+              },
+            },
+            Object {
+              "name": "values",
+              "value": Object {
+                "type": "array",
+                "values": Array [
+                  Object {
+                    "number": 1,
+                    "type": "number",
+                  },
+                  Object {
+                    "number": 2,
+                    "type": "number",
+                  },
+                  Object {
+                    "number": 3,
+                    "type": "number",
+                  },
+                  Object {
+                    "number": 4,
+                    "type": "number",
+                  },
+                  Object {
+                    "number": 5,
+                    "type": "number",
+                  },
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                ],
+              },
+            },
+          ],
+        },
+      ],
+      "position": 0,
+      "type": "event",
+    },
+  ],
+}
+`;
+
+exports[`значения переменные игровые 1`] = `
+Object {
+  "handlers": Array [
+    Object {
+      "event": "world_start",
+      "operations": Array [
+        Object {
+          "action": "set_variable_value",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "a",
+              },
+            },
+            Object {
+              "name": "value",
+              "value": Object {
+                "game_value": "location",
+                "selection": "{\\"type\\":\\"default\\"}",
+                "type": "game_value",
+              },
+            },
+          ],
+        },
+      ],
+      "position": 0,
+      "type": "event",
+    },
+  ],
+}
+`;
+
+exports[`значения переменные определённые 1`] = `
+Object {
+  "handlers": Array [
+    Object {
+      "event": "world_start",
+      "operations": Array [
+        Object {
+          "action": "set_variable_value",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "a",
+              },
+            },
+            Object {
+              "name": "value",
+              "value": Object {
+                "number": 0,
+                "type": "number",
+              },
+            },
+          ],
+        },
+        Object {
+          "action": "set_variable_value",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "b",
+              },
+            },
+            Object {
+              "name": "value",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "a",
+              },
+            },
+          ],
+        },
+      ],
+      "position": 0,
+      "type": "event",
+    },
+  ],
+}
+`;
+
+exports[`значения текст с двойными кавычками 1`] = `
+Object {
+  "handlers": Array [
+    Object {
+      "event": "world_start",
+      "operations": Array [
+        Object {
+          "action": "set_variable_value",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "a",
+              },
+            },
+            Object {
+              "name": "value",
+              "value": Object {
+                "text": "string",
+                "type": "text",
+              },
+            },
+          ],
+        },
+      ],
+      "position": 0,
+      "type": "event",
+    },
+  ],
+}
+`;
+
+exports[`значения текст с одинарными кавычками 1`] = `
+Object {
+  "handlers": Array [
+    Object {
+      "event": "world_start",
+      "operations": Array [
+        Object {
+          "action": "set_variable_value",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "a",
+              },
+            },
+            Object {
+              "name": "value",
+              "value": Object {
+                "text": "string",
+                "type": "text",
+              },
+            },
+          ],
+        },
+      ],
+      "position": 0,
+      "type": "event",
+    },
+  ],
+}
+`;
+
+exports[`значения число дробное 1`] = `
+Object {
+  "handlers": Array [
+    Object {
+      "event": "world_start",
+      "operations": Array [
+        Object {
+          "action": "set_variable_value",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "a",
+              },
+            },
+            Object {
+              "name": "value",
+              "value": Object {
+                "number": 0.1,
+                "type": "number",
+              },
+            },
+          ],
+        },
+      ],
+      "position": 0,
+      "type": "event",
+    },
+  ],
+}
+`;
+
+exports[`значения число отрицательное 1`] = `
+Object {
+  "handlers": Array [
+    Object {
+      "event": "world_start",
+      "operations": Array [
+        Object {
+          "action": "set_variable_value",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "a",
+              },
+            },
+            Object {
+              "name": "value",
+              "value": Object {
+                "number": -1,
+                "type": "number",
+              },
+            },
+          ],
+        },
+      ],
+      "position": 0,
+      "type": "event",
+    },
+  ],
+}
+`;
+
+exports[`значения число целое 1`] = `
+Object {
+  "handlers": Array [
+    Object {
+      "event": "world_start",
+      "operations": Array [
+        Object {
+          "action": "set_variable_value",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "a",
+              },
+            },
+            Object {
+              "name": "value",
+              "value": Object {
+                "number": 1,
+                "type": "number",
+              },
+            },
+          ],
+        },
+      ],
+      "position": 0,
+      "type": "event",
+    },
+  ],
+}
+`;

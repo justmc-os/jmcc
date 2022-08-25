@@ -1,0 +1,79 @@
+// Цвета
+inline var red = '&#f7a077';
+inline var green = '&#7cff73';
+inline var blue = '&#73b2ff';
+
+inline var yellow = '&#ffe169';
+inline var orange = '&#ffbb73';
+
+// Предметы в инвентаре игрока
+inline var capture_item = item("wooden_sword", name = "${red}Захват");
+inline var build_item = item("wooden_pickaxe", name = "${green}Построить");
+inline var land_item = item("egg", name = "${blue}Захват с моря");
+
+// Предметы в меню постройки
+inline var factory_item = item("piston", name = "${orange}Фабрика", lore = [
+  "&7&oДвигатель прогресса",
+  "",
+  "&7&oДаёт - ${yellow}0.25 золота/сек",
+  "&7&oПостроить - ${yellow}30 золота"
+]);
+inline var factory_block = "stone_button[face=floor]";
+
+inline var barracks_item = item("iron_helmet", name = "${red}Бараки", lore = [
+  "&7&oПуть войны",
+  "",
+  "&7&oДаёт - ${yellow}0.5 атаки/сек",
+  "&7&oПостроить - ${yellow}50 золота, ${red}10 атаки"
+]);
+inline var barracks_block = "oak_button[face=floor]";
+
+inline var bank_item = item("gold_ingot", name = "${yellow}Банк", lore = [
+  "&7&oСбережения на потом",
+  "",
+  "&7&oДаёт - ${yellow}+50 макс. золота",
+  "&7&oПостроить - ${yellow}100 золота"
+]);
+inline var bank_block = "birch_button[face=floor]";
+
+// Блоки
+inline var grass = "grass_block";
+inline var water = "spruce_slab[waterlogged=true]";
+
+// Воздух
+inline var _ = item("air");
+// Серая стеклянная панель
+inline var G = item("gray_stained_glass_pane", name = "&r");
+
+// Меню блоков при входе
+inline var blocks_menu = [
+  item("red_concrete",    "&cКрасный бетон"),
+  item("blue_concrete",   "&9Синий бетон"),
+  item("white_concrete",  "&fБелый бетон"),
+  item("yellow_concrete", "&eЖёлтый бетон"),
+  item("cyan_concrete",   "&3Бирюзовый бетон"),
+  item("pink_concrete",   "&5Розовый бетон"),
+  item("black_concrete",  "&7Чёрный бетон"),
+  item("brown_concrete",  "&6Коричневый бетон"),
+];
+
+inline var C = capture_item;
+inline var L = land_item;
+inline var B = build_item;
+// Инвентарь игрока
+inline var player_inventory = [
+  _, _, _, _, _, _, _, _, _,
+  _, _, _, _, _, _, _, _, _,
+  _, _, _, _, _, _, _, _, _,
+  _, _, C, _, L, _, B, _, _,
+];
+
+inline var F = factory_item;
+inline var R = barracks_item;
+inline var N = bank_item;
+// Меню построек
+inline var build_menu = [
+  G, G, G, G, G, G, G, G, G,
+  G, F, R, N, _, _, _, _, G,
+  G, G, G, G, G, G, G, G, G,
+];

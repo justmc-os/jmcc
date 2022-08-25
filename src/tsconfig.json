@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "../dist/",
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "incremental": true,
+    "target": "es2015",
+    "sourceMap": true,
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "references": [{ "path": "../" }],
+  "exclude": ["__tests__"]
+}

@@ -1,0 +1,39 @@
+import './items';
+import './utils';
+import './variables';
+import './on-block-capture';
+
+event<player_right_click> {
+  world::cancel_event();
+
+  // Если игрок держит предмет захвата
+  if (player::is_holding(capture_item)) {
+    // Если предмет захвата с моря без задержки
+    if (player::item_is_not_on_cooldown(capture_item)) {
+      // Если игрок кликает не по своему блоку и не по воде
+      if not (world::block_equals(value::event_block, [%player%_block, water])) {
+        // Если у игрока больше или равно 5 атаки
+        if (%player%_attack.greater_or_equals(5)) {
+          var return = 0;
+          // Если блок рядом с блоком игрока
+          // (Функция определена в файле 'utils.jc')
+          is_near_block(value::event_block, %player%_block, return);
+  
+          if (return.equals(1)) {
+            %player%_attack -= 5;
+            on_block_capture(value::event_block);
+            // Установка блока игрока туда куда он кликнул
+            world::set_block(%player%_block, value::event_block);
+            // Задержка - 8 тиков
+            player::set_item_cooldown(capture_item, 8);
+
+          }
+        // Если у игрока меньше 5 атаки
+        } else {
+          // (Функция определена в файле 'utils.jc')
+          title("${red}Недостаточно атаки")
+        }
+      }
+    }
+  }
+}
