@@ -1,6 +1,6 @@
 {
   "name": "jmcc",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Компилятор кода JustCode",
   "main": "dist/index.js",
   "keywords": [
@@ -53,6 +53,6 @@
     "docs": "yarn build:ts && node dist/docs/index.js",
     "tree": "bash scripts/tree.sh",
     "data": "ts-node scripts/data.ts",
-    "test": "jest"
+    "test": "FORCE_COLOR=0 jest"
   }
 }
