@@ -2,6 +2,7 @@ import envPaths from 'env-paths';
 import * as fs from 'fs';
 import path from 'path';
 import fetch from 'node-fetch';
+import mkdirp from 'mkdirp';
 
 import {
   number,
@@ -115,10 +116,12 @@ class Bootstrap {
     const version = await this.getRemoteDataFile('version.json');
 
     this.load(actions, values, events);
-    this.writeLocalDataFile(events, 'events.json');
-    this.writeLocalDataFile(actions, 'actions.json');
-    this.writeLocalDataFile(actions, 'actions.json');
-    this.writeLocalDataFile(version.data, 'values.json');
+
+    await mkdirp(Bootstrap.DATA_FOLDER);
+    this.writeLocalDataFile('events.json', events);
+    this.writeLocalDataFile('actions.json', actions);
+    this.writeLocalDataFile('values.json', values);
+    this.writeLocalDataFile('version', version.data);
   }
 
   loadLocal() {

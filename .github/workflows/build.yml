@@ -1,0 +1,55 @@
+name: Build executable
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  yarn:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16]
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - uses: actions/cache@v2
+        name: Cache
+        id: yarn-cache
+        with:
+          path: |
+            ~/.pkg-cache/
+            **/node_modules
+            ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn
+
+      - name: Install
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
+        run: yarn install --frozen-lockfile --prefer-offline --non-interactive --ignore-scripts
+
+      - name: Build
+        run: yarn build
+
+      - name: Test
+        run: yarn test
+
+      - name: Package
+        run: yarn package
+
+      - name: Get tag
+        id: get_tag
+        uses: dawidd6/action-get-tag@v1
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          body: |
+            JustMC Code Compiler ${{ steps.get_tag.outputs.tag }}
+          files: Release.txt
