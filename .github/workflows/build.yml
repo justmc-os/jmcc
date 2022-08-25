@@ -3,7 +3,7 @@ name: Build executable
 on:
   push:
     tags:
-      - '*'
+      - 'v*.*.*'
 
 jobs:
   yarn:
@@ -53,4 +53,6 @@ jobs:
         with:
           body: |
             JustMC Code Compiler ${{ steps.get_tag.outputs.tag }}
-          files: Release.txt
+          files: |
+            jmcc
+            jmcc.exe

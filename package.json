@@ -1,6 +1,6 @@
 {
   "name": "jmcc",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Компилятор кода JustCode",
   "main": "dist/index.js",
   "bin": "dist/index.js",
@@ -47,7 +47,7 @@
     "build": "yarn build:grammar && yarn build:ts",
     "build:grammar": "yarn clean && cd src/core/grammar && antlr4ts -o .compiled -visitor -no-listener JustCodeLexer.g4 JustCodeParser.g4",
     "build:ts": "tsc --build src",
-    "package": "pkg . -t node16-linux-x64",
+    "package": "pkg . -t node16-linux-x64 node16-win-x64",
     "clean": "rm -rf src/core/grammar/.??*/",
     "start": "node dist/index.js",
     "dev": "yarn build:ts && yarn start",
