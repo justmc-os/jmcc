@@ -95,6 +95,35 @@ var c = b.${action.name}(${getExampleArguments(action, [
 \`\`\`
     `.trim();
 
+  if (
+    isContainingAction(action) &&
+    action.containing === ActionContainerType.LAMBDA
+  )
+    return `
+  \`\`\`ts${
+    action.conditional
+      ? `
+  var a = 1`
+      : ''
+  }
+  ${objectName}::${action.name}(${
+      action.conditional
+        ? 'a.less(10)'
+        : getExampleArguments(action, action.lambda)
+    }) { ${
+      action.lambda
+        ?.map((_, idx) => 'abcdef'[idx])
+        .join(', ')
+        .concat(' ->') || ''
+    }
+    player::message("Повторение");
+    code::wait(1);
+  }
+
+  player::message("Конец повторения");
+  \`\`\`
+        `.trim();
+
   if (isContainingAction(action))
     return `
 \`\`\`ts

@@ -6442,7 +6442,7 @@
   },
   {
     "id": "set_variable_append_list",
-    "name": "append_list",
+    "name": "list_append_list",
     "object": "variable",
     "args": [
       {

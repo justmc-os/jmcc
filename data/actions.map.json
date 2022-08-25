@@ -1,5 +1,6 @@
 {
   "set_variable_append_list": {
+    "name": "list_append_list",
     "assigning": "variable",
     "origin": "list_1"
   },
@@ -636,5 +637,150 @@
   },
   "repeat_while": {
     "conditional": true
+  },
+  "add_item_enchantment": {
+    "assigning": "variable",
+    "origin": "item"
+  },
+  "append_value": {
+    "name": "list_append_value",
+    "assigning": "variable",
+    "origin": "item"
+  },
+  "get_item_color": {
+    "assigning": "variable",
+    "origin": "item"
+  },
+  "get_item_custom_tags": {
+    "assigning": "variable",
+    "origin": "item"
+  },
+  "get_item_enchantments": {
+    "assigning": "variable",
+    "origin": "item"
+  },
+  "get_item_nbt_tags": {
+    "assigning": "variable",
+    "origin": "item"
+  },
+  "get_player_head": {
+    "assigning": "variable"
+  },
+  "remove_enchantment": {
+    "name": "remove_item_enchantment",
+    "assigning": "variable",
+    "origin": "item"
+  },
+  "set_item_color": {
+    "assigning": "variable",
+    "origin": "item"
+  },
+  "set_item_enchantments": {
+    "assigning": "variable",
+    "origin": "item"
+  },
+  "set_item_visibility_flags": {
+    "assigning": "variable",
+    "origin": "item"
+  },
+  "random_location": {
+    "assigning": "variable"
+  },
+  "shift_location_in_direction": {
+    "assigning": "variable",
+    "origin": "location"
+  },
+  "get_potion_effect_amplifier": {
+    "assigning": "variable",
+    "origin": "potion"
+  },
+  "get_potion_effect_duration": {
+    "assigning": "variable",
+    "origin": "potion"
+  },
+  "get_potion_effect_type": {
+    "assigning": "variable",
+    "origin": "potion"
+  },
+  "get_sound_volume_action": {
+    "assigning": "variable",
+    "origin": "sound"
+  },
+  "get_template_code": {
+    "assigning": "variable",
+    "origin": "template"
+  },
+  "set_potion_effect_amplifier": {
+    "assigning": "variable",
+    "origin": "potion"
+  },
+  "set_potion_effect_duration": {
+    "assigning": "variable",
+    "origin": "potion"
+  },
+  "set_potion_effect_type": {
+    "assigning": "variable",
+    "origin": "potion"
+  },
+  "set_sound_type": {
+    "assigning": "variable",
+    "origin": "sound"
+  },
+  "set_sound_volume_action": {
+    "assigning": "variable",
+    "origin": "sound"
+  },
+  "set_template_code": {
+    "assigning": "variable",
+    "origin": "template"
+  },
+  "convert_text_to_number": {
+    "assigning": "variable",
+    "origin": "text"
+  },
+  "get_particle_spread": {
+    "assigning": "variable",
+    "origin": "particle"
+  },
+  "set_particle_spread": {
+    "assigning": "variable",
+    "origin": "particle"
+  },
+  "get_list_variables": {
+    "assigning": "variable"
+  },
+  "char_to_number": {
+    "assigning": "variable",
+    "origin": "char"
+  },
+  "clear_color_codes": {
+    "assigning": "variable",
+    "origin": "text"
+  },
+  "convert_number_to_text": {
+    "assigning": "variable",
+    "origin": "number"
+  },
+  "parse_json": {
+    "assigning": "variable"
+  },
+  "strip_text": {
+    "assigning": "variable",
+    "origin": "text"
+  },
+  "to_char": {
+    "assigning": "variable",
+    "origin": "number"
+  },
+  "to_json": {
+    "assigning": "variable",
+    "origin": "value"
+  },
+  "get_light_level": {
+    "assigning": "variable",
+    "origin": "location"
+  },
+  "ray_trace_result": {
+    "assigning": "variable_for_hit_block_location"
   }
 }
