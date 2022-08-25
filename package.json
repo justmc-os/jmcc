@@ -53,6 +53,6 @@
     "docs": "yarn build:ts && node dist/docs/index.js",
     "tree": "bash scripts/tree.sh",
     "data": "ts-node scripts/data.ts",
-    "test": "FORCE_COLOR=0 jest"
+    "test": "bash scripts/test.sh"
   }
 }
