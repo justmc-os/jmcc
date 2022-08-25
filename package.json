@@ -1,6 +1,6 @@
 {
   "name": "jmcc",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Компилятор кода JustCode",
   "main": "dist/index.js",
   "keywords": [
