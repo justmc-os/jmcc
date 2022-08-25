@@ -606,10 +606,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@rqbik/mtext@^1.0.0":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@rqbik/mtext/-/mtext-1.0.5.tgz#d9ea18cc67cba800c0a8eb8e48a0b73cb2fdf9cb"
-  integrity sha512-fxbOf7EYZ0lRQwpNNNBfoNeQDo0OcqAKdlpwcgh+mH4+uMLC/FM76gAZ+bPFt+y9ZakVc0mGJJAoHS7e1xFJaQ==
+"@rqbik/mtext@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@rqbik/mtext/-/mtext-1.0.6.tgz#7c55ef33c0260bc56c89def0fe99a6c255ca3a70"
+  integrity sha512-Z3X6ZLIhYA0y6KOS21popJ2qcuCCkUvenvdepwj30C9JwiWVG990ZKlwYGh4/6FHF6C9Lh3CjbeDlVxdVIFPFQ==
 
 "@sinclair/typebox@^0.23.3":
   version "0.23.5"
