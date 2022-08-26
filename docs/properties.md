@@ -48,7 +48,7 @@ var b = value::health<default_entity>
 | `value::entity_ticks_lived`          | число                   | Время жизни цели                      |
 | `value::arrows_in_body`              | число                   | Количество стрел в теле               |
 | `value::age`                         | число                   | Возраст цели                          |
-| `value::steer_forward`               | число                   | Прямолинейная движение транспорта     |
+| `value::steer_forward`               | число                   | Прямолинейное движение транспорта     |
 | `value::steer_sideways`              | число                   | Движение транспорта в стороны         |
 | `value::location`                    | местоположение          | Местоположение                        |
 | `value::target_block`                | местоположение          | Местоположение целевого блока         |
