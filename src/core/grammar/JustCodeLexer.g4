@@ -117,9 +117,11 @@ mode String;
 
 QUOTE_CLOSE: '"' -> popMode;
 
-StringText: ~('"' | '$')+ | '$';
+StringText: ~('\\' | '"' | '$')+ | '$';
 
 StringReference: DollarIdentifier;
+
+StringEscapedChar: '\\' .;
 
 StringExpressionStart: '${' -> pushMode(StringExpression);
 
@@ -130,9 +132,11 @@ mode SQString;
 
 SINGLE_QUOTE_CLOSE: '\'' -> popMode;
 
-SQStringText: ~('\'' | '$')+ | '$';
+SQStringText: ~('\\' | '\'' | '$')+ | '$';
 
 SQStringReference: DollarIdentifier;
+
+SQStringEscapedChar: '\\' .;
 
 SQStringExpressionStart: '${' -> pushMode(StringExpression);
 

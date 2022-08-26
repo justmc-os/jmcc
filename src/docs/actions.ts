@@ -174,7 +174,7 @@ const generateActionsDocs = async (properties: FlatProperties) => {
       (action) =>
         `- [*:: ${action.name}() [ ${
           properties[`${ACTION_PREFIX}${action.id}.name`]
-        } ]*](./${object.name}#${action.id})`
+        } ]*](./${object.name}.md#${action.id})`
     )
     .join('\n  ')}
     `.trim();

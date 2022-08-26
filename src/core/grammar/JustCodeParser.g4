@@ -65,14 +65,17 @@ string: stringLiteral | sqStringLiteral;
 stringLiteral:
 	QUOTE_OPEN (stringContent | stringExpression)* QUOTE_CLOSE;
 
-stringContent: StringText | StringReference;
+stringContent: StringText | StringEscapedChar | StringReference;
 
 stringExpression: StringExpressionStart expression RCURL;
 
 sqStringLiteral:
 	SINGLE_QUOTE_OPEN (sqStringContent | sqStringExpression)* SINGLE_QUOTE_CLOSE;
 
-sqStringContent: SQStringText | SQStringReference;
+sqStringContent:
+	SQStringText
+	| SQStringEscapedChar
+	| SQStringReference;
 
 sqStringExpression: SQStringExpressionStart expression RCURL;
 

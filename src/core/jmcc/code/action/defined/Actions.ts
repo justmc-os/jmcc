@@ -211,7 +211,8 @@ const equals = (value: Value, argument: ArgumentType) => {
   // Если значение является переменной
   if (value instanceof Variable) return true;
 
-  // Если значение является переменной
+  // Если аргумент является текстом
+  if (argument === TextConstant) return true;
 
   // Если значение является игровым значением и тип значения равен типу аргумента
   if (isGameValue(value)) {

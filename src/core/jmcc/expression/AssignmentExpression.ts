@@ -115,7 +115,7 @@ class AssignmentExpression {
       value.action = Actions.from(variableActions.SET_AT, {
         variable: args.list,
         list: args.list,
-        index: args.number,
+        number: args.number,
         value: expression,
       });
 

@@ -1,22 +1,20 @@
 import { CValue } from '../Value';
 
 class ParticleConstant extends CValue('particle', 'частица') {
-  static type: string = 'частица';
-
   constructor(
     public particle: string,
     public count: number,
-    public offset: {
+    public spread: {
       x: number;
       y: number;
-      z: number;
     },
-    public velocity: {
+    public motion: {
       x: number;
       y: number;
       z: number;
     },
     public material?: string,
+    public color?: string,
     public size?: number
   ) {
     super();
@@ -24,13 +22,14 @@ class ParticleConstant extends CValue('particle', 'частица') {
 
   toString(): string {
     return `Particle(${this.particle}, ${this.count}, ${JSON.stringify(
-      this.offset
-    )}, ${JSON.stringify(this.velocity)}, ${this.material}, ${this.size})`;
+      this.spread
+    )}, ${JSON.stringify(this.motion)}, ${this.material}, ${this.size})`;
   }
 
   toJson(): object {
     const additional = {
       ...(this.material ? { material: this.material } : {}),
+      ...(this.color ? { color: this.color } : {}),
       ...(this.size ? { size: this.size } : {}),
     };
 
@@ -38,12 +37,11 @@ class ParticleConstant extends CValue('particle', 'частица') {
       ...super.toJson(),
       particle_type: this.particle,
       count: this.count,
-      x_offset: this.offset.x,
-      y_offset: this.offset.y,
-      z_offset: this.offset.z,
-      x_velocity: this.velocity.x,
-      y_velocity: this.velocity.y,
-      z_velocity: this.velocity.z,
+      spread: {
+        first: this.spread.x,
+        second: this.spread.y,
+      },
+      motion: this.motion,
       ...additional,
     };
   }

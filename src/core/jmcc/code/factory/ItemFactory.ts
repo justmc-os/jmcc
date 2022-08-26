@@ -1,4 +1,18 @@
 import { MinecraftText } from '@rqbik/mtext';
+// @ts-ignore
+import mojangson from 'mojangson';
+
+interface MojangsonEntry {
+  value: any;
+  type: string;
+}
+
+const { parse, stringify } = mojangson as {
+  simplify(data: MojangsonEntry): any;
+  stringify({ value, type }: MojangsonEntry, quotes?: boolean): string;
+  parse(text: string): MojangsonEntry;
+  normalize(str: string, quotes?: boolean): string;
+};
 
 import { data } from '../../..';
 import Factory, { FactoryArguments, required } from './Factory';
@@ -41,19 +55,30 @@ class ItemFactory extends Factory('item') {
       item.tag.display.Lore = [];
 
       args.lore.values.forEach((value) => {
-        item.tag.display.Lore.push(MinecraftText.from(value.text).toJsonString());
+        item.tag.display.Lore.push(
+          MinecraftText.from(value.text).toJsonString()
+        );
       });
     }
 
     if (args.nbt) {
-      let nbt: object;
+      let nbt: MojangsonEntry;
       try {
-        nbt = JSON.parse(args.nbt.text);
+        nbt = parse(args.nbt.text);
       } catch (e) {
         throw new TracedParsingError(args.nbt, `Неправильный JSON объект`);
       }
 
-      item = { ...item, tag: { ...item.tag, ...nbt } };
+      item = {
+        ...item,
+        tag: stringify({
+          type: nbt.type,
+          value: {
+            ...nbt.value,
+            ...(item.tag ? parse(JSON.stringify(item.tag)) : {}),
+          },
+        }),
+      };
     }
 
     return new ItemConstant(JSON.stringify(item));

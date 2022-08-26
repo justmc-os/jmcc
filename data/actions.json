@@ -6463,7 +6463,7 @@
   },
   {
     "id": "set_variable_append_value",
-    "name": "append_value",
+    "name": "list_append_value",
     "object": "variable",
     "args": [
       {
@@ -6761,7 +6761,9 @@
         "type": "number",
         "name": "level"
       }
-    ]
+    ],
+    "assigning": "variable",
+    "origin": "item"
   },
   {
     "id": "set_variable_get_book_text",
@@ -6814,7 +6816,9 @@
         "type": "item",
         "name": "item"
       }
-    ]
+    ],
+    "assigning": "variable",
+    "origin": "item"
   },
   {
     "id": "set_variable_get_item_custom_tag",
@@ -6854,7 +6858,9 @@
         "type": "item",
         "name": "item"
       }
-    ]
+    ],
+    "assigning": "variable",
+    "origin": "item"
   },
   {
     "id": "set_variable_get_item_durability",
@@ -6897,7 +6903,9 @@
         "type": "item",
         "name": "item"
       }
-    ]
+    ],
+    "assigning": "variable",
+    "origin": "item"
   },
   {
     "id": "set_variable_get_item_lore",
@@ -6989,7 +6997,9 @@
         "type": "item",
         "name": "item"
       }
-    ]
+    ],
+    "assigning": "variable",
+    "origin": "item"
   },
   {
     "id": "set_variable_get_player_head",
@@ -7004,7 +7014,8 @@
         "type": "text",
         "name": "name_or_uuid"
       }
-    ]
+    ],
+    "assigning": "variable"
   },
   {
     "id": "set_variable_remove_item_custom_tag",
@@ -7029,7 +7040,7 @@
   },
   {
     "id": "set_variable_remove_enchantment",
-    "name": "remove_enchantment",
+    "name": "remove_item_enchantment",
     "object": "variable",
     "args": [
       {
@@ -7044,7 +7055,9 @@
         "type": "text",
         "name": "enchantment"
       }
-    ]
+    ],
+    "assigning": "variable",
+    "origin": "item"
   },
   {
     "id": "set_variable_set_book_page",
@@ -7140,7 +7153,9 @@
         "type": "text",
         "name": "color"
       }
-    ]
+    ],
+    "assigning": "variable",
+    "origin": "item"
   },
   {
     "id": "set_variable_set_item_custom_tag",
@@ -7215,7 +7230,9 @@
         "type": "variable",
         "name": "enchantments"
       }
-    ]
+    ],
+    "assigning": "variable",
+    "origin": "item"
   },
   {
     "id": "set_variable_set_item_lore",
@@ -7410,7 +7427,9 @@
           "OFF"
         ]
       }
-    ]
+    ],
+    "assigning": "variable",
+    "origin": "item"
   },
   {
     "id": "set_variable_center_location",
@@ -7589,7 +7608,8 @@
         "type": "location",
         "name": "location_2"
       }
-    ]
+    ],
+    "assigning": "variable"
   },
   {
     "id": "set_variable_set_all_coordinates",
@@ -7771,7 +7791,9 @@
           "SIDEWAYS"
         ]
       }
-    ]
+    ],
+    "assigning": "variable",
+    "origin": "location"
   },
   {
     "id": "set_variable_shift_location_on_vector",
@@ -8014,7 +8036,9 @@
         "type": "potion",
         "name": "potion"
       }
-    ]
+    ],
+    "assigning": "variable",
+    "origin": "potion"
   },
   {
     "id": "set_variable_get_potion_effect_duration",
@@ -8029,7 +8053,9 @@
         "type": "potion",
         "name": "potion"
       }
-    ]
+    ],
+    "assigning": "variable",
+    "origin": "potion"
   },
   {
     "id": "set_variable_get_potion_effect_type",
@@ -8044,7 +8070,9 @@
         "type": "potion",
         "name": "potion"
       }
-    ]
+    ],
+    "assigning": "variable",
+    "origin": "potion"
   },
   {
     "id": "set_variable_get_sound_pitch",
@@ -8093,7 +8121,9 @@
         "type": "sound",
         "name": "sound"
       }
-    ]
+    ],
+    "assigning": "variable",
+    "origin": "sound"
   },
   {
     "id": "set_variable_get_template_code",
@@ -8116,7 +8146,9 @@
           "MAP"
         ]
       }
-    ]
+    ],
+    "assigning": "variable",
+    "origin": "template"
   },
   {
     "id": "set_variable_set_potion_effect_amplifier",
@@ -8135,7 +8167,9 @@
         "type": "number",
         "name": "amplifier"
       }
-    ]
+    ],
+    "assigning": "variable",
+    "origin": "potion"
   },
   {
     "id": "set_variable_set_potion_effect_duration",
@@ -8154,7 +8188,9 @@
         "type": "number",
         "name": "duration"
       }
-    ]
+    ],
+    "assigning": "variable",
+    "origin": "potion"
   },
   {
     "id": "set_variable_set_potion_effect_type",
@@ -8173,7 +8209,9 @@
         "type": "text",
         "name": "effect_type"
       }
-    ]
+    ],
+    "assigning": "variable",
+    "origin": "potion"
   },
   {
     "id": "set_variable_set_sound_pitch",
@@ -8217,7 +8255,9 @@
         "type": "text",
         "name": "value"
       }
-    ]
+    ],
+    "assigning": "variable",
+    "origin": "sound"
   },
   {
     "id": "set_variable_set_sound_volume_action",
@@ -8236,7 +8276,9 @@
         "type": "number",
         "name": "volume"
       }
-    ]
+    ],
+    "assigning": "variable",
+    "origin": "sound"
   },
   {
     "id": "set_variable_set_template_code",
@@ -8255,7 +8297,9 @@
         "type": "any",
         "name": "code"
       }
-    ]
+    ],
+    "assigning": "variable",
+    "origin": "template"
   },
   {
     "id": "set_variable_to_hsb",
@@ -8460,7 +8504,9 @@
         "type": "number",
         "name": "radix"
       }
-    ]
+    ],
+    "assigning": "variable",
+    "origin": "text"
   },
   {
     "id": "set_variable_cosine",
@@ -9085,7 +9131,9 @@
           "HORIZONTAL"
         ]
       }
-    ]
+    ],
+    "assigning": "variable",
+    "origin": "particle"
   },
   {
     "id": "set_variable_get_particle_type",
@@ -9230,7 +9278,9 @@
         "type": "number",
         "name": "vertical"
       }
-    ]
+    ],
+    "assigning": "variable",
+    "origin": "particle"
   },
   {
     "id": "set_variable_set_particle_type",
@@ -9271,7 +9321,8 @@
           "LOCAL"
         ]
       }
-    ]
+    ],
+    "assigning": "variable"
   },
   {
     "id": "set_variable_purge",
@@ -9357,7 +9408,9 @@
         "type": "text",
         "name": "char"
       }
-    ]
+    ],
+    "assigning": "variable",
+    "origin": "char"
   },
   {
     "id": "set_variable_clear_color_codes",
@@ -9372,7 +9425,9 @@
         "type": "text",
         "name": "text"
       }
-    ]
+    ],
+    "assigning": "variable",
+    "origin": "text"
   },
   {
     "id": "set_variable_convert_number_to_text",
@@ -9391,7 +9446,9 @@
         "type": "number",
         "name": "radix"
       }
-    ]
+    ],
+    "assigning": "variable",
+    "origin": "number"
   },
   {
     "id": "set_variable_get_char_at",
@@ -9540,7 +9597,8 @@
         "type": "text",
         "name": "json"
       }
-    ]
+    ],
+    "assigning": "variable"
   },
   {
     "id": "set_variable_regex_replace_text",
@@ -9713,7 +9771,9 @@
           "INDENT"
         ]
       }
-    ]
+    ],
+    "assigning": "variable",
+    "origin": "text"
   },
   {
     "id": "set_variable_text",
@@ -9783,7 +9843,9 @@
         "type": "number",
         "name": "number"
       }
-    ]
+    ],
+    "assigning": "variable",
+    "origin": "number"
   },
   {
     "id": "set_variable_to_json",
@@ -9798,7 +9860,9 @@
         "type": "any",
         "name": "value"
       }
-    ]
+    ],
+    "assigning": "variable",
+    "origin": "value"
   },
   {
     "id": "set_variable_trim_text",
@@ -10281,7 +10345,9 @@
           "BLOCKS"
         ]
       }
-    ]
+    ],
+    "assigning": "variable",
+    "origin": "location"
   },
   {
     "id": "set_variable_get_sign_text",
@@ -10366,6 +10432,7 @@
         "type": "variable",
         "name": "variable_for_hit_entity_uuid"
       }
-    ]
+    ],
+    "assigning": "variable_for_hit_block_location"
   }
 ]

@@ -664,7 +664,11 @@ class CodeVisitor
 
   visitStringContent(context: JC.StringContentContext) {
     const reference = context.StringReference();
-    if (!reference) return context.StringText()!.text;
+    if (!reference) {
+      const escapedChar = context.StringEscapedChar()?.text.substring(1);
+
+      return (context.StringText()?.text || escapedChar)!;
+    }
 
     return this.resolveIdentifier(
       reference.text.substring(1),

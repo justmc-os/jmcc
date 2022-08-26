@@ -122,7 +122,7 @@ class VariableActions extends Actions {
     {
       variable: variable,
       list: variable,
-      index: number,
+      number,
       value: any,
     },
     { assigning: 'variable', origin: 'list' }
