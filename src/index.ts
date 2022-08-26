@@ -136,7 +136,7 @@ program
   });
 
 program
-  .command('fetch')
+  .command('update')
   .description('Обновляет данные о коде')
   .action(async (_path: string, options) => {
     await bootstrap.loadRemote();

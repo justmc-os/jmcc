@@ -133,7 +133,7 @@ class Bootstrap {
   }
 
   async getRemoteDataFile(name: string) {
-    const r = await fetch(`${Bootstrap.REMOVE_DATA}/${name}`);
+    const r = await fetch(`${Bootstrap.REMOTE_DATA}/${name}`);
     return await r.json();
   }
 
@@ -159,7 +159,7 @@ class Bootstrap {
   }
 
   static DATA_FOLDER = envPaths('jmcc', { suffix: '' }).data;
-  static REMOVE_DATA =
+  static REMOTE_DATA =
     'https://raw.githubusercontent.com/justmc-c/jmcc/main/data';
 }
 

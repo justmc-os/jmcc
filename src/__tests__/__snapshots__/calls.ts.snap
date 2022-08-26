@@ -164,7 +164,7 @@ Object {
               },
             },
             Object {
-              "name": "index",
+              "name": "number",
               "value": Object {
                 "number": 1,
                 "type": "number",

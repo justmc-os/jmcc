@@ -11,9 +11,7 @@ type VersionFile = {
 async function checkForUpdates() {
   let version: VersionFile;
   try {
-    version = JSON.parse(
-      await bootstrap.getRemoteDataFile('version.json').catch(() => '')
-    );
+    version = await bootstrap.getRemoteDataFile('version.json');
   } catch (e) {
     return;
   }
@@ -23,18 +21,18 @@ async function checkForUpdates() {
   if (version.data > localDataVersion) {
     console.log(
       chalk.bgYellow.black(' Внимание '),
-      `Данные о коде отстают от нужных на ${
+      `Данные о коде отстают от нужных на ${chalk.red(
         version.data - localDataVersion
-      } версии. Обновитесь с помощью ${chalk.cyan('jmcc update')}`
+      )} версии. Обновитесь с помощью ${chalk.cyan('jmcc update')}`
     );
   }
 
   if (version.compiler > localVersion.compiler) {
     console.log(
       chalk.bgYellow.black(' Внимание '),
-      `Компилятор отстаёт от нужного на ${
-        version.data - localDataVersion
-      } версии. Обновитесь переустановив компилятор`
+      `Компилятор отстаёт от нужного на ${chalk.red(
+        version.data - localVersion.compiler
+      )} версии. Обновитесь переустановив компилятор`
     );
   }
 }
