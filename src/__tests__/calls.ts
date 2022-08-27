@@ -16,6 +16,14 @@ describe('вызовы', () => {
         expect(jmcc.compileToJson(source)).toMatchSnapshot();
       });
 
+      test('с аргументом массивом', () => {
+        const source = `
+          player::message(["hello", "world!"], merging = "SPACES")
+        `;
+
+        expect(jmcc.compileToJson(source)).toMatchSnapshot();
+      });
+
       test('с неизвестным аргументом', () => {
         const source = `
           var a = variable::create_list(b = 1)
@@ -30,6 +38,46 @@ describe('вызовы', () => {
         `;
 
         expect(() => jmcc.compileToJson(source)).toThrowErrorMatchingSnapshot();
+      });
+
+      test('проверяющих значение', () => {
+        const source = `
+          if (player::is_holding(item("stone"))) {
+            player::message("hello")
+          }
+        `;
+
+        expect(jmcc.compileToJson(source)).toMatchSnapshot();
+      });
+
+      test('повторений', () => {
+        const source = `
+          repeat::forever() {
+            player::message("hello")
+          }
+        `;
+
+        expect(jmcc.compileToJson(source)).toMatchSnapshot();
+      });
+
+      test('повторений с условием', () => {
+        const source = `
+          repeat::while(player::is_holding(item("stone"))) {
+            player::message("hello")
+          }
+        `;
+
+        expect(jmcc.compileToJson(source)).toMatchSnapshot();
+      });
+
+      test('повторений с лямбдами', () => {
+        const source = `
+          repeat::on_range(0, 2) { i ->
+            player::message("idx: $i")
+          }
+        `;
+
+        expect(jmcc.compileToJson(source)).toMatchSnapshot();
       });
     });
 

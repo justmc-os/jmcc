@@ -338,6 +338,473 @@ Object {
 }
 `;
 
+exports[`вызовы функций встроенных объектов повторений 1`] = `
+Object {
+  "handlers": Array [
+    Object {
+      "event": "world_start",
+      "operations": Array [
+        Object {
+          "action": "repeat_forever",
+          "is_inverted": false,
+          "operations": Array [
+            Object {
+              "action": "player_send_message",
+              "values": Array [
+                Object {
+                  "name": "messages",
+                  "value": Object {
+                    "type": "array",
+                    "values": Array [
+                      Object {
+                        "text": "hello",
+                        "type": "text",
+                      },
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                    ],
+                  },
+                },
+                Object {
+                  "name": "merging",
+                  "value": Object {
+                    "enum": "SPACES",
+                    "type": "enum",
+                  },
+                },
+              ],
+            },
+          ],
+          "values": Array [],
+        },
+      ],
+      "position": 0,
+      "type": "event",
+    },
+  ],
+}
+`;
+
+exports[`вызовы функций встроенных объектов повторений с лямбдами 1`] = `
+Object {
+  "handlers": Array [
+    Object {
+      "event": "world_start",
+      "operations": Array [
+        Object {
+          "action": "repeat_on_range",
+          "is_inverted": false,
+          "operations": Array [
+            Object {
+              "action": "player_send_message",
+              "values": Array [
+                Object {
+                  "name": "messages",
+                  "value": Object {
+                    "type": "array",
+                    "values": Array [
+                      Object {
+                        "text": "idx: %var_local(i)",
+                        "type": "text",
+                      },
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                    ],
+                  },
+                },
+                Object {
+                  "name": "merging",
+                  "value": Object {
+                    "enum": "SPACES",
+                    "type": "enum",
+                  },
+                },
+              ],
+            },
+          ],
+          "values": Array [
+            Object {
+              "name": "start",
+              "value": Object {
+                "number": 0,
+                "type": "number",
+              },
+            },
+            Object {
+              "name": "end",
+              "value": Object {
+                "number": 2,
+                "type": "number",
+              },
+            },
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "i",
+              },
+            },
+          ],
+        },
+      ],
+      "position": 0,
+      "type": "event",
+    },
+  ],
+}
+`;
+
+exports[`вызовы функций встроенных объектов повторений с условием 1`] = `
+Object {
+  "handlers": Array [
+    Object {
+      "event": "world_start",
+      "operations": Array [
+        Object {
+          "action": "repeat_while",
+          "conditional": Object {
+            "action": "if_player_is_holding",
+            "is_inverted": false,
+            "operations": Array [],
+            "values": Array [
+              Object {
+                "name": "items",
+                "value": Object {
+                  "type": "array",
+                  "values": Array [
+                    Object {
+                      "item": "{\\"id\\":\\"stone\\",\\"Count\\":1}",
+                      "type": "item",
+                    },
+                    Object {},
+                    Object {},
+                    Object {},
+                    Object {},
+                    Object {},
+                    Object {},
+                    Object {},
+                    Object {},
+                    Object {},
+                    Object {},
+                    Object {},
+                    Object {},
+                    Object {},
+                    Object {},
+                    Object {},
+                    Object {},
+                    Object {},
+                  ],
+                },
+              },
+              Object {
+                "name": "hand_slot",
+                "value": Object {
+                  "enum": "EITHER_HAND",
+                  "type": "enum",
+                },
+              },
+              Object {
+                "name": "comparison_mode",
+                "value": Object {
+                  "enum": "EXACTLY",
+                  "type": "enum",
+                },
+              },
+            ],
+          },
+          "is_inverted": false,
+          "operations": Array [
+            Object {
+              "action": "player_send_message",
+              "values": Array [
+                Object {
+                  "name": "messages",
+                  "value": Object {
+                    "type": "array",
+                    "values": Array [
+                      Object {
+                        "text": "hello",
+                        "type": "text",
+                      },
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                    ],
+                  },
+                },
+                Object {
+                  "name": "merging",
+                  "value": Object {
+                    "enum": "SPACES",
+                    "type": "enum",
+                  },
+                },
+              ],
+            },
+          ],
+          "values": Array [
+            Object {
+              "name": "items",
+              "value": Object {
+                "type": "array",
+                "values": Array [
+                  Object {
+                    "item": "{\\"id\\":\\"stone\\",\\"Count\\":1}",
+                    "type": "item",
+                  },
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                ],
+              },
+            },
+            Object {
+              "name": "hand_slot",
+              "value": Object {
+                "enum": "EITHER_HAND",
+                "type": "enum",
+              },
+            },
+            Object {
+              "name": "comparison_mode",
+              "value": Object {
+                "enum": "EXACTLY",
+                "type": "enum",
+              },
+            },
+          ],
+        },
+      ],
+      "position": 0,
+      "type": "event",
+    },
+  ],
+}
+`;
+
+exports[`вызовы функций встроенных объектов проверяющих значение 1`] = `
+Object {
+  "handlers": Array [
+    Object {
+      "event": "world_start",
+      "operations": Array [
+        Object {
+          "action": "if_player_is_holding",
+          "is_inverted": false,
+          "operations": Array [
+            Object {
+              "action": "player_send_message",
+              "values": Array [
+                Object {
+                  "name": "messages",
+                  "value": Object {
+                    "type": "array",
+                    "values": Array [
+                      Object {
+                        "text": "hello",
+                        "type": "text",
+                      },
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                    ],
+                  },
+                },
+                Object {
+                  "name": "merging",
+                  "value": Object {
+                    "enum": "SPACES",
+                    "type": "enum",
+                  },
+                },
+              ],
+            },
+          ],
+          "values": Array [
+            Object {
+              "name": "items",
+              "value": Object {
+                "type": "array",
+                "values": Array [
+                  Object {
+                    "item": "{\\"id\\":\\"stone\\",\\"Count\\":1}",
+                    "type": "item",
+                  },
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                ],
+              },
+            },
+            Object {
+              "name": "hand_slot",
+              "value": Object {
+                "enum": "EITHER_HAND",
+                "type": "enum",
+              },
+            },
+            Object {
+              "name": "comparison_mode",
+              "value": Object {
+                "enum": "EXACTLY",
+                "type": "enum",
+              },
+            },
+          ],
+        },
+      ],
+      "position": 0,
+      "type": "event",
+    },
+  ],
+}
+`;
+
+exports[`вызовы функций встроенных объектов с аргументом массивом 1`] = `
+Object {
+  "handlers": Array [
+    Object {
+      "event": "world_start",
+      "operations": Array [
+        Object {
+          "action": "player_send_message",
+          "values": Array [
+            Object {
+              "name": "messages",
+              "value": Object {
+                "type": "array",
+                "values": Array [
+                  Object {
+                    "text": "hello",
+                    "type": "text",
+                  },
+                  Object {
+                    "text": "world!",
+                    "type": "text",
+                  },
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                ],
+              },
+            },
+            Object {
+              "name": "merging",
+              "value": Object {
+                "enum": "SPACES",
+                "type": "enum",
+              },
+            },
+          ],
+        },
+      ],
+      "position": 0,
+      "type": "event",
+    },
+  ],
+}
+`;
+
 exports[`вызовы функций встроенных объектов с неизвестным аргументом 1`] = `"Неизвестный аргумент 'b'"`;
 
 exports[`вызовы функций встроенных объектов с неподходящим типом аргумента 1`] = `"Аргумент с типом текст не может быть установлен параметру с типом число"`;

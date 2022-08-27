@@ -6,8 +6,19 @@ abstract class ErrorTraceable {
    */
   public node: ParserRuleContext | undefined;
 
+  /**
+   * Выражение парсера, которое создало это значение
+   */
+  public statement: ParserRuleContext | undefined;
+
   setNode(node: ParserRuleContext) {
     this.node = node;
+
+    return this;
+  }
+
+  setStatement(statement: ParserRuleContext) {
+    this.statement = statement;
 
     return this;
   }

@@ -80,6 +80,16 @@ describe('функции', () => {
 
     expect(jmcc.compileToJson(source)).toMatchSnapshot();
   });
+
+  test('поздние', () => {
+    const source = `
+      func(1, 2)
+
+      function func(a, b) {}
+    `;
+
+    expect(jmcc.compileToJson(source)).toMatchSnapshot();
+  });
 });
 
 describe('if-блоки', () => {
@@ -116,6 +126,19 @@ describe('if-блоки', () => {
       } else {
         player::message("false")
       }
+    `;
+
+    expect(jmcc.compileToJson(source)).toMatchSnapshot();
+  });
+
+  test('с одним выражением', () => {
+    const source = `
+      var a = 1
+
+      if (variable::in_range(a, 1, 2))
+        player::message("true")
+      else
+        player::message("false")
     `;
 
     expect(jmcc.compileToJson(source)).toMatchSnapshot();

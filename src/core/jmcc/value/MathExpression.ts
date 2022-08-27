@@ -89,10 +89,15 @@ class MathExpression extends CValue('text', 'текст') {
   static parseFunction(name: string, args: Value[]): MathExpression | null {
     const func = this.functions[name];
     if (!func) return null;
-    if (args.length > func)
-      throw `Передано слишком много аргументов (нужно: ${func}, передано: ${args.length})`;
-    if (args.length < func)
-      throw `Передано недостаточно аргументов (нужно: ${func}, передано: ${args.length})`;
+    const isNumber = typeof func === 'number';
+
+    const min = isNumber ? func : func.min;
+    const max = isNumber ? func : func.max;
+
+    if (args.length > max)
+      throw `Передано слишком много аргументов (нужно: ${max}, передано: ${args.length})`;
+    if (args.length < min)
+      throw `Передано недостаточно аргументов (нужно: ${min}, передано: ${args.length})`;
 
     const values = args.map((value) => this.expand(value));
     const expr = new MathExpression(args[0]);
@@ -105,7 +110,7 @@ class MathExpression extends CValue('text', 'текст') {
    * @see https://github.com/cregus/expression-evaluator/blob/master/src/main/kotlin/pl/kremblewski/expressionevaluator/Tokenizer.kt
    */
   static functions: {
-    [name: string]: number; // Parameters
+    [name: string]: number | { min: number; max: number }; // Parameters
   } = {
     abs: 1,
     sqrt: 1,
@@ -115,7 +120,7 @@ class MathExpression extends CValue('text', 'текст') {
     sin: 1,
     cos: 1,
 
-    round: 2,
+    round: { min: 1, max: 2 },
     pow: 2,
     min: 2,
     max: 2,

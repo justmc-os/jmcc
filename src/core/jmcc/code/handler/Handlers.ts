@@ -4,6 +4,7 @@ import Actions from '../action/defined/Actions';
 import codeActions from '../action/defined/CodeActions';
 import CodeFunction from './CodeFunction';
 import CodeHandler from './CodeHandler';
+import CodeProcess from './CodeProcess';
 
 class Handlers {
   protected values: CodeHandler[] = [];
@@ -73,9 +74,16 @@ class Handlers {
             maxLength - length < CodeContainingAction.LENGTH + 2
           ) {
             const removeAt = isActionContaining ? k : k - 1;
+            const actions = container.actions.slice(removeAt);
+            if (
+              actions.length === 1 &&
+              !(actions[0] instanceof CodeContainingAction)
+            )
+              break;
+
             const name = `jmcc.f${functionId++}`;
             const func = new CodeFunction(name);
-            func.actions = container.actions.slice(removeAt);
+            func.actions = actions;
             result.push(func);
 
             container.actions = container.actions.slice(0, removeAt);
@@ -104,7 +112,10 @@ class Handlers {
 
     for (let i = 0; i < result.length; i++) {
       let handler = result[i];
-      if (handler.length === 0) {
+      if (
+        handler.length === 0 &&
+        !(handler instanceof CodeFunction || handler instanceof CodeProcess)
+      ) {
         result.splice(i--, 1);
         continue;
       }

@@ -292,7 +292,11 @@ class Actions {
 
       // Если действие принимает список аргументов, но был передан один аргумент
       // то сворачиваем аргумент в список
-      if (isArray(argument) && equals(provided, argument.argument))
+      if (
+        isArray(argument) &&
+        equals(provided, argument.argument) &&
+        !(provided instanceof ArrayConstant)
+      )
         provided = args[key] = new ArrayConstant(provided, [provided]);
 
       // Если действие принимает перечисление и аргумент был передан как

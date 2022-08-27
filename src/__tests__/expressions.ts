@@ -34,6 +34,15 @@ describe('выражения', () => {
 
       expect(jmcc.compileToJson(source)).toMatchSnapshot();
     });
+
+    test('с динамическими значениями', () => {
+      const source = `
+        var a = 1.clamp(0, 2)
+        var b = a + 1
+      `;
+
+      expect(jmcc.compileToJson(source)).toMatchSnapshot();
+    });
   });
 
   test('устанавливающие', () => {

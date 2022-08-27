@@ -363,6 +363,159 @@ Object {
 }
 `;
 
+exports[`if-блоки с одним выражением 1`] = `
+Object {
+  "handlers": Array [
+    Object {
+      "event": "world_start",
+      "operations": Array [
+        Object {
+          "action": "set_variable_value",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "a",
+              },
+            },
+            Object {
+              "name": "value",
+              "value": Object {
+                "number": 1,
+                "type": "number",
+              },
+            },
+          ],
+        },
+        Object {
+          "action": "if_variable_in_range",
+          "is_inverted": false,
+          "operations": Array [
+            Object {
+              "action": "player_send_message",
+              "values": Array [
+                Object {
+                  "name": "messages",
+                  "value": Object {
+                    "type": "array",
+                    "values": Array [
+                      Object {
+                        "text": "true",
+                        "type": "text",
+                      },
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                    ],
+                  },
+                },
+                Object {
+                  "name": "merging",
+                  "value": Object {
+                    "enum": "SPACES",
+                    "type": "enum",
+                  },
+                },
+              ],
+            },
+          ],
+          "values": Array [
+            Object {
+              "name": "value",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "a",
+              },
+            },
+            Object {
+              "name": "min",
+              "value": Object {
+                "number": 1,
+                "type": "number",
+              },
+            },
+            Object {
+              "name": "max",
+              "value": Object {
+                "number": 2,
+                "type": "number",
+              },
+            },
+          ],
+        },
+        Object {
+          "action": "else",
+          "is_inverted": false,
+          "operations": Array [
+            Object {
+              "action": "player_send_message",
+              "values": Array [
+                Object {
+                  "name": "messages",
+                  "value": Object {
+                    "type": "array",
+                    "values": Array [
+                      Object {
+                        "text": "false",
+                        "type": "text",
+                      },
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                      Object {},
+                    ],
+                  },
+                },
+                Object {
+                  "name": "merging",
+                  "value": Object {
+                    "enum": "SPACES",
+                    "type": "enum",
+                  },
+                },
+              ],
+            },
+          ],
+          "values": Array [],
+        },
+      ],
+      "position": 0,
+      "type": "event",
+    },
+  ],
+}
+`;
+
 exports[`события обычные 1`] = `
 Object {
   "handlers": Array [
@@ -547,6 +700,86 @@ Object {
       "position": 0,
       "type": "event",
     },
+    Object {
+      "is_hidden": false,
+      "name": "func",
+      "operations": Array [],
+      "position": 1,
+      "type": "function",
+    },
+  ],
+}
+`;
+
+exports[`функции поздние 1`] = `
+Object {
+  "handlers": Array [
+    Object {
+      "event": "world_start",
+      "operations": Array [
+        Object {
+          "action": "set_variable_value",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "a",
+              },
+            },
+            Object {
+              "name": "value",
+              "value": Object {
+                "number": 1,
+                "type": "number",
+              },
+            },
+          ],
+        },
+        Object {
+          "action": "set_variable_value",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "b",
+              },
+            },
+            Object {
+              "name": "value",
+              "value": Object {
+                "number": 2,
+                "type": "number",
+              },
+            },
+          ],
+        },
+        Object {
+          "action": "call_function",
+          "values": Array [
+            Object {
+              "name": "function_name",
+              "value": Object {
+                "text": "func",
+                "type": "text",
+              },
+            },
+          ],
+        },
+      ],
+      "position": 0,
+      "type": "event",
+    },
+    Object {
+      "is_hidden": false,
+      "name": "func",
+      "operations": Array [],
+      "position": 1,
+      "type": "function",
+    },
   ],
 }
 `;
@@ -627,6 +860,13 @@ Object {
       "position": 0,
       "type": "event",
     },
+    Object {
+      "is_hidden": false,
+      "name": "func",
+      "operations": Array [],
+      "position": 1,
+      "type": "process",
+    },
   ],
 }
 `;
@@ -692,6 +932,13 @@ Object {
       ],
       "position": 0,
       "type": "event",
+    },
+    Object {
+      "is_hidden": false,
+      "name": "func",
+      "operations": Array [],
+      "position": 1,
+      "type": "function",
     },
   ],
 }
@@ -759,6 +1006,13 @@ Object {
       "position": 0,
       "type": "event",
     },
+    Object {
+      "is_hidden": false,
+      "name": "func",
+      "operations": Array [],
+      "position": 1,
+      "type": "function",
+    },
   ],
 }
 `;
@@ -824,6 +1078,13 @@ Object {
       ],
       "position": 0,
       "type": "event",
+    },
+    Object {
+      "is_hidden": false,
+      "name": "func",
+      "operations": Array [],
+      "position": 1,
+      "type": "function",
     },
   ],
 }

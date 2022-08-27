@@ -7,7 +7,7 @@ import MathExpression from './value/MathExpression';
 import { Value } from './value/Value';
 import Variable from './value/Variable';
 import GameValue from './value/GameValue';
-import Reporter from './Reporter';
+import { DynamicValue } from './value/DynamicValue';
 
 /**
  * Возвращает тип элемента массива
@@ -56,6 +56,7 @@ const isNumberValue = (value: any): boolean =>
   value instanceof MathExpression ||
   value instanceof NumberConstant ||
   value instanceof Variable ||
+  value instanceof DynamicValue ||
   (isGameValue(value) && value.type === NumberConstant) ||
   (value instanceof ParenthesizedExpression && isNumberValue(value.expression));
 

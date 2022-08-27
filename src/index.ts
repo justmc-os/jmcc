@@ -5,6 +5,7 @@ import chalk from 'chalk';
 import { Command, Help } from 'commander';
 import { promises as fsp } from 'fs';
 import fetch from 'node-fetch';
+import ora from 'ora';
 
 import jmccPackage from '../package.json';
 import JMCC from './core';
@@ -102,10 +103,14 @@ program
     if (options.silent) return console.dir(result, { depth: Infinity });
     if (options.upload) {
       await promise;
-      const response = await fetch(`${DOMAIN}/api/upload`, {
+      const spinner = ora().start('Загрузка в облако...');
+      const responsePromise = await fetch(`${DOMAIN}/api/upload`, {
         method: 'POST',
         body: JSON.stringify(result),
       }).then((r) => r.json());
+      spinner.stop();
+
+      const response = await responsePromise;
       if ('error' in response) return console.log(error(response.error));
 
       console.log(chalk.bgGreen.black(' Успех '), 'Файл загружен');
@@ -115,7 +120,9 @@ program
           ' Используйте данную команду на сервере для загрузки модуля:'
         )
       );
-      console.log(chalk.blue(` /module load-url ${DOMAIN}/api/${response.id}`));
+      console.log(
+        chalk.blue(` /module loadUrl force ${DOMAIN}/api/${response.id}`)
+      );
       console.log();
       console.log(
         chalk.bgYellow.black(' Важно '),

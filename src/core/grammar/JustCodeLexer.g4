@@ -89,7 +89,7 @@ fragment Letter:
 	| UNICODE_CLASS_LU
 	| UNICODE_CLASS_NL;
 
-NumberLiteral: '-'? IntegerLiteral | FloatLiteral;
+NumberLiteral: '-'? (IntegerLiteral | FloatLiteral);
 IntegerLiteral: '0' | (DigitNoZero Digit*);
 FloatLiteral: ('0' | DigitNoZero Digit*)? '.' Digit+;
 

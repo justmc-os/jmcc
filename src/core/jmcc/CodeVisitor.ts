@@ -52,6 +52,7 @@ import CodeContainingAction, {
 } from './code/action/CodeContainingAction';
 import CodeFunction from './code/handler/CodeFunction';
 import CodeProcess from './code/handler/CodeProcess';
+import { TracedParsingError } from './ErrorTraceable';
 
 const INITIAL_OPTIONS = {
   flat: false,
@@ -94,6 +95,13 @@ class CodeVisitor
     this.module.startBranch(getInitialHandler());
     tree.accept(this);
     this.module.endBranch();
+
+    try {
+      this.module.resolveLateFunctionCalls();
+    } catch (e: any) {
+      this.reporter.statement = (e as TracedParsingError).traced.statement;
+      this.reporter.report(e);
+    }
   }
 
   defaultResult(): any {
@@ -152,23 +160,32 @@ class CodeVisitor
     )
       throw 'Данное выражение не может быть использовано в условии if-блока';
 
-    const [ifBlock, elseBlock] = context.block();
+    const block = context.block();
+    const statement = context.statement();
     const not = !!context.NOT();
     expression.isInverted = not;
     this.module.addAction(expression);
 
     this.module.startBranch(expression);
-    this.visitBlock(ifBlock);
+    if (block) this.visitBlock(block);
+    if (statement) this.visitStatement(statement);
     this.module.endBranch();
 
-    if (elseBlock) {
-      const elseAction = Actions.from(codeActions.ELSE, {});
-      this.module.addAction(elseAction);
+    const elseStatement = context.elseStatement();
+    if (elseStatement) this.visitElseStatement(elseStatement);
+  }
 
-      this.module.startBranch(elseAction);
-      this.visitBlock(elseBlock);
-      this.module.endBranch();
-    }
+  visitElseStatement(context: JC.ElseStatementContext) {
+    const block = context.block();
+    const statement = context.statement();
+
+    const elseAction = Actions.from(codeActions.ELSE, {});
+    this.module.addAction(elseAction);
+
+    this.module.startBranch(elseAction);
+    if (block) this.visitBlock(block);
+    if (statement) this.visitStatement(statement);
+    this.module.endBranch();
   }
 
   visitBlock(context: JC.BlockContext) {
@@ -287,6 +304,22 @@ class CodeVisitor
     let [modifier, name, expression] = this.visitChildren(context, {
       resolveIdentifiers: false,
     });
+
+    if (!context.ASSIGNMENT()) {
+      if (!name) {
+        name = modifier;
+        modifier = VariableScope.LOCAL;
+      }
+
+      if (modifier === 'inline')
+        this.reporter.reportErrorAt(
+          context,
+          'Inline переменные не могут быть неопределёнными'
+        );
+
+      this.module.declareVariable(new Variable(name, modifier));
+      return;
+    }
 
     if (!expression) {
       expression = name;
@@ -409,73 +442,23 @@ class CodeVisitor
         );
         if (mathFunc) return mathFunc;
 
-        const func = this.module.resolveFunction(expression);
-        if (func) {
-          const argSchema = func.args.map(
-            ({ name }, idx) => [name, idx] as [string, number]
-          );
-          const normalized = normalizeCallArguments(
-            args,
-            argSchema.map(([a]) => a)
-          );
-
-          const funcArgs = argSchema.map(([key, idx]) => {
-            if (
-              !Object.keys(normalized).includes(key) &&
-              func.args[idx].defaultValue === undefined
-            )
-              throw `Не было передано значение для аргумента '${key}'`;
-
-            const argument = normalized[key];
-            // Если в качестве аргумента функции передаётся локальная переменная,
-            // имя которой равно имени аргумента, то игнорируем её
-            // (она и так будет установлена)
-            if (
-              argument &&
-              isVariable(argument) &&
-              argument.name === key &&
-              argument.scope === VariableScope.LOCAL
-            )
-              return;
-
-            const variable = new Variable(key, VariableScope.LOCAL);
-            this.module.assignVariable(
-              variable,
-              argument || func.args[idx].defaultValue
-            );
-
-            return [variable, key] as [Variable, string];
-          });
-
-          const action = func.process
-            ? Actions.from(codeActions.START_PROCESS, {
-                process_name: new TextConstant(expression),
-                local_variables_mode: 'COPY',
-              })
-            : Actions.from(codeActions.CALL_FUNCTION, {
-                function_name: new TextConstant(expression),
-              });
-
-          this.module.addAction(action);
-
-          // Устанавливаем после выполнения функции значения для переданных аргументов
-          // Это позволяет изменять значения аргументов функции, не меняя
-          // их имени или типа
-          funcArgs.forEach((funcArg) => {
-            if (!funcArg) return;
-
-            const argument = normalized[funcArg[1]];
-            if (argument && isVariable(argument))
-              this.module.assignVariable(argument, funcArg[0]);
-          });
-
-          return new Void().setNode(context);
-        }
-
-        this.reporter.reportErrorAt(
-          context.postfixUnaryNavigatedExpression(),
-          `Неизвестная функция '${expression}'`
+        const func = this.module.functions.find(
+          (func) => func.name === expression
         );
+
+        if (func) this.module.callFunction(func, args);
+        else
+          this.module.lateFunctionCalls.push(
+            new Internal({
+              name: expression,
+              args,
+              branch: this.module.branch,
+            })
+              .setNode(context.postfixUnaryNavigatedExpression())
+              .setStatement(context)
+          );
+
+        return new Void().setNode(context);
       }
 
       if (expression instanceof Internal && 'action' in expression.value) {

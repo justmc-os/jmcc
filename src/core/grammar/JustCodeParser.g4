@@ -36,16 +36,21 @@ functionValueParameters:
 functionValueParameter: identifier (ASSIGNMENT expression)?;
 
 variableDeclaration:
-	variableModifier? VAR NL* identifier NL* ASSIGNMENT NL* expression;
+	variableModifier? VAR NL* identifier (
+		NL* ASSIGNMENT NL* expression
+	)?;
 
 variableModifier: SAVE | GAME | INLINE NL*;
 
 block: LCURL statements RCURL;
 
 ifStatement:
-	IF NL* NOT? NL* LPAREN expression RPAREN NL* block? SEMICOLON? (
-		NL* ELSE NL* block?
-	)?;
+	IF NL* NOT? NL* LPAREN expression RPAREN NL* (
+		block
+		| statement
+	) (NL* elseStatement NL* SEMICOLON?)?;
+
+elseStatement: ELSE NL* (block | statement);
 
 lambdaStatement:
 	expression LCURL lambdaArguments? ARROW? statements RCURL;

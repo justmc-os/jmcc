@@ -1,6 +1,6 @@
 {
   "name": "jmcc",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Компилятор кода JustCode",
   "main": "dist/index.js",
   "bin": "dist/index.js",
@@ -21,8 +21,9 @@
     "env-paths": "2",
     "minecraft-data": "^3.4.0",
     "mkdirp": "^1.0.4",
+    "mojangson": "^2.0.2",
     "node-fetch": "2",
-    "mojangson": "^2.0.2"
+    "ora": "5"
   },
   "devDependencies": {
     "@gitbeaker/node": "^35.6.0",
