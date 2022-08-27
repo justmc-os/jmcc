@@ -31,7 +31,7 @@ async function checkForUpdates() {
     console.log(
       chalk.bgYellow.black(' Внимание '),
       `Компилятор отстаёт от нужного на ${chalk.red(
-        version.data - localVersion.compiler
+        version.compiler - localVersion.compiler
       )} версии. Обновитесь переустановив компилятор`
     );
   }
