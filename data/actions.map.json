@@ -699,6 +699,7 @@
     "origin": "potion"
   },
   "set_variable_get_sound_volume_action": {
+    "name": "get_sound_volume",
     "assigning": "variable",
     "origin": "sound"
   },
@@ -723,6 +724,7 @@
     "origin": "sound"
   },
   "set_variable_set_sound_volume_action": {
+    "name": "set_sound_volume",
     "assigning": "variable",
     "origin": "sound"
   },
@@ -778,5 +780,11 @@
   },
   "set_variable_ray_trace_result": {
     "assigning": "variable_for_hit_block_location"
+  },
+  "entity_celar_potion_effects": {
+    "name": "clear_potion_effects"
+  },
+  "player_play_animation_action": {
+    "name": "play_animation"
   }
 }
