@@ -26,16 +26,16 @@ class ParticleFactory extends Factory('particle') {
         `Неизвестная частица '${particle}'`
       );
 
-    const count = args.count?.number || 1;
+    const count = args.count?.number ?? 1;
     const spread = {
-      x: args.spread_x?.number || 1,
-      y: args.spread_y?.number || 1,
+      x: args.spread_x?.number ?? 0,
+      y: args.spread_y?.number ?? 0,
     };
 
     const motion = {
-      x: args.motion_x?.number || 1,
-      y: args.motion_y?.number || 1,
-      z: args.motion_z?.number || 1,
+      x: args.motion_x?.number ?? 0,
+      y: args.motion_y?.number ?? 0,
+      z: args.motion_z?.number ?? 0,
     };
 
     return new ParticleConstant(
