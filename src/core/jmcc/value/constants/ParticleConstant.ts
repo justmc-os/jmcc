@@ -37,11 +37,11 @@ class ParticleConstant extends CValue('particle', 'частица') {
       ...super.toJson(),
       particle_type: this.particle,
       count: this.count,
-      spread: {
-        first: this.spread.x,
-        second: this.spread.y,
-      },
-      motion: this.motion,
+      first_spread: this.spread.x,
+      second_spread: this.spread.y,
+      x_motion: this.motion.x,
+      y_motion: this.motion.y,
+      z_motion: this.motion.z,
       ...additional,
     };
   }
