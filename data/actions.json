@@ -5296,7 +5296,8 @@
         "name": "particle_mode",
         "enum": [
           "REGULAR",
-          "ItemStack"
+          "AMBIENT",
+          "NONE"
         ]
       }
     ]
@@ -6015,7 +6016,9 @@
         "name": "pattern",
         "enum": [
           "CARDINAL",
-          "ItemStack"
+          "SQUARE",
+          "ADJACENT",
+          "CUBE"
         ]
       }
     ],

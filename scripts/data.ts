@@ -34,12 +34,7 @@ const GAME_VALUES_PATH =
   'justmc-creative-plus/src/main/kotlin/ru/justmc/creativeplus/core/value/GameValue.kt';
 
 const ACTIONS_FILE = path.resolve(DATA_DIR, 'actions.json');
-const IGNORED_ACTIONS = [
-  'Actions.kt',
-  'EmptyAction.kt',
-  'DummyAction.kt',
-  'SetVariableParseNumberFromTextAction.kt',
-];
+const IGNORED_ACTIONS = ['Actions.kt', 'EmptyAction.kt', 'DummyAction.kt'];
 const ACTIONS_PATH =
   'justmc-creative-plus/src/main/kotlin/ru/justmc/creativeplus/action';
 
@@ -80,8 +75,10 @@ const ARGS_REGEX =
   /by (.*)\("(.*?)"(?:(?:,\s*(false))|(?:.*))\)(?:.|\n)*?parsing\s*=\s*(.*)/g;
 
 const ENUM_TYPE_REGEX = /enum<(.*)>/;
-const ENUM_REGEX = /enum\s*?class\s*(.*?)(?:\(.*?\))?\s*\{(.*?)\}(?!\))/gms;
-const ENUM_MEMBER_REGEX = /(?:(?:^|,)\s*)(?:\b([A-Z_][\w]*)\b(?:\(.*?\))?)/gm;
+const ENUM_REGEX =
+  /enum\s*?class\s*(.*?)(?:\(.*?\))?\s*\{(.*?)\}(?!\s*\)|,)/gms;
+const ENUM_MEMBER_REGEX =
+  /(?:(?:^|,)\s*)(?:\b(?!ItemStack|BlockDirection)([A-Z_][\w]*)(?!\))\b(?:\(.*?\))?)/gm;
 
 const ACTION_PREFIXES = {
   player: 'player',
