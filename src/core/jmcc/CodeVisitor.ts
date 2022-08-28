@@ -125,6 +125,7 @@ class CodeVisitor
       const module = this.compiler.import(path.text, this.mode);
       this.compiler.stack = [...this.stack];
       this.module.import(module);
+      CodeVisitor.currentModule = this.module;
     } catch (e: any) {
       return this.reporter.reportErrorAt(context.string(), e);
     }
@@ -388,7 +389,7 @@ class CodeVisitor
       if (expression instanceof Internal && 'property' in expression.value) {
         const { property, selection } = expression.value as PropertyReference;
 
-        return new GameValue(property.type, property.id, selection).setStack(
+        return new GameValue(property.type, property.id, selection).setModule(
           this.module
         );
       }
@@ -417,7 +418,7 @@ class CodeVisitor
           list: expression,
           number: index,
         })
-      ).setStack(this.module);
+      ).setModule(this.module);
     }
 
     const call = postfix.callSuffix();
@@ -537,7 +538,7 @@ class CodeVisitor
         }
 
         return new DynamicValue(Actions.from(action, actionArgs, selection))
-          .setStack(this.module)
+          .setModule(this.module)
           .setNode(context);
       }
     }

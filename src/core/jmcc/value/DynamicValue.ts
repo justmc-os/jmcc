@@ -13,7 +13,7 @@ export class DynamicValue extends CValue('dynamic', 'динамическое з
   }
 
   private module!: CodeModule;
-  setStack(module: CodeModule) {
+  setModule(module: CodeModule) {
     this.module = module;
     return this;
   }

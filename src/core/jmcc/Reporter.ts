@@ -84,9 +84,8 @@ class Reporter {
     const maxLine = nodeLine.toString().length;
     console.log(
       this.getLineText(maxLine, nodeLine),
-      ' '.repeat(
-        nodeLine === statementLine ? statement.start.charPositionInLine : char
-      ) + statementText[nodeLine - statementLine].trim()
+      ' '.repeat(statement.start.charPositionInLine) +
+        statementText[nodeLine - statementLine].trim()
     );
     console.log(
       this.getLineText(maxLine),

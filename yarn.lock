@@ -2499,9 +2499,9 @@ mimic-response@^3.1.0:
   integrity sha512-z0yWI+4FDrrweS8Zmt4Ej5HdJmky15+L2e6Wgn3+iK5fWzb6T3fhNFq2+MeTRb064c6Wr4N/wv0DzQTjNzHNGQ==
 
 minecraft-data@^3.4.0:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/minecraft-data/-/minecraft-data-3.4.0.tgz#63a63316cc85475339de853d7a48e9a11771e64e"
-  integrity sha512-5KuRiS2ledyhCHyxRy6Rw4mvi9RxUJUXwt6Rt6G9K3mqAALLGiBlGPokScmntBYllk5A5IHNth7+UQa88rErEg==
+  version "3.11.0"
+  resolved "https://registry.yarnpkg.com/minecraft-data/-/minecraft-data-3.11.0.tgz#02c6306e170f1c7b6f38fb5d39743522acb0f8d2"
+  integrity sha512-f2Zhv309sIetcK/Ar4sLqKkWB+fmxSL1j08IsH3U6zBqMQLmeBU0y6rTrBJZUJWlEzLVn2ZJONtNHoM/I6JaBA==
 
 minimatch@^3.0.4, minimatch@^3.1.1:
   version "3.1.2"

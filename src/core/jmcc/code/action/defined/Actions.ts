@@ -199,14 +199,8 @@ const equals = (value: Value, argument: ArgumentType) => {
   )
     return true;
 
-  // Если значение не является списком и аргумент принимает любой тип значений
-  if (
-    isValue(argument) &&
-    !(value instanceof ArrayConstant) &&
-    value !== undefined &&
-    argument === Any
-  )
-    return true;
+  // Если аргумент принимает любой тип значений
+  if (value !== undefined && argument === Any) return true;
 
   // Если значение является переменной
   if (value instanceof Variable) return true;
