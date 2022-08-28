@@ -2163,7 +2163,7 @@ var c = b.get_sound_type()
 | `variable` | переменная | Переменная для присвоения   |
 | `sound`    | звук       | Звук для получения значения |
 <h3 id=set_variable_get_sound_volume_action>
-  <code>variable::get_sound_volume_action</code>
+  <code>variable::get_sound_volume</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2171,12 +2171,12 @@ var c = b.get_sound_type()
 **Тип:** Действие, устанавливающее значение\
 **Пример использования:**
 ```ts
-var a = variable::get_sound_volume_action(sound("entity.zombie.hurt"))
+var a = variable::get_sound_volume(sound("entity.zombie.hurt"))
 
 // или от переменной:
 
 var b = sound("entity.zombie.hurt")
-var c = b.get_sound_volume_action()
+var c = b.get_sound_volume()
 ```
 
 **Аргументы:**
@@ -2324,7 +2324,7 @@ var c = b.set_sound_type("текст", "текст")
 | `namespace` | текст      | Пространство имён (minecraft: и т.п.) |
 | `value`     | текст      | ID звука                              |
 <h3 id=set_variable_set_sound_volume_action>
-  <code>variable::set_sound_volume_action</code>
+  <code>variable::set_sound_volume</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -2332,12 +2332,12 @@ var c = b.set_sound_type("текст", "текст")
 **Тип:** Действие, устанавливающее значение\
 **Пример использования:**
 ```ts
-var a = variable::set_sound_volume_action(sound("entity.zombie.hurt"), 0)
+var a = variable::set_sound_volume(sound("entity.zombie.hurt"), 0)
 
 // или от переменной:
 
 var b = sound("entity.zombie.hurt")
-var c = b.set_sound_volume_action(0)
+var c = b.set_sound_volume(0)
 ```
 
 **Аргументы:**

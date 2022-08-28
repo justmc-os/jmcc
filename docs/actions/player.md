@@ -610,7 +610,7 @@ player::disguise_as_item(item("stone"))
 | ------- | ------- | ---------------------- |
 | `item`  | предмет | Предмет для маскировки |
 <h3 id=player_play_animation_action>
-  <code>player::play_animation_action</code>
+  <code>player::play_animation</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -618,7 +618,7 @@ player::disguise_as_item(item("stone"))
 **Тип:** Действие без значения\
 **Пример использования:**
 ```ts
-player::play_animation_action("DAMAGE")
+player::play_animation("DAMAGE")
 ```
 
 **Аргументы:**
@@ -1652,12 +1652,12 @@ player::give_potion_effect([potion("slow_falling"), potion("slow_falling")], "TR
 ```
 
 **Аргументы:**
-| **Имя**         | **Тип**                                                          | **Описание**                        |
-| --------------- | ---------------------------------------------------------------- | ----------------------------------- |
-| `potions`       | список[зелье]                                                    | Эффекты для выдачи                  |
-| `overwrite`     | перечисление:<br/>**TRUE** - Да<br/>**FALSE** - Нет              | Перезаписывать существующие эффекты |
-| `show_icon`     | перечисление:<br/>**TRUE** - Да<br/>**FALSE** - Нет              | Показывать иконку эффекта           |
-| `particle_mode` | перечисление:<br/>**REGULAR** - Да<br/>**ItemStack** - undefined | Показывать частицы                  |
+| **Имя**         | **Тип**                                                                             | **Описание**                        |
+| --------------- | ----------------------------------------------------------------------------------- | ----------------------------------- |
+| `potions`       | список[зелье]                                                                       | Эффекты для выдачи                  |
+| `overwrite`     | перечисление:<br/>**TRUE** - Да<br/>**FALSE** - Нет                                 | Перезаписывать существующие эффекты |
+| `show_icon`     | перечисление:<br/>**TRUE** - Да<br/>**FALSE** - Нет                                 | Показывать иконку эффекта           |
+| `particle_mode` | перечисление:<br/>**REGULAR** - Да<br/>**AMBIENT** - Прозрачными<br/>**NONE** - Нет | Показывать частицы                  |
 <h3 id=player_heal>
   <code>player::heal</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>

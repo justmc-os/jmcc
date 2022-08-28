@@ -781,7 +781,7 @@ entity::teleport(location(0, 0, 0), "TRUE")
 | `location`      | местоположение                                                  | Новая позиция            |
 | `keep_rotation` | перечисление:<br/>**TRUE** - Включено<br/>**FALSE** - Выключено | Оставить текущий поворот |
 <h3 id=entity_celar_potion_effects>
-  <code>entity::celar_potion_effects</code>
+  <code>entity::clear_potion_effects</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -789,7 +789,7 @@ entity::teleport(location(0, 0, 0), "TRUE")
 **Тип:** Действие без значения\
 **Пример использования:**
 ```ts
-entity::celar_potion_effects()
+entity::clear_potion_effects()
 ```
 
 **Без аргументов**
