@@ -569,7 +569,7 @@
   },
   {
     "id": "server_stopped_time",
-    "type": "text",
+    "type": "number",
     "name": "server_stopped_time"
   },
   {

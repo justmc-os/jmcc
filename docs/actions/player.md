@@ -638,6 +638,19 @@ player::remove_disguise()
 ```
 
 **Без аргументов**
+<h3 id=player_remove_skin>
+  <code>player::remove_skin</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** undefined\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+player::remove_skin()
+```
+
+**Без аргументов**
 <h3 id=player_set_arrows_in_body>
   <code>player::set_arrows_in_body</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>

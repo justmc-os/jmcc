@@ -427,9 +427,9 @@ entity::set_target("текст")
 ```
 
 **Аргументы:**
-| **Имя** | **Тип** | **Описание**      |
-| ------- | ------- | ----------------- |
-| `name`  | текст   | Имя или UUID цели |
+| **Имя**        | **Тип** | **Описание** |
+| -------------- | ------- | ------------ |
+| `name_or_uuid` | текст   |              |
 <h3 id=entity_sleep>
   <code>entity::sleep</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -910,22 +910,6 @@ entity::set_attribute(0, "MAX_HEALTH")
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
 | `value`          | число                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Значение атрибута |
 | `attribute_type` | перечисление:<br/>**MAX_HEALTH** - Максимальное здоровье<br/>**FOLLOW_RANGE** - Расстояние следования<br/>**KNOCKBACK_RESISTANCE** - Сопротивление отталкиванию<br/>**MOVEMENT_SPEED** - Скорость передвижения<br/>**FLYING_SPEED** - Скорость полёта<br/>**ATTACK_DAMAGE** - Урон атаки<br/>**ATTACK_KNOCKBACK** - Отталкивание атаки<br/>**ATTACK_SPEED** - Скорость атаки<br/>**ARMOR** - Очки защиты<br/>**ARMOR_TOUGHNESS** - Очки плотности защиты<br/>**LUCK** - Удача рыбалки<br/>**HORSE_JUMP_STRENGTH** - Сила прыжка лошади | Тип атрибута      |
-<h3 id=entity_set_creeper_explosion_power>
-  <code>entity::set_creeper_explosion_power</code>
-  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
-</h3>
-
-**Имя:** Установить криперу силу взрыва\
-**Тип:** Действие без значения\
-**Пример использования:**
-```ts
-entity::set_creeper_explosion_power(0)
-```
-
-**Аргументы:**
-| **Имя** | **Тип** | **Описание** |
-| ------- | ------- | ------------ |
-| `power` | число   | Сила взрыва  |
 <h3 id=entity_set_creeper_fuse>
   <code>entity::set_creeper_fuse</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -974,6 +958,22 @@ entity::set_death_time(0)
 | **Имя**      | **Тип** | **Описание**                  |
 | ------------ | ------- | ----------------------------- |
 | `death_time` | число   | Длительность смерти (в тиках) |
+<h3 id=entity_set_explosive_power>
+  <code>entity::set_explosive_power</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** undefined\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_explosive_power(0)
+```
+
+**Аргументы:**
+| **Имя** | **Тип** | **Описание** |
+| ------- | ------- | ------------ |
+| `power` | число   |              |
 <h3 id=entity_set_fall_distance>
   <code>entity::set_fall_distance</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -1782,15 +1782,15 @@ if (entity::is_standing_on_block([item("stone"), item("stone")], [location(0, 0,
 **Тип:** Действие, проверяющее условие\
 **Пример использования:**
 ```ts
-if (entity::is_type(item("stone"))) {
+if (entity::is_type([item("stone"), item("stone")])) {
   player::message("Условие правдиво")
 }
 ```
 
 **Аргументы:**
-| **Имя**       | **Тип** | **Описание** |
-| ------------- | ------- | ------------ |
-| `entity_type` | предмет | Тип существа |
+| **Имя**        | **Тип**         | **Описание** |
+| -------------- | --------------- | ------------ |
+| `entity_types` | список[предмет] |              |
 <h3 id=if_entity_is_vehicle>
   <code>entity::is_vehicle</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>

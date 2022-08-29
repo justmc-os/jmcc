@@ -128,7 +128,7 @@ var b = value::health<default_entity>
 | `value::selection_target_uuids`      | список[текст]           | UUID выбранных целей                  |
 | `value::url_response`                | текст                   | Ответ на веб-запрос                   |
 | `value::world_time`                  | число                   | Текущее время мира                    |
-| `value::server_stopped_time`         | текст                   | Время остановки сервера               |
+| `value::server_stopped_time`         | число                   | Время остановки сервера               |
 | `value::action_count_per_tick`       | число                   | Количество действий за тик            |
 | `value::owner_uuid`                  | текст                   | UUID владельца мира                   |
 | `value::world_size`                  | число                   | Размер мира                           |

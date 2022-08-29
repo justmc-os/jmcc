@@ -550,7 +550,7 @@
     "args": [
       {
         "type": "text",
-        "name": "name"
+        "name": "name_or_uuid"
       }
     ]
   },
@@ -999,17 +999,6 @@
     ]
   },
   {
-    "id": "entity_set_creeper_explosion_power",
-    "name": "set_creeper_explosion_power",
-    "object": "entity",
-    "args": [
-      {
-        "type": "number",
-        "name": "power"
-      }
-    ]
-  },
-  {
     "id": "entity_set_creeper_fuse",
     "name": "set_creeper_fuse",
     "object": "entity",
@@ -1039,6 +1028,17 @@
       {
         "type": "number",
         "name": "death_time"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_explosive_power",
+    "name": "set_explosive_power",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "power"
       }
     ]
   },
@@ -2792,7 +2792,9 @@
     "args": [
       {
         "type": "item",
-        "name": "entity_type"
+        "name": "entity_types",
+        "array": true,
+        "length": 18
       }
     ],
     "containing": "predicate"
@@ -4273,6 +4275,12 @@
   {
     "id": "player_remove_disguise",
     "name": "remove_disguise",
+    "object": "player",
+    "args": []
+  },
+  {
+    "id": "player_remove_skin",
+    "name": "remove_skin",
     "object": "player",
     "args": []
   },
