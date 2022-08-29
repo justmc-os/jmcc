@@ -4,9 +4,6 @@ import { CValue, ValueType } from '../Value';
 
 class ArrayConstant<T extends ValueType> extends CValue('array', 'список') {
   constructor(public type: InstanceType<T>, public values: InstanceType<T>[]) {
-    if (type instanceof ArrayConstant)
-      throw 'Нельзя создавать вложенные массивы';
-
     super();
   }
 

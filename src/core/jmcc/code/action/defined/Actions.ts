@@ -313,6 +313,29 @@ class Actions {
         provided = args[key] = new EnumConstant(provided.text);
       }
 
+      if (
+        isArray(argument) &&
+        provided instanceof ArrayConstant &&
+        provided.values.some((value) => value instanceof ArrayConstant)
+      ) {
+        const walk = (array: ArrayConstant<any>) => {
+          const out = new Variable(
+            DynamicValue.getNextName(),
+            VariableScope.LOCAL
+          );
+
+          array.values = array.values.map((value) => {
+            if (value instanceof ArrayConstant) return walk(value);
+            return value;
+          });
+
+          CodeVisitor.currentModule.assignVariable(out, array);
+          return out;
+        };
+
+        provided = args[key] = walk(provided);
+      }
+
       // Если значение требует переменную, но передан массив
       if (provided instanceof ArrayConstant && argument === Variable) {
         const variable = new Variable(

@@ -72,7 +72,6 @@ class Reporter {
     const statementLine = statement.start.line;
     const nodeLine = node.start.line;
     const char = node.start.charPositionInLine;
-    const nodeSize = this.getFullText(node).length;
 
     console.log(
       `${chalk.gray('В файле')} ${chalk.blueBright(
@@ -82,14 +81,16 @@ class Reporter {
     console.log();
 
     const maxLine = nodeLine.toString().length;
+    const nodeText = statementText[nodeLine - statementLine].trim();
     console.log(
       this.getLineText(maxLine, nodeLine),
-      ' '.repeat(statement.start.charPositionInLine) +
-        statementText[nodeLine - statementLine].trim()
+      ' '.repeat(
+        statementLine === nodeLine ? statement.start.charPositionInLine : char
+      ) + nodeText
     );
     console.log(
       this.getLineText(maxLine),
-      ' '.repeat(char) + chalk.redBright('~'.repeat(nodeSize))
+      ' '.repeat(char) + chalk.redBright('~'.repeat(nodeText.length))
     );
 
     console.log();
@@ -102,7 +103,9 @@ class Reporter {
   private getLineText(maxLineLength: number, line?: number) {
     const text = ` ${line ?? '~'} `;
 
-    return chalk.bgWhite(' '.repeat(maxLineLength - (text.length - 2)) + text);
+    return chalk.bgWhite.black(
+      ' '.repeat(maxLineLength - (text.length - 2)) + text
+    );
   }
 
   private getCurrentNode() {
