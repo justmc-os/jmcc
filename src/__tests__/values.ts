@@ -77,7 +77,7 @@ describe('значения', () => {
         var a = [[1]]
       `;
 
-      expect(() => jmcc.compileToJson(source)).toThrowErrorMatchingSnapshot();
+      expect(jmcc.compileToJson(source)).toMatchSnapshot();
     });
   });
 

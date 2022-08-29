@@ -1,6 +1,130 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`значения массив вложенный 1`] = `"Нельзя создавать вложенные массивы"`;
+exports[`значения массив вложенный 1`] = `
+Object {
+  "handlers": Array [
+    Object {
+      "event": "world_start",
+      "operations": Array [
+        Object {
+          "action": "set_variable_create_list",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "jmcc.1",
+              },
+            },
+            Object {
+              "name": "values",
+              "value": Object {
+                "type": "array",
+                "values": Array [
+                  Object {
+                    "number": 1,
+                    "type": "number",
+                  },
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                ],
+              },
+            },
+          ],
+        },
+        Object {
+          "action": "set_variable_create_list",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "jmcc.0",
+              },
+            },
+            Object {
+              "name": "values",
+              "value": Object {
+                "type": "array",
+                "values": Array [
+                  Object {
+                    "scope": "local",
+                    "type": "variable",
+                    "variable": "jmcc.1",
+                  },
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                  Object {},
+                ],
+              },
+            },
+          ],
+        },
+        Object {
+          "action": "set_variable_create_list",
+          "values": Array [
+            Object {
+              "name": "variable",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "a",
+              },
+            },
+            Object {
+              "name": "values",
+              "value": Object {
+                "scope": "local",
+                "type": "variable",
+                "variable": "jmcc.0",
+              },
+            },
+          ],
+        },
+      ],
+      "position": 0,
+      "type": "event",
+    },
+  ],
+}
+`;
 
 exports[`значения массив пустой 1`] = `
 Object {
