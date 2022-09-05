@@ -1339,8 +1339,7 @@
     "args": [
       {
         "type": "boolean",
-        "name": "marker",
-        "defaultBooleanValue": false
+        "name": "marker"
       }
     ]
   },
@@ -2555,6 +2554,92 @@
     "args": []
   },
   {
+    "id": "game_clear_scoreboard_scores",
+    "name": "clear_scoreboard_scores",
+    "object": "world",
+    "args": [
+      {
+        "type": "text",
+        "name": "id"
+      }
+    ]
+  },
+  {
+    "id": "game_create_scoreboard",
+    "name": "create_scoreboard",
+    "object": "world",
+    "args": [
+      {
+        "type": "text",
+        "name": "id"
+      },
+      {
+        "type": "text",
+        "name": "display_name"
+      }
+    ]
+  },
+  {
+    "id": "game_remove_scoreboard",
+    "name": "remove_scoreboard",
+    "object": "world",
+    "args": [
+      {
+        "type": "text",
+        "name": "id"
+      }
+    ]
+  },
+  {
+    "id": "game_remove_scoreboard_score",
+    "name": "remove_scoreboard_score",
+    "object": "world",
+    "args": [
+      {
+        "type": "text",
+        "name": "id"
+      },
+      {
+        "type": "text",
+        "name": "text"
+      }
+    ]
+  },
+  {
+    "id": "game_set_scoreboard_score",
+    "name": "set_scoreboard_score",
+    "object": "world",
+    "args": [
+      {
+        "type": "text",
+        "name": "id"
+      },
+      {
+        "type": "text",
+        "name": "text"
+      },
+      {
+        "type": "number",
+        "name": "score"
+      }
+    ]
+  },
+  {
+    "id": "game_set_scoreboard_title",
+    "name": "set_scoreboard_title",
+    "object": "world",
+    "args": [
+      {
+        "type": "text",
+        "name": "id"
+      },
+      {
+        "type": "text",
+        "name": "title"
+      }
+    ]
+  },
+  {
     "id": "game_set_block_drops_enabled",
     "name": "set_block_drops_enabled",
     "object": "world",
@@ -2813,7 +2898,9 @@
     "args": [
       {
         "type": "text",
-        "name": "name"
+        "name": "names_or_uuids",
+        "array": true,
+        "length": 18
       }
     ],
     "containing": "predicate"
@@ -4810,6 +4897,12 @@
     ]
   },
   {
+    "id": "player_clear_ender_chest_contents",
+    "name": "clear_ender_chest_contents",
+    "object": "player",
+    "args": []
+  },
+  {
     "id": "player_clear_inventory",
     "name": "clear_inventory",
     "object": "player",
@@ -4951,6 +5044,19 @@
     ]
   },
   {
+    "id": "player_set_ender_chest_contents",
+    "name": "set_ender_chest_contents",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "items",
+        "array": true,
+        "length": 27
+      }
+    ]
+  },
+  {
     "id": "player_set_equipment",
     "name": "set_equipment",
     "object": "player",
@@ -5021,10 +5127,27 @@
     ]
   },
   {
+    "id": "player_hide_scoreboard",
+    "name": "hide_scoreboard",
+    "object": "player",
+    "args": []
+  },
+  {
     "id": "player_kick",
     "name": "kick",
     "object": "player",
     "args": []
+  },
+  {
+    "id": "player_show_scoreboard",
+    "name": "show_scoreboard",
+    "object": "player",
+    "args": [
+      {
+        "type": "text",
+        "name": "id"
+      }
+    ]
   },
   {
     "id": "player_boost_elytra",
@@ -7548,25 +7671,16 @@
         "type": "enum",
         "name": "block_face",
         "enum": [
-          "DOWN",
-          "EAST",
-          "EAST_NORTH_EAST",
-          "EAST_SOUTH_EAST",
           "NORTH",
-          "NORTH_EAST",
-          "NORTH_NORTH_EAST",
-          "NORTH_NORTH_WEST",
-          "NORTH_WEST",
-          "SELF",
+          "EAST",
           "SOUTH",
-          "SOUTH_EAST",
-          "SOUTH_SOUTH_EAST",
-          "SOUTH_SOUTH_WEST",
-          "SOUTH_WEST",
-          "UP",
           "WEST",
-          "WEST_NORTH_WEST",
-          "WEST_SOUTH_WEST"
+          "UP",
+          "DOWN",
+          "NORTH_EAST",
+          "NORTH_WEST",
+          "SOUTH_EAST",
+          "SOUTH_WEST"
         ]
       }
     ],

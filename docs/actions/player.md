@@ -643,7 +643,7 @@ player::remove_disguise()
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
-**Имя:** undefined\
+**Имя:** Убрать скин\
 **Тип:** Действие без значения\
 **Пример использования:**
 ```ts
@@ -1114,6 +1114,19 @@ player::show_menu([item("stone"), item("stone")], "текст", "CHEST")
 | `items`          | список[предмет]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Предметы инвентаря |
 | `name`           | текст                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Название инвентаря |
 | `inventory_type` | перечисление:<br/>**CHEST** - Сундук<br/>**DISPENSER** - Раздатчик<br/>**DROPPER** - Выбрасыватель<br/>**FURNACE** - Печь<br/>**WORKBENCH** - Верстак<br/>**CRAFTING** - Не открыт<br/>**ENCHANTING** - Чародейский стол<br/>**BREWING** - Зельеварка<br/>**PLAYER** - Инвентарь игрока<br/>**CREATIVE** - Инвентарь креатива<br/>**MERCHANT** - Торговец<br/>**ENDER_CHEST** - Эндер-сундук<br/>**ANVIL** - Наковальня<br/>**SMITHING** - Стол кузнеца<br/>**BEACON** - Маяк<br/>**HOPPER** - Воронка<br/>**SHULKER_BOX** - Шалкеровый ящик<br/>**BARREL** - Бочка<br/>**BLAST_FURNACE** - Плавильная печь<br/>**LECTERN** - Кафедра<br/>**SMOKER** - Коптильня<br/>**LOOM** - Ткацкий станок<br/>**CARTOGRAPHY** - Стол картографа<br/>**GRINDSTONE** - Точило<br/>**STONECUTTER** - Камнерез<br/>**COMPOSTER** - Компостер | Тип инвентаря      |
+<h3 id=player_clear_ender_chest_contents>
+  <code>player::clear_ender_chest_contents</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** undefined\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+player::clear_ender_chest_contents()
+```
+
+**Без аргументов**
 <h3 id=player_clear_inventory>
   <code>player::clear_inventory</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -1274,6 +1287,22 @@ player::set_cursor_item(item("stone"))
 | **Имя** | **Тип** | **Описание**          |
 | ------- | ------- | --------------------- |
 | `item`  | предмет | Предмет для установки |
+<h3 id=player_set_ender_chest_contents>
+  <code>player::set_ender_chest_contents</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** undefined\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+player::set_ender_chest_contents([item("stone"), item("stone")])
+```
+
+**Аргументы:**
+| **Имя** | **Тип**         | **Описание** |
+| ------- | --------------- | ------------ |
+| `items` | список[предмет] |              |
 <h3 id=player_set_equipment>
   <code>player::set_equipment</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -1342,6 +1371,19 @@ player::set_slot_item(item("stone"), 0)
 | ------- | ------- | ------------------ |
 | `item`  | предмет | Предмет для выдачи |
 | `slot`  | число   | Слот для выдачи    |
+<h3 id=player_hide_scoreboard>
+  <code>player::hide_scoreboard</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** undefined\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+player::hide_scoreboard()
+```
+
+**Без аргументов**
 <h3 id=player_kick>
   <code>player::kick</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -1355,6 +1397,22 @@ player::kick()
 ```
 
 **Без аргументов**
+<h3 id=player_show_scoreboard>
+  <code>player::show_scoreboard</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** undefined\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+player::show_scoreboard("текст")
+```
+
+**Аргументы:**
+| **Имя** | **Тип** | **Описание** |
+| ------- | ------- | ------------ |
+| `id`    | текст   |              |
 <h3 id=player_boost_elytra>
   <code>player::boost_elytra</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>

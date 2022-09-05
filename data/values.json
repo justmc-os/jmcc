@@ -510,6 +510,11 @@
     "name": "event_projectile_item"
   },
   {
+    "id": "event_teleport_cause",
+    "type": "text",
+    "name": "event_teleport_cause"
+  },
+  {
     "id": "player_count",
     "type": "number",
     "name": "players"

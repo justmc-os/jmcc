@@ -199,6 +199,8 @@ const equals = (value: Value, argument: ArgumentType) => {
   )
     return true;
 
+  if (isEnum(argument) && !(value instanceof EnumConstant)) return false;
+
   // Если аргумент принимает любой тип значений
   if (value !== undefined && argument === Any) return true;
 
@@ -499,4 +501,3 @@ export const dummyActions = new Actions([]);
 export default Actions;
 
 import CodeVisitor from '../../../CodeVisitor';
-import MapConstant from '../../../value/constants/MapConstant';

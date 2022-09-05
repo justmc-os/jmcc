@@ -118,6 +118,7 @@ var b = value::health<default_entity>
 | `value::event_time_skip_amount`      | число                   | Количество тиков пропуска времени     |
 | `value::event_food_level`            | число                   | Восполненный голод события            |
 | `value::event_projectile_item`       | предмет                 | Предмет снаряда события               |
+| `value::event_teleport_cause`        | текст                   |                                       |
 | `value::players`                     | число                   | Количество игроков в мире             |
 | `value::cpu_usage`                   | число                   | Процент использования процессора      |
 | `value::server_tps`                  | число                   | TPS сервера                           |

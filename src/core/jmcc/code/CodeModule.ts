@@ -27,7 +27,12 @@ import entityObject from './objects/EntityObject';
 import selectObject from './objects/SelectObject';
 import repeatObject from './objects/RepeatObject';
 import Internal from '../value/Internal';
-import { CallArgument, isVariable, normalizeCallArguments } from '../utils';
+import {
+  assertValue,
+  CallArgument,
+  isVariable,
+  normalizeCallArguments,
+} from '../utils';
 import TextConstant from '../value/constants/TextConstant';
 import codeActions from './action/defined/CodeActions';
 import { TracedParsingError } from '../ErrorTraceable';
@@ -177,6 +182,8 @@ class CodeModule {
   }
 
   assignVariable(variable: Variable, expression: Value) {
+    assertValue(expression);
+
     if (variable instanceof InlineVariable) {
       if (expression instanceof DynamicValue)
         throw 'Нельзя присвоить динамическое значение встроенной переменной';

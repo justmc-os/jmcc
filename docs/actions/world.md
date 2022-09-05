@@ -914,6 +914,107 @@ world::uncancel_event()
 ```
 
 **Без аргументов**
+<h3 id=game_clear_scoreboard_scores>
+  <code>world::clear_scoreboard_scores</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** undefined\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+world::clear_scoreboard_scores("текст")
+```
+
+**Аргументы:**
+| **Имя** | **Тип** | **Описание** |
+| ------- | ------- | ------------ |
+| `id`    | текст   |              |
+<h3 id=game_create_scoreboard>
+  <code>world::create_scoreboard</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** undefined\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+world::create_scoreboard("текст", "текст")
+```
+
+**Аргументы:**
+| **Имя**        | **Тип** | **Описание** |
+| -------------- | ------- | ------------ |
+| `id`           | текст   |              |
+| `display_name` | текст   |              |
+<h3 id=game_remove_scoreboard>
+  <code>world::remove_scoreboard</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** undefined\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+world::remove_scoreboard("текст")
+```
+
+**Аргументы:**
+| **Имя** | **Тип** | **Описание** |
+| ------- | ------- | ------------ |
+| `id`    | текст   |              |
+<h3 id=game_remove_scoreboard_score>
+  <code>world::remove_scoreboard_score</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** undefined\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+world::remove_scoreboard_score("текст", "текст")
+```
+
+**Аргументы:**
+| **Имя** | **Тип** | **Описание** |
+| ------- | ------- | ------------ |
+| `id`    | текст   |              |
+| `text`  | текст   |              |
+<h3 id=game_set_scoreboard_score>
+  <code>world::set_scoreboard_score</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** undefined\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+world::set_scoreboard_score("текст", "текст", 0)
+```
+
+**Аргументы:**
+| **Имя** | **Тип** | **Описание** |
+| ------- | ------- | ------------ |
+| `id`    | текст   |              |
+| `text`  | текст   |              |
+| `score` | число   |              |
+<h3 id=game_set_scoreboard_title>
+  <code>world::set_scoreboard_title</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** undefined\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+world::set_scoreboard_title("текст", "текст")
+```
+
+**Аргументы:**
+| **Имя** | **Тип** | **Описание** |
+| ------- | ------- | ------------ |
+| `id`    | текст   |              |
+| `title` | текст   |              |
 <h3 id=game_set_block_drops_enabled>
   <code>world::set_block_drops_enabled</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>

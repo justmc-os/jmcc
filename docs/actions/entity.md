@@ -427,9 +427,9 @@ entity::set_target("текст")
 ```
 
 **Аргументы:**
-| **Имя**        | **Тип** | **Описание** |
-| -------------- | ------- | ------------ |
-| `name_or_uuid` | текст   |              |
+| **Имя**        | **Тип** | **Описание**      |
+| -------------- | ------- | ----------------- |
+| `name_or_uuid` | текст   | Имя или UUID цели |
 <h3 id=entity_sleep>
   <code>entity::sleep</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -963,7 +963,7 @@ entity::set_death_time(0)
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
-**Имя:** undefined\
+**Имя:** Установить силу взрыва\
 **Тип:** Действие без значения\
 **Пример использования:**
 ```ts
@@ -973,7 +973,7 @@ entity::set_explosive_power(0)
 **Аргументы:**
 | **Имя** | **Тип** | **Описание** |
 | ------- | ------- | ------------ |
-| `power` | число   |              |
+| `power` | число   | Сила взрыва  |
 <h3 id=entity_set_fall_distance>
   <code>entity::set_fall_distance</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -1790,7 +1790,7 @@ if (entity::is_type([item("stone"), item("stone")])) {
 **Аргументы:**
 | **Имя**        | **Тип**         | **Описание** |
 | -------------- | --------------- | ------------ |
-| `entity_types` | список[предмет] |              |
+| `entity_types` | список[предмет] | Тип существа |
 <h3 id=if_entity_is_vehicle>
   <code>entity::is_vehicle</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -1815,15 +1815,15 @@ if (entity::is_vehicle()) {
 **Тип:** Действие, проверяющее условие\
 **Пример использования:**
 ```ts
-if (entity::name_equals("текст")) {
+if (entity::name_equals(["текст", "текст"])) {
   player::message("Условие правдиво")
 }
 ```
 
 **Аргументы:**
-| **Имя** | **Тип** | **Описание**              |
-| ------- | ------- | ------------------------- |
-| `name`  | текст   | Имя или UUID для проверки |
+| **Имя**          | **Тип**       | **Описание** |
+| ---------------- | ------------- | ------------ |
+| `names_or_uuids` | список[текст] |              |
 <h3 id=if_entity_spawn_reason_equals>
   <code>entity::spawn_reason_equals</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>

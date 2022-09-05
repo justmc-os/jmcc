@@ -90,7 +90,14 @@ class Reporter {
     );
     console.log(
       this.getLineText(maxLine),
-      ' '.repeat(char) + chalk.redBright('~'.repeat(nodeText.length))
+      ' '.repeat(char) +
+        chalk.redBright(
+          '~'.repeat(
+            statementLine === nodeLine
+              ? this.getFullText(node).length
+              : nodeText.length
+          )
+        )
     );
 
     console.log();

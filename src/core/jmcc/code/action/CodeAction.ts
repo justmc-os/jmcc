@@ -29,7 +29,7 @@ abstract class CodeAction extends CodeBlock {
     return Object.keys(this.args).map((key) => ({
       name: key,
       value: this.args[key].toJson(),
-    }))
+    }));
   }
 
   toJson() {
@@ -44,7 +44,7 @@ abstract class CodeAction extends CodeBlock {
     const conditional: object = this.conditional
       ? {
           conditional: this.conditional.toJson(),
-          values: this.conditional.valuesToJson()
+          values: this.conditional.valuesToJson(),
         }
       : {};
 
