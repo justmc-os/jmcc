@@ -747,7 +747,7 @@ entity::set_rotation(0, 0)
 | `yaw`   | число   | Горизонтальный поворот (yaw) |
 | `pitch` | число   | Вертикальный поворот (pitch) |
 <h3 id=entity_set_location>
-  <code>entity::set_location</code>
+  <code>entity::set_velocity</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
@@ -755,7 +755,7 @@ entity::set_rotation(0, 0)
 **Тип:** Действие без значения\
 **Пример использования:**
 ```ts
-entity::set_location(vector(0, 0, 0), "TRUE")
+entity::set_velocity(vector(0, 0, 0), "TRUE")
 ```
 
 **Аргументы:**
@@ -1821,9 +1821,9 @@ if (entity::name_equals(["текст", "текст"])) {
 ```
 
 **Аргументы:**
-| **Имя**          | **Тип**       | **Описание** |
-| ---------------- | ------------- | ------------ |
-| `names_or_uuids` | список[текст] |              |
+| **Имя**          | **Тип**       | **Описание**                |
+| ---------------- | ------------- | --------------------------- |
+| `names_or_uuids` | список[текст] | Имена или UUID для проверки |
 <h3 id=if_entity_spawn_reason_equals>
   <code>entity::spawn_reason_equals</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>

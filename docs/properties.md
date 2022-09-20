@@ -118,7 +118,7 @@ var b = value::health<default_entity>
 | `value::event_time_skip_amount`      | число                   | Количество тиков пропуска времени     |
 | `value::event_food_level`            | число                   | Восполненный голод события            |
 | `value::event_projectile_item`       | предмет                 | Предмет снаряда события               |
-| `value::event_teleport_cause`        | текст                   |                                       |
+| `value::event_teleport_cause`        | текст                   | Причина телепортации                  |
 | `value::players`                     | число                   | Количество игроков в мире             |
 | `value::cpu_usage`                   | число                   | Процент использования процессора      |
 | `value::server_tps`                  | число                   | TPS сервера                           |
@@ -129,6 +129,7 @@ var b = value::health<default_entity>
 | `value::selection_target_uuids`      | список[текст]           | UUID выбранных целей                  |
 | `value::url_response`                | текст                   | Ответ на веб-запрос                   |
 | `value::world_time`                  | число                   | Текущее время мира                    |
+| `value::world_weather`               | текст                   | Текущая погода мира                   |
 | `value::server_stopped_time`         | число                   | Время остановки сервера               |
 | `value::action_count_per_tick`       | число                   | Количество действий за тик            |
 | `value::owner_uuid`                  | текст                   | UUID владельца мира                   |

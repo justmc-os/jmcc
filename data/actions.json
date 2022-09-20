@@ -839,7 +839,7 @@
   },
   {
     "id": "entity_set_location",
-    "name": "set_location",
+    "name": "set_velocity",
     "object": "entity",
     "args": [
       {
@@ -1804,6 +1804,21 @@
     ]
   },
   {
+    "id": "game_set_block_data",
+    "name": "set_block_data",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "text",
+        "name": "block_data"
+      }
+    ]
+  },
+  {
     "id": "game_set_campfire_item",
     "name": "set_campfire_item",
     "object": "world",
@@ -2591,8 +2606,8 @@
     ]
   },
   {
-    "id": "game_remove_scoreboard_score",
-    "name": "remove_scoreboard_score",
+    "id": "game_remove_scoreboard_score_by_name",
+    "name": "remove_scoreboard_score_by_name",
     "object": "world",
     "args": [
       {
@@ -2602,6 +2617,21 @@
       {
         "type": "text",
         "name": "text"
+      }
+    ]
+  },
+  {
+    "id": "game_remove_scoreboard_score_by_score",
+    "name": "remove_scoreboard_score_by_score",
+    "object": "world",
+    "args": [
+      {
+        "type": "text",
+        "name": "id"
+      },
+      {
+        "type": "number",
+        "name": "score"
       }
     ]
   },
@@ -2687,8 +2717,9 @@
         "type": "enum",
         "name": "weather_type",
         "enum": [
-          "DOWNFALL",
-          "CLEAR"
+          "CLEAR",
+          "RAINING",
+          "THUNDER"
         ]
       },
       {
@@ -7194,6 +7225,25 @@
     "origin": "item"
   },
   {
+    "id": "set_variable_remove_item_lore_line",
+    "name": "remove_item_lore_line",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "number",
+        "name": "line"
+      }
+    ]
+  },
+  {
     "id": "set_variable_set_book_page",
     "name": "set_book_page",
     "object": "variable",
@@ -7604,6 +7654,37 @@
     ],
     "assigning": "variable",
     "origin": "location"
+  },
+  {
+    "id": "set_variable_get_all_coordinates",
+    "name": "get_all_coordinates",
+    "object": "variable",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "variable",
+        "name": "x"
+      },
+      {
+        "type": "variable",
+        "name": "y"
+      },
+      {
+        "type": "variable",
+        "name": "z"
+      },
+      {
+        "type": "variable",
+        "name": "yaw"
+      },
+      {
+        "type": "variable",
+        "name": "pitch"
+      }
+    ]
   },
   {
     "id": "set_variable_get_coordinate",
@@ -9984,6 +10065,11 @@
       {
         "type": "any",
         "name": "value"
+      },
+      {
+        "type": "boolean",
+        "name": "pretty_print",
+        "defaultBooleanValue": false
       }
     ],
     "assigning": "variable",

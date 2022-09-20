@@ -573,6 +573,11 @@
     "name": "world_time"
   },
   {
+    "id": "world_weather",
+    "type": "text",
+    "name": "world_weather"
+  },
+  {
     "id": "server_stopped_time",
     "type": "number",
     "name": "server_stopped_time"

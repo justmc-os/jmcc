@@ -1119,7 +1119,7 @@ player::show_menu([item("stone"), item("stone")], "текст", "CHEST")
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
-**Имя:** undefined\
+**Имя:** Очистить содержимое Эндер-сундука\
 **Тип:** Действие без значения\
 **Пример использования:**
 ```ts
@@ -1292,7 +1292,7 @@ player::set_cursor_item(item("stone"))
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
-**Имя:** undefined\
+**Имя:** Установить содержимое Эндер-сундука\
 **Тип:** Действие без значения\
 **Пример использования:**
 ```ts
@@ -1300,9 +1300,9 @@ player::set_ender_chest_contents([item("stone"), item("stone")])
 ```
 
 **Аргументы:**
-| **Имя** | **Тип**         | **Описание** |
-| ------- | --------------- | ------------ |
-| `items` | список[предмет] |              |
+| **Имя** | **Тип**         | **Описание**           |
+| ------- | --------------- | ---------------------- |
+| `items` | список[предмет] | Предметы для установки |
 <h3 id=player_set_equipment>
   <code>player::set_equipment</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -1376,7 +1376,7 @@ player::set_slot_item(item("stone"), 0)
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
-**Имя:** undefined\
+**Имя:** Скрыть скорборд\
 **Тип:** Действие без значения\
 **Пример использования:**
 ```ts
@@ -1402,7 +1402,7 @@ player::kick()
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
-**Имя:** undefined\
+**Имя:** Показать скорборд\
 **Тип:** Действие без значения\
 **Пример использования:**
 ```ts
@@ -1412,7 +1412,7 @@ player::show_scoreboard("текст")
 **Аргументы:**
 | **Имя** | **Тип** | **Описание** |
 | ------- | ------- | ------------ |
-| `id`    | текст   |              |
+| `id`    | текст   | ID скорборда |
 <h3 id=player_boost_elytra>
   <code>player::boost_elytra</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>

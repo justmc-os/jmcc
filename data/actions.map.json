@@ -786,5 +786,8 @@
   },
   "player_play_animation_action": {
     "name": "play_animation"
+  },
+  "entity_set_location": {
+    "name": "set_velocity"
   }
 }

@@ -12,7 +12,10 @@ const selection = {
   SHOOTER_PLAYER: 'shooter_player',
   SHOOTER_ENTITY: 'shooter_entity',
   RANDOM_PLAYER: 'random_player',
+  RANDOM_ENTITY: 'random_entity',
   ALL_PLAYERS: 'all_players',
+  ALL_ENTITIES: 'all_entities',
+  ALL_MOBS: 'all_mobs',
   PROJECTILE: 'projectile',
   LAST_ENTITY: 'last_entity',
 };

@@ -265,6 +265,23 @@ world::set_block(item("stone"), [location(0, 0, 0), location(0, 0, 0)])
 | ----------- | ---------------------- | ------------------------------ |
 | `block`     | предмет                | Блок                           |
 | `locations` | список[местоположение] | Местоположения установки блока |
+<h3 id=game_set_block_data>
+  <code>world::set_block_data</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Установить параметры блоку\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+world::set_block_data(location(0, 0, 0), "текст")
+```
+
+**Аргументы:**
+| **Имя**      | **Тип**        | **Описание**          |
+| ------------ | -------------- | --------------------- |
+| `location`   | местоположение | Местоположение блока  |
+| `block_data` | текст          | Новые параметры блока |
 <h3 id=game_set_campfire_item>
   <code>world::set_campfire_item</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -919,7 +936,7 @@ world::uncancel_event()
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
-**Имя:** undefined\
+**Имя:** Очистить значения скорборда\
 **Тип:** Действие без значения\
 **Пример использования:**
 ```ts
@@ -929,13 +946,13 @@ world::clear_scoreboard_scores("текст")
 **Аргументы:**
 | **Имя** | **Тип** | **Описание** |
 | ------- | ------- | ------------ |
-| `id`    | текст   |              |
+| `id`    | текст   | ID скорборда |
 <h3 id=game_create_scoreboard>
   <code>world::create_scoreboard</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
-**Имя:** undefined\
+**Имя:** Создать скорборд\
 **Тип:** Действие без значения\
 **Пример использования:**
 ```ts
@@ -945,14 +962,14 @@ world::create_scoreboard("текст", "текст")
 **Аргументы:**
 | **Имя**        | **Тип** | **Описание** |
 | -------------- | ------- | ------------ |
-| `id`           | текст   |              |
-| `display_name` | текст   |              |
+| `id`           | текст   | ID скорборда |
+| `display_name` | текст   | Заголовок    |
 <h3 id=game_remove_scoreboard>
   <code>world::remove_scoreboard</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
-**Имя:** undefined\
+**Имя:** Удалить скорборд\
 **Тип:** Действие без значения\
 **Пример использования:**
 ```ts
@@ -962,30 +979,47 @@ world::remove_scoreboard("текст")
 **Аргументы:**
 | **Имя** | **Тип** | **Описание** |
 | ------- | ------- | ------------ |
-| `id`    | текст   |              |
-<h3 id=game_remove_scoreboard_score>
-  <code>world::remove_scoreboard_score</code>
+| `id`    | текст   | ID скорборда |
+<h3 id=game_remove_scoreboard_score_by_name>
+  <code>world::remove_scoreboard_score_by_name</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
-**Имя:** undefined\
+**Имя:** Удалить значение скорборда по тексту\
 **Тип:** Действие без значения\
 **Пример использования:**
 ```ts
-world::remove_scoreboard_score("текст", "текст")
+world::remove_scoreboard_score_by_name("текст", "текст")
 ```
 
 **Аргументы:**
-| **Имя** | **Тип** | **Описание** |
-| ------- | ------- | ------------ |
-| `id`    | текст   |              |
-| `text`  | текст   |              |
+| **Имя** | **Тип** | **Описание**                |
+| ------- | ------- | --------------------------- |
+| `id`    | текст   | ID скорборда                |
+| `text`  | текст   | Текст значения для удаления |
+<h3 id=game_remove_scoreboard_score_by_score>
+  <code>world::remove_scoreboard_score_by_score</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Удалить значение скорборда по счёту\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+world::remove_scoreboard_score_by_score("текст", 0)
+```
+
+**Аргументы:**
+| **Имя** | **Тип** | **Описание**               |
+| ------- | ------- | -------------------------- |
+| `id`    | текст   | ID скорборда               |
+| `score` | число   | Счёт значения для удаления |
 <h3 id=game_set_scoreboard_score>
   <code>world::set_scoreboard_score</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
-**Имя:** undefined\
+**Имя:** Установить значение скорборда\
 **Тип:** Действие без значения\
 **Пример использования:**
 ```ts
@@ -993,17 +1027,17 @@ world::set_scoreboard_score("текст", "текст", 0)
 ```
 
 **Аргументы:**
-| **Имя** | **Тип** | **Описание** |
-| ------- | ------- | ------------ |
-| `id`    | текст   |              |
-| `text`  | текст   |              |
-| `score` | число   |              |
+| **Имя** | **Тип** | **Описание**       |
+| ------- | ------- | ------------------ |
+| `id`    | текст   | ID скорборда       |
+| `text`  | текст   | Отображаемый текст |
+| `score` | число   | Счёт               |
 <h3 id=game_set_scoreboard_title>
   <code>world::set_scoreboard_title</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
-**Имя:** undefined\
+**Имя:** Изменить заголовок скорборда\
 **Тип:** Действие без значения\
 **Пример использования:**
 ```ts
@@ -1011,10 +1045,10 @@ world::set_scoreboard_title("текст", "текст")
 ```
 
 **Аргументы:**
-| **Имя** | **Тип** | **Описание** |
-| ------- | ------- | ------------ |
-| `id`    | текст   |              |
-| `title` | текст   |              |
+| **Имя** | **Тип** | **Описание**    |
+| ------- | ------- | --------------- |
+| `id`    | текст   | ID скорборда    |
+| `title` | текст   | Новый заголовок |
 <h3 id=game_set_block_drops_enabled>
   <code>world::set_block_drops_enabled</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -1072,14 +1106,14 @@ world::set_world_time(0)
 **Тип:** Действие без значения\
 **Пример использования:**
 ```ts
-world::set_world_weather("DOWNFALL", 0)
+world::set_world_weather("CLEAR", 0)
 ```
 
 **Аргументы:**
-| **Имя**            | **Тип**                                                          | **Описание** |
-| ------------------ | ---------------------------------------------------------------- | ------------ |
-| `weather_type`     | перечисление:<br/>**DOWNFALL** - Дождливая<br/>**CLEAR** - Ясная | Тип погоды   |
-| `weather_duration` | число                                                            | Длительность |
+| **Имя**            | **Тип**                                                                                 | **Описание** |
+| ------------------ | --------------------------------------------------------------------------------------- | ------------ |
+| `weather_type`     | перечисление:<br/>**CLEAR** - Ясная<br/>**RAINING** - Дождливая<br/>**THUNDER** - Гроза | Тип погоды   |
+| `weather_duration` | число                                                                                   | Длительность |
 <h3 id=game_send_web_request>
   <code>world::send_web_request</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>

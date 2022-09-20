@@ -47,7 +47,7 @@ event<player_join> {
 | `event<player_jump>`                    | Игрок прыгает                            |
 | `event<player_sneak>`                   | Игрок начинает красться                  |
 | `event<player_unsneak>`                 | Игрок перестал красться                  |
-| `event<player_teleport>`                |                                          |
+| `event<player_teleport>`                | Игрок телепортировался                   |
 | `event<player_start_sprint>`            | Игрок начал бежать                       |
 | `event<player_stop_sprint>`             | Игрок перестает бежать                   |
 | `event<player_start_flight>`            | Игрок начинает лететь                    |
@@ -55,7 +55,7 @@ event<player_join> {
 | `event<player_riptide>`                 | Игрок использует 'Тягун'                 |
 | `event<player_dismount>`                | Игрок спешился                           |
 | `event<player_horse_jump>`              | Игрок прыгает на лошади                  |
-| `event<player_vehicle_jump>`            |                                          |
+| `event<player_vehicle_jump>`            | Игрок прыгает на транспорте              |
 | `event<player_take_damage>`             | Игрок получает урон                      |
 | `event<player_damage_player>`           | Игрок ранит игрока                       |
 | `event<entity_damage_player>`           | Существо ранит игрока                    |
