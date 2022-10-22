@@ -606,7 +606,7 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@rqbik/mtext@^1.0.6":
+"@rqbik/mtext@^1.0.7":
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/@rqbik/mtext/-/mtext-1.0.7.tgz#83eb3b9ca68bf98f70081ad38529b06f463899d9"
   integrity sha512-vHZ2JuqrgLPwUZG2JEAYH15Ta8ebxb7WbP95Vy8fv73mDIymZolIGqxrO+tmzOsX3uaffpXZxUBwyNf1QOmBZA==
