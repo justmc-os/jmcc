@@ -136,6 +136,30 @@
       {
         "type": "text",
         "name": "display_name"
+      },
+      {
+        "type": "enum",
+        "name": "server_type",
+        "enum": [
+          "MOJANG",
+          "SERVER"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "entity_play_damage_animation",
+    "name": "play_damage_animation",
+    "object": "entity",
+    "args": [
+      {
+        "type": "enum",
+        "name": "damage_type",
+        "enum": [
+          "DAMAGE",
+          "CRITICAL_DAMAGE",
+          "MAGICAL_DAMAGE"
+        ]
       }
     ]
   },
@@ -220,6 +244,28 @@
     ]
   },
   {
+    "id": "entity_set_bee_nectar",
+    "name": "set_bee_nectar",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "nectar"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_cat_lying_down",
+    "name": "set_cat_lying_down",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "lying_down"
+      }
+    ]
+  },
+  {
     "id": "entity_set_cat_type",
     "name": "set_cat_type",
     "object": "entity",
@@ -273,6 +319,28 @@
     ]
   },
   {
+    "id": "entity_set_enderman_block",
+    "name": "set_enderman_block",
+    "object": "entity",
+    "args": [
+      {
+        "type": "item",
+        "name": "block"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_fox_leaping",
+    "name": "set_fox_leaping",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "leaping"
+      }
+    ]
+  },
+  {
     "id": "entity_set_fox_type",
     "name": "set_fox_type",
     "object": "entity",
@@ -284,6 +352,33 @@
           "RED",
           "SNOW"
         ]
+      }
+    ]
+  },
+  {
+    "id": "entity_set_frog_type",
+    "name": "set_frog_type",
+    "object": "entity",
+    "args": [
+      {
+        "type": "enum",
+        "name": "frog_variant",
+        "enum": [
+          "COLD",
+          "TEMPERATE",
+          "WARM"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "entity_set_glow_squid_dark",
+    "name": "set_glow_squid_dark",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "dark_ticks"
       }
     ]
   },
@@ -343,6 +438,23 @@
     ]
   },
   {
+    "id": "entity_set_llama_type",
+    "name": "set_llama_type",
+    "object": "entity",
+    "args": [
+      {
+        "type": "enum",
+        "name": "type",
+        "enum": [
+          "BROWN",
+          "CREAMY",
+          "GRAY",
+          "WHITE"
+        ]
+      }
+    ]
+  },
+  {
     "id": "entity_set_minecart_block",
     "name": "set_minecart_block",
     "object": "entity",
@@ -391,6 +503,33 @@
     ]
   },
   {
+    "id": "entity_set_pose",
+    "name": "set_pose",
+    "object": "entity",
+    "args": [
+      {
+        "type": "enum",
+        "name": "pose",
+        "enum": [
+          "CROAKING",
+          "DIGGING",
+          "DYING",
+          "EMERGING",
+          "FALL_FLYING",
+          "LONG_JUMPING",
+          "ROARING",
+          "SLEEPING",
+          "SNEAKING",
+          "SNIFFING",
+          "SPIN_ATTACK",
+          "STANDING",
+          "SWIMMING",
+          "USING_TONGUE"
+        ]
+      }
+    ]
+  },
+  {
     "id": "entity_set_projectile_display_item",
     "name": "set_projectile_display_item",
     "object": "entity",
@@ -418,6 +557,17 @@
           "THE_KILLER_BUNNY",
           "WHITE"
         ]
+      }
+    ]
+  },
+  {
+    "id": "entity_set_snowman_pumpkin",
+    "name": "set_snowman_pumpkin",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "pumpkin"
       }
     ]
   },
@@ -494,10 +644,63 @@
     ]
   },
   {
+    "id": "entity_set_villager_biome",
+    "name": "set_villager_biome",
+    "object": "entity",
+    "args": [
+      {
+        "type": "enum",
+        "name": "biome",
+        "enum": [
+          "DESERT",
+          "JUNGLE",
+          "PLAINS",
+          "SAVANNA",
+          "SNOW",
+          "SWAMP",
+          "TAIGA"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "entity_set_visual_fire",
+    "name": "set_visual_fire",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "visual_fire"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_zombie_arms_raised",
+    "name": "set_zombie_arms_raised",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "arms_raised"
+      }
+    ]
+  },
+  {
     "id": "entity_eat_grass",
     "name": "eat_grass",
     "object": "entity",
     "args": []
+  },
+  {
+    "id": "entity_eat_target",
+    "name": "eat_target",
+    "object": "entity",
+    "args": [
+      {
+        "type": "text",
+        "name": "name_or_uuid"
+      }
+    ]
   },
   {
     "id": "entity_explode",
@@ -2998,7 +3201,7 @@
         "type": "item",
         "name": "blocks",
         "array": true,
-        "length": 17
+        "length": 26
       }
     ],
     "containing": "predicate"
@@ -3878,6 +4081,13 @@
     "containing": "predicate"
   },
   {
+    "id": "if_player_is_online_mode",
+    "name": "is_online_mode",
+    "object": "player",
+    "args": [],
+    "containing": "predicate"
+  },
+  {
     "id": "if_player_is_sleeping",
     "name": "is_sleeping",
     "object": "player",
@@ -4397,6 +4607,12 @@
     "args": []
   },
   {
+    "id": "player_remove_pose",
+    "name": "remove_pose",
+    "object": "player",
+    "args": []
+  },
+  {
     "id": "player_remove_skin",
     "name": "remove_skin",
     "object": "player",
@@ -4414,6 +4630,37 @@
     ]
   },
   {
+    "id": "player_set_pose",
+    "name": "set_pose",
+    "object": "player",
+    "args": [
+      {
+        "type": "enum",
+        "name": "pose",
+        "enum": [
+          "CROAKING",
+          "DIGGING",
+          "DYING",
+          "EMERGING",
+          "FALL_FLYING",
+          "LONG_JUMPING",
+          "ROARING",
+          "SLEEPING",
+          "SNEAKING",
+          "SNIFFING",
+          "SPIN_ATTACK",
+          "STANDING",
+          "SWIMMING",
+          "USING_TONGUE"
+        ]
+      },
+      {
+        "type": "boolean",
+        "name": "locked"
+      }
+    ]
+  },
+  {
     "id": "player_set_skin",
     "name": "set_skin",
     "object": "player",
@@ -4421,6 +4668,14 @@
       {
         "type": "text",
         "name": "name_or_uuid"
+      },
+      {
+        "type": "enum",
+        "name": "server_type",
+        "enum": [
+          "MOJANG",
+          "SERVER"
+        ]
       }
     ]
   },
@@ -4902,27 +5157,17 @@
           "DROPPER",
           "FURNACE",
           "WORKBENCH",
-          "CRAFTING",
           "ENCHANTING",
           "BREWING",
-          "PLAYER",
-          "CREATIVE",
-          "MERCHANT",
-          "ENDER_CHEST",
           "ANVIL",
           "SMITHING",
           "BEACON",
           "HOPPER",
-          "SHULKER_BOX",
-          "BARREL",
           "BLAST_FURNACE",
-          "LECTERN",
           "SMOKER",
-          "LOOM",
           "CARTOGRAPHY",
           "GRINDSTONE",
-          "STONECUTTER",
-          "COMPOSTER"
+          "STONECUTTER"
         ]
       }
     ]
@@ -5998,8 +6243,8 @@
     ]
   },
   {
-    "id": "player_hide_player",
-    "name": "hide_player",
+    "id": "player_hide_entity",
+    "name": "hide_entity",
     "object": "player",
     "args": [
       {
@@ -10001,7 +10246,8 @@
         "name": "merging",
         "enum": [
           "SPACES",
-          "CONCATENATION"
+          "CONCATENATION",
+          "SEPARATE_LINES"
         ]
       }
     ],

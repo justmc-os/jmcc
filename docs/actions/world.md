@@ -3,6 +3,8 @@
   <a href="./actions" style="font-size: 14px; margin-left:">↩️</a>
 </h2>
 
+
+
 <h3 id=game_block_growth>
   <code>world::block_growth</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -208,7 +210,7 @@ world::replace_blocks_in_region([item("stone"), item("stone")], location(0, 0, 0
 **Аргументы:**
 | **Имя**     | **Тип**         | **Описание**                 |
 | ----------- | --------------- | ---------------------------- |
-| `old_block` | список[предмет] | Блоки для заменты            |
+| `old_block` | список[предмет] | Блоки для замены             |
 | `pos_1`     | местоположение  | Угол региона                 |
 | `pos_2`     | местоположение  | Противоположный угол региона |
 | `new_block` | предмет         | Новый блок                   |

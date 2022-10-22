@@ -20,8 +20,8 @@ Object {
             Object {
               "name": "value",
               "value": Object {
-                "text": "4",
-                "type": "text",
+                "number": "4",
+                "type": "number",
               },
             },
           ],
@@ -40,8 +40,8 @@ Object {
             Object {
               "name": "value",
               "value": Object {
-                "text": "%math(%var_local(a)-2)",
-                "type": "text",
+                "number": "%math(%var_local(a)-2)",
+                "type": "number",
               },
             },
           ],
@@ -60,8 +60,8 @@ Object {
             Object {
               "name": "value",
               "value": Object {
-                "text": "0",
-                "type": "text",
+                "number": "0",
+                "type": "number",
               },
             },
           ],
@@ -94,8 +94,8 @@ Object {
             Object {
               "name": "value",
               "value": Object {
-                "text": "4",
-                "type": "text",
+                "number": "4",
+                "type": "number",
               },
             },
           ],
@@ -114,8 +114,8 @@ Object {
             Object {
               "name": "value",
               "value": Object {
-                "text": "2",
-                "type": "text",
+                "number": "2",
+                "type": "number",
               },
             },
           ],
@@ -134,8 +134,8 @@ Object {
             Object {
               "name": "value",
               "value": Object {
-                "text": "%math(%var_local(b)%3)",
-                "type": "text",
+                "number": "%math(%var_local(b)%3)",
+                "type": "number",
               },
             },
           ],
@@ -154,8 +154,8 @@ Object {
             Object {
               "name": "value",
               "value": Object {
-                "text": "0.6666666666666666",
-                "type": "text",
+                "number": "0.6666666666666666",
+                "type": "number",
               },
             },
           ],
@@ -222,8 +222,8 @@ Object {
             Object {
               "name": "value",
               "value": Object {
-                "text": "%math(%var_local(a)+1)",
-                "type": "text",
+                "number": "%math(%var_local(a)+1)",
+                "type": "number",
               },
             },
           ],
@@ -256,8 +256,8 @@ Object {
             Object {
               "name": "value",
               "value": Object {
-                "text": "6",
-                "type": "text",
+                "number": "6",
+                "type": "number",
               },
             },
           ],
@@ -276,8 +276,8 @@ Object {
             Object {
               "name": "value",
               "value": Object {
-                "text": "8",
-                "type": "text",
+                "number": "8",
+                "type": "number",
               },
             },
           ],
@@ -296,8 +296,8 @@ Object {
             Object {
               "name": "value",
               "value": Object {
-                "text": "%math(%var_local(b)/4)",
-                "type": "text",
+                "number": "%math(%var_local(b)/4)",
+                "type": "number",
               },
             },
           ],

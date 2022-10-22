@@ -16,7 +16,7 @@ enum MultiplicativeOperator {
   MULT = '*',
 }
 
-class MathExpression extends CValue('text', 'текст') {
+class MathExpression extends CValue('number', 'число') {
   public value: string | number;
 
   constructor(value: Value) {
@@ -48,7 +48,7 @@ class MathExpression extends CValue('text', 'текст') {
   toJson(): object {
     return {
       ...super.toJson(),
-      text: this.toString(),
+      number: this.toString(),
     };
   }
 

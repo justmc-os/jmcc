@@ -90,6 +90,16 @@
     "name": "slot"
   },
   {
+    "id": "walking_speed",
+    "type": "number",
+    "name": "walking_speed"
+  },
+  {
+    "id": "flying_speed",
+    "type": "number",
+    "name": "flying_speed"
+  },
+  {
     "id": "ping",
     "type": "number",
     "name": "ping"
@@ -271,14 +281,14 @@
     "name": "name"
   },
   {
-    "id": "display_name",
-    "type": "text",
-    "name": "display_name"
-  },
-  {
     "id": "uuid",
     "type": "text",
     "name": "uuid"
+  },
+  {
+    "id": "display_name",
+    "type": "text",
+    "name": "display_name"
   },
   {
     "id": "entity_type",

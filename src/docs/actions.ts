@@ -31,6 +31,7 @@ import {
 import { ActionContainerType } from '../core/jmcc/code/action/CodeContainingAction';
 
 const ACTION_PREFIX = 'creative_plus.action.';
+const SELECTION_PREFIX = 'creative_plus.selection.';
 const DIR = path.resolve(DOCS_DIR, 'actions');
 if (!fs.existsSync(DIR)) fs.mkdirSync(DIR);
 
@@ -245,11 +246,29 @@ ${
       })
       .join('\n');
 
+    const selection = actions[0].selection;
+
+    const selectionTable = markdownTable([
+      ['**Имя**', '**Описание**'],
+      ...selection.map((selector) => {
+        const description = properties[`${SELECTION_PREFIX}${selector}.name`];
+        return [`\`<${selector}>\``, description];
+      }),
+    ]);
+
     const text = `
 <h2 id=${object.name}>
   <code>${object.name}</code>
   <a href="./actions" style="font-size: 14px; margin-left:">↩️</a>
 </h2>
+
+${
+  selection.length > 0
+    ? `### Селекторы
+
+${selectionTable}`.trim()
+    : ''
+}
 
 ${actionsText}
     `.trim();
@@ -276,7 +295,7 @@ if (a.in_range(1, 2)) {
 };
 \`\`\`
 
-Список действий:
+**Список действий:**
 
 ${contentTable}`.trim();
 

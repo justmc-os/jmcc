@@ -3,6 +3,22 @@
   <a href="./actions" style="font-size: 14px; margin-left:">↩️</a>
 </h2>
 
+### Селекторы
+
+| **Имя**            | **Описание**          |
+| ------------------ | --------------------- |
+| `<current>`        | Текущая цель          |
+| `<default_entity>` | Сущность по умолчанию |
+| `<killer_entity>`  | Убийца                |
+| `<damager_entity>` | Атакующая сущность    |
+| `<shooter_entity>` | Стрелок               |
+| `<projectile>`     | Снаряд стрелка        |
+| `<victim_entity>`  | Жертва                |
+| `<random_entity>`  | Случайная сущность    |
+| `<all_mobs>`       | Все мобы              |
+| `<all_entities>`   | Все сущности          |
+| `<last_entity>`    | Последняя сущность    |
+
 <h3 id=entity_disguise_as_block>
   <code>entity::disguise_as_block</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -60,14 +76,31 @@ entity::disguise_as_item(item("stone"))
 **Тип:** Действие без значения\
 **Пример использования:**
 ```ts
-entity::disguise_as_player("текст", "текст")
+entity::disguise_as_player("текст", "текст", "MOJANG")
 ```
 
 **Аргументы:**
-| **Имя**        | **Тип** | **Описание**              |
-| -------------- | ------- | ------------------------- |
-| `name_or_uuid` | текст   | Имя или UUID              |
-| `display_name` | текст   | Отображаемое имя сущности |
+| **Имя**        | **Тип**                                                                 | **Описание**              |
+| -------------- | ----------------------------------------------------------------------- | ------------------------- |
+| `name_or_uuid` | текст                                                                   | Имя или UUID              |
+| `display_name` | текст                                                                   | Отображаемое имя сущности |
+| `server_type`  | перечисление:<br/>**MOJANG** - Скин Mojang<br/>**SERVER** - Скин JustMC | Тип сервера скинов        |
+<h3 id=entity_play_damage_animation>
+  <code>entity::play_damage_animation</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** undefined\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::play_damage_animation("DAMAGE")
+```
+
+**Аргументы:**
+| **Имя**       | **Тип**                                                                                                         | **Описание** |
+| ------------- | --------------------------------------------------------------------------------------------------------------- | ------------ |
+| `damage_type` | перечисление:<br/>**DAMAGE** - undefined<br/>**CRITICAL_DAMAGE** - undefined<br/>**MAGICAL_DAMAGE** - undefined |              |
 <h3 id=entity_remove_disguise>
   <code>entity::remove_disguise</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -133,6 +166,38 @@ entity::set_axolotl_type("BLUE")
 | **Имя**        | **Тип**                                                                                                                           | **Описание**  |
 | -------------- | --------------------------------------------------------------------------------------------------------------------------------- | ------------- |
 | `axolotl_type` | перечисление:<br/>**BLUE** - Синий<br/>**CYAN** - Голубой<br/>**GOLD** - Золотой<br/>**LUCY** - Лейкист<br/>**WILD** - Коричневый | Тип аксолотля |
+<h3 id=entity_set_bee_nectar>
+  <code>entity::set_bee_nectar</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** undefined\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_bee_nectar("TRUE")
+```
+
+**Аргументы:**
+| **Имя**  | **Тип**                                                          | **Описание** |
+| -------- | ---------------------------------------------------------------- | ------------ |
+| `nectar` | перечисление:<br/>**TRUE** - undefined<br/>**FALSE** - undefined |              |
+<h3 id=entity_set_cat_lying_down>
+  <code>entity::set_cat_lying_down</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** undefined\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_cat_lying_down("TRUE")
+```
+
+**Аргументы:**
+| **Имя**      | **Тип**                                                          | **Описание** |
+| ------------ | ---------------------------------------------------------------- | ------------ |
+| `lying_down` | перечисление:<br/>**TRUE** - undefined<br/>**FALSE** - undefined |              |
 <h3 id=entity_set_cat_type>
   <code>entity::set_cat_type</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -165,6 +230,38 @@ entity::set_dye_color("BLACK")
 | **Имя** | **Тип**                                                                                                                                                                                                                                                                                                                                                                                                                         | **Описание**  |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
 | `color` | перечисление:<br/>**BLACK** - Чёрный<br/>**BLUE** - Синий<br/>**BROWN** - Коричневый<br/>**CYAN** - Бирюзовый<br/>**GRAY** - Серый<br/>**GREEN** - Зелёный<br/>**LIGHT_BLUE** - Голубой<br/>**LIGHT_GRAY** - Светло-серый<br/>**LIME** - Лаймовый<br/>**MAGENTA** - Пурпурный<br/>**ORANGE** - Оранжевый<br/>**PINK** - Розовый<br/>**PURPLE** - Фиолетовый<br/>**RED** - Красный<br/>**WHITE** - Белый<br/>**YELLOW** - Жёлтый | Цвет сущности |
+<h3 id=entity_set_enderman_block>
+  <code>entity::set_enderman_block</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** undefined\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_enderman_block(item("stone"))
+```
+
+**Аргументы:**
+| **Имя** | **Тип** | **Описание** |
+| ------- | ------- | ------------ |
+| `block` | предмет |              |
+<h3 id=entity_set_fox_leaping>
+  <code>entity::set_fox_leaping</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** undefined\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_fox_leaping("TRUE")
+```
+
+**Аргументы:**
+| **Имя**   | **Тип**                                                          | **Описание** |
+| --------- | ---------------------------------------------------------------- | ------------ |
+| `leaping` | перечисление:<br/>**TRUE** - undefined<br/>**FALSE** - undefined |              |
 <h3 id=entity_set_fox_type>
   <code>entity::set_fox_type</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -181,6 +278,38 @@ entity::set_fox_type("RED")
 | **Имя**    | **Тип**                                                       | **Описание** |
 | ---------- | ------------------------------------------------------------- | ------------ |
 | `fox_type` | перечисление:<br/>**RED** - Стандартный<br/>**SNOW** - Зимний | Тип лисы     |
+<h3 id=entity_set_frog_type>
+  <code>entity::set_frog_type</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** undefined\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_frog_type("COLD")
+```
+
+**Аргументы:**
+| **Имя**        | **Тип**                                                                                       | **Описание** |
+| -------------- | --------------------------------------------------------------------------------------------- | ------------ |
+| `frog_variant` | перечисление:<br/>**COLD** - undefined<br/>**TEMPERATE** - undefined<br/>**WARM** - undefined |              |
+<h3 id=entity_set_glow_squid_dark>
+  <code>entity::set_glow_squid_dark</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** undefined\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_glow_squid_dark(0)
+```
+
+**Аргументы:**
+| **Имя**      | **Тип** | **Описание** |
+| ------------ | ------- | ------------ |
+| `dark_ticks` | число   |              |
 <h3 id=entity_set_glowing>
   <code>entity::set_glowing</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -230,6 +359,22 @@ entity::set_item_in_frame(item("stone"))
 | **Имя** | **Тип** | **Описание** |
 | ------- | ------- | ------------ |
 | `item`  | предмет | Предмет      |
+<h3 id=entity_set_llama_type>
+  <code>entity::set_llama_type</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** undefined\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_llama_type("BROWN")
+```
+
+**Аргументы:**
+| **Имя** | **Тип**                                                                                                               | **Описание** |
+| ------- | --------------------------------------------------------------------------------------------------------------------- | ------------ |
+| `type`  | перечисление:<br/>**BROWN** - undefined<br/>**CREAMY** - undefined<br/>**GRAY** - undefined<br/>**WHITE** - undefined |              |
 <h3 id=entity_set_minecart_block>
   <code>entity::set_minecart_block</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -279,6 +424,22 @@ entity::set_parrot_type("BLUE")
 | **Имя**       | **Тип**                                                                                                                        | **Описание** |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------ |
 | `parrot_type` | перечисление:<br/>**BLUE** - Синий<br/>**CYAN** - Бирюзовый<br/>**GRAY** - Серый<br/>**GREEN** - Зелёный<br/>**RED** - Красный | Тип попугая  |
+<h3 id=entity_set_pose>
+  <code>entity::set_pose</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** undefined\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_pose("CROAKING")
+```
+
+**Аргументы:**
+| **Имя** | **Тип**                                                                                                                                                                                                                                                                                                                                                                                                                                      | **Описание** |
+| ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| `pose`  | перечисление:<br/>**CROAKING** - undefined<br/>**DIGGING** - undefined<br/>**DYING** - undefined<br/>**EMERGING** - undefined<br/>**FALL_FLYING** - undefined<br/>**LONG_JUMPING** - undefined<br/>**ROARING** - undefined<br/>**SLEEPING** - undefined<br/>**SNEAKING** - undefined<br/>**SNIFFING** - undefined<br/>**SPIN_ATTACK** - undefined<br/>**STANDING** - undefined<br/>**SWIMMING** - undefined<br/>**USING_TONGUE** - undefined |              |
 <h3 id=entity_set_projectile_display_item>
   <code>entity::set_projectile_display_item</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -311,6 +472,22 @@ entity::set_rabbit_type("BLACK")
 | **Имя**       | **Тип**                                                                                                                                                                                                                               | **Описание** |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
 | `rabbit_type` | перечисление:<br/>**BLACK** - Чёрный<br/>**BLACK_AND_WHITE** - Черно-белый<br/>**BROWN** - Коричневый<br/>**GOLD** - Золотой<br/>**SALT_AND_PEPPER** - Бело-коричневый<br/>**THE_KILLER_BUNNY** - Кролик-убийца<br/>**WHITE** - Белый | Тип кролика  |
+<h3 id=entity_set_snowman_pumpkin>
+  <code>entity::set_snowman_pumpkin</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** undefined\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_snowman_pumpkin("TRUE")
+```
+
+**Аргументы:**
+| **Имя**   | **Тип**                                                          | **Описание** |
+| --------- | ---------------------------------------------------------------- | ------------ |
+| `pumpkin` | перечисление:<br/>**TRUE** - undefined<br/>**FALSE** - undefined |              |
 <h3 id=entity_set_tropical_fish_pattern>
   <code>entity::set_tropical_fish_pattern</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -329,6 +506,54 @@ entity::set_tropical_fish_pattern("WHITE", "WHITE", "KOB")
 | `pattern_color` | перечисление:<br/>**WHITE** - Белый<br/>**ORANGE** - Оранжевый<br/>**MAGENTA** - Пурпурный<br/>**LIGHT_BLUE** - Голубой<br/>**YELLOW** - Жёлтый<br/>**LIME** - Лаймовый<br/>**PINK** - Розовый<br/>**GRAY** - Серый<br/>**LIGHT_GRAY** - Светло-серый<br/>**CYAN** - Бирюзовый<br/>**PURPLE** - Фиолетовый<br/>**BLUE** - Синий<br/>**BROWN** - Коричневый<br/>**GREEN** - Зелёный<br/>**RED** - Красный<br/>**BLACK** - Чёрный<br/>**DO_NOT_CHANGE** - Не изменять | Цвет узора   |
 | `body_color`    | перечисление:<br/>**WHITE** - Белый<br/>**ORANGE** - Оранжевый<br/>**MAGENTA** - Пурпурный<br/>**LIGHT_BLUE** - Голубой<br/>**YELLOW** - Жёлтый<br/>**LIME** - Лаймовый<br/>**PINK** - Розовый<br/>**GRAY** - Серый<br/>**LIGHT_GRAY** - Светло-серый<br/>**CYAN** - Бирюзовый<br/>**PURPLE** - Фиолетовый<br/>**BLUE** - Синий<br/>**BROWN** - Коричневый<br/>**GREEN** - Зелёный<br/>**RED** - Красный<br/>**BLACK** - Чёрный<br/>**DO_NOT_CHANGE** - Не изменять | Цвет тела    |
 | `pattern`       | перечисление:<br/>**KOB** - Kob<br/>**SUNSTREAK** - SunStreak<br/>**SNOOPER** - Snooper<br/>**DASHER** - Dasher<br/>**BRINELY** - Brinely<br/>**SPOTTY** - Spotty<br/>**FLOPPER** - Flopper<br/>**STRIPEY** - Stripey<br/>**GLITTER** - Glitter<br/>**BLOCKFISH** - Blockfish<br/>**BETTY** - Betty<br/>**CLAYFISH** - Clayfish<br/>**DO_NOT_CHANGE** - Не изменять                                                                                                 | Узор         |
+<h3 id=entity_set_villager_biome>
+  <code>entity::set_villager_biome</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** undefined\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_villager_biome("DESERT")
+```
+
+**Аргументы:**
+| **Имя** | **Тип**                                                                                                                                                                                                 | **Описание** |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| `biome` | перечисление:<br/>**DESERT** - undefined<br/>**JUNGLE** - undefined<br/>**PLAINS** - undefined<br/>**SAVANNA** - undefined<br/>**SNOW** - undefined<br/>**SWAMP** - undefined<br/>**TAIGA** - undefined |              |
+<h3 id=entity_set_visual_fire>
+  <code>entity::set_visual_fire</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** undefined\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_visual_fire("TRUE")
+```
+
+**Аргументы:**
+| **Имя**       | **Тип**                                                          | **Описание** |
+| ------------- | ---------------------------------------------------------------- | ------------ |
+| `visual_fire` | перечисление:<br/>**TRUE** - undefined<br/>**FALSE** - undefined |              |
+<h3 id=entity_set_zombie_arms_raised>
+  <code>entity::set_zombie_arms_raised</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** undefined\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_zombie_arms_raised("TRUE")
+```
+
+**Аргументы:**
+| **Имя**       | **Тип**                                                          | **Описание** |
+| ------------- | ---------------------------------------------------------------- | ------------ |
+| `arms_raised` | перечисление:<br/>**TRUE** - undefined<br/>**FALSE** - undefined |              |
 <h3 id=entity_eat_grass>
   <code>entity::eat_grass</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -342,6 +567,22 @@ entity::eat_grass()
 ```
 
 **Без аргументов**
+<h3 id=entity_eat_target>
+  <code>entity::eat_target</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** undefined\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::eat_target("текст")
+```
+
+**Аргументы:**
+| **Имя**        | **Тип** | **Описание** |
+| -------------- | ------- | ------------ |
+| `name_or_uuid` | текст   |              |
 <h3 id=entity_explode>
   <code>entity::explode</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>

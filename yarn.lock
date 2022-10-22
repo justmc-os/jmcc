@@ -607,9 +607,9 @@
     fastq "^1.6.0"
 
 "@rqbik/mtext@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@rqbik/mtext/-/mtext-1.0.6.tgz#7c55ef33c0260bc56c89def0fe99a6c255ca3a70"
-  integrity sha512-Z3X6ZLIhYA0y6KOS21popJ2qcuCCkUvenvdepwj30C9JwiWVG990ZKlwYGh4/6FHF6C9Lh3CjbeDlVxdVIFPFQ==
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@rqbik/mtext/-/mtext-1.0.7.tgz#83eb3b9ca68bf98f70081ad38529b06f463899d9"
+  integrity sha512-vHZ2JuqrgLPwUZG2JEAYH15Ta8ebxb7WbP95Vy8fv73mDIymZolIGqxrO+tmzOsX3uaffpXZxUBwyNf1QOmBZA==
 
 "@sinclair/typebox@^0.23.3":
   version "0.23.5"

@@ -259,5 +259,32 @@
     "BUILDER_AND_DEVELOPER",
     "WHITELISTED",
     "OWNER"
+  ],
+  "Frog.Variant": ["COLD", "TEMPERATE", "WARM"],
+  "Llama.Color": ["BROWN", "CREAMY", "GRAY", "WHITE"],
+  "Pose": [
+    "CROAKING",
+    "DIGGING",
+    "DYING",
+    "EMERGING",
+    "FALL_FLYING",
+    "LONG_JUMPING",
+    "ROARING",
+    "SLEEPING",
+    "SNEAKING",
+    "SNIFFING",
+    "SPIN_ATTACK",
+    "STANDING",
+    "SWIMMING",
+    "USING_TONGUE"
+  ],
+  "Villager.Type": [
+    "DESERT",
+    "JUNGLE",
+    "PLAINS",
+    "SAVANNA",
+    "SNOW",
+    "SWAMP",
+    "TAIGA"
   ]
 }
