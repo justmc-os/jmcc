@@ -723,23 +723,24 @@ world::spawn_lightning_bolt(location(0, 0, 0))
 **Тип:** Действие без значения\
 **Пример использования:**
 ```ts
-world::spawn_mob(item("stone"), location(0, 0, 0), 0, "текст", [potion("slow_falling"), potion("slow_falling")], item("stone"), item("stone"), item("stone"), item("stone"), item("stone"), item("stone"))
+world::spawn_mob(item("stone"), location(0, 0, 0), 0, "текст", [potion("slow_falling"), potion("slow_falling")], item("stone"), item("stone"), item("stone"), item("stone"), item("stone"), item("stone"), "TRUE")
 ```
 
 **Аргументы:**
-| **Имя**          | **Тип**        | **Описание**                   |
-| ---------------- | -------------- | ------------------------------ |
-| `mob`            | предмет        | Тип моба                       |
-| `location`       | местоположение | Место создания                 |
-| `health`         | число          | Количество здоровья            |
-| `custom_name`    | текст          | Имя                            |
-| `potion_effects` | список[зелье]  | Эффекты                        |
-| `main_hand`      | предмет        | Предмет в основной руке        |
-| `helmet`         | предмет        | Головной убор                  |
-| `chestplate`     | предмет        | Нагрудник                      |
-| `leggings`       | предмет        | Поножи                         |
-| `boots`          | предмет        | Ботинки                        |
-| `off_hand`       | предмет        | Предмет во второстепенной руке |
+| **Имя**             | **Тип**                                                         | **Описание**                   |
+| ------------------- | --------------------------------------------------------------- | ------------------------------ |
+| `mob`               | предмет                                                         | Тип моба                       |
+| `location`          | местоположение                                                  | Место создания                 |
+| `health`            | число                                                           | Количество здоровья            |
+| `custom_name`       | текст                                                           | Имя                            |
+| `potion_effects`    | список[зелье]                                                   | Эффекты                        |
+| `main_hand`         | предмет                                                         | Предмет в основной руке        |
+| `helmet`            | предмет                                                         | Головной убор                  |
+| `chestplate`        | предмет                                                         | Нагрудник                      |
+| `leggings`          | предмет                                                         | Поножи                         |
+| `boots`             | предмет                                                         | Ботинки                        |
+| `off_hand`          | предмет                                                         | Предмет во второстепенной руке |
+| `natural_equipment` | перечисление:<br/>**TRUE** - Включить<br/>**FALSE** - Выключить | Стандартное снаряжение         |
 <h3 id=game_spawn_primed_tnt>
   <code>world::spawn_primed_tnt</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>

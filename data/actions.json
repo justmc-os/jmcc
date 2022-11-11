@@ -2616,6 +2616,11 @@
       {
         "type": "item",
         "name": "off_hand"
+      },
+      {
+        "type": "boolean",
+        "name": "natural_equipment",
+        "defaultBooleanValue": false
       }
     ]
   },
@@ -10888,6 +10893,10 @@
       {
         "type": "variable",
         "name": "variable_for_hit_entity_uuid"
+      },
+      {
+        "type": "variable",
+        "name": "entities"
       }
     ],
     "assigning": "variable_for_hit_block_location"
