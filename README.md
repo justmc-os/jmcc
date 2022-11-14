@@ -34,7 +34,7 @@
 
    ```shell
    # Для Windows
-   $ ./jmcc-win.exe compile example.jc
+   $ jmcc-win.exe compile example.jc
 
    # Для Linux
    $ ./jmcc-linux compile example.jc
