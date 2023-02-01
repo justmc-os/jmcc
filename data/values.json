@@ -578,6 +578,11 @@
     "name": "url_response"
   },
   {
+    "id": "url_response_code",
+    "type": "number",
+    "name": "url_response_code"
+  },
+  {
     "id": "world_time",
     "type": "number",
     "name": "world_time"

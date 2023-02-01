@@ -286,5 +286,40 @@
     "SNOW",
     "SWAMP",
     "TAIGA"
-  ]
+  ],
+  "AttributeModifier.Operation": [
+    "MULTIPLY_SCALAR_1",
+    "ADD_NUMBER",
+    "ADD_SCALAR"
+  ],
+  "InteractionHand": ["MAIN_HAND", "OFF_HAND"],
+  "Attribute": [
+    "GENERIC_ARMOR",
+    "GENERIC_ARMOR_TOUGHNESS",
+    "GENERIC_ATTACK_DAMAGE",
+    "GENERIC_ATTACK_KNOCKBACK",
+    "GENERIC_ATTACK_SPEED",
+    "GENERIC_FLYING_SPEED",
+    "GENERIC_FOLLOW_RANGE",
+    "GENERIC_KNOCKBACK_RESISTANCE",
+    "GENERIC_LUCK",
+    "GENERIC_MAX_HEALTH",
+    "GENERIC_MOVEMENT_SPEED",
+    "HORSE_JUMP_STRENGTH",
+    "ZOMBIE_SPAWN_REINFORCEMENTS"
+  ],
+  "EnderDragon.Phase": [
+    "BREATH_ATTACK",
+    "CHARGE_PLAYER",
+    "CIRCLING",
+    "DYING",
+    "FLY_TO_PORTAL",
+    "HOVER",
+    "LAND_ON_PORTAL",
+    "LEAVE_PORTAL",
+    "ROAR_BEFORE_ATTACK",
+    "SEARCH_FOR_BREATH_ATTACK_TARGET",
+    "STRAFING"
+  ],
+  "ReportCatcher.ReportType": ["WARNING", "ERROR", "ALL"]
 }

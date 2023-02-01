@@ -162,7 +162,7 @@ const getActionEnums = (source: string) => {
 const getArgument = (
   file: string,
   enums: ActionDataEnum[],
-  [, type, name, defaultBooleanValue, parsing]: RegExpMatchArray
+  [_source, type, name, defaultBooleanValue, parsing]: RegExpMatchArray
 ) => {
   const argumentType = getArgumentType(type);
   const result: ActionDataArgument = {
@@ -181,7 +181,8 @@ const getArgument = (
   }
 
   if (argumentType === 'enum') {
-    const enumName = type.match(ENUM_TYPE_REGEX)[1];
+    const enumName = (_source.match(/enum\(.*,\s*(.*)\..*\)/) ||
+      type.match(ENUM_TYPE_REGEX))[1];
     const enumValue =
       enums.find((_enum) => _enum.name === enumName)?.values ||
       enumMap[Object.keys(enumMap).find((key) => key === enumName)];

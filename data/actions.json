@@ -48,6 +48,25 @@
     ]
   },
   {
+    "id": "control_call_exception",
+    "name": "call_exception",
+    "object": "code",
+    "args": [
+      {
+        "type": "text",
+        "name": "id"
+      },
+      {
+        "type": "text",
+        "name": "message"
+      },
+      {
+        "type": "enum",
+        "name": "type"
+      }
+    ]
+  },
+  {
     "id": "control_end_thread",
     "name": "break",
     "object": "code",
@@ -87,6 +106,47 @@
           "TICKS",
           "SECONDS",
           "MINUTES"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "controller_async_run",
+    "name": "controller_async_run",
+    "object": "code",
+    "args": []
+  },
+  {
+    "id": "controller_exception",
+    "name": "controller_exception",
+    "object": "code",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "enum",
+        "name": "exception_type"
+      }
+    ]
+  },
+  {
+    "id": "controller_measure_time",
+    "name": "controller_measure_time",
+    "object": "code",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "enum",
+        "name": "duration",
+        "enum": [
+          "NANOSECONDS",
+          "MICROSECONDS",
+          "MILLISECONDS"
         ]
       }
     ]
@@ -736,6 +796,34 @@
     ]
   },
   {
+    "id": "entity_move_to_location_stop",
+    "name": "move_to_location_stop",
+    "object": "entity",
+    "args": []
+  },
+  {
+    "id": "entity_ram_target",
+    "name": "ram_target",
+    "object": "entity",
+    "args": [
+      {
+        "type": "text",
+        "name": "name_or_uuid"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_aware",
+    "name": "set_aware",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "aware"
+      }
+    ]
+  },
+  {
     "id": "entity_set_celebrating",
     "name": "set_celebrating",
     "object": "entity",
@@ -743,6 +831,28 @@
       {
         "type": "boolean",
         "name": "celebrating"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_dragon_phase",
+    "name": "set_dragon_phase",
+    "object": "entity",
+    "args": [
+      {
+        "type": "enum",
+        "name": "phase"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_shulker_bullet_target",
+    "name": "set_shulker_bullet_target",
+    "object": "entity",
+    "args": [
+      {
+        "type": "text",
+        "name": "target"
       }
     ]
   },
@@ -765,6 +875,21 @@
       {
         "type": "boolean",
         "name": "sleep"
+      }
+    ]
+  },
+  {
+    "id": "entity_use_item",
+    "name": "use_item",
+    "object": "entity",
+    "args": [
+      {
+        "type": "enum",
+        "name": "hand"
+      },
+      {
+        "type": "boolean",
+        "name": "enable"
       }
     ]
   },
@@ -900,6 +1025,21 @@
       {
         "type": "item",
         "name": "item"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_warden_digging",
+    "name": "set_warden_digging",
+    "object": "entity",
+    "args": [
+      {
+        "type": "enum",
+        "name": "digging",
+        "enum": [
+          "EMERGE",
+          "DIG_DOWN"
+        ]
       }
     ]
   },
@@ -2007,6 +2147,25 @@
     ]
   },
   {
+    "id": "game_set_block_custom_tag",
+    "name": "set_block_custom_tag",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "text",
+        "name": "tag_name"
+      },
+      {
+        "type": "text",
+        "name": "tag_value"
+      }
+    ]
+  },
+  {
     "id": "game_set_block_data",
     "name": "set_block_data",
     "object": "world",
@@ -2954,7 +3113,9 @@
         "name": "request_type",
         "enum": [
           "GET",
-          "POST"
+          "POST",
+          "PUT",
+          "DELETE"
         ]
       },
       {
@@ -3336,6 +3497,13 @@
         ]
       }
     ],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_game_event_attack_is_critical",
+    "name": "event_attack_is_critical",
+    "object": "world",
+    "args": [],
     "containing": "predicate"
   },
   {
@@ -4093,6 +4261,13 @@
     "containing": "predicate"
   },
   {
+    "id": "if_player_is_self_disguised",
+    "name": "is_self_disguised",
+    "object": "player",
+    "args": [],
+    "containing": "predicate"
+  },
+  {
     "id": "if_player_is_sleeping",
     "name": "is_sleeping",
     "object": "player",
@@ -4618,10 +4793,49 @@
     "args": []
   },
   {
+    "id": "player_remove_self_disguise",
+    "name": "remove_self_disguise",
+    "object": "player",
+    "args": []
+  },
+  {
     "id": "player_remove_skin",
     "name": "remove_skin",
     "object": "player",
     "args": []
+  },
+  {
+    "id": "player_self_disguise_as_block",
+    "name": "self_disguise_as_block",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "block"
+      }
+    ]
+  },
+  {
+    "id": "player_self_disguise_as_entity",
+    "name": "self_disguise_as_entity",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "entity_type"
+      }
+    ]
+  },
+  {
+    "id": "player_self_disguise_as_item",
+    "name": "self_disguise_as_item",
+    "object": "player",
+    "args": [
+      {
+        "type": "item",
+        "name": "item"
+      }
+    ]
   },
   {
     "id": "player_set_arrows_in_body",
@@ -5065,7 +5279,22 @@
     "id": "player_add_inventory_menu_row",
     "name": "add_menu_row",
     "object": "player",
-    "args": []
+    "args": [
+      {
+        "type": "item",
+        "name": "items",
+        "array": true,
+        "length": 9
+      },
+      {
+        "type": "enum",
+        "name": "position",
+        "enum": [
+          "TOP",
+          "BUTTON"
+        ]
+      }
+    ]
   },
   {
     "id": "player_close_inventory",
@@ -5108,7 +5337,15 @@
     "args": [
       {
         "type": "number",
-        "name": "row"
+        "name": "size"
+      },
+      {
+        "type": "enum",
+        "name": "position",
+        "enum": [
+          "TOP",
+          "BUTTON"
+        ]
       }
     ]
   },
@@ -5418,6 +5655,17 @@
     "name": "kick",
     "object": "player",
     "args": []
+  },
+  {
+    "id": "player_redirect_world",
+    "name": "redirect_world",
+    "object": "player",
+    "args": [
+      {
+        "type": "text",
+        "name": "world_id"
+      }
+    ]
   },
   {
     "id": "player_show_scoreboard",
@@ -5935,11 +6183,15 @@
     "args": [
       {
         "type": "particle",
-        "name": "particle"
+        "name": "particle",
+        "array": true,
+        "length": 20
       },
       {
         "type": "location",
-        "name": "location"
+        "name": "location",
+        "array": true,
+        "length": 20
       }
     ]
   },
@@ -6217,6 +6469,25 @@
       {
         "type": "text",
         "name": "text"
+      }
+    ]
+  },
+  {
+    "id": "player_display_pick_up_animation",
+    "name": "display_pick_up_animation",
+    "object": "player",
+    "args": [
+      {
+        "type": "text",
+        "name": "collected_name_or_uuid"
+      },
+      {
+        "type": "text",
+        "name": "collector_name_or_uuid"
+      },
+      {
+        "type": "number",
+        "name": "amount"
       }
     ]
   },
@@ -7181,6 +7452,44 @@
     "origin": "item"
   },
   {
+    "id": "set_variable_add_item_potion_effects",
+    "name": "add_item_potion_effects",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "potion",
+        "name": "potions",
+        "array": true,
+        "length": 18
+      },
+      {
+        "type": "boolean",
+        "name": "overwrite"
+      },
+      {
+        "type": "boolean",
+        "name": "show_icon"
+      },
+      {
+        "type": "enum",
+        "name": "particle_mode",
+        "enum": [
+          "REGULAR",
+          "AMBIENT",
+          "NONE"
+        ]
+      }
+    ]
+  },
+  {
     "id": "set_variable_get_book_text",
     "name": "get_book_text",
     "object": "variable",
@@ -7202,6 +7511,21 @@
     "origin": "book"
   },
   {
+    "id": "set_variable_get_compass_lodestone",
+    "name": "get_compass_lodestone",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      }
+    ]
+  },
+  {
     "id": "set_variable_get_item_amount",
     "name": "get_item_amount",
     "object": "variable",
@@ -7219,6 +7543,46 @@
     "origin": "item"
   },
   {
+    "id": "set_variable_get_item_attribute",
+    "name": "get_item_attribute",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "text",
+        "name": "name"
+      },
+      {
+        "type": "enum",
+        "name": "attribute"
+      },
+      {
+        "type": "enum",
+        "name": "slot",
+        "enum": [
+          "ALL",
+          "MAIN_HAND",
+          "OFF_HAND",
+          "HEAD",
+          "CHEST",
+          "LEGGINGS",
+          "BOOTS"
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "operation"
+      }
+    ]
+  },
+  {
     "id": "set_variable_get_item_color",
     "name": "get_item_color",
     "object": "variable",
@@ -7234,6 +7598,21 @@
     ],
     "assigning": "variable",
     "origin": "item"
+  },
+  {
+    "id": "set_variable_get_item_custom_model_data",
+    "name": "get_item_custom_model_data",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      }
+    ]
   },
   {
     "id": "set_variable_get_item_custom_tag",
@@ -7417,6 +7796,36 @@
     "origin": "item"
   },
   {
+    "id": "set_variable_get_item_potion_effects",
+    "name": "get_item_potion_effects",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_get_item_rarity",
+    "name": "get_item_rarity",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      }
+    ]
+  },
+  {
     "id": "set_variable_get_player_head",
     "name": "get_player_head",
     "object": "variable",
@@ -7431,6 +7840,59 @@
       }
     ],
     "assigning": "variable"
+  },
+  {
+    "id": "set_variable_get_player_head_owner",
+    "name": "get_player_head_owner",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "head"
+      },
+      {
+        "type": "enum",
+        "name": "return_value",
+        "enum": [
+          "NAME",
+          "UUID"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "set_variable_remove_compass_lodestone",
+    "name": "remove_compass_lodestone",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_remove_item_custom_model_data",
+    "name": "remove_item_custom_model_data",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      }
+    ]
   },
   {
     "id": "set_variable_remove_item_custom_tag",
@@ -7494,6 +7956,27 @@
     ]
   },
   {
+    "id": "set_variable_remove_item_potion_effects",
+    "name": "remove_item_potion_effects",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "potion",
+        "name": "effects",
+        "array": true,
+        "length": 18
+      }
+    ]
+  },
+  {
     "id": "set_variable_set_book_page",
     "name": "set_book_page",
     "object": "variable",
@@ -7550,6 +8033,29 @@
     "origin": "book"
   },
   {
+    "id": "set_variable_set_compass_lodestone",
+    "name": "set_compass_lodestone",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "boolean",
+        "name": "tracked"
+      }
+    ]
+  },
+  {
     "id": "set_variable_set_item_amount",
     "name": "set_item_amount",
     "object": "variable",
@@ -7571,6 +8077,50 @@
     "origin": "item"
   },
   {
+    "id": "set_variable_set_item_attribute",
+    "name": "set_item_attribute",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "number",
+        "name": "amount"
+      },
+      {
+        "type": "text",
+        "name": "name"
+      },
+      {
+        "type": "enum",
+        "name": "attribute"
+      },
+      {
+        "type": "enum",
+        "name": "slot",
+        "enum": [
+          "ALL",
+          "MAIN_HAND",
+          "OFF_HAND",
+          "HEAD",
+          "CHEST",
+          "LEGGINGS",
+          "BOOTS"
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "operation"
+      }
+    ]
+  },
+  {
     "id": "set_variable_set_item_color",
     "name": "set_item_color",
     "object": "variable",
@@ -7590,6 +8140,25 @@
     ],
     "assigning": "variable",
     "origin": "item"
+  },
+  {
+    "id": "set_variable_set_item_custom_model_data",
+    "name": "set_item_custom_model_data",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "number",
+        "name": "model"
+      }
+    ]
   },
   {
     "id": "set_variable_set_item_custom_tag",
@@ -7615,6 +8184,27 @@
     ],
     "assigning": "variable",
     "origin": "item"
+  },
+  {
+    "id": "set_variable_set_item_destroyable_blocks",
+    "name": "set_item_destroyable_blocks",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "item",
+        "name": "destroyable",
+        "array": true,
+        "length": 18
+      }
+    ]
   },
   {
     "id": "set_variable_set_item_durability",
@@ -7767,6 +8357,27 @@
     "origin": "item"
   },
   {
+    "id": "set_variable_set_item_placeable_blocks",
+    "name": "set_item_placeable_blocks",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "item",
+        "name": "placeable",
+        "array": true,
+        "length": 18
+      }
+    ]
+  },
+  {
     "id": "set_variable_set_item_unbreakable",
     "name": "set_item_unbreakable",
     "object": "variable",
@@ -7866,6 +8477,65 @@
     "origin": "item"
   },
   {
+    "id": "set_variable_set_texture_to_map",
+    "name": "set_texture_to_map",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "map"
+      },
+      {
+        "type": "text",
+        "name": "url"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_align_location",
+    "name": "align_location",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "enum",
+        "name": "rotation_mode",
+        "enum": [
+          "KEEP",
+          "REMOVE"
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "coordinates_mode",
+        "enum": [
+          "ALL",
+          "X_Z",
+          "Y"
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "align_mode",
+        "enum": [
+          "BLOCK_CENTER",
+          "CORNER"
+        ]
+      }
+    ]
+  },
+  {
     "id": "set_variable_center_location",
     "name": "center_location",
     "object": "variable",
@@ -7956,8 +8626,8 @@
           "X",
           "Y",
           "Z",
-          "PITCH",
-          "YAW"
+          "YAW",
+          "PITCH"
         ]
       }
     ],
@@ -8273,6 +8943,29 @@
     "origin": "location"
   },
   {
+    "id": "set_variable_shift_location_towards_location",
+    "name": "shift_location_towards_location",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "location_from"
+      },
+      {
+        "type": "location",
+        "name": "location_to"
+      },
+      {
+        "type": "number",
+        "name": "distance"
+      }
+    ]
+  },
+  {
     "id": "set_variable_append_map",
     "name": "append_map",
     "object": "variable",
@@ -8452,6 +9145,37 @@
     ],
     "assigning": "variable",
     "origin": "map"
+  },
+  {
+    "id": "set_variable_sort_any_map",
+    "name": "sort_any_map",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "variable",
+        "name": "map"
+      },
+      {
+        "type": "enum",
+        "name": "sort_order",
+        "enum": [
+          "ASCENDING",
+          "DESCENDING"
+        ]
+      },
+      {
+        "type": "enum",
+        "name": "sort_type",
+        "enum": [
+          "KEYS",
+          "VALUES"
+        ]
+      }
+    ]
   },
   {
     "id": "set_variable_get_color_channels",
@@ -9074,6 +9798,33 @@
     ],
     "assigning": "variable",
     "origin": "value"
+  },
+  {
+    "id": "set_variable_gaussian_distribution",
+    "name": "gaussian_distribution",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "deviant"
+      },
+      {
+        "type": "number",
+        "name": "mean"
+      },
+      {
+        "type": "enum",
+        "name": "distribution",
+        "enum": [
+          "NORMAL",
+          "FOLDER_NORMAL"
+        ]
+      }
+    ]
   },
   {
     "id": "set_variable_increment",
@@ -9907,6 +10658,52 @@
     "origin": "number"
   },
   {
+    "id": "set_variable_format_timestamp",
+    "name": "format_timestamp",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "number",
+        "name": "time"
+      },
+      {
+        "type": "text",
+        "name": "pattern"
+      },
+      {
+        "type": "text",
+        "name": "zone_id"
+      },
+      {
+        "type": "text",
+        "name": "locale"
+      },
+      {
+        "type": "enum",
+        "name": "format",
+        "enum": [
+          "CUSTOM",
+          "DD_MM_YYYY_HH_MM_S",
+          "DD_MM_YYYY",
+          "YYYY_MM_DD_HH_MM_S",
+          "YYYY_MM_DD",
+          "EEE_D_MMMM",
+          "EEE_MMMM_D",
+          "MMMM",
+          "EEEE",
+          "HH_MM_SS",
+          "H_MM_A",
+          "H_H_M_M_S_S",
+          "S_S"
+        ]
+      }
+    ]
+  },
+  {
     "id": "set_variable_get_char_at",
     "name": "get_char_at",
     "object": "variable",
@@ -10123,6 +10920,32 @@
     ],
     "assigning": "variable",
     "origin": "text"
+  },
+  {
+    "id": "set_variable_remove_text",
+    "name": "remove_text",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "text",
+        "name": "text"
+      },
+      {
+        "type": "boolean",
+        "name": "regex",
+        "defaultBooleanValue": false
+      },
+      {
+        "type": "text",
+        "name": "remove",
+        "array": true,
+        "length": 18
+      }
+    ]
   },
   {
     "id": "set_variable_repeat_text",
@@ -10371,6 +11194,26 @@
     "origin": "vectors"
   },
   {
+    "id": "set_variable_align_to_axis_vector",
+    "name": "align_to_axis_vector",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "vector",
+        "name": "vector"
+      },
+      {
+        "type": "boolean",
+        "name": "normalize",
+        "defaultBooleanValue": false
+      }
+    ]
+  },
+  {
     "id": "set_variable_vector_cross_product",
     "name": "vector_cross_product",
     "object": "variable",
@@ -10510,6 +11353,21 @@
     "origin": "vector"
   },
   {
+    "id": "set_variable_get_vector_from_block_face",
+    "name": "get_vector_from_block_face",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "text",
+        "name": "block_face"
+      }
+    ]
+  },
+  {
     "id": "set_variable_get_vector_length",
     "name": "get_vector_length",
     "object": "variable",
@@ -10554,6 +11412,29 @@
     ],
     "assigning": "variable",
     "origin": "vector"
+  },
+  {
+    "id": "set_variable_reflect_vector_product",
+    "name": "reflect_vector_product",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "vector",
+        "name": "vector_1"
+      },
+      {
+        "type": "vector",
+        "name": "vector_2"
+      },
+      {
+        "type": "number",
+        "name": "bounce"
+      }
+    ]
   },
   {
     "id": "set_variable_rotate_vector_around_axis",
@@ -10721,6 +11602,109 @@
     "assigning": "variable"
   },
   {
+    "id": "set_variable_vector_to_direction_name",
+    "name": "vector_to_direction_name",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "vector",
+        "name": "vector"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_get_all_block_data",
+    "name": "get_all_block_data",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "boolean",
+        "name": "hide_unspecified"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_get_block_custom_tag",
+    "name": "get_block_custom_tag",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "text",
+        "name": "tag_name"
+      },
+      {
+        "type": "text",
+        "name": "tag_value"
+      },
+      {
+        "type": "any",
+        "name": "default_value"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_get_block_data",
+    "name": "get_block_data",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "text",
+        "name": "tag_name"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_get_block_growth",
+    "name": "get_block_growth",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "enum",
+        "name": "growth_unit",
+        "enum": [
+          "GROWTH_STAGE",
+          "GROWTH_PERCENTAGE"
+        ]
+      }
+    ]
+  },
+  {
     "id": "set_variable_get_block_material",
     "name": "get_block_material",
     "object": "variable",
@@ -10748,6 +11732,21 @@
     "origin": "location"
   },
   {
+    "id": "set_variable_get_block_power",
+    "name": "get_block_power",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      }
+    ]
+  },
+  {
     "id": "set_variable_get_container_contents",
     "name": "get_container_contents",
     "object": "variable",
@@ -10769,6 +11768,21 @@
     "origin": "location"
   },
   {
+    "id": "set_variable_get_container_lock",
+    "name": "get_container_lock",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      }
+    ]
+  },
+  {
     "id": "set_variable_get_container_name",
     "name": "get_container_name",
     "object": "variable",
@@ -10784,6 +11798,36 @@
     ],
     "assigning": "variable",
     "origin": "location"
+  },
+  {
+    "id": "set_variable_get_lectern_book",
+    "name": "get_lectern_book",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_get_lectern_page",
+    "name": "get_lectern_page",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      }
+    ]
   },
   {
     "id": "set_variable_get_light_level",
