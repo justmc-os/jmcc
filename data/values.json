@@ -583,6 +583,11 @@
     "name": "url_response_code"
   },
   {
+    "id": "url",
+    "type": "text",
+    "name": "url"
+  },
+  {
     "id": "world_time",
     "type": "number",
     "name": "world_time"

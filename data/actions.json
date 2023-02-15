@@ -62,7 +62,12 @@
       },
       {
         "type": "enum",
-        "name": "type"
+        "name": "type",
+        "enum": [
+          "WARNING",
+          "ERROR",
+          "FATAL"
+        ]
       }
     ]
   },
@@ -127,7 +132,12 @@
       },
       {
         "type": "enum",
-        "name": "exception_type"
+        "name": "exception_type",
+        "enum": [
+          "WARNING",
+          "ERROR",
+          "ALL"
+        ]
       }
     ]
   },
@@ -813,6 +823,17 @@
     ]
   },
   {
+    "id": "entity_set_allay_dancing",
+    "name": "set_allay_dancing",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "dance"
+      }
+    ]
+  },
+  {
     "id": "entity_set_aware",
     "name": "set_aware",
     "object": "entity",
@@ -841,7 +862,20 @@
     "args": [
       {
         "type": "enum",
-        "name": "phase"
+        "name": "phase",
+        "enum": [
+          "BREATH_ATTACK",
+          "CHARGE_PLAYER",
+          "CIRCLING",
+          "DYING",
+          "FLY_TO_PORTAL",
+          "HOVER",
+          "LAND_ON_PORTAL",
+          "LEAVE_PORTAL",
+          "ROAR_BEFORE_ATTACK",
+          "SEARCH_FOR_BREATH_ATTACK_TARGET",
+          "STRAFING"
+        ]
       }
     ]
   },
@@ -885,7 +919,11 @@
     "args": [
       {
         "type": "enum",
-        "name": "hand"
+        "name": "hand",
+        "enum": [
+          "MAIN_HAND",
+          "OFF_HAND"
+        ]
       },
       {
         "type": "boolean",
@@ -1504,6 +1542,21 @@
       {
         "type": "number",
         "name": "experience"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_warden_anger_level",
+    "name": "set_warden_anger_level",
+    "object": "entity",
+    "args": [
+      {
+        "type": "text",
+        "name": "name_or_uuid"
+      },
+      {
+        "type": "number",
+        "name": "anger"
       }
     ]
   },
@@ -4849,6 +4902,17 @@
     ]
   },
   {
+    "id": "player_set_bee_stingers_in_body",
+    "name": "set_bee_stingers_in_body",
+    "object": "player",
+    "args": [
+      {
+        "type": "number",
+        "name": "amount"
+      }
+    ]
+  },
+  {
     "id": "player_set_pose",
     "name": "set_pose",
     "object": "player",
@@ -5782,6 +5846,20 @@
       {
         "type": "boolean",
         "name": "keep_rotation"
+      },
+      {
+        "type": "boolean",
+        "name": "keep_velocity",
+        "defaultBooleanValue": false
+      },
+      {
+        "type": "boolean",
+        "name": "ignore_passengers",
+        "defaultBooleanValue": false
+      },
+      {
+        "type": "boolean",
+        "name": "dismount"
       }
     ]
   },
@@ -5871,6 +5949,20 @@
       {
         "type": "boolean",
         "name": "keep_rotation"
+      },
+      {
+        "type": "boolean",
+        "name": "keep_velocity",
+        "defaultBooleanValue": false
+      },
+      {
+        "type": "boolean",
+        "name": "ignore_passengers",
+        "defaultBooleanValue": false
+      },
+      {
+        "type": "boolean",
+        "name": "dismount"
       }
     ]
   },
@@ -7245,6 +7337,10 @@
       {
         "type": "number",
         "name": "number"
+      },
+      {
+        "type": "boolean",
+        "name": "remove"
       }
     ],
     "assigning": "variable",
@@ -7561,7 +7657,22 @@
       },
       {
         "type": "enum",
-        "name": "attribute"
+        "name": "attribute",
+        "enum": [
+          "GENERIC_ARMOR",
+          "GENERIC_ARMOR_TOUGHNESS",
+          "GENERIC_ATTACK_DAMAGE",
+          "GENERIC_ATTACK_KNOCKBACK",
+          "GENERIC_ATTACK_SPEED",
+          "GENERIC_FLYING_SPEED",
+          "GENERIC_FOLLOW_RANGE",
+          "GENERIC_KNOCKBACK_RESISTANCE",
+          "GENERIC_LUCK",
+          "GENERIC_MAX_HEALTH",
+          "GENERIC_MOVEMENT_SPEED",
+          "HORSE_JUMP_STRENGTH",
+          "ZOMBIE_SPAWN_REINFORCEMENTS"
+        ]
       },
       {
         "type": "enum",
@@ -7578,7 +7689,12 @@
       },
       {
         "type": "enum",
-        "name": "operation"
+        "name": "operation",
+        "enum": [
+          "MULTIPLY_SCALAR_1",
+          "ADD_NUMBER",
+          "ADD_SCALAR"
+        ]
       }
     ]
   },
@@ -7717,6 +7833,25 @@
     ],
     "assigning": "variable",
     "origin": "item"
+  },
+  {
+    "id": "set_variable_get_item_lore_line",
+    "name": "get_item_lore_line",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "number",
+        "name": "line"
+      }
+    ]
   },
   {
     "id": "set_variable_get_item_type",
@@ -8099,7 +8234,22 @@
       },
       {
         "type": "enum",
-        "name": "attribute"
+        "name": "attribute",
+        "enum": [
+          "GENERIC_ARMOR",
+          "GENERIC_ARMOR_TOUGHNESS",
+          "GENERIC_ATTACK_DAMAGE",
+          "GENERIC_ATTACK_KNOCKBACK",
+          "GENERIC_ATTACK_SPEED",
+          "GENERIC_FLYING_SPEED",
+          "GENERIC_FOLLOW_RANGE",
+          "GENERIC_KNOCKBACK_RESISTANCE",
+          "GENERIC_LUCK",
+          "GENERIC_MAX_HEALTH",
+          "GENERIC_MOVEMENT_SPEED",
+          "HORSE_JUMP_STRENGTH",
+          "ZOMBIE_SPAWN_REINFORCEMENTS"
+        ]
       },
       {
         "type": "enum",
@@ -8116,7 +8266,12 @@
       },
       {
         "type": "enum",
-        "name": "operation"
+        "name": "operation",
+        "enum": [
+          "MULTIPLY_SCALAR_1",
+          "ADD_NUMBER",
+          "ADD_SCALAR"
+        ]
       }
     ]
   },
@@ -10773,6 +10928,21 @@
     ],
     "assigning": "variable",
     "origin": "text"
+  },
+  {
+    "id": "set_variable_get_text_width",
+    "name": "get_text_width",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "text",
+        "name": "text"
+      }
+    ]
   },
   {
     "id": "set_variable_hash",

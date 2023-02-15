@@ -321,5 +321,6 @@
     "SEARCH_FOR_BREATH_ATTACK_TARGET",
     "STRAFING"
   ],
-  "ReportCatcher.ReportType": ["WARNING", "ERROR", "ALL"]
+  "ReportCatcher.ReportType": ["WARNING", "ERROR", "ALL"],
+  "Report.Type": ["WARNING", "ERROR", "FATAL"]
 }

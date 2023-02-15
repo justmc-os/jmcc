@@ -459,7 +459,7 @@ if (player::is_blocking()) {
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
-**Имя:** Замаскирован\
+**Имя:** Замаскирован для всех\
 **Тип:** Действие, проверяющее условие\
 **Пример использования:**
 ```ts
@@ -524,6 +524,21 @@ if (player::is_on_ground()) {
 **Пример использования:**
 ```ts
 if (player::is_online_mode()) {
+  player::message("Условие правдиво")
+}
+```
+
+**Без аргументов**
+<h3 id=if_player_is_self_disguised>
+  <code>player::is_self_disguised</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Замаскирован для себя\
+**Тип:** Действие, проверяющее условие\
+**Пример использования:**
+```ts
+if (player::is_self_disguised()) {
   player::message("Условие правдиво")
 }
 ```
@@ -679,6 +694,19 @@ player::remove_pose()
 ```
 
 **Без аргументов**
+<h3 id=player_remove_self_disguise>
+  <code>player::remove_self_disguise</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Убрать свою маскировку\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+player::remove_self_disguise()
+```
+
+**Без аргументов**
 <h3 id=player_remove_skin>
   <code>player::remove_skin</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -692,6 +720,54 @@ player::remove_skin()
 ```
 
 **Без аргументов**
+<h3 id=player_self_disguise_as_block>
+  <code>player::self_disguise_as_block</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Замаскировать себя под блок\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+player::self_disguise_as_block(item("stone"))
+```
+
+**Аргументы:**
+| **Имя** | **Тип** | **Описание**        |
+| ------- | ------- | ------------------- |
+| `block` | предмет | Блок для маскировки |
+<h3 id=player_self_disguise_as_entity>
+  <code>player::self_disguise_as_entity</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Замаскировать себя под сущность\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+player::self_disguise_as_entity(item("stone"))
+```
+
+**Аргументы:**
+| **Имя**       | **Тип** | **Описание**            |
+| ------------- | ------- | ----------------------- |
+| `entity_type` | предмет | Сущность для маскировки |
+<h3 id=player_self_disguise_as_item>
+  <code>player::self_disguise_as_item</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** undefined\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+player::self_disguise_as_item(item("stone"))
+```
+
+**Аргументы:**
+| **Имя** | **Тип** | **Описание** |
+| ------- | ------- | ------------ |
+| `item`  | предмет |              |
 <h3 id=player_set_arrows_in_body>
   <code>player::set_arrows_in_body</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -708,6 +784,22 @@ player::set_arrows_in_body(0)
 | **Имя**  | **Тип** | **Описание**                  |
 | -------- | ------- | ----------------------------- |
 | `amount` | число   | Количество отображаемых стрел |
+<h3 id=player_set_bee_stingers_in_body>
+  <code>player::set_bee_stingers_in_body</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Установить жало пчелы на игроке\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+player::set_bee_stingers_in_body(0)
+```
+
+**Аргументы:**
+| **Имя**  | **Тип** | **Описание**                     |
+| -------- | ------- | -------------------------------- |
+| `amount` | число   | Количество отображаемых жал пчёл |
 <h3 id=player_set_pose>
   <code>player::set_pose</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -1052,14 +1144,18 @@ player::stop_sound([sound("entity.zombie.hurt"), sound("entity.zombie.hurt")], "
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
-**Имя:** Добавить строку для меню\
+**Имя:** Добавить строку меню\
 **Тип:** Действие без значения\
 **Пример использования:**
 ```ts
-player::add_menu_row()
+player::add_menu_row([item("stone"), item("stone")], "TOP")
 ```
 
-**Без аргументов**
+**Аргументы:**
+| **Имя**    | **Тип**                                                                                   | **Описание**   |
+| ---------- | ----------------------------------------------------------------------------------------- | -------------- |
+| `items`    | список[предмет]                                                                           | Предметы       |
+| `position` | перечисление:<br/>**TOP** - Добавить строку сверху<br/>**BUTTON** - Добавить строку снизу | Позиция строки |
 <h3 id=player_close_inventory>
   <code>player::close_menu</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -1111,17 +1207,18 @@ player::open_container_inventory(location(0, 0, 0))
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
-**Имя:** undefined\
+**Имя:** Убрать строки меню\
 **Тип:** Действие без значения\
 **Пример использования:**
 ```ts
-player::remove_menu_row(0)
+player::remove_menu_row(0, "TOP")
 ```
 
 **Аргументы:**
-| **Имя** | **Тип** | **Описание** |
-| ------- | ------- | ------------ |
-| `row`   | число   |              |
+| **Имя**    | **Тип**                                                                               | **Описание**     |
+| ---------- | ------------------------------------------------------------------------------------- | ---------------- |
+| `size`     | число                                                                                 | Количество строк |
+| `position` | перечисление:<br/>**TOP** - Убрать строку сверху<br/>**BUTTON** - Убрать строку снизу | Позиция строки   |
 <h3 id=player_set_inventory_menu_item>
   <code>player::set_menu_item</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -1456,6 +1553,22 @@ player::kick()
 ```
 
 **Без аргументов**
+<h3 id=player_redirect_world>
+  <code>player::redirect_world</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Переместить игрока в другой мир\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+player::redirect_world("текст")
+```
+
+**Аргументы:**
+| **Имя**    | **Тип** | **Описание** |
+| ---------- | ------- | ------------ |
+| `world_id` | текст   | ID мира      |
 <h3 id=player_show_scoreboard>
   <code>player::show_scoreboard</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -1582,14 +1695,17 @@ player::launch_up(0, "TRUE")
 **Тип:** Действие без значения\
 **Пример использования:**
 ```ts
-player::randomized_teleport([location(0, 0, 0), location(0, 0, 0)], "TRUE")
+player::randomized_teleport([location(0, 0, 0), location(0, 0, 0)], "TRUE", "TRUE", "TRUE", "TRUE")
 ```
 
 **Аргументы:**
-| **Имя**         | **Тип**                                                         | **Описание**             |
-| --------------- | --------------------------------------------------------------- | ------------------------ |
-| `locations`     | список[местоположение]                                          | Позиции для телепорта    |
-| `keep_rotation` | перечисление:<br/>**TRUE** - Включено<br/>**FALSE** - Выключено | Оставить текущий поворот |
+| **Имя**             | **Тип**                                                         | **Описание**                 |
+| ------------------- | --------------------------------------------------------------- | ---------------------------- |
+| `locations`         | список[местоположение]                                          | Позиции для телепорта        |
+| `keep_rotation`     | перечисление:<br/>**TRUE** - Включено<br/>**FALSE** - Выключено | Оставить текущий поворот     |
+| `keep_velocity`     | перечисление:<br/>**TRUE** - Включить<br/>**FALSE** - Выключить | Сохранение инерции           |
+| `ignore_passengers` | перечисление:<br/>**TRUE** - Включить<br/>**FALSE** - Выключить | Игнорирование пассажиров     |
+| `dismount`          | перечисление:<br/>**TRUE** - Да<br/>**FALSE** - Нет             | Спешиться после телепортации |
 <h3 id=player_ride_entity>
   <code>player::ride_entity</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -1697,14 +1813,17 @@ player::spectate_target("текст")
 **Тип:** Действие без значения\
 **Пример использования:**
 ```ts
-player::teleport(location(0, 0, 0), "TRUE")
+player::teleport(location(0, 0, 0), "TRUE", "TRUE", "TRUE", "TRUE")
 ```
 
 **Аргументы:**
-| **Имя**         | **Тип**                                                         | **Описание**             |
-| --------------- | --------------------------------------------------------------- | ------------------------ |
-| `location`      | местоположение                                                  | Новая позиция            |
-| `keep_rotation` | перечисление:<br/>**TRUE** - Включено<br/>**FALSE** - Выключено | Оставить текущий поворот |
+| **Имя**             | **Тип**                                                         | **Описание**                 |
+| ------------------- | --------------------------------------------------------------- | ---------------------------- |
+| `location`          | местоположение                                                  | Новая позиция                |
+| `keep_rotation`     | перечисление:<br/>**TRUE** - Включено<br/>**FALSE** - Выключено | Оставить текущий поворот     |
+| `keep_velocity`     | перечисление:<br/>**TRUE** - Включить<br/>**FALSE** - Выключить | Сохранение инерции           |
+| `ignore_passengers` | перечисление:<br/>**TRUE** - Включить<br/>**FALSE** - Выключить | Игнорирование пассажиров     |
+| `dismount`          | перечисление:<br/>**TRUE** - Да<br/>**FALSE** - Нет             | Спешиться после телепортации |
 <h3 id=player_teleport_sequence>
   <code>player::teleport_sequence</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -2073,14 +2192,14 @@ player::display_lightning(location(0, 0, 0))
 **Тип:** Действие без значения\
 **Пример использования:**
 ```ts
-player::display_particle(particle("fire"), location(0, 0, 0))
+player::display_particle([particle("fire"), particle("fire")], [location(0, 0, 0), location(0, 0, 0)])
 ```
 
 **Аргументы:**
-| **Имя**    | **Тип**        | **Описание**                  |
-| ---------- | -------------- | ----------------------------- |
-| `particle` | частица        | Эффект частиц для отображения |
-| `location` | местоположение | Местоположение эффекта        |
+| **Имя**    | **Тип**                | **Описание**                  |
+| ---------- | ---------------------- | ----------------------------- |
+| `particle` | список[частица]        | Эффект частиц для отображения |
+| `location` | список[местоположение] | Местоположение эффекта        |
 <h3 id=player_display_particle_line>
   <code>player::display_particle_line</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -2369,6 +2488,24 @@ player::display_hologram(location(0, 0, 0), "текст")
 | ---------- | -------------- | ------------------------- |
 | `location` | местоположение | Местоположение голограммы |
 | `text`     | текст          | Текст голограммы          |
+<h3 id=player_display_pick_up_animation>
+  <code>player::display_pick_up_animation</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Показать анимацию подбора предмета\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+player::display_pick_up_animation("текст", "текст", 0)
+```
+
+**Аргументы:**
+| **Имя**                  | **Тип** | **Описание**                             |
+| ------------------------ | ------- | ---------------------------------------- |
+| `collected_name_or_uuid` | текст   | Имя или UUID поднимаемой сущности        |
+| `collector_name_or_uuid` | текст   | Имя или UUID сущности, которая поднимает |
+| `amount`                 | число   | Количество поднимаемых предметов         |
 <h3 id=player_display_sign_text>
   <code>player::display_sign_text</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>

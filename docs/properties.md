@@ -132,6 +132,8 @@ var b = value::health<default_entity>
 | `value::selection_target_names`      | список[текст]           | Имена выбранных целей                 |
 | `value::selection_target_uuids`      | список[текст]           | UUID выбранных целей                  |
 | `value::url_response`                | текст                   | Ответ на веб-запрос                   |
+| `value::url_response_code`           | число                   | Код ответа на веб-запрос              |
+| `value::url`                         | текст                   |                                       |
 | `value::world_time`                  | число                   | Текущее время мира                    |
 | `value::world_weather`               | текст                   | Текущая погода мира                   |
 | `value::server_stopped_time`         | число                   | Время остановки сервера               |
