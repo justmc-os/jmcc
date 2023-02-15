@@ -67,6 +67,12 @@ program.showHelpAfterError(
   chalk.black`(добавьте --help для подробной информации о команде)`
 );
 
+type UploadResponse =
+  | {
+      id: string;
+    }
+  | { error: string };
+
 program
   .command('compile')
   .description(
@@ -103,15 +109,23 @@ program
     if (options.silent) return console.dir(result, { depth: Infinity });
     if (options.upload) {
       await promise;
+
       const spinner = ora().start('Загрузка в облако...');
-      const responsePromise = await fetch(`${DOMAIN}/api/upload`, {
+      const response = await fetch(`${DOMAIN}/api/upload`, {
         method: 'POST',
         body: JSON.stringify(result),
-      }).then((r) => r.json());
+      });
+      const responseText = await response.text();
       spinner.stop();
 
-      const response = await responsePromise;
-      if ('error' in response) return console.log(error(response.error));
+      let json: UploadResponse;
+      try {
+        json = JSON.parse(responseText);
+      } catch (e) {
+        return console.log(error(responseText));
+      }
+
+      if ('error' in json) return console.log(error(json.error));
 
       console.log(chalk.bgGreen.black(' Успех '), 'Файл загружен');
       console.log();
@@ -121,7 +135,7 @@ program
         )
       );
       console.log(
-        chalk.blue(` /module loadUrl force ${DOMAIN}/api/${response.id}`)
+        chalk.blue(` /module loadUrl force ${DOMAIN}/api/${json.id}`)
       );
       console.log();
       console.log(
