@@ -85,6 +85,7 @@ program
     '-s, --silent',
     'отключает создания файла и выводит результат в stdout'
   )
+  .option('-c, --compress', 'сжимает файл, убирая пропуски и пробелы')
   .option('-u, --upload', 'загружает скомпилированный файл на хостинг')
   .action(async (_path: string, options) => {
     if (!bootstrap.hasLocalData()) {
@@ -102,18 +103,22 @@ program
       return console.error(error(e));
     }
 
-    const result = jmcc.compileFileToJson(file, {
+    const compiled = jmcc.compileFileToJson(file, {
       debug: options.debug,
     });
+    const shouldCompress = options.upload || options.compress;
+    const result = shouldCompress
+      ? JSON.stringify(compiled)
+      : JSON.stringify(compiled, null, 2);
 
-    if (options.silent) return console.dir(result, { depth: Infinity });
+    if (options.silent) return console.dir(compiled, { depth: Infinity });
     if (options.upload) {
       await promise;
 
       const spinner = ora().start('Загрузка в облако...');
       const response = await fetch(`${DOMAIN}/api/upload`, {
         method: 'POST',
-        body: JSON.stringify(result),
+        body: result,
       });
       const responseText = await response.text();
       spinner.stop();
@@ -150,9 +155,7 @@ program
 
     const output = options.output || `${file.replace(/\.jc$/g, '')}.json`;
 
-    await fsp.writeFile(path.resolve(output), JSON.stringify(result, null, 2), {
-      encoding: 'utf-8',
-    });
+    await fsp.writeFile(path.resolve(output), result, 'utf-8');
     await promise;
   });
 

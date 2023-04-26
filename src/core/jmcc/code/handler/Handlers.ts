@@ -55,10 +55,11 @@ class Handlers {
       // Хендлер размером с одну строчку кода
       if (handler.length <= CodeHandler.MAX_LENGTH) continue;
 
-      let idx = 0,
-        maxLength = CodeHandler.MAX_LENGTH;
-
-      const walk = (container: CodeContainingAction | CodeHandler) => {
+      let idx = 0;
+      const walk = (
+        container: CodeContainingAction | CodeHandler,
+        maxLength: number = CodeHandler.MAX_LENGTH
+      ) => {
         for (
           let actionIdx = 0;
           actionIdx < container.actions.length;
@@ -77,7 +78,6 @@ class Handlers {
           const reserved = (() => {
             let reserved = 0;
             if (hasNext) reserved += 1;
-            if (hasContents) reserved += 1;
 
             // If next action is else
             if (!hasNext) return reserved;
@@ -91,7 +91,8 @@ class Handlers {
             return reserved;
           })();
 
-          const containerMaxLength = maxLength - reserved;
+          const containerMaxLength =
+            maxLength - reserved - (hasContents ? 1 : 0);
           if (newIdx > containerMaxLength) {
             const name = `jmcc.f${functionId++}`;
             const func = new CodeFunction(name);
@@ -102,22 +103,20 @@ class Handlers {
                 function_name: new TextConstant(name),
               })
             );
+
             result.push(func);
             idx += 1;
             break;
           }
 
           idx = newIdx;
-
           if (isContainer) {
-            maxLength -= reserved;
-            walk(action);
-            maxLength += reserved;
+            walk(action, maxLength - reserved);
           }
         }
       };
 
-      walk(handler);
+      walk(handler, CodeHandler.MAX_LENGTH);
     }
 
     this.values = result;
