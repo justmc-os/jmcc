@@ -41,6 +41,7 @@ event<player_join> {
 | `event<player_drop_item>`               | Игрок выбрасывает предмет                |
 | `event<player_consume_item>`            | Игрок употребляет предмет                |
 | `event<player_break_item>`              | Игрок ломает предмет                     |
+| `event<player_stop_using_item>`         | Игрок перестает использовать предмет     |
 | `event<player_edit_book>`               | Игрок изменяет книгу                     |
 | `event<player_fish>`                    | Игрок рыбачит                            |
 | `event<player_move>`                    | Игрок передвигается                      |
@@ -77,17 +78,22 @@ event<player_join> {
 | `event<entity_heal>`                    | Сущность исцеляется                      |
 | `event<entity_death>`                   | Смерть сущности                          |
 | `event<entity_spell_cast>`              | Существо выполняет заклинание            |
+| `event<enderman_escape>`                | Эндермен убегает                         |
+| `event<enderman_attack_player>`         | Эндермен злится на игрока                |
 | `event<firework_explode>`               | Фейерверк взрывается                     |
 | `event<hanging_break>`                  | Ломание висящего существа                |
 | `event<projectile_damage_entity>`       | Урон от снаряда                          |
 | `event<projectile_kill_entity>`         | Снаряд убил сущность                     |
-| `event<projectile_hit>`                 | Попадание снаряда                        |
+| `event<projectile_hit>`                 | Попадание снаряда в блок                 |
+| `event<projective_collide>`             | Снаряд столкнулся с сущностью            |
 | `event<entity_drop_item>`               | Существо выбрасывает предмет             |
 | `event<entity_pickup_item>`             | Существо поднимает предмет               |
 | `event<item_despawn>`                   | Предмет исчез                            |
 | `event<vehicle_take_damage>`            | Урон транспорту                          |
 | `event<block_fall>`                     | Блок начал падать                        |
+| `event<entity_interact>`                | Сущность взаимодействует с миром         |
 | `event<dispenser_shear_sheep>`          | Раздатчик обрезал овцу                   |
+| `event<sheep_regrow_wool>`              | Овца отрастила шерсть                    |
 | `event<world_start>`                    | Запуск мира                              |
 | `event<world_stop>`                     | Остановка мира                           |
 | `event<time_skip>`                      | Пропуск времени                          |

@@ -1,4 +1,5 @@
 import TextConstant from '../../value/constants/TextConstant';
+import CodeAction from '../action/CodeAction';
 import CodeContainingAction from '../action/CodeContainingAction';
 import Actions from '../action/defined/Actions';
 import codeActions from '../action/defined/CodeActions';
@@ -39,77 +40,6 @@ class Handlers {
     let position = 0;
     const result = this.values;
 
-    const walk = (
-      container: CodeContainingAction | CodeHandler,
-      maxLength: number
-    ) => {
-      let length = 0;
-      for (let k = 0; k < container.actions.length; k++) {
-        const action = container.actions[k];
-        const isActionContaining = action instanceof CodeContainingAction;
-        const nextAction = container.actions[k + 1];
-        const isNextActionElse =
-          nextAction instanceof CodeContainingAction &&
-          nextAction.id === codeActions.ELSE.id;
-
-        // Если действие может хранить другие действия и пустое
-        if (
-          isActionContaining &&
-          action.actions.length === 0 &&
-          // Если следующее действие не равно ветке ИНАЧЕ
-          !isNextActionElse
-        ) {
-          container.actions.splice(k, 1);
-          continue;
-        }
-
-        let currentMaxLength = maxLength;
-        if (isActionContaining && isNextActionElse) {
-          if (length + action.length > maxLength - 4) currentMaxLength -= 4;
-        }
-
-        if (length + action.length > currentMaxLength) {
-          if (
-            !isActionContaining ||
-            maxLength - length < CodeContainingAction.LENGTH + 2
-          ) {
-            const removeAt = isActionContaining ? k : k - 1;
-            const actions = container.actions.slice(removeAt);
-            if (
-              actions.length === 1 &&
-              !(actions[0] instanceof CodeContainingAction)
-            )
-              break;
-
-            const name = `jmcc.f${functionId++}`;
-            const func = new CodeFunction(name);
-            func.actions = actions;
-            result.push(func);
-
-            container.actions = container.actions.slice(0, removeAt);
-            container.actions.push(
-              Actions.from(codeActions.CALL_FUNCTION, {
-                function_name: new TextConstant(name),
-              })
-            );
-
-            break;
-          } else {
-            walk(
-              action,
-              currentMaxLength -
-                length -
-                CodeContainingAction.LENGTH -
-                (nextAction ? 1 : 0)
-            );
-            length = currentMaxLength - 1;
-          }
-        } else length += action.length;
-      }
-
-      return container;
-    };
-
     for (let i = 0; i < result.length; i++) {
       let handler = result[i];
       if (
@@ -125,7 +55,69 @@ class Handlers {
       // Хендлер размером с одну строчку кода
       if (handler.length <= CodeHandler.MAX_LENGTH) continue;
 
-      walk(handler, CodeHandler.MAX_LENGTH) as CodeHandler;
+      let idx = 0,
+        maxLength = CodeHandler.MAX_LENGTH;
+
+      const walk = (container: CodeContainingAction | CodeHandler) => {
+        for (
+          let actionIdx = 0;
+          actionIdx < container.actions.length;
+          actionIdx++
+        ) {
+          const action = container.actions[actionIdx];
+          const isContainer = action instanceof CodeContainingAction;
+          const actionLength = isContainer
+            ? CodeContainingAction.LENGTH
+            : CodeAction.LENGTH;
+          const newIdx = idx + actionLength;
+          const next = container.actions[actionIdx + 1];
+          const hasNext = !!next;
+          const hasContents = isContainer && action.actions.length > 0;
+
+          const reserved = (() => {
+            let reserved = 0;
+            if (hasNext) reserved += 1;
+            if (hasContents) reserved += 1;
+
+            // If next action is else
+            if (!hasNext) return reserved;
+            if (!isContainer) return reserved;
+            if (next.id !== codeActions.ELSE.id) return reserved;
+            if (!(next instanceof CodeContainingAction)) return reserved;
+
+            reserved += 2;
+            if (next.actions.length > 0) reserved += 1;
+            if (!!container.actions[actionIdx + 2]) reserved += 1;
+            return reserved;
+          })();
+
+          const containerMaxLength = maxLength - reserved;
+          if (newIdx > containerMaxLength) {
+            const name = `jmcc.f${functionId++}`;
+            const func = new CodeFunction(name);
+            func.actions = container.actions.splice(
+              actionIdx,
+              Infinity,
+              Actions.from(codeActions.CALL_FUNCTION, {
+                function_name: new TextConstant(name),
+              })
+            );
+            result.push(func);
+            idx += 1;
+            break;
+          }
+
+          idx = newIdx;
+
+          if (isContainer) {
+            maxLength -= reserved;
+            walk(action);
+            maxLength += reserved;
+          }
+        }
+      };
+
+      walk(handler);
     }
 
     this.values = result;

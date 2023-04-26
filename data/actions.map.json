@@ -789,5 +789,17 @@
   },
   "entity_set_location": {
     "name": "set_velocity"
+  },
+  "set_variable_get_list_random_value": {
+    "assigning": "variable",
+    "origin": "list"
+  },
+  "set_variable_get_block_material_property": {
+    "assigning": "variable",
+    "origin": "block"
+  },
+  "set_variable_get_map_keys_by_value": {
+    "assigning": "variable",
+    "origin": "map"
   }
 }

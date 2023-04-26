@@ -311,6 +311,16 @@
     "name": "open_inventory_title"
   },
   {
+    "id": "gamemode",
+    "type": "text",
+    "name": "gamemode"
+  },
+  {
+    "id": "last_damage_cause",
+    "type": "text",
+    "name": "last_damage_cause"
+  },
+  {
     "id": "potion_effects",
     "type": "array",
     "name": "potion_effects",
@@ -523,6 +533,11 @@
     "id": "event_teleport_cause",
     "type": "text",
     "name": "event_teleport_cause"
+  },
+  {
+    "id": "event_ticks_held_for",
+    "type": "number",
+    "name": "event_ticks_held_for"
   },
   {
     "id": "player_count",

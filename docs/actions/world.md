@@ -250,6 +250,23 @@ world::set_age(location(0, 0, 0), 0)
 | ---------- | -------------- | -------------------- |
 | `location` | местоположение | Местоположение блока |
 | `tick`     | число          | Тики                 |
+<h3 id=game_set_block_analogue_power>
+  <code>world::set_block_analogue_power</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Установить силу редстоун сигнала\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+world::set_block_analogue_power(location(0, 0, 0), 0)
+```
+
+**Аргументы:**
+| **Имя**       | **Тип**        | **Описание**         |
+| ------------- | -------------- | -------------------- |
+| `location`    | местоположение | Местоположение блока |
+| `power_level` | число          | Новая сила сигнала   |
 <h3 id=game_set_block>
   <code>world::set_block</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -442,6 +459,23 @@ world::set_player_head(location(0, 0, 0), "текст")
 | -------------- | -------------- | --------------------- |
 | `location`     | местоположение | Местоположение головы |
 | `name_or_uuid` | текст          | Имя или UUID игрока   |
+<h3 id=game_set_block_powered>
+  <code>world::set_block_powered</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Активировать блок\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+world::set_block_powered(location(0, 0, 0), "TRUE")
+```
+
+**Аргументы:**
+| **Имя**    | **Тип**                                                         | **Описание**         |
+| ---------- | --------------------------------------------------------------- | -------------------- |
+| `location` | местоположение                                                  | Местоположение блока |
+| `powered`  | перечисление:<br/>**TRUE** - Включить<br/>**FALSE** - Выключить | Активация            |
 <h3 id=game_set_region>
   <code>world::set_region</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -496,6 +530,22 @@ world::set_sign_text_color(location(0, 0, 0), "TRUE", "BLACK")
 | `location`        | местоположение                                                                                                                                                                                                                                                                                                                                                                                                                  | Местоположение таблички |
 | `glowing`         | перечисление:<br/>**TRUE** - Включить<br/>**FALSE** - Выключить                                                                                                                                                                                                                                                                                                                                                                 | Свечение текста         |
 | `sign_text_color` | перечисление:<br/>**BLACK** - Чёрный<br/>**BLUE** - Синий<br/>**BROWN** - Коричневый<br/>**CYAN** - Бирюзовый<br/>**GRAY** - Серый<br/>**GREEN** - Зелёный<br/>**LIGHT_BLUE** - Голубой<br/>**LIGHT_GRAY** - Светло-серый<br/>**LIME** - Лаймовый<br/>**MAGENTA** - Пурпурный<br/>**ORANGE** - Оранжевый<br/>**PINK** - Розовый<br/>**PURPLE** - Фиолетовый<br/>**RED** - Красный<br/>**WHITE** - Белый<br/>**YELLOW** - Жёлтый | Цвет таблички           |
+<h3 id=game_update_block>
+  <code>world::update_block</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** undefined\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+world::update_block(location(0, 0, 0))
+```
+
+**Аргументы:**
+| **Имя**    | **Тип**        | **Описание** |
+| ---------- | -------------- | ------------ |
+| `location` | местоположение |              |
 <h3 id=game_create_explosion>
   <code>world::create_explosion</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>

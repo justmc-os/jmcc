@@ -756,6 +756,21 @@
     ]
   },
   {
+    "id": "entity_swing_hand",
+    "name": "swing_hand",
+    "object": "entity",
+    "args": [
+      {
+        "type": "enum",
+        "name": "hand_type",
+        "enum": [
+          "MAIN",
+          "OFF"
+        ]
+      }
+    ]
+  },
+  {
     "id": "entity_eat_grass",
     "name": "eat_grass",
     "object": "entity",
@@ -1215,6 +1230,17 @@
       {
         "type": "number",
         "name": "pitch"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_rotation_by_vector",
+    "name": "set_rotation_by_vector",
+    "object": "entity",
+    "args": [
+      {
+        "type": "vector",
+        "name": "vector"
       }
     ]
   },
@@ -2183,6 +2209,21 @@
     ]
   },
   {
+    "id": "game_set_block_analogue_power",
+    "name": "set_block_analogue_power",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "number",
+        "name": "power_level"
+      }
+    ]
+  },
+  {
     "id": "game_set_block",
     "name": "set_block",
     "object": "world",
@@ -2380,6 +2421,21 @@
     ]
   },
   {
+    "id": "game_set_block_powered",
+    "name": "set_block_powered",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "boolean",
+        "name": "powered"
+      }
+    ]
+  },
+  {
     "id": "game_set_region",
     "name": "set_region",
     "object": "world",
@@ -2451,6 +2507,17 @@
           "WHITE",
           "YELLOW"
         ]
+      }
+    ]
+  },
+  {
+    "id": "game_update_block",
+    "name": "update_block",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
       }
     ]
   },
@@ -3238,6 +3305,26 @@
     "name": "is_grounded",
     "object": "entity",
     "args": [],
+    "containing": "predicate"
+  },
+  {
+    "id": "if_entity_in_area",
+    "name": "in_area",
+    "object": "entity",
+    "args": [
+      {
+        "type": "location",
+        "name": "location_1"
+      },
+      {
+        "type": "location",
+        "name": "location_2"
+      },
+      {
+        "type": "boolean",
+        "name": "ignore_y_axis"
+      }
+    ],
     "containing": "predicate"
   },
   {
@@ -5311,6 +5398,12 @@
     "args": []
   },
   {
+    "id": "player_show_win_screen",
+    "name": "show_win_screen",
+    "object": "player",
+    "args": []
+  },
+  {
     "id": "player_stop_sound",
     "name": "stop_sound",
     "object": "player",
@@ -5912,6 +6005,17 @@
     ]
   },
   {
+    "id": "player_set_rotation_by_vector",
+    "name": "set_rotation_by_vector",
+    "object": "player",
+    "args": [
+      {
+        "type": "vector",
+        "name": "vector"
+      }
+    ]
+  },
+  {
     "id": "player_set_velocity",
     "name": "set_velocity",
     "object": "player",
@@ -6499,6 +6603,12 @@
     ]
   },
   {
+    "id": "player_clear_debug_markers",
+    "name": "clear_debug_markers",
+    "object": "player",
+    "args": []
+  },
+  {
     "id": "player_display_block",
     "name": "display_block",
     "object": "player",
@@ -6702,6 +6812,17 @@
     ]
   },
   {
+    "id": "player_set_simulation_distance",
+    "name": "set_simulation_distance",
+    "object": "player",
+    "args": [
+      {
+        "type": "number",
+        "name": "distance"
+      }
+    ]
+  },
+  {
     "id": "player_set_time",
     "name": "set_time",
     "object": "player",
@@ -6762,6 +6883,33 @@
       {
         "type": "number",
         "name": "time"
+      }
+    ]
+  },
+  {
+    "id": "player_show_debug_marker",
+    "name": "show_debug_marker",
+    "object": "player",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "text",
+        "name": "name"
+      },
+      {
+        "type": "number",
+        "name": "duration"
+      },
+      {
+        "type": "number",
+        "name": "green"
+      },
+      {
+        "type": "number",
+        "name": "alpha"
       }
     ]
   },
@@ -7322,6 +7470,23 @@
     "origin": "list"
   },
   {
+    "id": "set_variable_get_list_random_value",
+    "name": "get_list_random_value",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "variable",
+        "name": "list"
+      }
+    ],
+    "assigning": "variable",
+    "origin": "list"
+  },
+  {
     "id": "set_variable_get_list_value",
     "name": "get_list_value",
     "object": "variable",
@@ -7584,6 +7749,32 @@
         ]
       }
     ]
+  },
+  {
+    "id": "set_variable_get_block_material_property",
+    "name": "get_block_material_property",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "item",
+        "name": "block"
+      },
+      {
+        "type": "enum",
+        "name": "property",
+        "enum": [
+          "HARDNESS",
+          "BLAST_RESISTANCE",
+          "SLIPPERINESS"
+        ]
+      }
+    ],
+    "assigning": "variable",
+    "origin": "block"
   },
   {
     "id": "set_variable_get_book_text",
@@ -9191,6 +9382,36 @@
     "origin": "map"
   },
   {
+    "id": "set_variable_get_map_keys_by_value",
+    "name": "get_map_keys_by_value",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "variable",
+        "name": "map"
+      },
+      {
+        "type": "any",
+        "name": "value"
+      },
+      {
+        "type": "enum",
+        "name": "find_mode",
+        "enum": [
+          "FIRST",
+          "LAST",
+          "ALL"
+        ]
+      }
+    ],
+    "assigning": "variable",
+    "origin": "map"
+  },
+  {
     "id": "set_variable_get_map_size",
     "name": "get_map_size",
     "object": "variable",
@@ -10666,6 +10887,22 @@
     "origin": "particle"
   },
   {
+    "id": "set_variable_value",
+    "name": "set_value",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "any",
+        "name": "value"
+      }
+    ],
+    "assigning": "variable"
+  },
+  {
     "id": "set_variable_get_list_variables",
     "name": "get_list_variables",
     "object": "variable",
@@ -10740,22 +10977,6 @@
     ],
     "assigning": "variable",
     "origin": "values"
-  },
-  {
-    "id": "set_variable_value",
-    "name": "set_value",
-    "object": "variable",
-    "args": [
-      {
-        "type": "variable",
-        "name": "variable"
-      },
-      {
-        "type": "any",
-        "name": "value"
-      }
-    ],
-    "assigning": "variable"
   },
   {
     "id": "set_variable_char_to_number",

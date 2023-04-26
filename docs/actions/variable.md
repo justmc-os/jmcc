@@ -644,6 +644,28 @@ var c = b.get_list_length()
 | ---------- | ---------- | ------------------------- |
 | `variable` | переменная | Переменная для присвоения |
 | `list`     | переменная | Список                    |
+<h3 id=set_variable_get_list_random_value>
+  <code>variable::get_list_random_value</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Получить случайное значение списка\
+**Тип:** Действие, устанавливающее значение\
+**Пример использования:**
+```ts
+var a = variable::get_list_random_value(переменная)
+
+// или от переменной:
+
+var b = переменная
+var c = b.get_list_random_value()
+```
+
+**Аргументы:**
+| **Имя**    | **Тип**    | **Описание**              |
+| ---------- | ---------- | ------------------------- |
+| `variable` | переменная | Переменная для присвоения |
+| `list`     | переменная | Список                    |
 <h3 id=set_variable_get_list_value>
   <code>variable::get_list_value</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -898,6 +920,29 @@ variable::add_item_potion_effects(переменная, item("stone"), [potion("
 | `overwrite`     | перечисление:<br/>**TRUE** - Да<br/>**FALSE** - Нет                                 | Перезаписывать существующие эффекты |
 | `show_icon`     | перечисление:<br/>**TRUE** - Да<br/>**FALSE** - Нет                                 | Показывать иконку эффекта           |
 | `particle_mode` | перечисление:<br/>**REGULAR** - Да<br/>**AMBIENT** - Прозрачными<br/>**NONE** - Нет | Показывать частицы                  |
+<h3 id=set_variable_get_block_material_property>
+  <code>variable::get_block_material_property</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Получить свойство блока\
+**Тип:** Действие, устанавливающее значение\
+**Пример использования:**
+```ts
+var a = variable::get_block_material_property(item("stone"), "HARDNESS")
+
+// или от переменной:
+
+var b = item("stone")
+var c = b.get_block_material_property("HARDNESS")
+```
+
+**Аргументы:**
+| **Имя**    | **Тип**                                                                                                                        | **Описание**              |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------- |
+| `variable` | переменная                                                                                                                     | Переменная для присвоения |
+| `block`    | предмет                                                                                                                        | Блок для получения        |
+| `property` | перечисление:<br/>**HARDNESS** - Прочность<br/>**BLAST_RESISTANCE** - Устойчивость к взрыву<br/>**SLIPPERINESS** - Скользкость | Свойство                  |
 <h3 id=set_variable_get_book_text>
   <code>variable::get_book_text</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -2305,6 +2350,30 @@ var c = b.get_map_keys()
 | ---------- | ---------- | ------------------------------ |
 | `variable` | переменная | Переменная для присвоения      |
 | `map`      | переменная | Словарь для получения значения |
+<h3 id=set_variable_get_map_keys_by_value>
+  <code>variable::get_map_keys_by_value</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Получить ключи словаря по значению\
+**Тип:** Действие, устанавливающее значение\
+**Пример использования:**
+```ts
+var a = variable::get_map_keys_by_value(переменная, "любое значение", "FIRST")
+
+// или от переменной:
+
+var b = переменная
+var c = b.get_map_keys_by_value("любое значение", "FIRST")
+```
+
+**Аргументы:**
+| **Имя**     | **Тип**                                                                                                                                               | **Описание**              |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- |
+| `variable`  | переменная                                                                                                                                            | Переменная для присвоения |
+| `map`       | переменная                                                                                                                                            | Словарь                   |
+| `value`     | любое значение                                                                                                                                        | Значение для получения    |
+| `find_mode` | перечисление:<br/>**FIRST** - С начала (получает первый ключ)<br/>**LAST** - С конца (получает последний ключ)<br/>**ALL** - Все (получает все ключи) | Режим поиска              |
 <h3 id=set_variable_get_map_size>
   <code>variable::get_map_size</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -3794,6 +3863,23 @@ var c = b.set_particle_type("текст")
 | `variable` | переменная | Переменная для присвоения |
 | `particle` | частица    | Частица для изменения     |
 | `type`     | текст      | Новый тип частицы         |
+<h3 id=set_variable_value>
+  <code>variable::set_value</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Установить значение (=)\
+**Тип:** Действие, устанавливающее значение\
+**Пример использования:**
+```ts
+var a = variable::set_value("любое значение")
+```
+
+**Аргументы:**
+| **Имя**    | **Тип**        | **Описание**              |
+| ---------- | -------------- | ------------------------- |
+| `variable` | переменная     | Переменная для присвоения |
+| `value`    | любое значение | Значение для присвоения   |
 <h3 id=set_variable_get_list_variables>
   <code>variable::get_list_variables</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -3852,23 +3938,6 @@ var c = b.set_random()
 | ---------- | ---------------------- | ------------------------- |
 | `variable` | переменная             | Переменная для присвоения |
 | `values`   | список[любое значение] | Значения для выбора       |
-<h3 id=set_variable_value>
-  <code>variable::set_value</code>
-  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
-</h3>
-
-**Имя:** Установить значение (=)\
-**Тип:** Действие, устанавливающее значение\
-**Пример использования:**
-```ts
-var a = variable::set_value("любое значение")
-```
-
-**Аргументы:**
-| **Имя**    | **Тип**        | **Описание**              |
-| ---------- | -------------- | ------------------------- |
-| `variable` | переменная     | Переменная для присвоения |
-| `value`    | любое значение | Значение для присвоения   |
 <h3 id=set_variable_char_to_number>
   <code>variable::char_to_number</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -4072,7 +4141,7 @@ var c = b.get_text_hash("MD5")
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
 </h3>
 
-**Имя:** Объединить текст\
+**Имя:** Объединить список в текст\
 **Тип:** Действие, устанавливающее значение\
 **Пример использования:**
 ```ts
