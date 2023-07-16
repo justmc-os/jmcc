@@ -18,6 +18,9 @@ event<player_join> {
 | `event<player_left_click>`              | Игрок кликает левой кнопкой              |
 | `event<player_place_block>`             | Игрок ставит блок                        |
 | `event<player_break_block>`             | Игрок ломает блок                        |
+| `event<block_damage>`                   | Игрок начинает ломать блок               |
+| `event<block_damage_abort>`             | Игрок перестает ломать блок              |
+| `event<player_structure_grow>`          | Игрок выращивает дерево                  |
 | `event<player_right_click_entity>`      | Игрок кликает правой кнопкой по существу |
 | `event<player_right_click_player>`      | Игрок кликает правой кнопкой по игроку   |
 | `event<player_imbue_potion_cloud>`      | Игрок получает эффект от взрывного зелья |
@@ -61,6 +64,7 @@ event<player_join> {
 | `event<player_damage_player>`           | Игрок ранит игрока                       |
 | `event<entity_damage_player>`           | Существо ранит игрока                    |
 | `event<player_damage_entity>`           | Игрок ранит существо                     |
+| `event<player_resurrect>`               | Игрок возрождается от тотема             |
 | `event<player_heal>`                    | Игрок восстанавливает здоровье           |
 | `event<player_food_level_change>`       | Изменение уровня голода игрока           |
 | `event<player_projectile_hit>`          | Попадание снаряда игрока                 |
@@ -76,6 +80,7 @@ event<player_join> {
 | `event<entity_kill_entity>`             | Моб убил моба                            |
 | `event<entity_take_damage>`             | Сущность получает урон                   |
 | `event<entity_heal>`                    | Сущность исцеляется                      |
+| `event<entity_resurrect>`               | Сущность возрождается от тотема          |
 | `event<entity_death>`                   | Смерть сущности                          |
 | `event<entity_spell_cast>`              | Существо выполняет заклинание            |
 | `event<enderman_escape>`                | Эндермен убегает                         |
@@ -94,13 +99,13 @@ event<player_join> {
 | `event<entity_interact>`                | Сущность взаимодействует с миром         |
 | `event<dispenser_shear_sheep>`          | Раздатчик обрезал овцу                   |
 | `event<sheep_regrow_wool>`              | Овца отрастила шерсть                    |
+| `event<witch_throw_potion>`             | Ведьма кидает зелье                      |
 | `event<world_start>`                    | Запуск мира                              |
 | `event<world_stop>`                     | Остановка мира                           |
 | `event<time_skip>`                      | Пропуск времени                          |
 | `event<world_web_response>`             | Ответ от сервера                         |
-| `event<block_ignite>`                   |                                          |
+| `event<block_ignite>`                   | Блок поджигается                         |
 | `event<block_burn>`                     | Сгорание блока                           |
-| `event<block_damage>`                   | Блок получает урон                       |
 | `event<block_fade>`                     | Исчезание блока                          |
 | `event<tnt_prime>`                      | Подрыв динамита                          |
 | `event<block_explode>`                  | Блок взрывается                          |
@@ -109,6 +114,7 @@ event<player_join> {
 | `event<block_piston_extend>`            | Поршень выдвигается                      |
 | `event<block_piston_retract>`           | Поршень втягивается                      |
 | `event<leaves_decay>`                   | Опадание листьев                         |
+| `event<structure_grow>`                 | Дерево выростает                         |
 | `event<block_grow>`                     | Рост блока                               |
 | `event<block_flow>`                     | Перемещение блока                        |
 | `event<block_fertilize>`                | Удобрение блока                          |
@@ -126,3 +132,5 @@ event<player_join> {
 | `event<fluid_level_change>`             | Изменение уровня воды                    |
 | `event<sponge_absorb>`                  | Губка впитывает воду                     |
 | `event<falling_block_land>`             | Падающий блок приземляется               |
+| `event<item_moved_into_container>`      | Предмет переместился в контейнер         |
+| `event<hopper_pickup_item>`             | Воронка подбирает предмет                |

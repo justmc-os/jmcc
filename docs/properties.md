@@ -54,6 +54,11 @@ var b = value::health<default_entity>
 | `value::age`                         | число                   | Возраст цели                            |
 | `value::steer_forward`               | число                   | Прямолинейное движение транспорта       |
 | `value::steer_sideways`              | число                   | Движение транспорта в стороны           |
+| `value::merchant_recipe_count`       | число                   | Количество торгов Жителя                |
+| `value::open_inventory_size`         | число                   | Размер открытого инвентаря              |
+| `value::entity_width_x`              | число                   | Размер хитбокса по X                    |
+| `value::entity_height`               | число                   | Высота хитбокса                         |
+| `value::entity_width_z`              | число                   | Размер хитбокса по Z                    |
 | `value::location`                    | местоположение          | Местоположение                          |
 | `value::target_block`                | местоположение          | Местоположение целевого блока           |
 | `value::target_fluid`                | местоположение          | Местоположение целевой жидкости         |
@@ -66,8 +71,9 @@ var b = value::health<default_entity>
 | `value::yaw`                         | число                   | Горизонтальный поворот                  |
 | `value::direction_of_view`           | вектор                  | Направление взгляда                     |
 | `value::cardinal_direction`          | текст                   | Кардинальное направление                |
-| `value::spawn_location`              | местоположение          | Местоположение спавна                   |
-| `value::origin`                      | местоположение          | Местоположение появления                |
+| `value::hitbox_midpoint_location`    | местоположение          | Центр хитбокса                          |
+| `value::spawn_location`              | местоположение          | Местоположение спавна мира              |
+| `value::origin`                      | местоположение          | Местоположение первого появления        |
 | `value::velocity`                    | вектор                  | Вектор скорости                         |
 | `value::main_hand_item`              | предмет                 | Предмет в ведущей руке                  |
 | `value::off_hand_item`               | предмет                 | Предмет во второй руке                  |
@@ -80,11 +86,12 @@ var b = value::health<default_entity>
 | `value::entity_item`                 | предмет                 | Предмет сущности                        |
 | `value::name`                        | текст                   | Имя                                     |
 | `value::uuid`                        | текст                   | UUID                                    |
-| `value::display_name`                | текст                   | Отображаемое имя игрока                 |
+| `value::display_name`                | текст                   | Отображаемое имя                        |
 | `value::entity_type`                 | текст                   | Тип сущности                            |
 | `value::client_brand`                | текст                   | Название клиента игрока                 |
 | `value::user_locale`                 | текст                   | Язык клиента игрока                     |
 | `value::open_inventory_title`        | текст                   | Заголовок открытого инвентаря           |
+| `value::open_inventory_type`         | текст                   | Тип открытого инвентаря                 |
 | `value::gamemode`                    | текст                   | Режим игры                              |
 | `value::last_damage_cause`           | текст                   | Последняя причина урона                 |
 | `value::potion_effects`              | список[зелье]           | Эффекты зелий                           |
@@ -92,6 +99,7 @@ var b = value::health<default_entity>
 | `value::passengers`                  | список[текст]           | Пассажиры                               |
 | `value::lead_holder`                 | текст                   | Поводырь                                |
 | `value::attached_leads`              | список[текст]           | Привязанные сущности                    |
+| `value::targeted_entity`             | текст                   | Цель для атаки                          |
 | `value::spawn_reason`                | текст                   | Причина спавна                          |
 | `value::main_hand`                   | текст                   | Ведущая рука                            |
 | `value::event_block`                 | местоположение          | Местоположение блока события            |
@@ -118,6 +126,7 @@ var b = value::health<default_entity>
 | `value::event_drag_type`             | текст                   | Тип перетягивания по инвентарю          |
 | `value::event_slots_involved`        | список[число]           | Задействованные слоты                   |
 | `value::event_fish_state`            | текст                   | Причина события рыбалки                 |
+| `value::event_tree_type`             | текст                   | Тип дерева                              |
 | `value::event_experience`            | число                   | Количество опыта события                |
 | `value::event_hanging_break_cause`   | текст                   | Причина удаление висящей сущности       |
 | `value::event_time_skip_reason`      | текст                   | Причина пропуска времени                |

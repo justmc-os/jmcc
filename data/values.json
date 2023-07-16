@@ -140,6 +140,31 @@
     "name": "steer_sideways"
   },
   {
+    "id": "merchant_recipe_count",
+    "type": "number",
+    "name": "merchant_recipe_count"
+  },
+  {
+    "id": "open_inventory_size",
+    "type": "number",
+    "name": "open_inventory_size"
+  },
+  {
+    "id": "entity_width_x",
+    "type": "number",
+    "name": "entity_width_x"
+  },
+  {
+    "id": "entity_height",
+    "type": "number",
+    "name": "entity_height"
+  },
+  {
+    "id": "entity_width_z",
+    "type": "number",
+    "name": "entity_width_z"
+  },
+  {
     "id": "location",
     "type": "location",
     "name": "location"
@@ -198,6 +223,11 @@
     "id": "cardinal_direction",
     "type": "text",
     "name": "cardinal_direction"
+  },
+  {
+    "id": "hitbox_midpoint_location",
+    "type": "location",
+    "name": "hitbox_midpoint_location"
   },
   {
     "id": "spawn_location",
@@ -311,6 +341,11 @@
     "name": "open_inventory_title"
   },
   {
+    "id": "open_inventory_type",
+    "type": "text",
+    "name": "open_inventory_type"
+  },
+  {
     "id": "gamemode",
     "type": "text",
     "name": "gamemode"
@@ -356,6 +391,11 @@
       "length": 9999999,
       "type": "text"
     }
+  },
+  {
+    "id": "targeted_entity",
+    "type": "text",
+    "name": "targeted_entity"
   },
   {
     "id": "spawn_reason",
@@ -498,6 +538,11 @@
     "id": "event_fish_state",
     "type": "text",
     "name": "event_fish_state"
+  },
+  {
+    "id": "event_tree_type",
+    "type": "text",
+    "name": "event_tree_type"
   },
   {
     "id": "event_experience",

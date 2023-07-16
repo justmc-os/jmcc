@@ -570,6 +570,408 @@ entity::swing_hand("MAIN")
 | **Имя**     | **Тип**                                                           | **Описание** |
 | ----------- | ----------------------------------------------------------------- | ------------ |
 | `hand_type` | перечисление:<br/>**MAIN** - Главная<br/>**OFF** - Второстепенная | Тип руки     |
+<h3 id=entity_reset_display_brightness>
+  <code>entity::reset_display_brightness</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Сбросить яркость\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::reset_display_brightness()
+```
+
+**Без аргументов**
+<h3 id=entity_reset_display_glow_color>
+  <code>entity::reset_display_glow_color</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Сбросить цвет свечения\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::reset_display_glow_color()
+```
+
+**Без аргументов**
+<h3 id=entity_reset_text_display_background>
+  <code>entity::reset_text_display_background</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Сбросить цвет фона\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::reset_text_display_background()
+```
+
+**Без аргументов**
+<h3 id=entity_set_block_display_block>
+  <code>entity::set_block_display_block</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Установить отображаемый блок\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_block_display_block(item("stone"))
+```
+
+**Аргументы:**
+| **Имя**           | **Тип** | **Описание**      |
+| ----------------- | ------- | ----------------- |
+| `displayed_block` | предмет | Отображаемый блок |
+<h3 id=entity_set_display_billboard>
+  <code>entity::set_display_billboard</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Установить режим отображения\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_display_billboard("CENTER")
+```
+
+**Аргументы:**
+| **Имя**          | **Тип**                                                                                                                                                                               | **Описание**      |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- |
+| `billboard_type` | перечисление:<br/>**CENTER** - Всегда повёрнут к игроку<br/>**FIXED** - Фиксированный<br/>**HORIZONTAL** - Фиксированный по горизонтали<br/>**VERTICAL** - Фиксированный по вертикали | Режим отображения |
+<h3 id=entity_set_display_brightness>
+  <code>entity::set_display_brightness</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Установить яркость\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_display_brightness(0, 0)
+```
+
+**Аргументы:**
+| **Имя**             | **Тип** | **Описание**            |
+| ------------------- | ------- | ----------------------- |
+| `block_light_level` | число   | Уровень света от блоков |
+| `sky_light_level`   | число   | Уровень света от неба   |
+<h3 id=entity_set_display_culling_suze>
+  <code>entity::set_display_culling_suze</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Установить размер области видимости\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_display_culling_suze(0, 0)
+```
+
+**Аргументы:**
+| **Имя**  | **Тип** | **Описание**          |
+| -------- | ------- | --------------------- |
+| `width`  | число   | Горизонтальный размер |
+| `height` | число   | Вертикальный размер   |
+<h3 id=entity_set_display_glow_color>
+  <code>entity::set_display_glow_color</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Установить цвет свечения\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_display_glow_color("текст")
+```
+
+**Аргументы:**
+| **Имя**             | **Тип** | **Описание** |
+| ------------------- | ------- | ------------ |
+| `color_hexadecimal` | текст   | HEX цвет     |
+<h3 id=entity_set_display_interpolation>
+  <code>entity::set_display_interpolation</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Установить интерполяцию\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_display_interpolation(0, 0)
+```
+
+**Аргументы:**
+| **Имя**                  | **Тип** | **Описание**                 |
+| ------------------------ | ------- | ---------------------------- |
+| `interpolation_duration` | число   | Длительность интерполяции    |
+| `interpolation_delay`    | число   | Задержка перед интерполяцией |
+<h3 id=entity_set_display_rotation_from_axis_angle>
+  <code>entity::set_display_rotation_from_axis_angle</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Установить поворот по осевому вектору\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_display_rotation_from_axis_angle(vector(0, 0, 0), 0, "LEFT_ROTATION")
+```
+
+**Аргументы:**
+| **Имя**       | **Тип**                                                                                                                           | **Описание**                |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| `axis_vector` | вектор                                                                                                                            | Осевой вектор               |
+| `angle`       | число                                                                                                                             | Угол поворота               |
+| `rotation`    | перечисление:<br/>**LEFT_ROTATION** - Левый поворот (Поворот х Размер)<br/>**RIGHT_ROTATION** - Правый поворот (Размер х Поворот) | Порядок применения поворота |
+<h3 id=entity_set_display_rotation_from_euler_angles>
+  <code>entity::set_display_rotation_from_euler_angles</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Установить поворот по углам Эйлера\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_display_rotation_from_euler_angles(0, 0, 0, "LEFT_ROTATION")
+```
+
+**Аргументы:**
+| **Имя**    | **Тип**                                                                                                                           | **Описание**                |
+| ---------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| `pitch`    | число                                                                                                                             | Угол тангажа (pitch)        |
+| `yaw`      | число                                                                                                                             | Угол рыскания (yaw)         |
+| `roll`     | число                                                                                                                             | Угол крена (roll)           |
+| `rotation` | перечисление:<br/>**LEFT_ROTATION** - Левый поворот (Поворот х Размер)<br/>**RIGHT_ROTATION** - Правый поворот (Размер х Поворот) | Порядок применения поворота |
+<h3 id=entity_set_display_scale>
+  <code>entity::set_display_scale</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Установить размер\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_display_scale(vector(0, 0, 0))
+```
+
+**Аргументы:**
+| **Имя**        | **Тип** | **Описание** |
+| -------------- | ------- | ------------ |
+| `scale_vector` | вектор  | Новый размер |
+<h3 id=entity_set_display_shadow>
+  <code>entity::set_display_shadow</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Установить настройки тени\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_display_shadow(0, 0)
+```
+
+**Аргументы:**
+| **Имя**                     | **Тип** | **Описание**           |
+| --------------------------- | ------- | ---------------------- |
+| `shadow_radius`             | число   | Радиус тени            |
+| `shadow_opacity_percentage` | число   | Процент непрозрачности |
+<h3 id=entity_set_display_transformation_matrix>
+  <code>entity::set_display_transformation_matrix</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Установить матрицу преобразования\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_display_transformation_matrix([0, 0])
+```
+
+**Аргументы:**
+| **Имя**            | **Тип**       | **Описание**        |
+| ------------------ | ------------- | ------------------- |
+| `row_major_matrix` | список[число] | Матрица из 16 чисел |
+<h3 id=entity_set_display_translation>
+  <code>entity::set_display_translation</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Установить смещение\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_display_translation(vector(0, 0, 0))
+```
+
+**Аргументы:**
+| **Имя**              | **Тип** | **Описание**   |
+| -------------------- | ------- | -------------- |
+| `translation_vector` | вектор  | Новое смещение |
+<h3 id=entity_set_display_view_range>
+  <code>entity::set_display_view_range</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Установить дальность видимости\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_display_view_range(0)
+```
+
+**Аргументы:**
+| **Имя**      | **Тип** | **Описание**        |
+| ------------ | ------- | ------------------- |
+| `view_range` | число   | Дальность видимости |
+<h3 id=entity_set_item_display_item>
+  <code>entity::set_item_display_item</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Установить отображаемый предмет\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_item_display_item(item("stone"))
+```
+
+**Аргументы:**
+| **Имя**          | **Тип** | **Описание**         |
+| ---------------- | ------- | -------------------- |
+| `displayed_item` | предмет | Отображаемый предмет |
+<h3 id=entity_set_item_display_model_type>
+  <code>entity::set_item_display_model_type</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Установить тип модели предмета\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_item_display_model_type("FIRSTPERSON_LEFTHAND")
+```
+
+**Аргументы:**
+| **Имя**              | **Тип**                                                                                                                                                                                                                                                                                                                                                                                      | **Описание** |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| `display_model_type` | перечисление:<br/>**FIRSTPERSON_LEFTHAND** - Левая рука от первого лица<br/>**FIRSTPERSON_RIGHTHAND** - Правая рука от первого лица<br/>**FIXED** - Фиксированный<br/>**GROUND** - На земле<br/>**GUI** - Инвентарь<br/>**HEAD** - Голова<br/>**NONE** - Стандартный<br/>**THIRDPERSON_LEFTHAND** - Левая рука от третьего лица<br/>**THIRDPERSON_RIGHTHAND** - Правая рука от третьего лица | Тип модели   |
+<h3 id=entity_set_text_display_alignment>
+  <code>entity::set_text_display_alignment</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Установить выравнивание текста\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_text_display_alignment("CENTER")
+```
+
+**Аргументы:**
+| **Имя**          | **Тип**                                                                              | **Описание**        |
+| ---------------- | ------------------------------------------------------------------------------------ | ------------------- |
+| `text_alignment` | перечисление:<br/>**CENTER** - По центру<br/>**LEFT** - Слева<br/>**RIGHT** - Справа | Выравнивание текста |
+<h3 id=entity_set_text_display_background>
+  <code>entity::set_text_display_background</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Установить цвет фона\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_text_display_background("текст", 0)
+```
+
+**Аргументы:**
+| **Имя**             | **Тип** | **Описание**           |
+| ------------------- | ------- | ---------------------- |
+| `color_hexadecimal` | текст   | HEX цвет               |
+| `opacity`           | число   | Процент непрозрачности |
+<h3 id=entity_set_text_display_line_width>
+  <code>entity::set_text_display_line_width</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Установить ширину строки\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_text_display_line_width(0)
+```
+
+**Аргументы:**
+| **Имя**      | **Тип** | **Описание**  |
+| ------------ | ------- | ------------- |
+| `line_width` | число   | Ширина строки |
+<h3 id=entity_set_text_display_opacity>
+  <code>entity::set_text_display_opacity</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Установить прозрачность текста\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_text_display_opacity(0)
+```
+
+**Аргументы:**
+| **Имя**        | **Тип** | **Описание**        |
+| -------------- | ------- | ------------------- |
+| `text_opacity` | число   | Прозрачность текста |
+<h3 id=entity_set_text_display_see_through>
+  <code>entity::set_text_display_see_through</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Установить видимость через блоки\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_text_display_see_through("TRUE")
+```
+
+**Аргументы:**
+| **Имя**              | **Тип**                                                         | **Описание**          |
+| -------------------- | --------------------------------------------------------------- | --------------------- |
+| `enable_see_through` | перечисление:<br/>**TRUE** - Включить<br/>**FALSE** - Выключить | Видимость через блоки |
+<h3 id=entity_set_text_display_text>
+  <code>entity::set_text_display_text</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Установить отображаемый текст\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_text_display_text(["текст", "текст"], "SPACES")
+```
+
+**Аргументы:**
+| **Имя**          | **Тип**                                                                                                                              | **Описание**       |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------ |
+| `displayed_text` | список[текст]                                                                                                                        | Отображаемый текст |
+| `merging_mode`   | перечисление:<br/>**SPACES** - Разделение пробелом<br/>**CONCATENATION** - Объединение<br/>**SEPARATE_LINES** - Разделение на строки | Объединение текста |
+<h3 id=entity_set_text_display_text_shadow>
+  <code>entity::set_text_display_text_shadow</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Установить тень текста\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_text_display_text_shadow("TRUE")
+```
+
+**Аргументы:**
+| **Имя**              | **Тип**                                                         | **Описание** |
+| -------------------- | --------------------------------------------------------------- | ------------ |
+| `enable_text_shadow` | перечисление:<br/>**TRUE** - Включить<br/>**FALSE** - Выключить | Тень текста  |
 <h3 id=entity_eat_grass>
   <code>entity::eat_grass</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -1201,13 +1603,14 @@ entity::clear_potion_effects()
 **Тип:** Действие без значения\
 **Пример использования:**
 ```ts
-entity::damage(0)
+entity::damage(0, "текст")
 ```
 
 **Аргументы:**
-| **Имя**         | **Тип** | **Описание**     |
-| --------------- | ------- | ---------------- |
-| `damage_amount` | число   | Количество урона |
+| **Имя**  | **Тип** | **Описание**                           |
+| -------- | ------- | -------------------------------------- |
+| `damage` | число   | Количество урона                       |
+| `source` | текст   | Источник урона (имя или UUID существа) |
 <h3 id=entity_give_potion_effects>
   <code>entity::give_potion_effects</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -1569,6 +1972,35 @@ entity::set_wither_invulnerability_ticks(0)
 | **Имя** | **Тип** | **Описание**                        |
 | ------- | ------- | ----------------------------------- |
 | `ticks` | число   | Длительность неуязвимости (в тиках) |
+<h3 id=entity_clear_merchant_recipes>
+  <code>entity::clear_merchant_recipes</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Очистить торги Жителю\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::clear_merchant_recipes()
+```
+
+**Без аргументов**
+<h3 id=entity_remove_merchant_recipe>
+  <code>entity::remove_merchant_recipe</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Удалить товар Жителю\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::remove_merchant_recipe(0)
+```
+
+**Аргументы:**
+| **Имя**        | **Тип** | **Описание**  |
+| -------------- | ------- | ------------- |
+| `recipe_index` | число   | Индекс товара |
 <h3 id=entity_set_ai>
   <code>entity::set_ai</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -1618,6 +2050,22 @@ entity::set_baby("любое значение")
 | **Имя** | **Тип**        | **Описание**  |
 | ------- | -------------- | ------------- |
 | `baby`  | любое значение | Режим ребёнка |
+<h3 id=entity_set_camel_dashing>
+  <code>entity::set_camel_dashing</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Установить анимацию рывка верблюду\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_camel_dashing("TRUE")
+```
+
+**Аргументы:**
+| **Имя**   | **Тип**                                                         | **Описание**   |
+| --------- | --------------------------------------------------------------- | -------------- |
+| `dashing` | перечисление:<br/>**TRUE** - Включить<br/>**FALSE** - Выключить | Анимация рывка |
 <h3 id=entity_set_carrying_chest>
   <code>entity::set_carrying_chest</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -1762,6 +2210,39 @@ entity::set_goat_screaming("TRUE")
 | **Имя**   | **Тип**                                                         | **Описание**   |
 | --------- | --------------------------------------------------------------- | -------------- |
 | `screams` | перечисление:<br/>**TRUE** - Включить<br/>**FALSE** - Выключить | Тег "Кричащий" |
+<h3 id=entity_set_interaction_responsive>
+  <code>entity::set_interaction_responsive</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Установить отзывчивость сущности взаимодействия\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_interaction_responsive("TRUE")
+```
+
+**Аргументы:**
+| **Имя**      | **Тип**                                                         | **Описание** |
+| ------------ | --------------------------------------------------------------- | ------------ |
+| `responsive` | перечисление:<br/>**TRUE** - Включить<br/>**FALSE** - Выключить | Отзывчивость |
+<h3 id=entity_set_interaction_size>
+  <code>entity::set_interaction_size</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Установить размер сущности взаимодействия\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_interaction_size(0, 0)
+```
+
+**Аргументы:**
+| **Имя**  | **Тип** | **Описание**          |
+| -------- | ------- | --------------------- |
+| `width`  | число   | Горизонтальный размер |
+| `height` | число   | Вертикальный размер   |
 <h3 id=entity_set_invisible>
   <code>entity::set_invisible</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -1810,6 +2291,34 @@ entity::set_marker("TRUE")
 | **Имя**  | **Тип**                                                         | **Описание**  |
 | -------- | --------------------------------------------------------------- | ------------- |
 | `marker` | перечисление:<br/>**TRUE** - Включить<br/>**FALSE** - Выключить | Режим маркера |
+<h3 id=entity_set_merchant_recipe>
+  <code>entity::set_merchant_recipe</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Установить товар Жителю\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_merchant_recipe(item("stone"), item("stone"), item("stone"), 0, "MERGE", 0, 0, 0, 0, 0, 0, "TRUE", "TRUE")
+```
+
+**Аргументы:**
+| **Имя**               | **Тип**                                                          | **Описание**                          |
+| --------------------- | ---------------------------------------------------------------- | ------------------------------------- |
+| `result`              | предмет                                                          | Покупаемый товар                      |
+| `ingredient_one`      | предмет                                                          | Первый предмет                        |
+| `ingredient_two`      | предмет                                                          | Второй предмет                        |
+| `index`               | число                                                            | Индекс товара                         |
+| `mode`                | перечисление:<br/>**MERGE** - Замена<br/>**APPEND** - Добавление | Режим установки                       |
+| `uses`                | число                                                            | Количество использований              |
+| `max_uses`            | число                                                            | Максимальное количество использований |
+| `villager_experience` | число                                                            | Опыт для Жителя                       |
+| `price_multiplifier`  | число                                                            | Множитель цены                        |
+| `demand`              | число                                                            | Спрос товара                          |
+| `special_price`       | число                                                            | Особая цена                           |
+| `ignore_discounts`    | перечисление:<br/>**TRUE** - Включить<br/>**FALSE** - Выключить  | Игнорирование скидок                  |
+| `experience_reward`   | перечисление:<br/>**TRUE** - Включить<br/>**FALSE** - Выключить  | Награда опытом                        |
 <h3 id=entity_set_panda_gene>
   <code>entity::set_panda_gene</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -1955,6 +2464,22 @@ entity::set_size(0)
 | **Имя** | **Тип** | **Описание** |
 | ------- | ------- | ------------ |
 | `size`  | число   | Размер       |
+<h3 id=entity_set_sniffer_state>
+  <code>entity::set_sniffer_state</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Установить состояние нюхача\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+entity::set_sniffer_state("DIGGING")
+```
+
+**Аргументы:**
+| **Имя** | **Тип**                                                                                                                                                                                                                                     | **Описание**     |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| `state` | перечисление:<br/>**DIGGING** - Копает<br/>**FEELING_HAPPY** - Чувстует себя счастливым<br/>**IDLING** - Обычное состояние<br/>**RISING** - Поднимается<br/>**SCENTING** - Идёт по следу<br/>**SEARCHING** - Ищет<br/>**SNIFFING** - Нюхает | Состояние нюхача |
 <h3 id=entity_set_tame>
   <code>entity::set_tame</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>

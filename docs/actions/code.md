@@ -173,3 +173,43 @@ code::controller_measure_time(переменная, "NANOSECONDS")
 | ---------- | ----------------------------------------------------------------------------------------------------------------------- | ------------------------- |
 | `variable` | переменная                                                                                                              | Переменная для присвоения |
 | `duration` | перечисление:<br/>**NANOSECONDS** - Наносекунды<br/>**MICROSECONDS** - Микросекунды<br/>**MILLISECONDS** - Миллисекунды | Формат времени            |
+<h3 id=UnstableApiUsage>
+  <code>code::UnstableApiUsage</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** undefined\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+code::UnstableApiUsage([location(0, 0, 0), location(0, 0, 0)], "TRUE", "TRUE", "TRUE", "TRUE")
+```
+
+**Аргументы:**
+| **Имя**             | **Тип**                                                          | **Описание** |
+| ------------------- | ---------------------------------------------------------------- | ------------ |
+| `locations`         | список[местоположение]                                           |              |
+| `keep_rotation`     | перечисление:<br/>**TRUE** - undefined<br/>**FALSE** - undefined |              |
+| `keep_velocity`     | перечисление:<br/>**TRUE** - undefined<br/>**FALSE** - undefined |              |
+| `ignore_passengers` | перечисление:<br/>**TRUE** - undefined<br/>**FALSE** - undefined |              |
+| `dismount`          | перечисление:<br/>**TRUE** - undefined<br/>**FALSE** - undefined |              |
+<h3 id=UnstableApiUsage>
+  <code>code::UnstableApiUsage</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** undefined\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+code::UnstableApiUsage(location(0, 0, 0), "TRUE", "TRUE", "TRUE", "TRUE")
+```
+
+**Аргументы:**
+| **Имя**             | **Тип**                                                          | **Описание** |
+| ------------------- | ---------------------------------------------------------------- | ------------ |
+| `location`          | местоположение                                                   |              |
+| `keep_rotation`     | перечисление:<br/>**TRUE** - undefined<br/>**FALSE** - undefined |              |
+| `keep_velocity`     | перечисление:<br/>**TRUE** - undefined<br/>**FALSE** - undefined |              |
+| `ignore_passengers` | перечисление:<br/>**TRUE** - undefined<br/>**FALSE** - undefined |              |
+| `dismount`          | перечисление:<br/>**TRUE** - undefined<br/>**FALSE** - undefined |              |

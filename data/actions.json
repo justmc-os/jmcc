@@ -771,6 +771,349 @@
     ]
   },
   {
+    "id": "entity_reset_display_brightness",
+    "name": "reset_display_brightness",
+    "object": "entity",
+    "args": []
+  },
+  {
+    "id": "entity_reset_display_glow_color",
+    "name": "reset_display_glow_color",
+    "object": "entity",
+    "args": []
+  },
+  {
+    "id": "entity_reset_text_display_background",
+    "name": "reset_text_display_background",
+    "object": "entity",
+    "args": []
+  },
+  {
+    "id": "entity_set_block_display_block",
+    "name": "set_block_display_block",
+    "object": "entity",
+    "args": [
+      {
+        "type": "item",
+        "name": "displayed_block"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_display_billboard",
+    "name": "set_display_billboard",
+    "object": "entity",
+    "args": [
+      {
+        "type": "enum",
+        "name": "billboard_type",
+        "enum": [
+          "CENTER",
+          "FIXED",
+          "HORIZONTAL",
+          "VERTICAL"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "entity_set_display_brightness",
+    "name": "set_display_brightness",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "block_light_level"
+      },
+      {
+        "type": "number",
+        "name": "sky_light_level"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_display_culling_suze",
+    "name": "set_display_culling_suze",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "width"
+      },
+      {
+        "type": "number",
+        "name": "height"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_display_glow_color",
+    "name": "set_display_glow_color",
+    "object": "entity",
+    "args": [
+      {
+        "type": "text",
+        "name": "color_hexadecimal"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_display_interpolation",
+    "name": "set_display_interpolation",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "interpolation_duration"
+      },
+      {
+        "type": "number",
+        "name": "interpolation_delay"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_display_rotation_from_axis_angle",
+    "name": "set_display_rotation_from_axis_angle",
+    "object": "entity",
+    "args": [
+      {
+        "type": "vector",
+        "name": "axis_vector"
+      },
+      {
+        "type": "number",
+        "name": "angle"
+      },
+      {
+        "type": "enum",
+        "name": "rotation",
+        "enum": [
+          "LEFT_ROTATION",
+          "RIGHT_ROTATION"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "entity_set_display_rotation_from_euler_angles",
+    "name": "set_display_rotation_from_euler_angles",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "pitch"
+      },
+      {
+        "type": "number",
+        "name": "yaw"
+      },
+      {
+        "type": "number",
+        "name": "roll"
+      },
+      {
+        "type": "enum",
+        "name": "rotation",
+        "enum": [
+          "LEFT_ROTATION",
+          "RIGHT_ROTATION"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "entity_set_display_scale",
+    "name": "set_display_scale",
+    "object": "entity",
+    "args": [
+      {
+        "type": "vector",
+        "name": "scale_vector"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_display_shadow",
+    "name": "set_display_shadow",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "shadow_radius"
+      },
+      {
+        "type": "number",
+        "name": "shadow_opacity_percentage"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_display_transformation_matrix",
+    "name": "set_display_transformation_matrix",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "row_major_matrix",
+        "array": true,
+        "length": 16
+      }
+    ]
+  },
+  {
+    "id": "entity_set_display_translation",
+    "name": "set_display_translation",
+    "object": "entity",
+    "args": [
+      {
+        "type": "vector",
+        "name": "translation_vector"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_display_view_range",
+    "name": "set_display_view_range",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "view_range"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_item_display_item",
+    "name": "set_item_display_item",
+    "object": "entity",
+    "args": [
+      {
+        "type": "item",
+        "name": "displayed_item"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_item_display_model_type",
+    "name": "set_item_display_model_type",
+    "object": "entity",
+    "args": [
+      {
+        "type": "enum",
+        "name": "display_model_type",
+        "enum": [
+          "FIRSTPERSON_LEFTHAND",
+          "FIRSTPERSON_RIGHTHAND",
+          "FIXED",
+          "GROUND",
+          "GUI",
+          "HEAD",
+          "NONE",
+          "THIRDPERSON_LEFTHAND",
+          "THIRDPERSON_RIGHTHAND"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "entity_set_text_display_alignment",
+    "name": "set_text_display_alignment",
+    "object": "entity",
+    "args": [
+      {
+        "type": "enum",
+        "name": "text_alignment",
+        "enum": [
+          "CENTER",
+          "LEFT",
+          "RIGHT"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "entity_set_text_display_background",
+    "name": "set_text_display_background",
+    "object": "entity",
+    "args": [
+      {
+        "type": "text",
+        "name": "color_hexadecimal"
+      },
+      {
+        "type": "number",
+        "name": "opacity"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_text_display_line_width",
+    "name": "set_text_display_line_width",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "line_width"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_text_display_opacity",
+    "name": "set_text_display_opacity",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "text_opacity"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_text_display_see_through",
+    "name": "set_text_display_see_through",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "enable_see_through"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_text_display_text",
+    "name": "set_text_display_text",
+    "object": "entity",
+    "args": [
+      {
+        "type": "text",
+        "name": "displayed_text",
+        "array": true,
+        "length": 27
+      },
+      {
+        "type": "enum",
+        "name": "merging_mode",
+        "enum": [
+          "SPACES",
+          "CONCATENATION",
+          "SEPARATE_LINES"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "entity_set_text_display_text_shadow",
+    "name": "set_text_display_text_shadow",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "enable_text_shadow"
+      }
+    ]
+  },
+  {
     "id": "entity_eat_grass",
     "name": "eat_grass",
     "object": "entity",
@@ -1287,7 +1630,11 @@
     "args": [
       {
         "type": "number",
-        "name": "damage_amount"
+        "name": "damage"
+      },
+      {
+        "type": "text",
+        "name": "source"
       }
     ]
   },
@@ -1598,6 +1945,23 @@
     ]
   },
   {
+    "id": "entity_clear_merchant_recipes",
+    "name": "clear_merchant_recipes",
+    "object": "entity",
+    "args": []
+  },
+  {
+    "id": "entity_remove_merchant_recipe",
+    "name": "remove_merchant_recipe",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "recipe_index"
+      }
+    ]
+  },
+  {
     "id": "entity_set_ai",
     "name": "set_ai",
     "object": "entity",
@@ -1630,6 +1994,17 @@
     "args": [
       {
         "name": "baby"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_camel_dashing",
+    "name": "set_camel_dashing",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "dashing"
       }
     ]
   },
@@ -1733,6 +2108,32 @@
     ]
   },
   {
+    "id": "entity_set_interaction_responsive",
+    "name": "set_interaction_responsive",
+    "object": "entity",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "responsive"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_interaction_size",
+    "name": "set_interaction_size",
+    "object": "entity",
+    "args": [
+      {
+        "type": "number",
+        "name": "width"
+      },
+      {
+        "type": "number",
+        "name": "height"
+      }
+    ]
+  },
+  {
     "id": "entity_set_invisible",
     "name": "set_invisible",
     "object": "entity",
@@ -1762,6 +2163,69 @@
       {
         "type": "boolean",
         "name": "marker"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_merchant_recipe",
+    "name": "set_merchant_recipe",
+    "object": "entity",
+    "args": [
+      {
+        "type": "item",
+        "name": "result"
+      },
+      {
+        "type": "item",
+        "name": "ingredient_one"
+      },
+      {
+        "type": "item",
+        "name": "ingredient_two"
+      },
+      {
+        "type": "number",
+        "name": "index"
+      },
+      {
+        "type": "enum",
+        "name": "mode",
+        "enum": [
+          "MERGE",
+          "APPEND"
+        ]
+      },
+      {
+        "type": "number",
+        "name": "uses"
+      },
+      {
+        "type": "number",
+        "name": "max_uses"
+      },
+      {
+        "type": "number",
+        "name": "villager_experience"
+      },
+      {
+        "type": "number",
+        "name": "price_multiplifier"
+      },
+      {
+        "type": "number",
+        "name": "demand"
+      },
+      {
+        "type": "number",
+        "name": "special_price"
+      },
+      {
+        "type": "boolean",
+        "name": "ignore_discounts"
+      },
+      {
+        "type": "boolean",
+        "name": "experience_reward"
       }
     ]
   },
@@ -1879,6 +2343,26 @@
       {
         "type": "number",
         "name": "size"
+      }
+    ]
+  },
+  {
+    "id": "entity_set_sniffer_state",
+    "name": "set_sniffer_state",
+    "object": "entity",
+    "args": [
+      {
+        "type": "enum",
+        "name": "state",
+        "enum": [
+          "DIGGING",
+          "FEELING_HAPPY",
+          "IDLING",
+          "RISING",
+          "SCENTING",
+          "SEARCHING",
+          "SNIFFING"
+        ]
       }
     ]
   },
@@ -2275,6 +2759,21 @@
     ]
   },
   {
+    "id": "game_set_brushable_block_item",
+    "name": "set_brushable_block_item",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      }
+    ]
+  },
+  {
     "id": "game_set_campfire_item",
     "name": "set_campfire_item",
     "object": "world",
@@ -2470,6 +2969,15 @@
       {
         "type": "number",
         "name": "line"
+      },
+      {
+        "type": "enum",
+        "name": "side",
+        "enum": [
+          "FRONT",
+          "BACK",
+          "ALL"
+        ]
       }
     ]
   },
@@ -2483,8 +2991,13 @@
         "name": "location"
       },
       {
-        "type": "boolean",
-        "name": "glowing"
+        "type": "enum",
+        "name": "side",
+        "enum": [
+          "FRONT",
+          "BACK",
+          "ALL"
+        ]
       },
       {
         "type": "enum",
@@ -2507,6 +3020,25 @@
           "WHITE",
           "YELLOW"
         ]
+      },
+      {
+        "type": "boolean",
+        "name": "glowing"
+      }
+    ]
+  },
+  {
+    "id": "game_set_sign_waxed",
+    "name": "set_sign_waxed",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "boolean",
+        "name": "waxed"
       }
     ]
   },
@@ -2663,6 +3195,21 @@
     ]
   },
   {
+    "id": "game_spawn_block_display",
+    "name": "spawn_block_display",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "spawn_location"
+      },
+      {
+        "type": "item",
+        "name": "block"
+      }
+    ]
+  },
+  {
     "id": "game_spawn_effect_cloud",
     "name": "spawn_effect_cloud",
     "object": "world",
@@ -2804,6 +3351,29 @@
     ]
   },
   {
+    "id": "game_spawn_interaction_entity",
+    "name": "spawn_interaction_entity",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "number",
+        "name": "width"
+      },
+      {
+        "type": "number",
+        "name": "height"
+      },
+      {
+        "type": "boolean",
+        "name": "responsive"
+      }
+    ]
+  },
+  {
     "id": "game_spawn_item",
     "name": "spawn_item",
     "object": "world",
@@ -2831,6 +3401,21 @@
       {
         "type": "boolean",
         "name": "can_player_pickup"
+      }
+    ]
+  },
+  {
+    "id": "game_spawn_item_display",
+    "name": "spawn_item_display",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "spawn_location"
+      },
+      {
+        "type": "item",
+        "name": "displayed_item"
       }
     ]
   },
@@ -2942,6 +3527,32 @@
     ]
   },
   {
+    "id": "game_spawn_text_display",
+    "name": "spawn_text_display",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "spawn_location"
+      },
+      {
+        "type": "text",
+        "name": "displayed_text",
+        "array": true,
+        "length": 21
+      },
+      {
+        "type": "enum",
+        "name": "merging_mode",
+        "enum": [
+          "SPACES",
+          "CONCATENATION",
+          "SEPARATE_LINES"
+        ]
+      }
+    ]
+  },
+  {
     "id": "game_spawn_vehicle",
     "name": "spawn_vehicle",
     "object": "world",
@@ -3020,6 +3631,17 @@
       {
         "type": "number",
         "name": "heal"
+      }
+    ]
+  },
+  {
+    "id": "game_set_event_item",
+    "name": "set_event_item",
+    "object": "world",
+    "args": [
+      {
+        "type": "item",
+        "name": "item"
       }
     ]
   },
@@ -3181,6 +3803,17 @@
           "NORMAL",
           "PEACEFUL"
         ]
+      }
+    ]
+  },
+  {
+    "id": "game_set_world_simulation_distance",
+    "name": "set_world_simulation_distance",
+    "object": "world",
+    "args": [
+      {
+        "type": "number",
+        "name": "distance"
       }
     ]
   },
@@ -3535,6 +4168,18 @@
     "containing": "predicate"
   },
   {
+    "id": "if_game_chunk_is_loaded",
+    "name": "chunk_is_loaded",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
     "id": "if_game_container_has",
     "name": "container_has",
     "object": "world",
@@ -3800,6 +4445,15 @@
         "name": "texts",
         "array": true,
         "length": 16
+      },
+      {
+        "type": "enum",
+        "name": "check_side",
+        "enum": [
+          "ANY",
+          "FRONT",
+          "BACK"
+        ]
       },
       {
         "type": "enum",
@@ -4649,6 +5303,14 @@
         "name": "values",
         "array": true,
         "length": 21
+      },
+      {
+        "type": "enum",
+        "name": "check_mode",
+        "enum": [
+          "ANY",
+          "ALL"
+        ]
       }
     ],
     "containing": "predicate",
@@ -4676,6 +5338,35 @@
     ],
     "containing": "predicate",
     "origin": "list"
+  },
+  {
+    "id": "if_variable_location_in_range",
+    "name": "location_in_range",
+    "object": "variable",
+    "args": [
+      {
+        "type": "location",
+        "name": "value"
+      },
+      {
+        "type": "location",
+        "name": "min"
+      },
+      {
+        "type": "location",
+        "name": "max"
+      },
+      {
+        "type": "enum",
+        "name": "border_handling",
+        "enum": [
+          "EXACT",
+          "BLOCK",
+          "FULL_BLOCK_RANGE"
+        ]
+      }
+    ],
+    "containing": "predicate"
   },
   {
     "id": "if_variable_location_is_near",
@@ -5104,22 +5795,23 @@
       {
         "type": "location",
         "name": "location"
+      }
+    ]
+  },
+  {
+    "id": "player_play_sound_from_entity",
+    "name": "play_sound_from_entity",
+    "object": "player",
+    "args": [
+      {
+        "type": "sound",
+        "name": "sounds",
+        "array": true,
+        "length": 21
       },
       {
-        "type": "enum",
-        "name": "source",
-        "enum": [
-          "MASTER",
-          "AMBIENT",
-          "BLOCK",
-          "HOSTILE",
-          "MUSIC",
-          "NEUTRAL",
-          "PLAYER",
-          "RECORD",
-          "VOICE",
-          "WEATHER"
-        ]
+        "type": "text",
+        "name": "name_or_uuid"
       }
     ]
   },
@@ -5141,22 +5833,6 @@
       {
         "type": "location",
         "name": "location"
-      },
-      {
-        "type": "enum",
-        "name": "source",
-        "enum": [
-          "MASTER",
-          "AMBIENT",
-          "BLOCK",
-          "HOSTILE",
-          "MUSIC",
-          "NEUTRAL",
-          "PLAYER",
-          "RECORD",
-          "VOICE",
-          "WEATHER"
-        ]
       }
     ]
   },
@@ -5413,22 +6089,6 @@
         "name": "sounds",
         "array": true,
         "length": 18
-      },
-      {
-        "type": "enum",
-        "name": "source",
-        "enum": [
-          "MASTER",
-          "AMBIENT",
-          "BLOCK",
-          "HOSTILE",
-          "MUSIC",
-          "NEUTRAL",
-          "PLAYER",
-          "RECORD",
-          "VOICE",
-          "WEATHER"
-        ]
       }
     ]
   },
@@ -5926,9 +6586,9 @@
     ]
   },
   {
-    "id": "player_randomized_teleport",
-    "name": "randomized_teleport",
-    "object": "player",
+    "id": "UnstableApiUsage",
+    "name": "UnstableApiUsage",
+    "object": "code",
     "args": [
       {
         "type": "location",
@@ -6042,9 +6702,9 @@
     ]
   },
   {
-    "id": "player_teleport",
-    "name": "teleport",
-    "object": "player",
+    "id": "UnstableApiUsage",
+    "name": "UnstableApiUsage",
+    "object": "code",
     "args": [
       {
         "type": "location",
@@ -6265,6 +6925,14 @@
       {
         "type": "number",
         "name": "food"
+      },
+      {
+        "type": "enum",
+        "name": "mode",
+        "enum": [
+          "SET",
+          "ADD"
+        ]
       }
     ]
   },
@@ -6358,6 +7026,14 @@
       {
         "type": "number",
         "name": "saturation"
+      },
+      {
+        "type": "enum",
+        "name": "mode",
+        "enum": [
+          "SET",
+          "ADD"
+        ]
       }
     ]
   },
@@ -6905,7 +7581,15 @@
       },
       {
         "type": "number",
+        "name": "red"
+      },
+      {
+        "type": "number",
         "name": "green"
+      },
+      {
+        "type": "number",
+        "name": "blue"
       },
       {
         "type": "number",
@@ -7142,6 +7826,39 @@
     "lambda": [
       "variable"
     ]
+  },
+  {
+    "id": "repeat_on_sphere",
+    "name": "on_sphere",
+    "object": "repeat",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "center"
+      },
+      {
+        "type": "number",
+        "name": "radius"
+      },
+      {
+        "type": "number",
+        "name": "points"
+      },
+      {
+        "type": "enum",
+        "name": "rotate_location",
+        "enum": [
+          "NO_CHANGES",
+          "INWARDS",
+          "OUTWARDS"
+        ]
+      }
+    ],
+    "containing": "lambda"
   },
   {
     "id": "repeat_while",
@@ -7424,6 +8141,21 @@
     "assigning": "variable"
   },
   {
+    "id": "set_variable_flatten_list",
+    "name": "flatten_list",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "variable",
+        "name": "list"
+      }
+    ]
+  },
+  {
     "id": "set_variable_get_list_index_of_value",
     "name": "get_list_index_of_value",
     "object": "variable",
@@ -7502,10 +8234,6 @@
       {
         "type": "number",
         "name": "number"
-      },
-      {
-        "type": "boolean",
-        "name": "remove"
       }
     ],
     "assigning": "variable",
@@ -7554,6 +8282,21 @@
     "origin": "list"
   },
   {
+    "id": "set_variable_remove_list_duplicates",
+    "name": "remove_list_duplicates",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "variable",
+        "name": "list"
+      }
+    ]
+  },
+  {
     "id": "set_variable_remove_list_value",
     "name": "remove_list_value",
     "object": "variable",
@@ -7579,6 +8322,10 @@
     "name": "remove_list_value_at_index",
     "object": "variable",
     "args": [
+      {
+        "type": "variable",
+        "name": "removed_value"
+      },
       {
         "type": "variable",
         "name": "variable"
@@ -8817,6 +9564,15 @@
           "NO_CHANGE",
           "OFF"
         ]
+      },
+      {
+        "type": "enum",
+        "name": "hide_armor_trim",
+        "enum": [
+          "ON",
+          "NO_CHANGE",
+          "OFF"
+        ]
       }
     ],
     "assigning": "variable",
@@ -9477,6 +10233,10 @@
     "args": [
       {
         "type": "variable",
+        "name": "removed_value"
+      },
+      {
+        "type": "variable",
         "name": "variable"
       },
       {
@@ -9648,6 +10408,21 @@
     "origin": "sound"
   },
   {
+    "id": "set_variable_get_sound_source",
+    "name": "get_sound_source",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "sound",
+        "name": "sound"
+      }
+    ]
+  },
+  {
     "id": "set_variable_get_sound_type",
     "name": "get_sound_type",
     "object": "variable",
@@ -9663,6 +10438,36 @@
     ],
     "assigning": "variable",
     "origin": "sound"
+  },
+  {
+    "id": "set_variable_get_sound_variation",
+    "name": "get_sound_variation",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "sound",
+        "name": "sound"
+      }
+    ]
+  },
+  {
+    "id": "set_variable_get_sound_variations",
+    "name": "get_sound_variations",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "sound",
+        "name": "sound"
+      }
+    ]
   },
   {
     "id": "set_variable_get_sound_volume_action",
@@ -9791,6 +10596,37 @@
     "origin": "sound"
   },
   {
+    "id": "set_variable_set_sound_source",
+    "name": "set_sound_source",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "sound",
+        "name": "sound"
+      },
+      {
+        "type": "enum",
+        "name": "source",
+        "enum": [
+          "AMBIENT",
+          "BLOCK",
+          "HOSTILE",
+          "MASTER",
+          "MUSIC",
+          "NEUTRAL",
+          "PLAYER",
+          "RECORD",
+          "VOICE",
+          "WEATHER"
+        ]
+      }
+    ]
+  },
+  {
     "id": "set_variable_set_sound_type",
     "name": "set_sound_type",
     "object": "variable",
@@ -9814,6 +10650,25 @@
     ],
     "assigning": "variable",
     "origin": "sound"
+  },
+  {
+    "id": "set_variable_set_sound_variation",
+    "name": "set_sound_variation",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "sound",
+        "name": "sound"
+      },
+      {
+        "type": "text",
+        "name": "variation"
+      }
+    ]
   },
   {
     "id": "set_variable_set_sound_volume_action",
@@ -10394,6 +11249,14 @@
       {
         "type": "number",
         "name": "divisor"
+      },
+      {
+        "type": "enum",
+        "name": "remainder_mode",
+        "enum": [
+          "REMAINDER",
+          "MODULO"
+        ]
       }
     ],
     "assigning": "variable",
@@ -11626,6 +12489,25 @@
     "origin": "vector_1"
   },
   {
+    "id": "set_variable_divide_vector",
+    "name": "divide_vector",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "vector",
+        "name": "vector"
+      },
+      {
+        "type": "vector",
+        "name": "divider"
+      }
+    ]
+  },
+  {
     "id": "set_variable_vector_dot_product",
     "name": "vector_dot_product",
     "object": "variable",
@@ -12138,6 +13020,21 @@
     ]
   },
   {
+    "id": "set_variable_get_brushable_block_item",
+    "name": "get_brushable_block_item",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      }
+    ]
+  },
+  {
     "id": "set_variable_get_container_contents",
     "name": "get_container_contents",
     "object": "variable",
@@ -12258,6 +13155,15 @@
       {
         "type": "location",
         "name": "location"
+      },
+      {
+        "type": "enum",
+        "name": "check_side",
+        "enum": [
+          "FRONT",
+          "BACK",
+          "ALL"
+        ]
       },
       {
         "type": "enum",
