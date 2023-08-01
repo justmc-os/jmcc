@@ -8,7 +8,7 @@ type FullIndexedData = IndexedData & {
   particlesByName: { [name: string]: Particle };
 };
 
-export const data = minecraftData('1.19') as FullIndexedData;
+export const data = minecraftData('1.20.1') as FullIndexedData;
 
 import CodeVisitor from './jmcc/CodeVisitor';
 import { JustCodeLexer } from './grammar/.compiled/JustCodeLexer';
