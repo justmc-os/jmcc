@@ -12,7 +12,7 @@ import JMCC from './core';
 import checkForUpdates from './checkForUpdates';
 import bootstrap from './core/jmcc/Bootstrap';
 
-const DOMAIN = 'https://m.justmc.ru';
+const DOMAIN = 'https://serverless-jmodules.vercel.app';
 
 const error = (message: string) => {
   return `${chalk.bgRed.black(' Ошибка ')} ${message}`;
