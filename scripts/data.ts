@@ -6,7 +6,7 @@ import 'dotenv/config';
 
 import path from 'path';
 import fs from 'fs';
-import { Gitlab } from '@gitbeaker/node';
+import { Gitlab } from '@gitbeaker/rest';
 import chalk from 'chalk';
 
 import { ActionData, ActionDataArgument } from '../data/action';
@@ -19,7 +19,6 @@ type ActionDataEnum = {
 const PROJECT_ID = 21858804;
 const API = new Gitlab({
   token: process.env.GITLAB_TOKEN,
-  requestTimeout: 10_000,
 });
 
 const DATA_DIR = path.resolve(__dirname, '../data');
@@ -100,7 +99,7 @@ const error = (text: string) => console.log(chalk.red('error'), text);
 
 const toJson = (any: any) => JSON.stringify(any, null, 2);
 const getFile = async (path: string) => {
-  return await API.RepositoryFiles.showRaw(PROJECT_ID, path);
+  return await API.RepositoryFiles.showRaw(PROJECT_ID, path, 'main');
 };
 
 const getArgumentType = (type: string) => {
@@ -238,7 +237,7 @@ const getArgument = (
   info('Загружаю действия...');
 
   const actionFiles = (
-    await API.Repositories.tree(PROJECT_ID, {
+    await API.Repositories.allRepositoryTrees(PROJECT_ID, {
       path: ACTIONS_PATH,
       recursive: true,
     })
