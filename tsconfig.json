@@ -3,6 +3,7 @@
     "rootDir": ".",
     "outDir": ".",
     "resolveJsonModule": true,
+    "skipLibCheck": true,
     "composite": true
   },
   // Data & package
