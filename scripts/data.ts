@@ -66,7 +66,7 @@ const gameValuesMap = JSON.parse(
 const GAME_VALUE_REGEX =
   /val\s*[A-Z_]+\s*=\s*register\("(.*)",\s*ValueTypes.([A-Z_a-z]*)/gm;
 
-const STRING_REGEX = /"(.*)"/;
+const ACTION_ID_REGEX = /(?<!Suppress)\("(.*)"/;
 const STRING_GLOBAL_REGEX = /"(.*)"/g;
 const PARSING_SLOTS_REGEX = /(?:\(?([\d]+)\.\.([\d]+)\)?)|([\d]+)/g;
 
@@ -243,9 +243,12 @@ const getArgument = (
       recursive: true,
     })
   ).filter(
-    (file) =>
-      file.type === 'blob' &&
-      !IGNORED_ACTIONS.some((ignored) => file.path.endsWith(ignored))
+    (file) => {
+      if (file.type !== 'blob') return false;
+      if (file.name === 'IfVariableValueIsEmptyAction.kt') return true;
+
+      return !IGNORED_ACTIONS.some((ignored) => file.path.endsWith(ignored));
+    }
   );
 
   info('Загружаю файлы действий...');
@@ -257,7 +260,7 @@ const getArgument = (
   info('Загружаю данные действий...');
 
   const actionsData = actions.map((action, idx) => {
-    const id = action.match(STRING_REGEX)[1];
+    const id = action.match(ACTION_ID_REGEX)[1];
     const { name, object } = getActionName(id);
     const enums = getActionEnums(action);
     const args = Array.from(action.matchAll(ARGS_REGEX)).map((matches) =>

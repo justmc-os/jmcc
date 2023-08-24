@@ -5675,6 +5675,18 @@
     "origin": "value"
   },
   {
+    "id": "if_variable_list_is_empty",
+    "name": "list_is_empty",
+    "object": "variable",
+    "args": [
+      {
+        "type": "any",
+        "name": "list"
+      }
+    ],
+    "containing": "predicate"
+  },
+  {
     "id": "player_disguise_as_block",
     "name": "disguise_as_block",
     "object": "player",
@@ -6722,9 +6734,9 @@
     ]
   },
   {
-    "id": "UnstableApiUsage",
-    "name": "UnstableApiUsage",
-    "object": "code",
+    "id": "player_randomized_teleport",
+    "name": "randomized_teleport",
+    "object": "player",
     "args": [
       {
         "type": "location",
@@ -6838,9 +6850,9 @@
     ]
   },
   {
-    "id": "UnstableApiUsage",
-    "name": "UnstableApiUsage",
-    "object": "code",
+    "id": "player_teleport",
+    "name": "teleport",
+    "object": "player",
     "args": [
       {
         "type": "location",
