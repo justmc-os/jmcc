@@ -135,8 +135,7 @@
         "name": "exception_type",
         "enum": [
           "WARNING",
-          "ERROR",
-          "ALL"
+          "ERROR"
         ]
       }
     ]
@@ -887,6 +886,14 @@
       },
       {
         "type": "enum",
+        "name": "mode",
+        "enum": [
+          "SET",
+          "ADD"
+        ]
+      },
+      {
+        "type": "enum",
         "name": "rotation",
         "enum": [
           "LEFT_ROTATION",
@@ -914,6 +921,14 @@
       },
       {
         "type": "enum",
+        "name": "mode",
+        "enum": [
+          "SET",
+          "ADD"
+        ]
+      },
+      {
+        "type": "enum",
         "name": "rotation",
         "enum": [
           "LEFT_ROTATION",
@@ -930,6 +945,14 @@
       {
         "type": "vector",
         "name": "scale_vector"
+      },
+      {
+        "type": "enum",
+        "name": "mode",
+        "enum": [
+          "SET",
+          "ADD"
+        ]
       }
     ]
   },
@@ -969,6 +992,14 @@
       {
         "type": "vector",
         "name": "translation_vector"
+      },
+      {
+        "type": "enum",
+        "name": "mode",
+        "enum": [
+          "SET",
+          "ADD"
+        ]
       }
     ]
   },
@@ -2440,6 +2471,25 @@
     ]
   },
   {
+    "id": "game_bloom_skulk_catalyst",
+    "name": "bloom_skulk_catalyst",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "location",
+        "name": "bloom_location"
+      },
+      {
+        "type": "number",
+        "name": "charge"
+      }
+    ]
+  },
+  {
     "id": "game_bone_meal_block",
     "name": "bone_meal_block",
     "object": "world",
@@ -2852,6 +2902,31 @@
     ]
   },
   {
+    "id": "game_set_decorate_pot_sherd",
+    "name": "set_decorate_pot_sherd",
+    "object": "world",
+    "args": [
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "item",
+        "name": "item"
+      },
+      {
+        "type": "enum",
+        "name": "side",
+        "enum": [
+          "BACK",
+          "FRONT",
+          "LEFT",
+          "RIGHT"
+        ]
+      }
+    ]
+  },
+  {
     "id": "game_set_furnace_cook_time",
     "name": "set_furnace_cook_time",
     "object": "world",
@@ -3204,6 +3279,10 @@
         "name": "spawn_location"
       },
       {
+        "type": "text",
+        "name": "custom_name"
+      },
+      {
         "type": "item",
         "name": "block"
       }
@@ -3360,6 +3439,10 @@
         "name": "location"
       },
       {
+        "type": "text",
+        "name": "custom_name"
+      },
+      {
         "type": "number",
         "name": "width"
       },
@@ -3412,6 +3495,10 @@
       {
         "type": "location",
         "name": "spawn_location"
+      },
+      {
+        "type": "text",
+        "name": "custom_name"
       },
       {
         "type": "item",
@@ -3537,9 +3624,7 @@
       },
       {
         "type": "text",
-        "name": "displayed_text",
-        "array": true,
-        "length": 21
+        "name": "custom_name"
       },
       {
         "type": "enum",
@@ -3549,6 +3634,12 @@
           "CONCATENATION",
           "SEPARATE_LINES"
         ]
+      },
+      {
+        "type": "text",
+        "name": "displayed_text",
+        "array": true,
+        "length": 24
       }
     ]
   },
@@ -3646,6 +3737,17 @@
     ]
   },
   {
+    "id": "game_set_event_move_allowed",
+    "name": "set_event_move_allowed",
+    "object": "world",
+    "args": [
+      {
+        "type": "boolean",
+        "name": "allowed"
+      }
+    ]
+  },
+  {
     "id": "game_set_event_projectile",
     "name": "set_event_projectile",
     "object": "world",
@@ -3657,6 +3759,17 @@
       {
         "type": "text",
         "name": "name"
+      }
+    ]
+  },
+  {
+    "id": "game_set_event_uery_info",
+    "name": "set_event_uery_info",
+    "object": "world",
+    "args": [
+      {
+        "type": "text",
+        "name": "information"
       }
     ]
   },
@@ -6093,6 +6206,29 @@
     ]
   },
   {
+    "id": "player_stop_sounds_by_source",
+    "name": "stop_sounds_by_source",
+    "object": "player",
+    "args": [
+      {
+        "type": "enum",
+        "name": "source",
+        "enum": [
+          "AMBIENT",
+          "BLOCK",
+          "HOSTILE",
+          "MASTER",
+          "MUSIC",
+          "NEUTRAL",
+          "PLAYER",
+          "RECORD",
+          "VOICE",
+          "WEATHER"
+        ]
+      }
+    ]
+  },
+  {
     "id": "player_add_inventory_menu_row",
     "name": "add_menu_row",
     "object": "player",
@@ -7449,6 +7585,12 @@
     "args": []
   },
   {
+    "id": "player_reset_weather",
+    "name": "reset_weather",
+    "object": "player",
+    "args": []
+  },
+  {
     "id": "player_send_break_animation",
     "name": "send_break_animation",
     "object": "player",
@@ -7488,6 +7630,17 @@
     ]
   },
   {
+    "id": "player_set_rain_level",
+    "name": "set_rain_level",
+    "object": "player",
+    "args": [
+      {
+        "type": "number",
+        "name": "rain_level"
+      }
+    ]
+  },
+  {
     "id": "player_set_simulation_distance",
     "name": "set_simulation_distance",
     "object": "player",
@@ -7495,6 +7648,17 @@
       {
         "type": "number",
         "name": "distance"
+      }
+    ]
+  },
+  {
+    "id": "player_set_thunder_level",
+    "name": "set_thunder_level",
+    "object": "player",
+    "args": [
+      {
+        "type": "number",
+        "name": "thunder_level"
       }
     ]
   },
@@ -9835,6 +9999,10 @@
       {
         "type": "location",
         "name": "location_2"
+      },
+      {
+        "type": "boolean",
+        "name": "integer"
       }
     ],
     "assigning": "variable"
@@ -11161,12 +11329,16 @@
         "name": "variable"
       },
       {
+        "type": "location",
+        "name": "location"
+      },
+      {
         "type": "number",
         "name": "seed"
       },
       {
-        "type": "location",
-        "name": "location"
+        "type": "number",
+        "name": "loc_frequency"
       },
       {
         "type": "number",
@@ -11179,6 +11351,14 @@
       {
         "type": "number",
         "name": "amplitude"
+      },
+      {
+        "type": "enum",
+        "name": "range_mode",
+        "enum": [
+          "ZERO_TO_ONE",
+          "FULL_RANGE"
+        ]
       },
       {
         "type": "boolean",
@@ -11323,12 +11503,40 @@
         "name": "variable"
       },
       {
+        "type": "location",
+        "name": "location"
+      },
+      {
         "type": "number",
         "name": "seed"
       },
       {
-        "type": "location",
-        "name": "location"
+        "type": "number",
+        "name": "loc_frequency"
+      },
+      {
+        "type": "number",
+        "name": "octaves"
+      },
+      {
+        "type": "number",
+        "name": "frequency"
+      },
+      {
+        "type": "number",
+        "name": "amplitude"
+      },
+      {
+        "type": "enum",
+        "name": "range_mode",
+        "enum": [
+          "ZERO_TO_ONE",
+          "FULL_RANGE"
+        ]
+      },
+      {
+        "type": "boolean",
+        "name": "normalized"
       }
     ],
     "assigning": "variable",
@@ -11441,6 +11649,23 @@
       {
         "type": "number",
         "name": "frequency"
+      },
+      {
+        "type": "number",
+        "name": "displacement"
+      },
+      {
+        "type": "enum",
+        "name": "range_mode",
+        "enum": [
+          "ZERO_TO_ONE",
+          "FULL_RANGE"
+        ]
+      },
+      {
+        "type": "boolean",
+        "name": "enable_distance",
+        "defaultBooleanValue": false
       }
     ],
     "assigning": "variable",
@@ -13086,6 +13311,31 @@
     ],
     "assigning": "variable",
     "origin": "location"
+  },
+  {
+    "id": "set_variable_get_decorate_pot_sherd",
+    "name": "get_decorate_pot_sherd",
+    "object": "variable",
+    "args": [
+      {
+        "type": "variable",
+        "name": "variable"
+      },
+      {
+        "type": "location",
+        "name": "location"
+      },
+      {
+        "type": "enum",
+        "name": "side",
+        "enum": [
+          "BACK",
+          "FRONT",
+          "LEFT",
+          "RIGHT"
+        ]
+      }
+    ]
   },
   {
     "id": "set_variable_get_lectern_book",

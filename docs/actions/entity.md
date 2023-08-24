@@ -717,7 +717,7 @@ entity::set_display_interpolation(0, 0)
 **Тип:** Действие без значения\
 **Пример использования:**
 ```ts
-entity::set_display_rotation_from_axis_angle(vector(0, 0, 0), 0, "LEFT_ROTATION")
+entity::set_display_rotation_from_axis_angle(vector(0, 0, 0), 0, "SET", "LEFT_ROTATION")
 ```
 
 **Аргументы:**
@@ -725,6 +725,7 @@ entity::set_display_rotation_from_axis_angle(vector(0, 0, 0), 0, "LEFT_ROTATION"
 | ------------- | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
 | `axis_vector` | вектор                                                                                                                            | Осевой вектор               |
 | `angle`       | число                                                                                                                             | Угол поворота               |
+| `mode`        | перечисление:<br/>**SET** - Установка<br/>**ADD** - Добавление                                                                    | Режим установки             |
 | `rotation`    | перечисление:<br/>**LEFT_ROTATION** - Левый поворот (Поворот х Размер)<br/>**RIGHT_ROTATION** - Правый поворот (Размер х Поворот) | Порядок применения поворота |
 <h3 id=entity_set_display_rotation_from_euler_angles>
   <code>entity::set_display_rotation_from_euler_angles</code>
@@ -735,7 +736,7 @@ entity::set_display_rotation_from_axis_angle(vector(0, 0, 0), 0, "LEFT_ROTATION"
 **Тип:** Действие без значения\
 **Пример использования:**
 ```ts
-entity::set_display_rotation_from_euler_angles(0, 0, 0, "LEFT_ROTATION")
+entity::set_display_rotation_from_euler_angles(0, 0, 0, "SET", "LEFT_ROTATION")
 ```
 
 **Аргументы:**
@@ -744,6 +745,7 @@ entity::set_display_rotation_from_euler_angles(0, 0, 0, "LEFT_ROTATION")
 | `pitch`    | число                                                                                                                             | Угол тангажа (pitch)        |
 | `yaw`      | число                                                                                                                             | Угол рыскания (yaw)         |
 | `roll`     | число                                                                                                                             | Угол крена (roll)           |
+| `mode`     | перечисление:<br/>**SET** - Установка<br/>**ADD** - Добавление                                                                    | Режим установки             |
 | `rotation` | перечисление:<br/>**LEFT_ROTATION** - Левый поворот (Поворот х Размер)<br/>**RIGHT_ROTATION** - Правый поворот (Размер х Поворот) | Порядок применения поворота |
 <h3 id=entity_set_display_scale>
   <code>entity::set_display_scale</code>
@@ -754,13 +756,14 @@ entity::set_display_rotation_from_euler_angles(0, 0, 0, "LEFT_ROTATION")
 **Тип:** Действие без значения\
 **Пример использования:**
 ```ts
-entity::set_display_scale(vector(0, 0, 0))
+entity::set_display_scale(vector(0, 0, 0), "SET")
 ```
 
 **Аргументы:**
-| **Имя**        | **Тип** | **Описание** |
-| -------------- | ------- | ------------ |
-| `scale_vector` | вектор  | Новый размер |
+| **Имя**        | **Тип**                                                        | **Описание**    |
+| -------------- | -------------------------------------------------------------- | --------------- |
+| `scale_vector` | вектор                                                         | Новый размер    |
+| `mode`         | перечисление:<br/>**SET** - Установка<br/>**ADD** - Добавление | Режим установки |
 <h3 id=entity_set_display_shadow>
   <code>entity::set_display_shadow</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -803,13 +806,14 @@ entity::set_display_transformation_matrix([0, 0])
 **Тип:** Действие без значения\
 **Пример использования:**
 ```ts
-entity::set_display_translation(vector(0, 0, 0))
+entity::set_display_translation(vector(0, 0, 0), "SET")
 ```
 
 **Аргументы:**
-| **Имя**              | **Тип** | **Описание**   |
-| -------------------- | ------- | -------------- |
-| `translation_vector` | вектор  | Новое смещение |
+| **Имя**              | **Тип**                                                        | **Описание**    |
+| -------------------- | -------------------------------------------------------------- | --------------- |
+| `translation_vector` | вектор                                                         | Новое смещение  |
+| `mode`               | перечисление:<br/>**SET** - Установка<br/>**ADD** - Добавление | Режим установки |
 <h3 id=entity_set_display_view_range>
   <code>entity::set_display_view_range</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>

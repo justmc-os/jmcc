@@ -1166,6 +1166,22 @@ player::stop_sound([sound("entity.zombie.hurt"), sound("entity.zombie.hurt")])
 | **Имя**  | **Тип**      | **Описание**          |
 | -------- | ------------ | --------------------- |
 | `sounds` | список[звук] | Эффекты для остановки |
+<h3 id=player_stop_sounds_by_source>
+  <code>player::stop_sounds_by_source</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Остановить звуки по источнику\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+player::stop_sounds_by_source("AMBIENT")
+```
+
+**Аргументы:**
+| **Имя**  | **Тип**                                                                                                                                                                                                                                                                                                                                                                                              | **Описание**   |
+| -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
+| `source` | перечисление:<br/>**AMBIENT** - Окружение (ambient)<br/>**BLOCK** - Блоки (block)<br/>**HOSTILE** - Враждебные существа (hostile)<br/>**MASTER** - Общий (master)<br/>**MUSIC** - Музыка (music)<br/>**NEUTRAL** - Дружелюбные существа (neutral)<br/>**PLAYER** - Игроки (player)<br/>**RECORD** - Музыкальные блоки (record)<br/>**VOICE** - Голос/Речь (voice)<br/>**WEATHER** - Погода (weather) | Источник звука |
 <h3 id=player_add_inventory_menu_row>
   <code>player::add_menu_row</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -2595,6 +2611,19 @@ player::remove_world_border()
 ```
 
 **Без аргументов**
+<h3 id=player_reset_weather>
+  <code>player::reset_weather</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** undefined\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+player::reset_weather()
+```
+
+**Без аргументов**
 <h3 id=player_send_break_animation>
   <code>player::send_break_animation</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -2644,6 +2673,22 @@ player::set_fog_distance(0)
 | **Имя**    | **Тип** | **Описание**                         |
 | ---------- | ------- | ------------------------------------ |
 | `distance` | число   | Дистанция прорисовки в чанках (2-32) |
+<h3 id=player_set_rain_level>
+  <code>player::set_rain_level</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** undefined\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+player::set_rain_level(0)
+```
+
+**Аргументы:**
+| **Имя**      | **Тип** | **Описание** |
+| ------------ | ------- | ------------ |
+| `rain_level` | число   |              |
 <h3 id=player_set_simulation_distance>
   <code>player::set_simulation_distance</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -2660,6 +2705,22 @@ player::set_simulation_distance(0)
 | **Имя**    | **Тип** | **Описание**                        |
 | ---------- | ------- | ----------------------------------- |
 | `distance` | число   | Дистанция симуляции в чанках (2-32) |
+<h3 id=player_set_thunder_level>
+  <code>player::set_thunder_level</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** undefined\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+player::set_thunder_level(0)
+```
+
+**Аргументы:**
+| **Имя**         | **Тип** | **Описание** |
+| --------------- | ------- | ------------ |
+| `thunder_level` | число   |              |
 <h3 id=player_set_time>
   <code>player::set_time</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>

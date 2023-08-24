@@ -135,6 +135,8 @@ var b = value::health<default_entity>
 | `value::event_projectile_item`       | предмет                 | Предмет снаряда события                 |
 | `value::event_teleport_cause`        | текст                   | Причина телепортации                    |
 | `value::event_ticks_held_for`        | число                   | Количество тиков использования предмета |
+| `value::event_query_info`            | текст                   | Отладочная информация                   |
+| `value::event_fail_move_reason`      | текст                   | Причина неудачного перемещения          |
 | `value::players`                     | число                   | Количество игроков в мире               |
 | `value::cpu_usage`                   | число                   | Процент использования процессора        |
 | `value::server_tps`                  | число                   | TPS сервера                             |

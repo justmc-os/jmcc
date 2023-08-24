@@ -21,6 +21,8 @@ event<player_join> {
 | `event<block_damage>`                   | Игрок начинает ломать блок               |
 | `event<block_damage_abort>`             | Игрок перестает ломать блок              |
 | `event<player_structure_grow>`          | Игрок выращивает дерево                  |
+| `event<player_query_block_info>`        | Игрок получает информацию о блоке        |
+| `event<player_arm_swing>`               | Игрок машет рукой                        |
 | `event<player_right_click_entity>`      | Игрок кликает правой кнопкой по существу |
 | `event<player_right_click_player>`      | Игрок кликает правой кнопкой по игроку   |
 | `event<player_imbue_potion_cloud>`      | Игрок получает эффект от взрывного зелья |
@@ -30,6 +32,7 @@ event<player_join> {
 | `event<player_leash_entity>`            | Игрок привязывает существо               |
 | `event<player_start_spectating_entity>` | Игрок начал следить за существом         |
 | `event<player_stop_spectating_entity>`  | Игрок перестал следить за существом      |
+| `event<player_query_entity_info>`       | Получить информацию о сущности           |
 | `event<player_open_inventory>`          | Игрок открыл инвентарь                   |
 | `event<player_click_inventory>`         | Игрок кликает в инвентаре                |
 | `event<player_drag_inventory>`          | Игрок перетягивает предмет в инвентаре   |
@@ -48,6 +51,7 @@ event<player_join> {
 | `event<player_edit_book>`               | Игрок изменяет книгу                     |
 | `event<player_fish>`                    | Игрок рыбачит                            |
 | `event<player_move>`                    | Игрок передвигается                      |
+| `event<player_fail_move>`               | Игроку не удалось передвинуться          |
 | `event<player_jump>`                    | Игрок прыгает                            |
 | `event<player_sneak>`                   | Игрок начинает красться                  |
 | `event<player_unsneak>`                 | Игрок перестал красться                  |
@@ -69,6 +73,7 @@ event<player_join> {
 | `event<player_food_level_change>`       | Изменение уровня голода игрока           |
 | `event<player_projectile_hit>`          | Попадание снаряда игрока                 |
 | `event<projectile_damage_player>`       | Игрок получает урон от снаряда           |
+| `event<player_pre_attack_entity>`       | Игрок собирается нанести урон сущности   |
 | `event<player_death>`                   | Игрок умирает                            |
 | `event<player_kill_player>`             | Игрок убивает игрока                     |
 | `event<player_kill_mob>`                | Игрок убивает моба                       |
@@ -114,7 +119,7 @@ event<player_join> {
 | `event<block_piston_extend>`            | Поршень выдвигается                      |
 | `event<block_piston_retract>`           | Поршень втягивается                      |
 | `event<leaves_decay>`                   | Опадание листьев                         |
-| `event<structure_grow>`                 | Дерево выростает                         |
+| `event<structure_grow>`                 | Дерево вырастает                         |
 | `event<block_grow>`                     | Рост блока                               |
 | `event<block_flow>`                     | Перемещение блока                        |
 | `event<block_fertilize>`                | Удобрение блока                          |

@@ -585,6 +585,16 @@
     "name": "event_ticks_held_for"
   },
   {
+    "id": "event_query_info",
+    "type": "text",
+    "name": "event_query_info"
+  },
+  {
+    "id": "event_fail_move_reason",
+    "type": "text",
+    "name": "event_fail_move_reason"
+  },
+  {
     "id": "player_count",
     "type": "number",
     "name": "players"

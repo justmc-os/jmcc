@@ -23,6 +23,24 @@ world::block_growth(location(0, 0, 0), 0, "STAGE_NUMBER")
 | `location`     | местоположение                                                                             | Местоположение блока |
 | `growth_stage` | число                                                                                      | Стадия роста         |
 | `growth_type`  | перечисление:<br/>**STAGE_NUMBER** - Номер стадии роста<br/>**PERCENTAGE** - Процент роста | Тип роста            |
+<h3 id=game_bloom_skulk_catalyst>
+  <code>world::bloom_skulk_catalyst</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Продлить скалк-заражение к местоположению\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+world::bloom_skulk_catalyst(location(0, 0, 0), location(0, 0, 0), 0)
+```
+
+**Аргументы:**
+| **Имя**          | **Тип**        | **Описание**                           |
+| ---------------- | -------------- | -------------------------------------- |
+| `location`       | местоположение | Местоположение скалкового катализатора |
+| `bloom_location` | местоположение | Конечное местоположение                |
+| `charge`         | число          | Сила заражения                         |
 <h3 id=game_bone_meal_block>
   <code>world::bone_meal_block</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -406,6 +424,24 @@ world::set_container_name(location(0, 0, 0), "текст")
 | ---------- | -------------- | ------------------------- |
 | `location` | местоположение | Местоположение контейнера |
 | `name`     | текст          | Имя контейнера            |
+<h3 id=game_set_decorate_pot_sherd>
+  <code>world::set_decorate_pot_sherd</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Установить украшение кувшина\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+world::set_decorate_pot_sherd(location(0, 0, 0), item("stone"), "BACK")
+```
+
+**Аргументы:**
+| **Имя**    | **Тип**                                                                                                                                  | **Описание**           |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- |
+| `location` | местоположение                                                                                                                           | Местоположение кувшина |
+| `item`     | предмет                                                                                                                                  | Черепок для установки  |
+| `side`     | перечисление:<br/>**BACK** - Задняя сторона<br/>**FRONT** - Передняя сторона<br/>**LEFT** - Левая сторона<br/>**RIGHT** - Правая сторона | Сторона кувшина        |
 <h3 id=game_set_furnace_cook_time>
   <code>world::set_furnace_cook_time</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -677,13 +713,14 @@ world::spawn_armor_stand(item("stone"), item("stone"), item("stone"), item("ston
 **Тип:** Действие без значения\
 **Пример использования:**
 ```ts
-world::spawn_block_display(location(0, 0, 0), item("stone"))
+world::spawn_block_display(location(0, 0, 0), "текст", item("stone"))
 ```
 
 **Аргументы:**
 | **Имя**          | **Тип**        | **Описание**      |
 | ---------------- | -------------- | ----------------- |
 | `spawn_location` | местоположение | Место создания    |
+| `custom_name`    | текст          | Имя               |
 | `block`          | предмет        | Отображаемый блок |
 <h3 id=game_spawn_effect_cloud>
   <code>world::spawn_effect_cloud</code>
@@ -807,16 +844,17 @@ world::spawn_falling_block(item("stone"), location(0, 0, 0), "текст", "TRUE
 **Тип:** Действие без значения\
 **Пример использования:**
 ```ts
-world::spawn_interaction_entity(location(0, 0, 0), 0, 0, "TRUE")
+world::spawn_interaction_entity(location(0, 0, 0), "текст", 0, 0, "TRUE")
 ```
 
 **Аргументы:**
-| **Имя**      | **Тип**                                                         | **Описание**          |
-| ------------ | --------------------------------------------------------------- | --------------------- |
-| `location`   | местоположение                                                  | Место создания        |
-| `width`      | число                                                           | Горизонтальный размер |
-| `height`     | число                                                           | Вертикальный размер   |
-| `responsive` | перечисление:<br/>**TRUE** - Включить<br/>**FALSE** - Выключить | Отзывчивость          |
+| **Имя**       | **Тип**                                                         | **Описание**          |
+| ------------- | --------------------------------------------------------------- | --------------------- |
+| `location`    | местоположение                                                  | Место создания        |
+| `custom_name` | текст                                                           | Имя                   |
+| `width`       | число                                                           | Горизонтальный размер |
+| `height`      | число                                                           | Вертикальный размер   |
+| `responsive`  | перечисление:<br/>**TRUE** - Включить<br/>**FALSE** - Выключить | Отзывчивость          |
 <h3 id=game_spawn_item>
   <code>world::spawn_item</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -847,13 +885,14 @@ world::spawn_item(item("stone"), location(0, 0, 0), "текст", "TRUE", "TRUE"
 **Тип:** Действие без значения\
 **Пример использования:**
 ```ts
-world::spawn_item_display(location(0, 0, 0), item("stone"))
+world::spawn_item_display(location(0, 0, 0), "текст", item("stone"))
 ```
 
 **Аргументы:**
 | **Имя**          | **Тип**        | **Описание**         |
 | ---------------- | -------------- | -------------------- |
 | `spawn_location` | местоположение | Место создания       |
+| `custom_name`    | текст          | Имя                  |
 | `displayed_item` | предмет        | Отображаемый предмет |
 <h3 id=game_spawn_lightning_bolt>
   <code>world::spawn_lightning_bolt</code>
@@ -943,15 +982,16 @@ world::spawn_shulker_bullet(location(0, 0, 0), "текст")
 **Тип:** Действие без значения\
 **Пример использования:**
 ```ts
-world::spawn_text_display(location(0, 0, 0), ["текст", "текст"], "SPACES")
+world::spawn_text_display(location(0, 0, 0), "текст", "SPACES", ["текст", "текст"])
 ```
 
 **Аргументы:**
 | **Имя**          | **Тип**                                                                                                                              | **Описание**       |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------ |
 | `spawn_location` | местоположение                                                                                                                       | Место создания     |
-| `displayed_text` | список[текст]                                                                                                                        | Отображаемый текст |
+| `custom_name`    | текст                                                                                                                                | Имя                |
 | `merging_mode`   | перечисление:<br/>**SPACES** - Разделение пробелом<br/>**CONCATENATION** - Объединение<br/>**SEPARATE_LINES** - Разделение на строки | Объединение текста |
+| `displayed_text` | список[текст]                                                                                                                        | Отображаемый текст |
 <h3 id=game_spawn_vehicle>
   <code>world::spawn_vehicle</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -1079,6 +1119,22 @@ world::set_event_item(item("stone"))
 | **Имя** | **Тип** | **Описание**          |
 | ------- | ------- | --------------------- |
 | `item`  | предмет | Новый предмет события |
+<h3 id=game_set_event_move_allowed>
+  <code>world::set_event_move_allowed</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Разрешить передвижение\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+world::set_event_move_allowed("TRUE")
+```
+
+**Аргументы:**
+| **Имя**   | **Тип**                                             | **Описание**           |
+| --------- | --------------------------------------------------- | ---------------------- |
+| `allowed` | перечисление:<br/>**TRUE** - Да<br/>**FALSE** - Нет | Разрешить передвижение |
 <h3 id=game_set_event_projectile>
   <code>world::set_event_projectile</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
@@ -1096,6 +1152,22 @@ world::set_event_projectile(item("stone"), "текст")
 | ------------ | ------- | ------------------------ |
 | `projectile` | предмет | Снаряд                   |
 | `name`       | текст   | Отображаемое имя снаряда |
+<h3 id=game_set_event_uery_info>
+  <code>world::set_event_uery_info</code>
+  <a href="#" style="font-size: 12px; margin-left:">⬆️</a>
+</h3>
+
+**Имя:** Добавить теги в полученную информацию\
+**Тип:** Действие без значения\
+**Пример использования:**
+```ts
+world::set_event_uery_info("текст")
+```
+
+**Аргументы:**
+| **Имя**       | **Тип** | **Описание**        |
+| ------------- | ------- | ------------------- |
+| `information` | текст   | Дополнительные теги |
 <h3 id=game_set_event_sound>
   <code>world::set_event_sound</code>
   <a href="#" style="font-size: 12px; margin-left:">⬆️</a>

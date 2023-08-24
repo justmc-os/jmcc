@@ -356,5 +356,11 @@
     "RECORD",
     "VOICE",
     "WEATHER"
+  ],
+  "DecoratedPot.Side": [
+"BACK",
+"FRONT",
+"LEFT",
+"RIGHT"
   ]
 }
