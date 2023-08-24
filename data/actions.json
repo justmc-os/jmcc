@@ -3764,7 +3764,7 @@
   },
   {
     "id": "game_set_event_uery_info",
-    "name": "set_event_uery_info",
+    "name": "set_event_query_info",
     "object": "world",
     "args": [
       {
