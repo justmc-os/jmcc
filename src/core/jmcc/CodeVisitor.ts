@@ -257,6 +257,8 @@ class CodeVisitor
         `Данное выражение не может быть использовано как лямбда-выражение`
       );
 
+    this.module.addAction(call);
+    this.module.startBranch(call);
     const lambdaArguments = context.lambdaArguments();
     if (lambdaArguments) {
       const args = this.visitLambdaArguments(lambdaArguments);
@@ -277,9 +279,6 @@ class CodeVisitor
       });
     }
 
-    this.module.addAction(call);
-
-    this.module.startBranch(call);
     this.visitStatement(context.statements());
     this.module.endBranch();
   }
