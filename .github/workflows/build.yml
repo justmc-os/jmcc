@@ -32,7 +32,7 @@ jobs:
 
       - name: Install
         if: steps.yarn-cache.outputs.cache-hit != 'true'
-        run: yarn install --production #--frozen-lockfile --prefer-offline --non-interactive --ignore-scripts
+        run: yarn install --frozen-lockfile --prefer-offline --non-interactive --ignore-scripts
 
       - name: Build
         run: yarn build
